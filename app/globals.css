@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta del proyecto — ver README */
+  --color-fondo: #ffffff;
+  --color-barra: #f7f8f9;
+
+  --color-tinta: #111827; /* texto principal */
+  --color-tinta-2: #4b5563; /* secundario */
+  --color-tinta-3: #6b7280; /* terciario */
+
+  --color-borde: #eaecef; /* secciones */
+  --color-borde-fila: #eef0f2; /* filas */
+  --color-borde-control: #d7dbe0; /* controles */
+
+  --color-acento: #0e5c4a; /* verde oscuro */
+  --color-acento-tinte: #e3f1ed;
+
+  --color-ambar: #92400e;
+  --color-ambar-tinte: #fdf0dc;
+
+  --color-gris-etiqueta: #4b5563;
+  --color-gris-tinte: #f1f3f5;
+
+  --color-azul: #1e4fa3; /* azul discreto para "abierta todo el año" */
+  --color-azul-tinte: #e9f0fa;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-tinta);
+  font-weight: 400;
+}
+
+/* Scroll horizontal de filtros sin barra visible */
+.sin-scrollbar {
+  scrollbar-width: none;
+}
+.sin-scrollbar::-webkit-scrollbar {
+  display: none;
+}

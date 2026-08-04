@@ -1,0 +1,32 @@
+import type { Estado } from "@/lib/datos";
+
+const ESTILOS: Record<Exclude<Estado, null>, { texto: string; clases: string }> = {
+  verificado: {
+    texto: "Verificado por el club",
+    clases: "bg-acento-tinte text-acento",
+  },
+  provisional: {
+    texto: "Fecha provisional",
+    clases: "bg-ambar-tinte text-ambar",
+  },
+  "por-confirmar": {
+    texto: "Día por confirmar",
+    clases: "bg-gris-tinte text-gris-etiqueta",
+  },
+  abierta: {
+    texto: "Inscripción abierta todo el año",
+    clases: "bg-azul-tinte text-azul",
+  },
+};
+
+export default function EtiquetaEstado({ estado }: { estado: Estado }) {
+  if (!estado) return null;
+  const { texto, clases } = ESTILOS[estado];
+  return (
+    <span
+      className={`inline-block rounded-[5px] px-[8px] py-[3px] text-[11.5px] leading-[1.3] ${clases}`}
+    >
+      {texto}
+    </span>
+  );
+}
