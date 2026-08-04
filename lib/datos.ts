@@ -29,6 +29,8 @@ export interface Convocatoria {
   sexo: Sexo;
   tipoEntidad: "federado" | "escuela";
   nivel: string;
+  /** Temporada a la que pertenece la prueba, p. ej. "2026-27". */
+  temporada: string;
   tipoFecha: TipoFecha;
   fecha: string;
   mesAprox: string;
@@ -163,7 +165,7 @@ export function mesesDisponibles(lista: Convocatoria[]): { valor: string; etique
   });
 }
 
-/** Etiqueta de estado de una convocatoria (una sola por fila). */
+/** Etiquetas de estado de una convocatoria. */
 export type Estado =
   | "verificado"
   | "provisional"
@@ -171,10 +173,26 @@ export type Estado =
   | "abierta"
   | null;
 
-export function estadoConvocatoria(c: Convocatoria): Estado {
-  if (c.tipoFecha === "abierta") return "abierta";
-  if (c.tipoFecha === "mes") return "por-confirmar";
-  if (c.estadoFecha === "provisional") return "provisional";
-  if (c.origen === "club") return "verificado";
-  return null;
+/**
+ * Una convocatoria puede llevar hasta dos etiquetas:
+ * - "Verificado por el club" (verde), siempre que origen = club.
+ * - La de estado de fecha que corresponda: abierta (azul), día por
+ *   confirmar (gris) o fecha provisional (ámbar).
+ */
+export function etiquetasConvocatoria(c: Convocatoria): Exclude<Estado, null>[] {
+  const etiquetas: Exclude<Estado, null>[] = [];
+  if (c.origen === "club") etiquetas.push("verificado");
+  if (c.tipoFecha === "abierta") etiquetas.push("abierta");
+  else if (c.tipoFecha === "mes") etiquetas.push("por-confirmar");
+  else if (c.estadoFecha === "provisional") etiquetas.push("provisional");
+  return etiquetas;
+}
+
+/** Temporadas presentes en los datos (p. ej. "2026-27"), ordenadas. */
+export function temporadasDisponibles(
+  lista: Convocatoria[]
+): { valor: string; etiqueta: string }[] {
+  const temporadas = new Set<string>();
+  for (const c of lista) if (c.temporada) temporadas.add(c.temporada);
+  return [...temporadas].sort().map((t) => ({ valor: t, etiqueta: t }));
 }

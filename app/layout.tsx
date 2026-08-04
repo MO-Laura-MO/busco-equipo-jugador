@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Link from "next/link";
+import { AMBITO, NOMBRE_AMBITO_LARGO, TITULO_SITIO, URL_SITIO } from "@/lib/config";
 import "./globals.css";
 
 // Inter auto-alojada (sin peticiones a Google Fonts).
@@ -14,13 +15,12 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pruebas-voleibol-madrid.vercel.app"),
+  metadataBase: new URL(URL_SITIO),
   title: {
-    default: "Pruebas de voleibol · Madrid",
-    template: "%s · Pruebas de voleibol Madrid",
+    default: TITULO_SITIO,
+    template: `%s · Pruebas de voleibol ${AMBITO}`,
   },
-  description:
-    "Directorio de convocatorias de pruebas de voleibol base en la Comunidad de Madrid. Busca por categoría, sexo, zona y mes, y contacta directamente con el club.",
+  description: `Directorio de convocatorias de pruebas de voleibol base en ${NOMBRE_AMBITO_LARGO}. Busca por categoría, sexo, zona y mes, y contacta directamente con el club.`,
 };
 
 export default function RootLayout({

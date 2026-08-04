@@ -13,6 +13,7 @@ import {
   Zona,
   mesesDisponibles,
   ordenarConvocatorias,
+  temporadasDisponibles,
 } from "@/lib/datos";
 import FilaConvocatoria from "./FilaConvocatoria";
 
@@ -21,7 +22,7 @@ interface Props {
   convocatorias: Convocatoria[];
 }
 
-type Filtro = "categoria" | "sexo" | "zona" | "mes";
+type Filtro = "categoria" | "sexo" | "zona" | "mes" | "temporada";
 
 function Chip({
   activo,
@@ -65,10 +66,20 @@ export default function Listado({ clubes, convocatorias }: Props) {
   const [sexo, setSexo] = useState<Sexo | null>(null);
   const [zona, setZona] = useState<Zona | null>(null);
   const [mes, setMes] = useState<string | null>(null);
+  const [temporada, setTemporada] = useState<string | null>(null);
   const [desplegado, setDesplegado] = useState<Filtro | null>(null);
   const [orden, setOrden] = useState<"asc" | "desc">("asc");
 
   const meses = useMemo(() => mesesDisponibles(convocatorias), [convocatorias]);
+  const temporadas = useMemo(
+    () => temporadasDisponibles(convocatorias),
+    [convocatorias]
+  );
+  // El filtro de temporada solo aparece cuando conviven varias temporadas.
+  const filtros: Filtro[] =
+    temporadas.length > 1
+      ? ["categoria", "sexo", "zona", "mes", "temporada"]
+      : ["categoria", "sexo", "zona", "mes"];
   const clubesPorId = useMemo(
     () => new Map(clubes.map((c) => [c.id, c])),
     [clubes]
@@ -82,6 +93,7 @@ export default function Listado({ clubes, convocatorias }: Props) {
       if (categoria && c.categoria !== categoria) return false;
       if (sexo && c.sexo !== sexo) return false;
       if (zona && club.zona !== zona) return false;
+      if (temporada && c.temporada !== temporada) return false;
       if (mes) {
         const suMes =
           c.tipoFecha === "exacta"
@@ -99,7 +111,7 @@ export default function Listado({ clubes, convocatorias }: Props) {
       return true;
     });
     return ordenarConvocatorias(lista, orden);
-  }, [busqueda, categoria, sexo, zona, mes, orden, convocatorias, clubesPorId]);
+  }, [busqueda, categoria, sexo, zona, mes, temporada, orden, convocatorias, clubesPorId]);
 
   const alternarDesplegable = (f: Filtro) =>
     setDesplegado((actual) => (actual === f ? null : f));
@@ -132,6 +144,12 @@ export default function Listado({ clubes, convocatorias }: Props) {
       activo: mes === m.valor,
       elegir: () => setMes(mes === m.valor ? null : m.valor),
     })),
+    temporada: temporadas.map((t) => ({
+      valor: t.valor,
+      etiqueta: t.etiqueta,
+      activo: temporada === t.valor,
+      elegir: () => setTemporada(temporada === t.valor ? null : t.valor),
+    })),
   };
 
   const etiquetaChip: Record<Filtro, string> = {
@@ -142,6 +160,7 @@ export default function Listado({ clubes, convocatorias }: Props) {
       ? `Zona ${ZONAS.find((z) => z.valor === zona)?.etiqueta.toLowerCase()}`
       : "Zona",
     mes: meses.find((m) => m.valor === mes)?.etiqueta ?? "Mes",
+    temporada: temporada ?? "Temporada",
   };
 
   const activoChip: Record<Filtro, boolean> = {
@@ -149,6 +168,7 @@ export default function Listado({ clubes, convocatorias }: Props) {
     sexo: sexo !== null,
     zona: zona !== null,
     mes: mes !== null,
+    temporada: temporada !== null,
   };
 
   return (
@@ -170,7 +190,7 @@ export default function Listado({ clubes, convocatorias }: Props) {
       {/* Filtros */}
       <div className="border-b border-borde pb-3">
         <div className="sin-scrollbar flex gap-2 overflow-x-auto px-4">
-          {(["categoria", "sexo", "zona", "mes"] as Filtro[]).map((f) => (
+          {filtros.map((f) => (
             <Chip
               key={f}
               activo={activoChip[f]}

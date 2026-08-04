@@ -1,7 +1,9 @@
-# Pruebas de voleibol · Madrid
+# Busco equipo — directorio de pruebas de voleibol base
 
-Directorio de convocatorias de pruebas de voleibol base en la Comunidad de
-Madrid. Los clubes publican qué categorías buscan completar y cuándo hacen
+Directorio de convocatorias de pruebas de voleibol base, empezando por la
+Comunidad de Madrid (el ámbito se define en `lib/config.ts` y la idea es
+ampliarlo a otras comunidades más adelante). Los clubes publican qué
+categorías buscan completar y cuándo hacen
 las pruebas; las familias las encuentran filtrando por categoría, sexo, zona
 y mes. Sin base de datos, sin CMS, sin registro: el contenido vive en dos
 archivos JSON de este repo y el contacto ocurre fuera de la plataforma.
@@ -33,11 +35,15 @@ Reglas del modelo de datos:
   "Verificado por el club") o `fuentes-publicas`
 - `nivel` es texto libre corto y opcional ("Primera Autonómica"…); si está
   vacío no se muestra nada
+- `temporada`: temporada de la prueba, formato "2026-27". El filtro
+  Temporada solo aparece en la web cuando conviven dos o más temporadas
+  en los datos
 - `descripcion` del club: máximo 300 caracteres
 
-Etiquetas de estado que pinta la web (una por fila): abierta → azul;
-mes → gris "Día por confirmar"; exacta provisional → ámbar; exacta
-confirmada con `origen: club` → verde "Verificado por el club".
+Etiquetas de estado que pinta la web (hasta dos por fila): la verde
+"Verificado por el club" siempre que `origen: club`, y además la de
+fecha que corresponda — abierta → azul; mes → gris "Día por confirmar";
+exacta provisional → ámbar.
 
 ## Configurar antes de publicar
 

@@ -2,9 +2,9 @@ import Link from "next/link";
 import { CalendarClock, MapPin, RefreshCw } from "lucide-react";
 import {
   Convocatoria,
-  estadoConvocatoria,
   etiquetaCategoria,
   etiquetaSexo,
+  etiquetasConvocatoria,
   partesFecha,
 } from "@/lib/datos";
 import EtiquetaEstado from "./EtiquetaEstado";
@@ -52,7 +52,7 @@ export default function FilaConvocatoria({
   municipio,
   enlazar = true,
 }: Props) {
-  const estado = estadoConvocatoria(c);
+  const etiquetas = etiquetasConvocatoria(c);
   const linea2 = [
     `${etiquetaCategoria(c.categoria)} ${etiquetaSexo(c.sexo).toLowerCase()}`,
     c.nivel || null,
@@ -74,9 +74,11 @@ export default function FilaConvocatoria({
             <span className="truncate">{lugar}</span>
           </p>
         )}
-        {estado && (
-          <div className="mt-[7px]">
-            <EtiquetaEstado estado={estado} />
+        {etiquetas.length > 0 && (
+          <div className="mt-[7px] flex flex-wrap gap-[6px]">
+            {etiquetas.map((e) => (
+              <EtiquetaEstado key={e} estado={e} />
+            ))}
           </div>
         )}
       </div>

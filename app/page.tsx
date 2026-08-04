@@ -1,15 +1,14 @@
 import { Info } from "lucide-react";
 import Link from "next/link";
 import Listado from "@/components/Listado";
+import { TITULO_SITIO } from "@/lib/config";
 import { clubes, convocatorias } from "@/lib/datos";
 
 export default function Home() {
   return (
     <main>
       <header className="flex items-center justify-between px-4 pb-3 pt-5">
-        <h1 className="text-[15px] font-medium text-tinta">
-          Pruebas de voleibol · Madrid
-        </h1>
+        <h1 className="text-[15px] font-medium text-tinta">{TITULO_SITIO}</h1>
         <Link
           href="/aviso-legal"
           aria-label="Información sobre esta web"

@@ -23,9 +23,9 @@ import {
   clubPorId,
   clubes,
   convocatoriasDeClub,
-  estadoConvocatoria,
   etiquetaCategoria,
   etiquetaSexo,
+  etiquetasConvocatoria,
   fechaLarga,
   partesFecha,
 } from "@/lib/datos";
@@ -197,7 +197,7 @@ export default async function FichaClub({
             : `${lista.length} convocatorias`}
         </h2>
         {lista.map((c, i) => {
-          const estado = estadoConvocatoria(c);
+          const etiquetas = etiquetasConvocatoria(c);
           const linea = [
             `${etiquetaCategoria(c.categoria)} ${etiquetaSexo(c.sexo).toLowerCase()}`,
             c.nivel || null,
@@ -215,6 +215,11 @@ export default async function FichaClub({
                   <h3 className="text-[15px] font-medium leading-snug text-tinta">
                     {linea}
                   </h3>
+                  {c.temporada && (
+                    <p className="mt-[2px] text-[12.5px] text-tinta-3">
+                      Temporada {c.temporada}
+                    </p>
+                  )}
                   {c.hora && (
                     <p className="mt-[3px] flex items-center gap-[5px] text-[12.5px] text-tinta-3">
                       <Clock size={13} strokeWidth={1.75} />
@@ -257,9 +262,11 @@ export default async function FichaClub({
                       {c.notas}
                     </p>
                   )}
-                  {estado && (
-                    <div className="mt-[7px]">
-                      <EtiquetaEstado estado={estado} />
+                  {etiquetas.length > 0 && (
+                    <div className="mt-[7px] flex flex-wrap gap-[6px]">
+                      {etiquetas.map((e) => (
+                        <EtiquetaEstado key={e} estado={e} />
+                      ))}
                     </div>
                   )}
                 </div>
