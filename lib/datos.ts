@@ -2,7 +2,15 @@ import clubesJson from "@/data/clubes.json";
 import convocatoriasJson from "@/data/convocatorias.json";
 
 export type Zona = "norte" | "sur" | "este" | "oeste" | "centro";
-export type Categoria = "benjamin" | "alevin" | "infantil" | "cadete" | "juvenil";
+export type Categoria =
+  | "benjamin"
+  | "alevin"
+  | "infantil"
+  | "cadete"
+  | "juvenil"
+  | "junior"
+  | "senior"
+  | "master";
 export type Sexo = "femenino" | "masculino" | "mixto";
 export type TipoFecha = "exacta" | "mes" | "abierta";
 export type EstadoFecha = "confirmada" | "provisional";
@@ -20,6 +28,10 @@ export interface Club {
   telefono: string;
   logo: string;
   descripcion: string;
+  /** true si el club busca entrenador/a; se muestra en la ficha y en el filtro de portada. */
+  buscaEntrenador?: boolean;
+  /** Detalle corto y opcional (máx ~150 car.), p. ej. "Cadete femenino, martes y jueves". */
+  notasEntrenador?: string;
   fechaActualizacion: string;
 }
 
@@ -79,19 +91,35 @@ export function ordenarConvocatorias(
     if (g !== 0) return g;
     const ka = a.fecha || a.mesAprox || "9999";
     const kb = b.fecha || b.mesAprox || "9999";
-    return ka.localeCompare(kb) * factor;
+    const f = ka.localeCompare(kb) * factor;
+    if (f !== 0) return f;
+    // A igual fecha, por edad de la categoría (nunca alfabético).
+    return ordenCategoria(a.categoria) - ordenCategoria(b.categoria);
   });
 }
 
 /* ---------- etiquetas de texto ---------- */
 
+/**
+ * Categorías en ORDEN DE EDAD (de menor a mayor), nunca alfabético.
+ * Este orden manda en los chips de filtro y en cualquier listado por categoría.
+ */
 export const CATEGORIAS: { valor: Categoria; etiqueta: string }[] = [
   { valor: "benjamin", etiqueta: "Benjamín" },
   { valor: "alevin", etiqueta: "Alevín" },
   { valor: "infantil", etiqueta: "Infantil" },
   { valor: "cadete", etiqueta: "Cadete" },
   { valor: "juvenil", etiqueta: "Juvenil" },
+  { valor: "junior", etiqueta: "Júnior" },
+  { valor: "senior", etiqueta: "Sénior" },
+  { valor: "master", etiqueta: "Máster" },
 ];
+
+/** Posición de una categoría en el orden de edad (para ordenar, nunca alfabético). */
+export function ordenCategoria(c: Categoria): number {
+  const i = CATEGORIAS.findIndex((x) => x.valor === c);
+  return i === -1 ? CATEGORIAS.length : i;
+}
 
 export const SEXOS: { valor: Sexo; etiqueta: string }[] = [
   { valor: "femenino", etiqueta: "Femenino" },
@@ -186,6 +214,13 @@ export function etiquetasConvocatoria(c: Convocatoria): Exclude<Estado, null>[] 
   else if (c.tipoFecha === "mes") etiquetas.push("por-confirmar");
   else if (c.estadoFecha === "provisional") etiquetas.push("provisional");
   return etiquetas;
+}
+
+/** Clubes que buscan entrenador/a, ordenados por nombre. */
+export function clubesBuscanEntrenador(lista: Club[]): Club[] {
+  return lista
+    .filter((c) => c.buscaEntrenador)
+    .sort((a, b) => a.nombre.localeCompare(b.nombre, "es"));
 }
 
 /** Temporadas presentes en los datos (p. ej. "2026-27"), ordenadas. */

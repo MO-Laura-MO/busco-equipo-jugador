@@ -1,7 +1,15 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ArrowDown, ArrowUp, ChevronDown, Search } from "lucide-react";
+import Link from "next/link";
+import {
+  ArrowDown,
+  ArrowUp,
+  ChevronDown,
+  MapPin,
+  Search,
+  Users,
+} from "lucide-react";
 import {
   CATEGORIAS,
   Categoria,
@@ -11,6 +19,7 @@ import {
   Sexo,
   ZONAS,
   Zona,
+  clubesBuscanEntrenador,
   mesesDisponibles,
   ordenarConvocatorias,
   temporadasDisponibles,
@@ -69,15 +78,20 @@ export default function Listado({ clubes, convocatorias }: Props) {
   const [temporada, setTemporada] = useState<string | null>(null);
   const [desplegado, setDesplegado] = useState<Filtro | null>(null);
   const [orden, setOrden] = useState<"asc" | "desc">("asc");
+  // Modo "buscan entrenador": el listado pasa a ser de clubes, no de convocatorias.
+  const [soloEntrenador, setSoloEntrenador] = useState(false);
 
   const meses = useMemo(() => mesesDisponibles(convocatorias), [convocatorias]);
   const temporadas = useMemo(
     () => temporadasDisponibles(convocatorias),
     [convocatorias]
   );
+  const conEntrenador = useMemo(() => clubesBuscanEntrenador(clubes), [clubes]);
   // El filtro de temporada solo aparece cuando conviven varias temporadas.
-  const filtros: Filtro[] =
-    temporadas.length > 1
+  // En modo entrenador solo tiene sentido filtrar por zona.
+  const filtros: Filtro[] = soloEntrenador
+    ? ["zona"]
+    : temporadas.length > 1
       ? ["categoria", "sexo", "zona", "mes", "temporada"]
       : ["categoria", "sexo", "zona", "mes"];
   const clubesPorId = useMemo(
@@ -112,6 +126,19 @@ export default function Listado({ clubes, convocatorias }: Props) {
     });
     return ordenarConvocatorias(lista, orden);
   }, [busqueda, categoria, sexo, zona, mes, temporada, orden, convocatorias, clubesPorId]);
+
+  // Clubes que buscan entrenador, con búsqueda y zona aplicadas.
+  const clubesFiltrados = useMemo(() => {
+    const q = busqueda.trim().toLowerCase();
+    return conEntrenador.filter((c) => {
+      if (zona && c.zona !== zona) return false;
+      if (q) {
+        const texto = `${c.nombre} ${c.municipio}`.toLowerCase();
+        if (!texto.includes(q)) return false;
+      }
+      return true;
+    });
+  }, [busqueda, zona, conEntrenador]);
 
   const alternarDesplegable = (f: Filtro) =>
     setDesplegado((actual) => (actual === f ? null : f));
@@ -201,6 +228,17 @@ export default function Listado({ clubes, convocatorias }: Props) {
               {etiquetaChip[f]}
             </Chip>
           ))}
+          {conEntrenador.length > 0 && (
+            <Chip
+              activo={soloEntrenador}
+              onClick={() => {
+                setSoloEntrenador(!soloEntrenador);
+                setDesplegado(null);
+              }}
+            >
+              Buscan entrenador
+            </Chip>
+          )}
         </div>
         {desplegado && (
           <div className="sin-scrollbar mt-2 flex gap-2 overflow-x-auto px-4">
@@ -223,25 +261,84 @@ export default function Listado({ clubes, convocatorias }: Props) {
       {/* Barra de resultados */}
       <div className="flex items-center justify-between bg-barra px-4 py-[9px]">
         <span className="text-[12.5px] text-tinta-2">
-          {filtradas.length}{" "}
-          {filtradas.length === 1 ? "convocatoria" : "convocatorias"}
+          {soloEntrenador
+            ? `${clubesFiltrados.length} ${
+                clubesFiltrados.length === 1
+                  ? "club busca entrenador"
+                  : "clubes buscan entrenador"
+              }`
+            : `${filtradas.length} ${
+                filtradas.length === 1 ? "convocatoria" : "convocatorias"
+              }`}
         </span>
-        <button
-          type="button"
-          onClick={() => setOrden(orden === "asc" ? "desc" : "asc")}
-          className="flex items-center gap-1 text-[12.5px] text-tinta-2 hover:text-tinta"
-        >
-          Por fecha
-          {orden === "asc" ? (
-            <ArrowDown size={13} strokeWidth={1.75} />
-          ) : (
-            <ArrowUp size={13} strokeWidth={1.75} />
-          )}
-        </button>
+        {!soloEntrenador && (
+          <button
+            type="button"
+            onClick={() => setOrden(orden === "asc" ? "desc" : "asc")}
+            className="flex items-center gap-1 text-[12.5px] text-tinta-2 hover:text-tinta"
+          >
+            Por fecha
+            {orden === "asc" ? (
+              <ArrowDown size={13} strokeWidth={1.75} />
+            ) : (
+              <ArrowUp size={13} strokeWidth={1.75} />
+            )}
+          </button>
+        )}
       </div>
 
-      {/* Listado */}
-      {filtradas.length > 0 ? (
+      {/* Listado de clubes que buscan entrenador */}
+      {soloEntrenador ? (
+        clubesFiltrados.length > 0 ? (
+          <ul>
+            {clubesFiltrados.map((c) => (
+              <li key={c.id}>
+                <Link
+                  href={`/clubes/${c.id}`}
+                  className="block border-b border-borde-fila hover:bg-barra/60"
+                >
+                  <div className="flex gap-3 px-4 py-[14px]">
+                    <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
+                      <Users
+                        size={17}
+                        className="mt-[8px] text-acento"
+                        strokeWidth={1.75}
+                      />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-[15px] font-medium leading-snug text-tinta">
+                        {c.nombre}
+                      </h3>
+                      <p className="mt-[3px] flex items-center gap-[5px] text-[12.5px] leading-snug text-tinta-3">
+                        <MapPin size={13} strokeWidth={1.75} className="shrink-0" />
+                        <span className="truncate">
+                          {c.municipio} · zona{" "}
+                          {ZONAS.find((z) => z.valor === c.zona)?.etiqueta.toLowerCase() ??
+                            c.zona}
+                        </span>
+                      </p>
+                      {c.notasEntrenador && (
+                        <p className="mt-[3px] text-[12.5px] leading-snug text-tinta-2">
+                          {c.notasEntrenador}
+                        </p>
+                      )}
+                      <div className="mt-[7px]">
+                        <span className="inline-block rounded-[5px] bg-acento-tinte px-[8px] py-[3px] text-[11.5px] leading-[1.3] text-acento">
+                          Busca entrenador
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="px-4 py-10 text-center text-[13.5px] text-tinta-3">
+            No hay clubes que busquen entrenador con esos filtros.
+          </p>
+        )
+      ) : filtradas.length > 0 ? (
         <ul>
           {filtradas.map((c, i) => {
             const club = clubesPorId.get(c.clubId)!;

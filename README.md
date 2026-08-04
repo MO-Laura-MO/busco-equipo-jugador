@@ -26,7 +26,9 @@ Editar directamente en GitHub y hacer commit; Vercel redespliega solo.
 Reglas del modelo de datos:
 
 - `zona`: `norte | sur | este | oeste | centro`
-- `categoria`: `benjamin | alevin | infantil | cadete | juvenil`
+- `categoria`: `benjamin | alevin | infantil | cadete | juvenil | junior | senior | master`
+  — siempre en orden de edad, nunca alfabético (el orden lo fija
+  `CATEGORIAS` en `lib/datos.ts`)
 - `sexo`: `femenino | masculino | mixto`
 - `tipoFecha`: `exacta` (usa `fecha` AAAA-MM-DD), `mes` (usa `mesAprox`
   AAAA-MM) o `abierta` (inscripción todo el año)
@@ -39,6 +41,12 @@ Reglas del modelo de datos:
   Temporada solo aparece en la web cuando conviven dos o más temporadas
   en los datos
 - `descripcion` del club: máximo 300 caracteres
+- `buscaEntrenador` (club, opcional): `true` si el club busca
+  entrenador/a. Muestra el aviso en la ficha y hace aparecer el chip
+  "Buscan entrenador" en la portada
+- `notasEntrenador` (club, opcional): detalle corto (~150 caracteres),
+  p. ej. "Cadete femenino, martes y jueves"; si está vacío no se muestra
+  nada
 
 Etiquetas de estado que pinta la web (hasta dos por fila): la verde
 "Verificado por el club" siempre que `origen: club`, y además la de

@@ -24,9 +24,9 @@ export default function Alta() {
 
       <div className="mt-3 space-y-3 text-[13.5px] leading-relaxed text-tinta-2">
         <p>
-          Si tu club hace pruebas para completar equipos de categorías base
-          (benjamín a juvenil) en la Comunidad de Madrid, puedes publicarlas
-          aquí gratis.
+          Si tu club hace pruebas para completar equipos (de benjamín a
+          máster) en la Comunidad de Madrid, puedes publicarlas aquí gratis.
+          También puedes indicar si buscáis entrenador.
         </p>
         <p>
           Rellena el formulario con los datos del club y de las convocatorias.

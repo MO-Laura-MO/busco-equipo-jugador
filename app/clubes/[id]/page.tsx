@@ -12,6 +12,7 @@ import {
   MapPin,
   RefreshCw,
   Twitter,
+  Users,
   Youtube,
 } from "lucide-react";
 import ContactoClub from "@/components/ContactoClub";
@@ -152,6 +153,20 @@ export default async function FichaClub({
           <p className="mt-3 text-[13.5px] leading-relaxed text-tinta-2">
             {club.descripcion}
           </p>
+        )}
+
+        {club.buscaEntrenador && (
+          <div className="mt-3 rounded-[6px] bg-acento-tinte px-3 py-[9px]">
+            <p className="flex items-center gap-[6px] text-[13px] font-medium text-acento">
+              <Users size={14} strokeWidth={1.75} className="shrink-0" />
+              Este club busca entrenador
+            </p>
+            {club.notasEntrenador && (
+              <p className="mt-[3px] text-[12.5px] leading-relaxed text-tinta-2">
+                {club.notasEntrenador}
+              </p>
+            )}
+          </div>
         )}
 
         {(club.web || club.redes.length > 0) && (

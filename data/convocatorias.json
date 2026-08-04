@@ -166,5 +166,26 @@
     "notas": "Pruebas de final de curso para formar el equipo de la temporada 2027-28.",
     "origen": "fuentes-publicas",
     "fechaActualizacion": "2026-08-01"
+  },
+  {
+    "clubId": "condor-voleibol",
+    "categoria": "senior",
+    "sexo": "femenino",
+    "tipoEntidad": "federado",
+    "nivel": "Segunda Autonómica",
+    "temporada": "2026-27",
+    "tipoFecha": "exacta",
+    "fecha": "2026-09-12",
+    "mesAprox": "",
+    "estadoFecha": "confirmada",
+    "hora": "19:00",
+    "pabellon": "Polideportivo Antonio Magariños",
+    "direccion": "C. de Serrano, 127, 28006 Madrid",
+    "mapsUrl": "https://maps.google.com/?q=Polideportivo+Antonio+Magariños+Madrid",
+    "avisoPrevio": true,
+    "cuotaOrientativa": "≈ 45 €/mes",
+    "notas": "Se buscan colocadora y central con experiencia federada.",
+    "origen": "club",
+    "fechaActualizacion": "2026-08-02"
   }
 ]

@@ -13,6 +13,8 @@
     "telefono": "+34 600 111 222",
     "logo": "",
     "descripcion": "Club federado con equipos en todas las categorías, desde benjamín hasta juvenil. Entrenamos en el Pabellón Villafontana y competimos en las ligas de la Federación Madrileña de Voleibol.",
+    "buscaEntrenador": false,
+    "notasEntrenador": "",
     "fechaActualizacion": "2026-07-28"
   },
   {
@@ -29,6 +31,8 @@
     "telefono": "+34 600 333 444",
     "logo": "",
     "descripcion": "Club de voleibol del norte de Madrid capital. Equipos femeninos y masculinos en categorías infantil, cadete y juvenil, con pruebas abiertas cada septiembre.",
+    "buscaEntrenador": true,
+    "notasEntrenador": "Entrenador/a para cadete femenino, martes y jueves de 18 a 20 h.",
     "fechaActualizacion": "2026-07-30"
   },
   {
@@ -44,6 +48,8 @@
     "telefono": "+34 600 555 666",
     "logo": "",
     "descripcion": "Club deportivo de la sierra oeste. Formación y competición federada en categorías alevín, infantil y cadete.",
+    "buscaEntrenador": false,
+    "notasEntrenador": "",
     "fechaActualizacion": "2026-07-15"
   },
   {
@@ -60,6 +66,8 @@
     "telefono": "+34 600 777 888",
     "logo": "",
     "descripcion": "Escuela municipal de voleibol. Grupos de iniciación y perfeccionamiento para todas las edades, con inscripción abierta durante todo el curso.",
+    "buscaEntrenador": true,
+    "notasEntrenador": "",
     "fechaActualizacion": "2026-08-01"
   }
 ]
