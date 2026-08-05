@@ -15,12 +15,18 @@ export default function Home() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         {/* Velo suave para que el texto se lea sobre cualquier imagen. */}
-        <div className="absolute inset-0 bg-[#0B1F1A]/35" />
+        <div className="absolute inset-0 bg-[#0B1F1A]/45" />
         <div className="relative px-4 py-14 sm:py-16">
-          <h1 className="max-w-[420px] text-[24px] font-medium leading-snug text-white">
+          <h1
+            className="max-w-[420px] text-[24px] font-medium leading-snug text-white"
+            style={{ textShadow: "0 1px 12px rgba(11, 31, 26, 0.55)" }}
+          >
             Tu próximo equipo te está buscando
           </h1>
-          <p className="mt-2 max-w-[440px] text-[13.5px] leading-relaxed text-white/85">
+          <p
+            className="mt-2 max-w-[440px] text-[13.5px] leading-relaxed text-white/90"
+            style={{ textShadow: "0 1px 10px rgba(11, 31, 26, 0.55)" }}
+          >
             La nueva forma de encontrar equipo de voleibol en {AMBITO}: pruebas
             de clubes y escuelas, de benjamín a máster, en un solo sitio.
           </p>
