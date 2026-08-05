@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Link from "next/link";
-import { AMBITO, NOMBRE_AMBITO_LARGO, TITULO_SITIO, URL_SITIO } from "@/lib/config";
+import { Volleyball } from "lucide-react";
+import {
+  AMBITO,
+  NOMBRE_AMBITO_LARGO,
+  NOMBRE_MARCA,
+  TITULO_SITIO,
+  URL_SITIO,
+} from "@/lib/config";
 import "./globals.css";
 
 // Inter auto-alojada (sin peticiones a Google Fonts).
@@ -32,6 +39,26 @@ export default function RootLayout({
     <html lang="es" className={inter.variable}>
       <body className="font-sans text-tinta bg-fondo">
         <div className="mx-auto min-h-screen w-full max-w-[720px]">
+          <header className="flex items-center justify-between gap-3 border-b border-borde px-4 py-3">
+            <Link
+              href="/"
+              className="flex shrink-0 items-center gap-[6px] text-[13px] font-medium text-acento"
+            >
+              <Volleyball size={17} strokeWidth={1.75} />
+              {NOMBRE_MARCA}
+            </Link>
+            <nav className="sin-scrollbar flex items-center gap-4 overflow-x-auto text-[13px]">
+              <Link href="/#convocatorias" className="shrink-0 text-tinta-2 hover:text-tinta">
+                Buscar pruebas
+              </Link>
+              <Link href="/clubes" className="shrink-0 text-tinta-2 hover:text-tinta">
+                Clubes
+              </Link>
+              <Link href="/alta" className="shrink-0 text-tinta-2 hover:text-tinta">
+                Publicar
+              </Link>
+            </nav>
+          </header>
           {children}
           <footer className="border-t border-borde px-4 py-5">
             <p className="text-[12.5px] leading-relaxed text-tinta-3">

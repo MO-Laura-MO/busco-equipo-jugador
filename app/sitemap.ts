@@ -16,6 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1,
     },
+    {
+      url: `${URL_SITIO}/clubes`,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
     ...fichas,
     {
       url: `${URL_SITIO}/alta`,
