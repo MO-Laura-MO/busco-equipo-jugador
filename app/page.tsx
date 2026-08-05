@@ -27,6 +27,12 @@ export default function Home() {
         <p className="mt-[3px] text-[13.5px] leading-relaxed text-tinta-2">
           Convocatorias de pruebas de clubes y escuelas, de benjamín a máster.
         </p>
+        {/* Hero estrecho: la imagen vive en public/hero.webp (1440×576). */}
+        <img
+          src="/hero.webp"
+          alt=""
+          className="mt-4 aspect-[5/2] w-full rounded-[8px] object-cover"
+        />
       </header>
       <Listado clubes={clubes} convocatorias={convocatorias} />
     </main>
