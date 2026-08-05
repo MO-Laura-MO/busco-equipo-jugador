@@ -53,6 +53,60 @@ Etiquetas de estado que pinta la web (hasta dos por fila): la verde
 fecha que corresponda — abierta → azul; mes → gris "Día por confirmar";
 exacta provisional → ámbar.
 
+### Plantilla de club (copiar dentro de `data/clubes.json`)
+
+```json
+{
+  "id": "nombre-del-club",
+  "nombre": "Nombre del Club",
+  "municipio": "Municipio",
+  "zona": "sur",
+  "web": "https://www.ejemplo.com",
+  "redes": [{ "tipo": "instagram", "url": "https://instagram.com/ejemplo" }],
+  "email": "contacto@ejemplo.com",
+  "telefono": "+34 600 000 000",
+  "logo": "",
+  "descripcion": "Descripción breve del club (máx. 300 caracteres).",
+  "buscaEntrenador": false,
+  "notasEntrenador": "",
+  "fechaActualizacion": "2026-08-05"
+}
+```
+
+El `id` se escribe en minúsculas con guiones, sin acentos, y es el que
+enlaza las convocatorias y forma la URL de la ficha (`/clubes/<id>`).
+
+### Plantilla de convocatoria (copiar dentro de `data/convocatorias.json`)
+
+```json
+{
+  "clubId": "nombre-del-club",
+  "categoria": "cadete",
+  "sexo": "femenino",
+  "tipoEntidad": "federado",
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "exacta",
+  "fecha": "2026-09-12",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "10:00",
+  "pabellon": "Pabellón Ejemplo",
+  "direccion": "C. Ejemplo, 1, 28000 Municipio",
+  "mapsUrl": "https://maps.google.com/?q=Pabellón+Ejemplo",
+  "avisoPrevio": false,
+  "cuotaOrientativa": "",
+  "notas": "",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-05"
+}
+```
+
+Si `tipoFecha` es `mes`, deja `fecha` vacía y rellena `mesAprox`
+("2026-09"). Si es `abierta`, deja las dos vacías. Con los dos archivos
+vacíos (`[]`), la portada muestra un mensaje de lanzamiento que invita
+a los clubes a darse de alta.
+
 ## Configurar antes de publicar
 
 En `lib/config.ts`:

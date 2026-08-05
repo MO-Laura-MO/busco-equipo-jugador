@@ -198,6 +198,29 @@ export default function Listado({ clubes, convocatorias }: Props) {
     temporada: temporada !== null,
   };
 
+  // Sin ningún dato cargado (lanzamiento): solo el mensaje, sin controles.
+  const sinDatos = convocatorias.length === 0 && conEntrenador.length === 0;
+  if (sinDatos) {
+    return (
+      <div className="border-t border-borde px-4 py-10 text-center">
+        <p className="text-[13.5px] leading-relaxed text-tinta-2">
+          Acabamos de arrancar y estamos contactando con los primeros clubes.
+          Las convocatorias aparecerán aquí muy pronto.
+        </p>
+        <p className="mt-3 text-[13.5px] text-tinta-2">
+          ¿Eres un club?{" "}
+          <a
+            href="/alta"
+            className="text-acento underline underline-offset-2 decoration-acento/40 hover:decoration-acento"
+          >
+            Publica tus pruebas gratis
+          </a>
+          .
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div>
       {/* Búsqueda */}
