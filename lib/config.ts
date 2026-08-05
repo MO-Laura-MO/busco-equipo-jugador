@@ -10,7 +10,10 @@
 export const AMBITO = "Madrid";
 export const NOMBRE_AMBITO_LARGO = "la Comunidad de Madrid";
 
-/** Título visible del sitio (cabecera y metadatos). */
+/** Nombre de la marca (cabecera de la portada). */
+export const NOMBRE_MARCA = "voley.app";
+
+/** Título visible del sitio (metadatos). */
 export const TITULO_SITIO = `Pruebas de voleibol · ${AMBITO}`;
 
 /** URL pública del sitio (para metadatos, sitemap y JSON-LD). */
