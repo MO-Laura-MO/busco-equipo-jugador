@@ -1,7 +1,6 @@
 import { ClipboardList, Search } from "lucide-react";
 import Link from "next/link";
 import Listado from "@/components/Listado";
-import { AMBITO } from "@/lib/config";
 import { clubes, convocatorias } from "@/lib/datos";
 
 export default function Home() {
@@ -27,8 +26,8 @@ export default function Home() {
             className="mt-2 max-w-[440px] text-[13.5px] leading-relaxed text-white/90"
             style={{ textShadow: "0 1px 10px rgba(11, 31, 26, 0.55)" }}
           >
-            La nueva forma de encontrar equipo de voleibol en {AMBITO}: pruebas
-            de clubes y escuelas, de benjamín a máster, en un solo sitio.
+            La nueva forma de encontrar equipo de voleibol: pruebas de clubes
+            y escuelas, de benjamín a máster, en un solo sitio.
           </p>
         </div>
       </section>
