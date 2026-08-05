@@ -1,4 +1,4 @@
-import { Info, Volleyball } from "lucide-react";
+import { ClipboardList, Info, Search, Volleyball } from "lucide-react";
 import Link from "next/link";
 import Listado from "@/components/Listado";
 import { AMBITO, NOMBRE_MARCA } from "@/lib/config";
@@ -33,8 +33,26 @@ export default function Home() {
           alt=""
           className="mt-4 aspect-[5/2] w-full rounded-[8px] object-cover"
         />
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          <Link
+            href="/alta"
+            className="flex items-center justify-center gap-2 rounded-[8px] bg-acento px-4 py-[10px] text-[13.5px] font-medium text-white hover:bg-acento/90"
+          >
+            <ClipboardList size={16} strokeWidth={1.75} />
+            Soy un club: publicar pruebas
+          </Link>
+          <a
+            href="#convocatorias"
+            className="flex items-center justify-center gap-2 rounded-[8px] border border-borde-control px-4 py-[10px] text-[13.5px] font-medium text-tinta hover:border-tinta-3"
+          >
+            <Search size={16} strokeWidth={1.75} />
+            Soy jugador/a: buscar pruebas
+          </a>
+        </div>
       </header>
-      <Listado clubes={clubes} convocatorias={convocatorias} />
+      <div id="convocatorias">
+        <Listado clubes={clubes} convocatorias={convocatorias} />
+      </div>
     </main>
   );
 }
