@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import Link from "next/link";
 import { Volleyball } from "lucide-react";
@@ -75,6 +76,7 @@ export default function RootLayout({
             </nav>
           </footer>
         </div>
+        <Analytics />
       </body>
     </html>
   );
