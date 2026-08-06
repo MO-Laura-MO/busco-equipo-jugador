@@ -1,1 +1,861 @@
-[]
+[
+ {
+  "id": "ad-perales-del-rio",
+  "nombre": "AD Perales del Río",
+  "municipio": "Getafe",
+  "zona": "sur",
+  "web": "https://www.agrupaciondeportivaperales.es",
+  "redes": [],
+  "email": "agrupaciondeportivaperales@gmail.com",
+  "telefono": "+34 609 061 092",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "ad-voleibol-rivas",
+  "nombre": "AD Voleibol Rivas",
+  "municipio": "Rivas-Vaciamadrid",
+  "zona": "este",
+  "web": "",
+  "redes": [],
+  "email": "advoleibolrivas@voleibolrivas.es",
+  "telefono": "+34 636827313",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "ancora-galapagar",
+  "nombre": "Ancora Galapagar",
+  "municipio": "Galapagar",
+  "zona": "oeste",
+  "web": "",
+  "redes": [],
+  "email": "ancoragalapagarvoleibol@gmail.com",
+  "telefono": "+34 689798590",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "block-out-beach",
+  "nombre": "Block Out Beach Volley",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://blockoutbeachvolley.com",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/blockoutbeachvolley"
+   }
+  ],
+  "email": "",
+  "telefono": "",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "san-ignacio-torrelodones",
+  "nombre": "C.D. San Ignacio Torrelodones",
+  "municipio": "Torrelodones",
+  "zona": "oeste",
+  "web": "https://www.cdsanignaciotorrelodones.es",
+  "redes": [],
+  "email": "",
+  "telefono": "+34 91 854 49 89",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cdv-vallecas",
+  "nombre": "CDV Vallecas",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [],
+  "email": "maritzarate@hotmail.com",
+  "telefono": "+34 620511746",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cd-dosa",
+  "nombre": "CD Dosa",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [],
+  "email": "eddosa@domingosavio.com",
+  "telefono": "+34 913683099",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cd-gredos-san-diego",
+  "nombre": "CD Gredos San Diego",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [],
+  "email": "clubdeportivo@gsd.coop",
+  "telefono": "+34 913853505",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "avp-parla",
+  "nombre": "CDB AVP Academia Voley Parla",
+  "municipio": "Parla",
+  "zona": "sur",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/voleibol_avp"
+   }
+  ],
+  "email": "",
+  "telefono": "",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "las-nieves-sports",
+  "nombre": "CDB Las Nieves Sports",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://colegionsnieves.es",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/cdnieves_sports"
+   }
+  ],
+  "email": "deportes@cdlasnievessports.es",
+  "telefono": "+34 917 410 009",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-amet",
+  "nombre": "CDE Amet",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://cdamet.es",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/cd_amet"
+   }
+  ],
+  "email": "voleibol@cdamet.es",
+  "telefono": "+34 669 083 446",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-arganvoley",
+  "nombre": "CDE Arganvoley",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "x",
+    "url": "https://www.twitter.com/arganvoley"
+   }
+  ],
+  "email": "arganvoley@gmail.com",
+  "telefono": "+34 606549887",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "boadilla-dos-de-mayo",
+  "nombre": "CDE Boadilla M. Dos de Mayo CV",
+  "municipio": "Boadilla del Monte",
+  "zona": "oeste",
+  "web": "",
+  "redes": [],
+  "email": "2demayomostoles@gmail.com",
+  "telefono": "+34 601 156 781",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-chamartin-vergara",
+  "nombre": "CDE Chamartín Vergara",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://chv1995.es",
+  "redes": [],
+  "email": "voleibol@chv1995.es",
+  "telefono": "+34 635147425",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "intervoley-fuenlabrada",
+  "nombre": "CDE Intervoley Fuenlabrada",
+  "municipio": "Fuenlabrada",
+  "zona": "sur",
+  "web": "https://intervoleyfuenlabrada.es",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/intervoley_fuenla"
+   }
+  ],
+  "email": "info@intervoleyfuenlabrada.es",
+  "telefono": "+34 687 613 842",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-manzanares-voley",
+  "nombre": "CDE Manzanares Voley",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [],
+  "email": "manzanaresvoley@gmail.com",
+  "telefono": "+34 695045819",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-parla-voley",
+  "nombre": "CDE Parla Voley",
+  "municipio": "Parla",
+  "zona": "sur",
+  "web": "",
+  "redes": [],
+  "email": "clubvoleibolparla@gmail.com",
+  "telefono": "+34 696357167",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-prodet-pozuelo",
+  "nombre": "CDE Prodet Pozuelo",
+  "municipio": "Pozuelo de Alarcón",
+  "zona": "oeste",
+  "web": "https://www.deportesorolla.com",
+  "redes": [],
+  "email": "contacto@deportesorolla.com",
+  "telefono": "+34 913527544",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-switch-volley",
+  "nombre": "CDE Switch Volley Madrid Beach Club",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://switchvolley.com",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/switchvolley"
+   }
+  ],
+  "email": "info@switchvolley.com",
+  "telefono": "+34 604 979 209",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-vb-villanueva-del-pardillo",
+  "nombre": "CDE VB Villanueva Del Pardillo",
+  "municipio": "Villanueva del Pardillo",
+  "zona": "oeste",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/cvbulldogs"
+   }
+  ],
+  "email": "voleibolbulldogs@hotmail.com",
+  "telefono": "+34 611762428",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-voleibol-algete",
+  "nombre": "CDE Voleibol Algete",
+  "municipio": "Algete",
+  "zona": "norte",
+  "web": "",
+  "redes": [],
+  "email": "ramonvoley@hotmail.com",
+  "telefono": "+34 653 213 040",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-voleibol-colmenar",
+  "nombre": "CDE Voleibol Colmenar",
+  "municipio": "Colmenar Viejo",
+  "zona": "norte",
+  "web": "",
+  "redes": [],
+  "email": "gabidopa@yahoo.es",
+  "telefono": "+34 639052688",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-voleibol-moralzarzal",
+  "nombre": "CDE Voleibol Moralzarzal",
+  "municipio": "Moralzarzal",
+  "zona": "oeste",
+  "web": "",
+  "redes": [],
+  "email": "dragonsvoleibol@gmail.com",
+  "telefono": "+34 695117205",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-san-agustin-guadalix",
+  "nombre": "CDE Voleibol San Agustín de Guadalix",
+  "municipio": "San Agustín del Guadalix",
+  "zona": "norte",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/cvoleysanagustin"
+   }
+  ],
+  "email": "",
+  "telefono": "",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "voleibol-valdemoro",
+  "nombre": "CDE Voleibol Valdemoro",
+  "municipio": "Valdemoro",
+  "zona": "sur",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/clubvoleibolvaldemoro_"
+   }
+  ],
+  "email": "info@clubvoleibolvaldemoro.com",
+  "telefono": "+34 637 980 124",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cde-voley-playa-madrid",
+  "nombre": "CDE Voley Playa Madrid",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://www.vpmadrid.com/contacts/",
+  "redes": [],
+  "email": "info@vpmadrid.com",
+  "telefono": "+34 656469949",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "yma-sports",
+  "nombre": "CDE YMA Sports",
+  "municipio": "Majadahonda",
+  "zona": "oeste",
+  "web": "https://ymavoleibol.com",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/ymasports.voleibol"
+   }
+  ],
+  "email": "yma.deportes@gmail.com",
+  "telefono": "+34 617 152 378",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "club-deportivo-elemental-voleibol-daganzo-de-arriba",
+  "nombre": "Club Deportivo Elemental Voleibol Daganzo De Arriba",
+  "municipio": "Daganzo",
+  "zona": "este",
+  "web": "",
+  "redes": [],
+  "email": "germago26@hotmail.com",
+  "telefono": "+34 679589283",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "club-deportivo-newman",
+  "nombre": "Club Deportivo Newman",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://clubdeportivonewman.org",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/newman_clubdeportivo"
+   }
+  ],
+  "email": "alejandro.villacanas@clubdeportivonewman.org",
+  "telefono": "+34 628107011",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "club-saint-louis-des-francais",
+  "nombre": "Club Saint Louis Des Francais",
+  "municipio": "Pozuelo de Alarcón",
+  "zona": "oeste",
+  "web": "https://www.stlouisfrancais.com",
+  "redes": [],
+  "email": "victorcamposgonzalez@gmail.com",
+  "telefono": "+34 652866293",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "san-agustin",
+  "nombre": "Club San Agustín",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://www.colegiosanagustin-madrid.org",
+  "redes": [],
+  "email": "",
+  "telefono": "+34 914 589 620",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "club-unificado-voleibol-alcorcon",
+  "nombre": "Club Unificado Voleibol Alcorcón",
+  "municipio": "Alcorcón",
+  "zona": "sur",
+  "web": "https://www.cuvalcorcon.com",
+  "redes": [],
+  "email": "cuvalcorcon@cuvalcorcon.com",
+  "telefono": "+34 686071922",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-aranjuez",
+  "nombre": "Club Voleibol Aranjuez",
+  "municipio": "Aranjuez",
+  "zona": "sur",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/cv_aranjuez"
+   }
+  ],
+  "email": "clubvoleibolaranjuez@gmail.com",
+  "telefono": "+34 628 629 410",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "club-voleibol-torrelodones",
+  "nombre": "Club Voleibol Torrelodones",
+  "municipio": "Torrelodones",
+  "zona": "oeste",
+  "web": "https://www.cvtorrelodones.com/",
+  "redes": [],
+  "email": "cvtorrelodones@gmail.com",
+  "telefono": "+34 645192939",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "colegio-miramadrid",
+  "nombre": "Colegio Miramadrid",
+  "municipio": "Paracuellos de Jarama",
+  "zona": "este",
+  "web": "https://colegiomiramadrid.es",
+  "redes": [],
+  "email": "",
+  "telefono": "+34 912 688 787",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cp-santa-maria-del-pilar",
+  "nombre": "CP Santa Maria Del Pilar",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [],
+  "email": "voleibol@santamariadelpilar.es",
+  "telefono": "+34 915738007",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-alcala",
+  "nombre": "CV Alcalá",
+  "municipio": "Alcalá de Henares",
+  "zona": "este",
+  "web": "https://cvoleibolalcala.com",
+  "redes": [],
+  "email": "info@cvoleibolalcala.com",
+  "telefono": "+34 675759841",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-alcobendas",
+  "nombre": "CV Alcobendas",
+  "municipio": "Alcobendas",
+  "zona": "norte",
+  "web": "https://feelalcobendas.es",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/voleyalcobendas"
+   }
+  ],
+  "email": "feelalcobendas@yahoo.com",
+  "telefono": "+34 652023114",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-collado-villalba",
+  "nombre": "CV Collado Villalba",
+  "municipio": "Collado Villalba",
+  "zona": "oeste",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/c.voleibolvillalba"
+   }
+  ],
+  "email": "voleibolcolladovillalba@gmail.com",
+  "telefono": "+34 608187207",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-coslada",
+  "nombre": "CV Coslada",
+  "municipio": "Coslada",
+  "zona": "este",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/cosladavoley"
+   }
+  ],
+  "email": "voleibolcoslada@voleibolcoslada.com",
+  "telefono": "+34 637811208",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-esther-gonzalez",
+  "nombre": "CV Esther González SLN",
+  "municipio": "Villanueva de Perales",
+  "zona": "oeste",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/c.voleibolesthergonzalezsln"
+   }
+  ],
+  "email": "",
+  "telefono": "",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-fuenlabrada",
+  "nombre": "CV Fuenlabrada",
+  "municipio": "Fuenlabrada",
+  "zona": "sur",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/fuenlabrada.voleibol"
+   }
+  ],
+  "email": "cvfuenlabrada@gmail.com",
+  "telefono": "+34 637538775",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-las-rozas",
+  "nombre": "CV Las Rozas",
+  "municipio": "Las Rozas de Madrid",
+  "zona": "oeste",
+  "web": "https://www.cvlasrozas.com",
+  "redes": [],
+  "email": "info@cvlasrozas.com",
+  "telefono": "+34 638149039",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-leganes",
+  "nombre": "CV Leganés",
+  "municipio": "Leganés",
+  "zona": "sur",
+  "web": "https://www.cvleganes.com",
+  "redes": [],
+  "email": "sedevoley@gmail.com",
+  "telefono": "+34 640102368",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-mostoles",
+  "nombre": "CV Móstoles",
+  "municipio": "Móstoles",
+  "zona": "sur",
+  "web": "",
+  "redes": [],
+  "email": "cvmostoles@hotmail.com",
+  "telefono": "+34 639393561",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-nueva-castilla",
+  "nombre": "CV Nueva Castilla",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [],
+  "email": "clubvoleibolnuevacastilla@gmail.com",
+  "telefono": "+34 617641245",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-pinto",
+  "nombre": "CV Pinto",
+  "municipio": "Pinto",
+  "zona": "sur",
+  "web": "",
+  "redes": [],
+  "email": "clubvoleibolpinto@gmail.com",
+  "telefono": "+34 655836532",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-sanse",
+  "nombre": "CV Sanse",
+  "municipio": "San Sebastián de los Reyes",
+  "zona": "norte",
+  "web": "https://www.voleysanse.com",
+  "redes": [],
+  "email": "coordinacion@voleysanse.com",
+  "telefono": "+34 665646369",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-torrejon",
+  "nombre": "CV Torrejón",
+  "municipio": "Torrejón de Ardoz",
+  "zona": "este",
+  "web": "",
+  "redes": [],
+  "email": "cgvoleiboltorrejon@gmail.com",
+  "telefono": "+34 602599011",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "marianistas-amoros",
+  "nombre": "Marianistas Amorós",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://www.colegioamoros.org",
+  "redes": [],
+  "email": "voleibol@colegioamoros.org",
+  "telefono": "+34 915111130",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "mintonette-cv-pozuelo",
+  "nombre": "Mintonette CV Pozuelo",
+  "municipio": "Pozuelo de Alarcón",
+  "zona": "oeste",
+  "web": "https://www.clubvoleibolpozuelo.es",
+  "redes": [],
+  "email": "mintonette@clubvoleibolpozuelo.es",
+  "telefono": "+34 673434246",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "nuestra-senora-del-pilar",
+  "nombre": "Nuestra Señora Del Pilar",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/clubpilaristas"
+   }
+  ],
+  "email": "clubpilaristasvoleibol@nspilar.com",
+  "telefono": "",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "saco-chamartin",
+  "nombre": "SACO Chamartín",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://chamartin.fesofiabarat.es",
+  "redes": [],
+  "email": "secretaria.chamartin@fesofiabarat.es",
+  "telefono": "+34 913 023 540",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "sad-colegio-claret",
+  "nombre": "SAD Colegio Claret",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "http://www.claretmadrid.es",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/voleyclaretmadrid"
+   }
+  ],
+  "email": "",
+  "telefono": "+34 914 152 154",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "fusp-ceu",
+  "nombre": "SAD FUSP-CEU Comunidad de Madrid",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://www.ceu.es",
+  "redes": [],
+  "email": "info.sanchinarro@ceu.es",
+  "telefono": "+34 913 923 440",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "sad-recuerdo",
+  "nombre": "SAD Recuerdo",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [],
+  "email": "jhernandez@recuerdo.net",
+  "telefono": "+34 913022640",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "runnymede-college",
+  "nombre": "SAD Runnymede College",
+  "municipio": "Alcobendas",
+  "zona": "norte",
+  "web": "https://runnymede-college.com",
+  "redes": [],
+  "email": "secretary@runnymede-college.com",
+  "telefono": "+34 916 508 302",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "cv-majadahonda",
+  "nombre": "CV Majadahonda",
+  "municipio": "Majadahonda",
+  "zona": "oeste",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/c.v.majadahonda"
+   }
+  ],
+  "email": "clubvoleibolmajadahonda@hotmail.com",
+  "telefono": "+34 689151171",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-05"
+ }
+]

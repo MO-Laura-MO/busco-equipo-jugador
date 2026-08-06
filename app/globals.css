@@ -13,8 +13,12 @@
   --color-borde-fila: #eef0f2; /* filas */
   --color-borde-control: #d7dbe0; /* controles */
 
-  --color-acento: #0e5c4a; /* verde oscuro */
-  --color-acento-tinte: #e3f1ed;
+  --color-acento: #1e3a8a; /* azul marca */
+  --color-acento-tinte: #e3e9f8;
+  --color-amarillo: #ffc000; /* segundo color de marca */
+
+  --color-verificado: #0e5c4a; /* verde semántico (solo etiqueta Verificado) */
+  --color-verificado-tinte: #e3f1ed;
 
   --color-ambar: #92400e;
   --color-ambar-tinte: #fdf0dc;

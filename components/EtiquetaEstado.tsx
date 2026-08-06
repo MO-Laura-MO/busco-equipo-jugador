@@ -3,7 +3,7 @@ import type { Estado } from "@/lib/datos";
 const ESTILOS: Record<Exclude<Estado, null>, { texto: string; clases: string }> = {
   verificado: {
     texto: "Verificado por el club",
-    clases: "bg-acento-tinte text-acento",
+    clases: "bg-verificado-tinte text-verificado",
   },
   provisional: {
     texto: "Fecha provisional",

@@ -198,14 +198,21 @@ export default function Listado({ clubes, convocatorias }: Props) {
     temporada: temporada !== null,
   };
 
-  // Sin ningún dato cargado (lanzamiento): solo el mensaje, sin controles.
+  // Sin convocatorias cargadas (lanzamiento): mensaje con enlace al directorio.
   const sinDatos = convocatorias.length === 0 && conEntrenador.length === 0;
   if (sinDatos) {
     return (
       <div className="border-t border-borde px-4 py-10 text-center">
         <p className="text-[13.5px] leading-relaxed text-tinta-2">
-          Acabamos de arrancar y estamos contactando con los primeros clubes.
-          Las convocatorias aparecerán aquí muy pronto.
+          Estamos recopilando las convocatorias de la temporada 2026-27 y
+          aparecerán aquí muy pronto. Mientras tanto, ya puedes explorar los{" "}
+          <a
+            href="/clubes"
+            className="text-acento underline underline-offset-2 decoration-acento/40 hover:decoration-acento"
+          >
+            {clubes.length > 0 ? `${clubes.length} clubes` : "clubes"} de Madrid
+          </a>{" "}
+          y contactar con ellos.
         </p>
         <p className="mt-3 text-[13.5px] text-tinta-2">
           ¿Eres un club?{" "}

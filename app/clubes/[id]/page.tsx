@@ -211,6 +211,20 @@ export default async function FichaClub({
             ? "1 convocatoria"
             : `${lista.length} convocatorias`}
         </h2>
+        {lista.length === 0 && (
+          <p className="px-4 py-6 text-[13px] leading-relaxed text-tinta-3">
+            Este club todavía no tiene convocatorias publicadas en voley.app.
+            Contacta directamente con el club para preguntar por pruebas, o si
+            eres del club,{" "}
+            <Link
+              href="/alta"
+              className="text-acento underline underline-offset-2 decoration-acento/40 hover:decoration-acento"
+            >
+              publícalas gratis aquí
+            </Link>
+            .
+          </p>
+        )}
         {lista.map((c, i) => {
           const etiquetas = etiquetasConvocatoria(c);
           const linea = [
