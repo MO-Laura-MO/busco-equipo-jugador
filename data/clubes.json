@@ -18,12 +18,17 @@
   "municipio": "Rivas-Vaciamadrid",
   "zona": "este",
   "web": "",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/advoleibolrivas"
+   }
+  ],
   "email": "advoleibolrivas@voleibolrivas.es",
   "telefono": "+34 636827313",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-06"
  },
  {
   "id": "ancora-galapagar",
@@ -186,12 +191,17 @@
   "municipio": "Boadilla del Monte",
   "zona": "oeste",
   "web": "",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/boadillavoleibol"
+   }
+  ],
   "email": "2demayomostoles@gmail.com",
   "telefono": "+34 601 156 781",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-06"
  },
  {
   "id": "cde-chamartin-vergara",
@@ -199,12 +209,17 @@
   "municipio": "Madrid",
   "zona": "centro",
   "web": "https://chv1995.es",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/chamartinvergara"
+   }
+  ],
   "email": "voleibol@chv1995.es",
   "telefono": "+34 635147425",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-06"
  },
  {
   "id": "intervoley-fuenlabrada",
@@ -331,12 +346,17 @@
   "municipio": "Moralzarzal",
   "zona": "oeste",
   "web": "",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/dragonsvoleibol"
+   }
+  ],
   "email": "dragonsvoleibol@gmail.com",
   "telefono": "+34 695117205",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-06"
  },
  {
   "id": "cv-san-agustin-guadalix",
@@ -538,12 +558,17 @@
   "municipio": "Alcalá de Henares",
   "zona": "este",
   "web": "https://cvoleibolalcala.com",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/voleibolalcala"
+   }
+  ],
   "email": "info@cvoleibolalcala.com",
   "telefono": "+34 675759841",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-06"
  },
  {
   "id": "cv-alcobendas",
@@ -654,12 +679,17 @@
   "municipio": "Leganés",
   "zona": "sur",
   "web": "https://www.cvleganes.com",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/voleibolleganes"
+   }
+  ],
   "email": "sedevoley@gmail.com",
   "telefono": "+34 640102368",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-06"
  },
  {
   "id": "cv-mostoles",
@@ -667,12 +697,17 @@
   "municipio": "Móstoles",
   "zona": "sur",
   "web": "",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/cvmostoles"
+   }
+  ],
   "email": "cvmostoles@hotmail.com",
   "telefono": "+34 639393561",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-06"
  },
  {
   "id": "cv-nueva-castilla",
@@ -693,12 +728,17 @@
   "municipio": "Pinto",
   "zona": "sur",
   "web": "",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/voleibol_pinto"
+   }
+  ],
   "email": "clubvoleibolpinto@gmail.com",
   "telefono": "+34 655836532",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-06"
  },
  {
   "id": "cv-sanse",
@@ -706,12 +746,17 @@
   "municipio": "San Sebastián de los Reyes",
   "zona": "norte",
   "web": "https://www.voleysanse.com",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/voleysanse"
+   }
+  ],
   "email": "coordinacion@voleysanse.com",
   "telefono": "+34 665646369",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-06"
  },
  {
   "id": "cv-torrejon",
@@ -745,12 +790,17 @@
   "municipio": "Pozuelo de Alarcón",
   "zona": "oeste",
   "web": "https://www.clubvoleibolpozuelo.es",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/mintonette.cvpozuelo"
+   }
+  ],
   "email": "mintonette@clubvoleibolpozuelo.es",
   "telefono": "+34 673434246",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-06"
  },
  {
   "id": "nuestra-senora-del-pilar",
