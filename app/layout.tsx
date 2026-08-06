@@ -48,15 +48,18 @@ export default function RootLayout({
               <Volleyball size={17} strokeWidth={1.75} />
               {NOMBRE_MARCA}
             </Link>
-            <nav className="sin-scrollbar flex items-center gap-4 overflow-x-auto text-[13px]">
+            <nav className="sin-scrollbar flex items-center gap-3 overflow-x-auto text-[13px]">
               <Link href="/#convocatorias" className="shrink-0 text-tinta-2 hover:text-tinta">
-                Buscar pruebas
+                Pruebas
               </Link>
               <Link href="/clubes" className="shrink-0 text-tinta-2 hover:text-tinta">
                 Clubes
               </Link>
               <Link href="/alta" className="shrink-0 text-tinta-2 hover:text-tinta">
-                Publicar
+                Soy un club
+              </Link>
+              <Link href="/blog" className="shrink-0 text-tinta-2 hover:text-tinta">
+                Blog
               </Link>
             </nav>
           </header>
@@ -69,6 +72,9 @@ export default function RootLayout({
             <nav className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[12.5px]">
               <Link href="/alta" className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta">
                 Dar de alta un club
+              </Link>
+              <Link href="/blog" className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta">
+                Blog
               </Link>
               <Link href="/aviso-legal" className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta">
                 Aviso legal y privacidad

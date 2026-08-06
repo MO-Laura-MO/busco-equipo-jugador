@@ -1,0 +1,26 @@
+# voley.app
+
+> Directorio gratuito de pruebas y captaciones de clubes de voleibol de la
+> Comunidad de Madrid (España). Las familias y jugadores encuentran las
+> convocatorias de pruebas filtrando por categoría (de benjamín a máster),
+> sexo, zona y mes, y contactan directamente con el club. Sin registro y sin
+> intermediarios. Los clubes publican sus pruebas gratis.
+
+Datos clave:
+- Cobertura actual: Comunidad de Madrid, con decenas de clubes federados y
+  escuelas listados con municipio, zona, web y contacto.
+- Las convocatorias indican categoría, sexo, fecha (exacta, aproximada o
+  inscripción abierta), pabellón y contacto del club.
+- La etiqueta "Verificado por el club" distingue la información confirmada
+  por el propio club de la recopilada de fuentes públicas.
+- La información puede quedar desactualizada: se recomienda confirmar
+  siempre fecha y lugar con el club antes de acudir.
+
+Páginas principales:
+- https://voley.app/ — buscador de convocatorias de pruebas
+- https://voley.app/clubes — directorio de clubes de voleibol de Madrid
+- https://voley.app/blog — guías: categorías por edad, cómo apuntarse, cómo
+  son las pruebas
+- https://voley.app/alta — formulario gratuito para que los clubes publiquen
+
+Contacto: voley.app.es@gmail.com

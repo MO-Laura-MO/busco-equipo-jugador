@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import {
+  BadgeCheck,
+  ClipboardList,
+  ExternalLink,
+  Megaphone,
+  ShieldCheck,
+  Volleyball,
+} from "lucide-react";
 import { URL_FORMULARIO_ALTA } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -9,50 +15,118 @@ export const metadata: Metadata = {
     "Publica las pruebas de tu club de voleibol en el directorio de la Comunidad de Madrid. Alta gratuita a través de un formulario.",
 };
 
+const PASOS = [
+  {
+    titulo: "Rellena el formulario",
+    texto: "Datos del club y de vuestras convocatorias. Cinco minutos.",
+  },
+  {
+    titulo: "Lo revisamos a mano",
+    texto: "Comprobamos cada alta antes de publicarla; puede tardar unos días.",
+  },
+  {
+    titulo: "Publicado, gratis",
+    texto:
+      "Vuestra ficha y vuestras pruebas, visibles para las familias que buscan equipo.",
+  },
+];
+
+const VENTAJAS = [
+  {
+    icono: Megaphone,
+    texto:
+      "Las familias que buscan “pruebas de voleibol” en tu zona te encuentran a ti.",
+  },
+  {
+    icono: BadgeCheck,
+    texto:
+      "Etiqueta “Verificado por el club” y difusión de tus convocatorias en nuestras redes.",
+  },
+  {
+    icono: ShieldCheck,
+    texto:
+      "Solo publicamos datos de contacto de la entidad. Nunca información de jugadores ni de menores.",
+  },
+];
+
 export default function Alta() {
   return (
-    <main className="px-4 pb-8 pt-5">
-      <Link
-        href="/"
-        className="mb-4 flex items-center gap-1 text-[12.5px] text-tinta-2 hover:text-tinta"
-      >
-        <ArrowLeft size={14} strokeWidth={1.75} />
-        Todas las convocatorias
-      </Link>
-
-      <h1 className="text-[19px] font-medium text-tinta">Dar de alta un club</h1>
-
-      <div className="mt-3 space-y-3 text-[13.5px] leading-relaxed text-tinta-2">
-        <p>
-          Si tu club hace pruebas para completar equipos (de benjamín a
-          máster) en la Comunidad de Madrid, puedes publicarlas aquí gratis.
-          También puedes indicar si buscáis entrenador.
+    <main className="pb-8">
+      <header className="relative overflow-hidden bg-acento px-4 pb-7 pt-6">
+        <Volleyball
+          size={150}
+          strokeWidth={1.2}
+          className="absolute -right-6 -top-6 text-white/10"
+        />
+        <p className="relative text-[11.5px] font-medium uppercase tracking-[0.18em] text-amarillo">
+          Para clubes y escuelas
         </p>
-        <p>
-          Rellena el formulario con los datos del club y de las convocatorias.
-          Revisamos cada alta a mano antes de publicarla, así que puede tardar
-          unos días en aparecer.
+        <h1 className="relative mt-2 text-[23px] font-medium leading-snug text-white">
+          Publica tus pruebas donde las familias buscan
+        </h1>
+        <p className="relative mt-3 max-w-[520px] text-[13.5px] leading-relaxed text-white/85">
+          Si tu club hace pruebas o captaciones (de benjamín a máster) en la
+          Comunidad de Madrid, publícalas gratis. También puedes indicar si
+          buscáis entrenador/a.
         </p>
-        <p>
-          Solo publicamos datos de contacto del club (email y teléfono de la
-          entidad), nunca información de jugadores ni de menores.
+        <a
+          href={URL_FORMULARIO_ALTA}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative mt-5 inline-flex items-center gap-2 rounded-[8px] bg-amarillo px-5 py-[11px] text-[14px] font-medium text-[#111827] hover:bg-amarillo/90"
+        >
+          <ClipboardList size={16} strokeWidth={1.75} />
+          Ir al formulario de alta
+          <ExternalLink size={14} strokeWidth={1.75} />
+        </a>
+      </header>
+
+      <section className="px-4 pt-6">
+        <h2 className="text-[15px] font-medium text-tinta">Cómo funciona</h2>
+        <ol className="mt-3 space-y-3">
+          {PASOS.map((p, i) => (
+            <li key={i} className="flex gap-3">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-acento-tinte text-[14px] font-medium text-acento">
+                {i + 1}
+              </span>
+              <div>
+                <p className="text-[14px] font-medium text-tinta">{p.titulo}</p>
+                <p className="mt-[2px] text-[13px] leading-snug text-tinta-2">
+                  {p.texto}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="mt-6 border-t border-borde px-4 pt-5">
+        <h2 className="text-[15px] font-medium text-tinta">
+          Qué gana tu club
+        </h2>
+        <ul className="mt-3 space-y-3">
+          {VENTAJAS.map((v, i) => (
+            <li key={i} className="flex gap-3">
+              <v.icono
+                size={20}
+                strokeWidth={1.75}
+                className="mt-[2px] shrink-0 text-acento"
+              />
+              <p className="text-[13.5px] leading-relaxed text-tinta-2">
+                {v.texto}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <div className="mx-4 mt-6 rounded-[10px] bg-barra px-4 py-3">
+        <p className="text-[12.5px] leading-relaxed text-tinta-3">
+          ¿Tu club ya está publicado y quieres corregir o añadir algo? Usa el
+          enlace «¿Hay algún dato incorrecto?» de su ficha, o responde al
+          formulario indicando que ya existís.
         </p>
       </div>
-
-      <a
-        href={URL_FORMULARIO_ALTA}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-5 inline-flex items-center gap-2 rounded-[6px] bg-acento px-4 py-[9px] text-[13.5px] font-medium text-white hover:opacity-90"
-      >
-        Ir al formulario de alta
-        <ExternalLink size={14} strokeWidth={1.75} />
-      </a>
-
-      <p className="mt-4 text-[12.5px] text-tinta-3">
-        ¿Tu club ya está publicado y quieres corregir o añadir algo? Usa el
-        enlace «¿Hay algún dato incorrecto?» de su ficha.
-      </p>
     </main>
   );
 }

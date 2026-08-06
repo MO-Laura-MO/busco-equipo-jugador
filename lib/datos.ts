@@ -59,7 +59,18 @@ export interface Convocatoria {
 }
 
 export const clubes = clubesJson as Club[];
-export const convocatorias = convocatoriasJson as Convocatoria[];
+/**
+ * Las convocatorias con fecha exacta ya pasada (más de 3 días) se ocultan
+ * automáticamente. El filtro se evalúa en cada build (la web se reconstruye
+ * con cada cambio de contenido), así el listado nunca muestra pruebas caducadas.
+ */
+const CORTE = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000)
+  .toISOString()
+  .slice(0, 10);
+
+export const convocatorias = (convocatoriasJson as Convocatoria[]).filter(
+  (c) => !(c.tipoFecha === "exacta" && c.fecha && c.fecha < CORTE)
+);
 
 export function clubPorId(id: string): Club | undefined {
   return clubes.find((c) => c.id === id);
