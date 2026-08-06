@@ -52,7 +52,7 @@ export default function Pagina() {
         <ul>
           <li>Ropa deportiva cómoda (camiseta y pantalón corto).</li>
           <li>
-            Zapatillas de pabellón con suela limpia — muchas instalaciones no
+            Zapatillas de pabellón con suela limpia: muchas instalaciones no
             dejan entrar con el calzado de la calle.
           </li>
           <li>Botella de agua.</li>
@@ -69,8 +69,8 @@ export default function Pagina() {
           calentamiento en grupo, ejercicios básicos por parejas (toque de
           dedos, antebrazos), algo de saque y recepción, y un rato de juego
           real en equipos mezclados. En categorías pequeñas los entrenadores
-          plantean juegos; en cadete o juvenil el formato se parece más a un
-          entrenamiento normal. Algunos clubes citan a todos los interesados
+          plantean juegos; en infantil, cadete o juvenil el formato se parece
+          más a un entrenamiento normal. Algunos clubes citan a todos los interesados
           un mismo día; otros invitan a entrenar con el grupo durante una
           semana antes de decidir.
         </p>
@@ -83,7 +83,7 @@ export default function Pagina() {
           a esas edades la técnica se enseña, el entusiasmo no. En cadete y
           juvenil ya se valora la <strong>técnica básica</strong> (toque de
           dedos, antebrazos, saque seguro), los desplazamientos y la altura o
-          el salto — pero también cómo escucha, cómo anima y cómo encaja los
+          el salto, pero también cómo escucha, cómo anima y cómo encaja los
           errores. Un consejo honesto: el jugador que va a todas las bolas y
           celebra los puntos de los demás deja mejor impresión que el que
           remata fuerte y protesta.
@@ -94,8 +94,8 @@ export default function Pagina() {
           Los equipos tienen plazas limitadas por categoría, y no entrar en un
           club concreto no significa no poder jugar. Pregunta al entrenador si
           conoce clubes cercanos con hueco en esa categoría (se conocen todos
-          entre sí), mira las escuelas municipales de tu zona — inscripción
-          abierta casi todo el año — y consulta el{" "}
+          entre sí), mira las escuelas municipales de tu zona (inscripción
+          abierta casi todo el año) y consulta el{" "}
           <Link href="/clubes">directorio de clubes de voley.app</Link> para
           contactar con otros clubes cercanos.
         </p>

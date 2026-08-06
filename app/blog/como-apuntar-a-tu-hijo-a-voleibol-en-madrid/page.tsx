@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Articulo from "@/components/Articulo";
 import { ARTICULOS } from "@/lib/blog";
-import { URL_SITIO } from "@/lib/config";
 
 const ART = ARTICULOS.find(
   (a) => a.slug === "como-apuntar-a-tu-hijo-a-voleibol-en-madrid"
@@ -22,7 +21,7 @@ const faqJsonLd = {
       name: "¿Cuándo se hacen las pruebas de voleibol en Madrid?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La mayoría de los clubes de la Comunidad de Madrid hacen sus pruebas y captaciones entre finales de agosto y finales de septiembre, antes del inicio de la liga. Algunos clubes hacen una segunda captación en diciembre-enero y muchas escuelas tienen inscripción abierta durante todo el curso.",
+        text: "Hay dos grandes ventanas. La principal es al final de la temporada, en mayo y junio, cuando los clubes forman los equipos del curso siguiente. La segunda es al arranque, entre finales de agosto y finales de septiembre, para completar plantillas. Además, algunos clubes hacen captaciones en diciembre-enero y muchas escuelas tienen inscripción abierta durante todo el curso.",
       },
     },
     {
@@ -38,7 +37,7 @@ const faqJsonLd = {
       name: "¿Hace falta experiencia para entrar en un club de voleibol?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No en las categorías pequeñas ni en las escuelas, donde se empieza desde cero. En categorías mayores (cadete, juvenil) los equipos federados suelen valorar experiencia previa, pero muchos clubes tienen varios equipos por categoría con distintos niveles.",
+        text: "No necesariamente. En las escuelas y en los equipos de iniciación se empieza desde cero, y también hay clubes federados que incorporan jugadores sin experiencia. En los equipos de más nivel sí se valora la experiencia previa, pero muchos clubes tienen varios equipos por categoría con distintos niveles, así que suele haber un hueco adecuado para cada jugador.",
       },
     },
   ],
@@ -53,10 +52,12 @@ export default function Pagina() {
       />
       <Articulo titulo={ART.titulo} fecha={ART.fecha}>
         <p>
-          Cada septiembre, miles de familias madrileñas buscan dónde puede
-          jugar al voleibol su hijo o su hija. La información está repartida
-          entre webs de clubes, cuentas de Instagram y el boca a boca — así
-          que aquí va la guía corta y práctica, paso a paso.
+          Cada temporada, miles de familias madrileñas buscan dónde puede
+          jugar al voleibol su hijo o su hija. Y cada vez más, son los propios
+          jugadores y jugadoras adolescentes quienes buscan club por su
+          cuenta. La información está repartida entre webs de clubes, cuentas
+          de Instagram y el boca a boca, así que aquí va la guía corta y
+          práctica, paso a paso.
         </p>
 
         <h2>1. Averigua qué categoría le corresponde</h2>
@@ -77,32 +78,41 @@ export default function Pagina() {
           Los <strong>clubes federados</strong> compiten en las ligas de la
           Federación Madrileña de Voleibol: entrenan dos o tres días por
           semana y juegan partido casi todos los fines de semana. Las{" "}
-          <strong>escuelas</strong> (muchas municipales) son la puerta de
-          entrada ideal para empezar: menos exigencia, inscripción abierta casi
-          todo el año y grupos por edades. Si tu peque nunca ha jugado, una
-          escuela o los equipos de iniciación de un club son el mejor comienzo;
-          si ya juega y quiere competir, busca club federado.
+          <strong>escuelas</strong> (muchas municipales) ofrecen grupos por
+          edades, menos exigencia e inscripción abierta casi todo el año. Para
+          quien nunca ha jugado, una escuela o los equipos de iniciación de un
+          club pueden ser una buena opción, aunque también se puede empezar
+          directamente en un club federado: la elección depende sobre todo de
+          las ganas de competir. Si ya juega y quiere competición regular, el
+          club federado es el camino.
         </p>
 
-        <h2>3. Busca clubes cerca de casa</h2>
+        <h2>3. Busca clubes cerca de casa (o donde encajes mejor)</h2>
         <p>
-          El voleibol vive de entrenar dos o tres veces por semana: la
+          El voleibol vive de entrenar dos o tres veces por semana, y la
           distancia importa más de lo que parece. En Madrid hay clubes en
-          todas las zonas — capital, norte, sur, este y oeste (sierra
-          incluida). En{" "}
+          todas las zonas: capital, norte, sur, este y oeste, sierra incluida.
+          Dicho esto, también hay familias y jugadores que eligen desplazarse
+          un poco más porque un club concreto les encaja mejor por su
+          ambiente, su proyecto deportivo o su nivel. Al final no se trata
+          solo de cercanía, sino de encontrar el sitio donde estar a gusto. En{" "}
           <Link href="/clubes">el directorio de clubes de voley.app</Link>{" "}
-          puedes ver los de tu zona con su municipio y su contacto directo.
+          puedes ver los de cada zona con su municipio y su contacto directo.
         </p>
 
         <h2>4. Localiza sus pruebas o captaciones</h2>
         <p>
-          La mayoría de los clubes hacen pruebas entre finales de agosto y
-          finales de septiembre. No te asustes con la palabra "prueba": en
-          categorías pequeñas suele ser simplemente un entrenamiento abierto
-          para conocer al grupo y formar equipos. En{" "}
-          <Link href="/">voley.app</Link> vamos publicando las convocatorias
-          de cada club con fecha, pabellón y contacto, y puedes filtrar por
-          categoría, zona y mes. Te contamos qué esperar en{" "}
+          Hay dos grandes ventanas de pruebas. La principal es al{" "}
+          <strong>final de la temporada, en mayo y junio</strong>: es cuando
+          los clubes forman los equipos del curso siguiente y se mueven más
+          fichas. La segunda es al arranque, entre{" "}
+          <strong>finales de agosto y finales de septiembre</strong>, para
+          completar las plantillas. Y no te asustes con la palabra "prueba":
+          suele ser simplemente un entrenamiento abierto para conocer al grupo
+          y organizar los equipos. En <Link href="/">voley.app</Link> vamos
+          publicando las convocatorias de cada club con fecha, pabellón y
+          contacto, filtrables por categoría, zona y mes. Te contamos qué
+          esperar en{" "}
           <Link href="/blog/como-es-una-prueba-de-voleibol">
             cómo es una prueba de voleibol
           </Link>
@@ -121,8 +131,11 @@ export default function Pagina() {
         <h2>6. El primer día</h2>
         <p>
           Ropa deportiva, zapatillas de suela limpia para pabellón, botella de
-          agua y, si las tiene, rodilleras. Y sobre todo: cero presión. Los
-          entrenadores de base buscan ganas y actitud, no acrobacias.
+          agua y, si las tiene, rodilleras. Para quien empieza de cero, los
+          entrenadores buscan sobre todo ganas y actitud. Y si ya ha jugado,
+          se fijan también en que la técnica sea correcta para el nivel del
+          equipo al que aspira. En cualquier caso: cero presión, que de eso ya
+          se encarga la emoción del primer día.
         </p>
 
         <div className="aviso">

@@ -45,7 +45,7 @@ export default function Pagina() {
           La primera duda de toda familia que llega al voleibol: ¿qué es
           "alevín"? ¿qué es "cadete"? ¿dónde encaja mi hijo o mi hija? La
           respuesta corta: las categorías van por <strong>año de
-          nacimiento</strong> — no por curso escolar — y cambian cada
+          nacimiento</strong>, no por curso escolar, y cambian cada
           temporada. Esta es la tabla de la temporada 2026-27.
         </p>
 
@@ -64,7 +64,7 @@ export default function Pagina() {
             <tr><td>Infantil</td><td>2013-2014</td><td>12-13 años</td></tr>
             <tr><td>Cadete</td><td>2011-2012</td><td>14-15 años</td></tr>
             <tr><td>Juvenil</td><td>2009-2010</td><td>16-17 años</td></tr>
-            <tr><td>Júnior</td><td>según normativa anual</td><td>18-20 años</td></tr>
+            <tr><td>Júnior</td><td>categoría puente, según competición</td><td>18-20 años</td></tr>
             <tr><td>Sénior</td><td>sin límite superior</td><td>desde ~18 años</td></tr>
             <tr><td>Máster / veteranos</td><td>según competición</td><td>+30/35 años</td></tr>
           </tbody>
@@ -73,20 +73,38 @@ export default function Pagina() {
         <h2>Cómo leer la tabla</h2>
         <p>
           Cada categoría abarca dos años de nacimiento, y la temporada
-          deportiva (de septiembre a junio) manda sobre el año natural: un
-          niño nacido en diciembre de 2014 juega toda la temporada 2026-27
-          como infantil aunque cumpla años a mitad de curso. Cuando la
-          temporada cambie, la tabla se desplaza un año — por eso conviene
-          comprobarla cada septiembre.
+          deportiva (de septiembre a junio) manda sobre el año natural: quien
+          nace en diciembre de 2014 juega toda la temporada 2026-27 como
+          infantil aunque cumpla años a mitad de curso. Cuando la temporada
+          cambie, la tabla se desplaza un año, así que conviene comprobarla
+          cada septiembre.
+        </p>
+        <p>
+          Dentro de cada categoría conviven además{" "}
+          <strong>jugadores de primer año y de segundo año</strong>: los del
+          año de nacimiento más joven acaban de llegar a la categoría, y los
+          del año mayor ya están en su segunda temporada en ella. Es la
+          rotación natural de todas las categorías, salvo sénior y máster,
+          donde ya no hay ese relevo por edad.
+        </p>
+
+        <h2>¿Y el júnior?</h2>
+        <p>
+          El júnior es una categoría puente entre juvenil y sénior, en torno a
+          los 18-20 años, que no todas las competiciones convocan todas las
+          temporadas. En la práctica, muchos jugadores y jugadoras pasan
+          directamente de juvenil a los equipos sénior de su club. Si estás en
+          esa edad, lo más útil es preguntar directamente al club qué equipos
+          tiene en marcha esa temporada.
         </p>
 
         <h2>¿Se puede jugar "hacia arriba"?</h2>
         <p>
-          Sí. La normativa permite que un jugador compita en categorías
-          superiores a la suya (una infantil puede jugar con cadetes, por
+          Sí. La normativa permite competir en categorías superiores a la que
+          corresponde por edad (un infantil puede jugar con cadetes, por
           ejemplo), algo habitual en clubes con pocos efectivos o con
-          jugadoras destacadas. Lo que no se permite es jugar en categorías
-          inferiores a la que corresponde por edad.
+          jugadores y jugadoras destacados. Lo que no se permite es jugar en
+          categorías inferiores.
         </p>
 
         <h2>¿Y antes de benjamín, o si nunca ha jugado?</h2>
@@ -94,7 +112,7 @@ export default function Pagina() {
           Muchas escuelas y clubes tienen grupos de iniciación o "minivoley"
           para los más pequeños, a menudo mixtos y sin competición federada.
           Si tu peque quiere empezar, no hace falta esperar a ninguna edad:
-          pregunta directamente a los clubes de tu zona — puedes encontrarlos,
+          pregunta directamente a los clubes de tu zona. Puedes encontrarlos,
           con su contacto, en el{" "}
           <Link href="/clubes">directorio de clubes de voley.app</Link>.
         </p>
