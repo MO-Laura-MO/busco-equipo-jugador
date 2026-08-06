@@ -79,10 +79,20 @@ export default function AvisoLegal() {
         </section>
 
         <section>
-          <h2 className="mb-2 text-[15px] font-medium text-tinta">Cookies</h2>
+          <h2 className="mb-2 text-[15px] font-medium text-tinta">
+            Cookies y analítica
+          </h2>
           <p>
             Esta web no usa cookies propias ni de terceros con fines
-            publicitarios o de seguimiento.
+            publicitarios o de seguimiento, y por eso no verás banners de
+            consentimiento.
+          </p>
+          <p className="mt-2">
+            Para saber cuántas personas visitan la web utilizamos Vercel Web
+            Analytics, un sistema de medición que no usa cookies, no
+            identifica a las personas y solo recoge datos agregados y anónimos
+            (páginas vistas, país y tipo de dispositivo). No se comparten
+            datos con terceros con fines publicitarios.
           </p>
         </section>
 
