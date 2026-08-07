@@ -109,8 +109,13 @@ export default function Pagina() {
 
         <h2>¿Y antes de benjamín, o si nunca ha jugado?</h2>
         <p>
-          Muchas escuelas y clubes tienen grupos de iniciación o "minivoley"
-          para los más pequeños, a menudo mixtos y sin competición federada.
+          Muchas escuelas y clubes tienen{" "}
+          <Link href="/blog/federado-o-escuela-de-voleibol">
+            grupos de iniciación
+          </Link>{" "}
+          o "minivoley" para los más pequeños, a menudo{" "}
+          <Link href="/blog/voleibol-masculino-madrid">mixtos</Link> y sin
+          competición federada.
           Si tu peque quiere empezar, no hace falta esperar a ninguna edad:
           pregunta directamente a los clubes de tu zona. Puedes encontrarlos,
           con su contacto, en el{" "}

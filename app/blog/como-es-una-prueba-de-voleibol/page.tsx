@@ -80,7 +80,11 @@ export default function Pagina() {
           Menos de lo que las familias temen y otras cosas distintas de las
           que imaginan. En benjamín, alevín e infantil, los entrenadores
           buscan sobre todo <strong>coordinación general, actitud y ganas</strong>:
-          a esas edades la técnica se enseña, el entusiasmo no. En cadete y
+          a esas edades{" "}
+          <Link href="/blog/haikyuu-empezar-a-jugar-voleibol">
+            la técnica se enseña
+          </Link>
+          , el entusiasmo no. En cadete y
           juvenil ya se valora la <strong>técnica básica</strong> (toque de
           dedos, antebrazos, saque seguro), los desplazamientos y la altura o
           el salto, pero también cómo escucha, cómo anima y cómo encaja los
@@ -102,7 +106,11 @@ export default function Pagina() {
 
         <h2>Antes de ir: confirma</h2>
         <p>
-          Las fechas y pabellones de las pruebas cambian con facilidad.
+          Las{" "}
+          <Link href="/blog/cuando-son-las-pruebas-de-voleibol-madrid">
+            fechas y pabellones de las pruebas
+          </Link>{" "}
+          cambian con facilidad.
           Confirma siempre con el club por email o teléfono antes de acudir, y
           pregunta si hace falta inscripción previa. En{" "}
           <Link href="/">voley.app</Link> publicamos las convocatorias con su

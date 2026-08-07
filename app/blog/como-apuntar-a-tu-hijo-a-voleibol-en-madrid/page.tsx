@@ -75,12 +75,21 @@ export default function Pagina() {
 
         <h2>2. Decide entre club federado o escuela</h2>
         <p>
-          Los <strong>clubes federados</strong> compiten en las ligas de la
-          Federación Madrileña de Voleibol: entrenan dos o tres días por
-          semana y juegan partido casi todos los fines de semana. Las{" "}
-          <strong>escuelas</strong> (muchas municipales) ofrecen grupos por
-          edades, menos exigencia e inscripción abierta casi todo el año. Para
-          quien nunca ha jugado, una escuela o los equipos de iniciación de un
+          Los{" "}
+          <strong>
+            <Link href="/blog/federado-o-escuela-de-voleibol">
+              clubes federados
+            </Link>
+          </strong>{" "}
+          compiten en las ligas de la Federación Madrileña de Voleibol:
+          entrenan dos o tres días por semana y juegan partido casi todos los
+          fines de semana. Las <strong>escuelas</strong> (muchas municipales)
+          ofrecen grupos por edades, menos exigencia e inscripción abierta
+          casi todo el año. Para{" "}
+          <Link href="/blog/elegir-deporte-futbol-baloncesto-voleibol">
+            quien nunca ha jugado
+          </Link>
+          , una escuela o los equipos de iniciación de un
           club pueden ser una buena opción, aunque también se puede empezar
           directamente en un club federado: la elección depende sobre todo de
           las ganas de competir. Si ya juega y quiere competición regular, el
@@ -102,7 +111,11 @@ export default function Pagina() {
 
         <h2>4. Localiza sus pruebas o captaciones</h2>
         <p>
-          Hay dos grandes ventanas de pruebas. La principal es al{" "}
+          Hay{" "}
+          <Link href="/blog/cuando-son-las-pruebas-de-voleibol-madrid">
+            dos grandes ventanas de pruebas
+          </Link>
+          . La principal es al{" "}
           <strong>final de la temporada, en mayo y junio</strong>: es cuando
           los clubes forman los equipos del curso siguiente y se mueven más
           fichas. La segunda es al arranque, entre{" "}

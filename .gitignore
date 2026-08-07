@@ -20,3 +20,6 @@ next-env.d.ts
 
 # vercel
 .vercel
+
+# material de trabajo (textos fuente del blog, no se publica)
+/contenido/
