@@ -50,7 +50,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
         <p>
           La pregunta llega casi siempre en el mismo momento, a finales de
           agosto, y casi siempre con la misma frase: ¿llego tarde? La

@@ -4,6 +4,8 @@ export interface Articulo {
   titulo: string;
   descripcion: string;
   fecha: string; // AAAA-MM-DD
+  /** Etiqueta de la cabecera y de la tarjeta; si falta, "Guía para familias". */
+  etiqueta?: string;
 }
 
 export const ARTICULOS: Articulo[] = [
@@ -20,6 +22,7 @@ export const ARTICULOS: Articulo[] = [
     descripcion:
       "Qué cuenta bien Haikyuu del voleibol y qué no es exactamente así, y cómo empezar a jugar de verdad en Madrid aunque no hayas tocado un balón nunca.",
     fecha: "2026-08-07",
+    etiqueta: "Guía para jugadores",
   },
   {
     slug: "federado-o-escuela-de-voleibol",

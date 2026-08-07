@@ -40,7 +40,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
         <p>
           La palabra "prueba" impone, pero en el voleibol base es mucho menos
           dramática de lo que suena: en la mayoría de los casos es un

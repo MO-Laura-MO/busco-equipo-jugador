@@ -50,7 +50,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
         <p>
           Cada temporada, miles de familias madrileñas buscan dónde puede
           jugar al voleibol su hijo o su hija. Y cada vez más, son los propios

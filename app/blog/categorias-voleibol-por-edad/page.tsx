@@ -40,7 +40,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
         <p>
           La primera duda de toda familia que llega al voleibol: ¿qué es
           "alevín"? ¿qué es "cadete"? ¿dónde encaja mi hijo o mi hija? La

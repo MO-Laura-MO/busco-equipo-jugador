@@ -50,7 +50,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta="Guía para jugadores">
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
         <p>
           Te ha pasado lo que a mucha gente este año: terminas un capítulo, te
           levantas del sofá y te sale solo hacer el gesto de dedos contra la

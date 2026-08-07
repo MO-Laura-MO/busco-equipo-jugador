@@ -45,7 +45,7 @@ export default function Blog() {
                       azul ? "text-amarillo" : "text-acento"
                     }`}
                   >
-                    Guía para familias
+                    {a.etiqueta ?? "Guía para familias"}
                   </p>
                   <h2
                     className={`relative mt-2 max-w-[520px] text-[17px] font-medium leading-snug ${

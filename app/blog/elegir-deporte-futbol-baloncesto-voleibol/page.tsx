@@ -58,7 +58,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
         <p>
           En septiembre, en muchas casas de Madrid, se abre la misma
           conversación: hay que apuntar a alguien a algo. Y la pregunta que se

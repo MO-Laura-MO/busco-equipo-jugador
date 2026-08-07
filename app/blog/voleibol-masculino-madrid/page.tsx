@@ -48,7 +48,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
         <p>
           En España actualmente hay unas 121.000 licencias de voleibol y
           85.657 son de mujeres. Siete de cada diez. Ese dato explica muchas

@@ -48,7 +48,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
         <p>
           Cuando una familia empieza a buscar voleibol en Madrid se encuentra
           con dos cosas que parecen lo mismo y no lo son: los clubes federados
