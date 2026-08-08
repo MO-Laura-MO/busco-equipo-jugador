@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarClock, MapPin, RefreshCw } from "lucide-react";
+import { CalendarClock, ChevronRight, MapPin, RefreshCw } from "lucide-react";
 import {
   Convocatoria,
   etiquetaCategoria,
@@ -93,6 +93,12 @@ export default function FilaConvocatoria({
               <EtiquetaEstado key={e} estado={e} />
             ))}
           </div>
+        )}
+        {enlazar && (
+          <span className="mt-[10px] inline-flex items-center gap-[4px] rounded-[6px] bg-acento px-3 py-[7px] text-[12.5px] font-medium text-white">
+            Ver convocatoria
+            <ChevronRight size={13} strokeWidth={2} />
+          </span>
         )}
       </div>
     </div>

@@ -270,7 +270,9 @@ export function textoAnios(c: Convocatoria): string | null {
       : c.sexo === "masculino"
         ? "nacidos"
         : "nacidos y nacidas";
-  return `${prefijo} en ${anios}`;
+  // Rango ("2017 a 2021") → "de 2017 a 2021"; pareja ("2015 y 2016") → "en 2015 y 2016".
+  const preposicion = anios.includes(" a ") ? "de" : "en";
+  return `${prefijo} ${preposicion} ${anios}`;
 }
 
 /** Clubes que buscan entrenador/a, ordenados por nombre. */
