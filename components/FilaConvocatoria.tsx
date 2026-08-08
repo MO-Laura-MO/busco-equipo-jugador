@@ -6,6 +6,7 @@ import {
   etiquetaSexo,
   etiquetasConvocatoria,
   partesFecha,
+  textoAnios,
 } from "@/lib/datos";
 import EtiquetaEstado from "./EtiquetaEstado";
 
@@ -37,6 +38,14 @@ function ColumnaFecha({ c }: { c: Convocatoria }) {
     );
   }
 
+  if (c.tipoFecha === "por-confirmar") {
+    return (
+      <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
+        <CalendarClock size={17} className="mt-[10px] text-tinta-3" strokeWidth={1.75} />
+      </div>
+    );
+  }
+
   return (
     <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
       <span className="text-[11px] uppercase leading-[1.4] text-tinta-3">{diaSemana}</span>
@@ -53,6 +62,7 @@ export default function FilaConvocatoria({
   enlazar = true,
 }: Props) {
   const etiquetas = etiquetasConvocatoria(c);
+  const anios = textoAnios(c);
   const linea2 = [
     `${etiquetaCategoria(c.categoria)} ${etiquetaSexo(c.sexo).toLowerCase()}`,
     c.nivel || null,
@@ -68,6 +78,9 @@ export default function FilaConvocatoria({
       <div className="min-w-0 flex-1">
         <h3 className="text-[15px] font-medium leading-snug text-tinta">{nombreClub}</h3>
         <p className="mt-[2px] text-[13.5px] leading-snug text-tinta-2">{linea2}</p>
+        {anios && (
+          <p className="mt-[2px] text-[12.5px] leading-snug text-tinta-2">{anios}</p>
+        )}
         {lugar && (
           <p className="mt-[3px] flex items-center gap-[5px] text-[12.5px] leading-snug text-tinta-3">
             <MapPin size={13} strokeWidth={1.75} className="shrink-0" />

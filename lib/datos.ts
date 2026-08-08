@@ -12,7 +12,7 @@ export type Categoria =
   | "senior"
   | "master";
 export type Sexo = "femenino" | "masculino" | "mixto";
-export type TipoFecha = "exacta" | "mes" | "abierta";
+export type TipoFecha = "exacta" | "mes" | "por-confirmar" | "abierta";
 export type EstadoFecha = "confirmada" | "provisional";
 export type Origen = "club" | "fuentes-publicas";
 export type TipoRed = "instagram" | "tiktok" | "facebook" | "youtube" | "x" | "otra";
@@ -46,6 +46,11 @@ export interface Convocatoria {
   tipoFecha: TipoFecha;
   fecha: string;
   mesAprox: string;
+  /**
+   * Años de nacimiento que convoca el club, p. ej. "2017 a 2021". Si falta,
+   * se calculan con ANIOS_POR_TEMPORADA; el dato del club manda sobre la tabla.
+   */
+  anios?: string;
   estadoFecha: EstadoFecha;
   hora: string;
   pabellon: string;
@@ -82,14 +87,16 @@ export function convocatoriasDeClub(clubId: string): Convocatoria[] {
 
 /**
  * Orden del listado:
- * 1. fechas exactas confirmadas → 2. exactas provisionales → 3. por mes → 4. abiertas.
+ * 1. fechas exactas confirmadas → 2. exactas provisionales → 3. por mes →
+ * 4. fecha por confirmar → 5. inscripción abierta todo el año.
  * Dentro de cada grupo, por fecha/mes ascendente.
  */
 export function grupoOrden(c: Convocatoria): number {
   if (c.tipoFecha === "exacta" && c.estadoFecha === "confirmada") return 0;
   if (c.tipoFecha === "exacta") return 1;
   if (c.tipoFecha === "mes") return 2;
-  return 3;
+  if (c.tipoFecha === "por-confirmar") return 3;
+  return 4;
 }
 
 export function ordenarConvocatorias(
@@ -209,6 +216,7 @@ export type Estado =
   | "verificado"
   | "provisional"
   | "por-confirmar"
+  | "fecha-por-confirmar"
   | "abierta"
   | null;
 
@@ -216,15 +224,53 @@ export type Estado =
  * Una convocatoria puede llevar hasta dos etiquetas:
  * - "Verificado por el club" (verde), siempre que origen = club.
  * - La de estado de fecha que corresponda: abierta (azul), día por
- *   confirmar (gris) o fecha provisional (ámbar).
+ *   confirmar (gris, hay mes pero no día), fecha por confirmar (gris,
+ *   sin fecha anunciada) o fecha provisional (ámbar).
  */
 export function etiquetasConvocatoria(c: Convocatoria): Exclude<Estado, null>[] {
   const etiquetas: Exclude<Estado, null>[] = [];
   if (c.origen === "club") etiquetas.push("verificado");
   if (c.tipoFecha === "abierta") etiquetas.push("abierta");
+  else if (c.tipoFecha === "por-confirmar") etiquetas.push("fecha-por-confirmar");
   else if (c.tipoFecha === "mes") etiquetas.push("por-confirmar");
   else if (c.estadoFecha === "provisional") etiquetas.push("provisional");
   return etiquetas;
+}
+
+/**
+ * Años de nacimiento de cada categoría por temporada.
+ * ACTUALIZAR CADA TEMPORADA: al preparar una temporada nueva hay que añadir
+ * aquí su fila con los cortes de edad de la normativa federativa vigente.
+ * Júnior, sénior y máster no llevan años fijos y quedan fuera a propósito.
+ */
+export const ANIOS_POR_TEMPORADA: Record<
+  string,
+  Partial<Record<Categoria, string>>
+> = {
+  "2026-27": {
+    benjamin: "2017 y 2018",
+    alevin: "2015 y 2016",
+    infantil: "2013 y 2014",
+    cadete: "2011 y 2012",
+    juvenil: "2009 y 2010",
+  },
+};
+
+/**
+ * Línea de años de nacimiento de una convocatoria ("nacidas en 2013 y 2014").
+ * El campo `anios` del club manda sobre la tabla; sin dato del club ni fila
+ * en la tabla (júnior, sénior, máster o temporada desconocida) no se muestra.
+ */
+export function textoAnios(c: Convocatoria): string | null {
+  const anios = c.anios || ANIOS_POR_TEMPORADA[c.temporada]?.[c.categoria];
+  if (!anios) return null;
+  const prefijo =
+    c.sexo === "femenino"
+      ? "nacidas"
+      : c.sexo === "masculino"
+        ? "nacidos"
+        : "nacidos y nacidas";
+  return `${prefijo} en ${anios}`;
 }
 
 /** Clubes que buscan entrenador/a, ordenados por nombre. */

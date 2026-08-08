@@ -6,9 +6,10 @@
   "tipoEntidad": "federado",
   "nivel": "",
   "temporada": "2026-27",
-  "tipoFecha": "abierta",
+  "tipoFecha": "por-confirmar",
   "fecha": "",
   "mesAprox": "",
+  "anios": "2017 a 2021",
   "estadoFecha": "confirmada",
   "hora": "",
   "pabellon": "",
@@ -16,9 +17,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Captación abierta. Contacto por WhatsApp en el 675 759 841. Los grupos de 2019 a 2021 son de iniciación.",
+  "notas": "Contacta con el club por WhatsApp. El teléfono está en el apartado de contacto.",
   "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-06"
+  "fechaActualizacion": "2026-08-08"
  },
  {
   "clubId": "cv-alcala",
@@ -27,9 +28,10 @@
   "tipoEntidad": "federado",
   "nivel": "",
   "temporada": "2026-27",
-  "tipoFecha": "abierta",
+  "tipoFecha": "por-confirmar",
   "fecha": "",
   "mesAprox": "",
+  "anios": "2017 a 2021",
   "estadoFecha": "confirmada",
   "hora": "",
   "pabellon": "",
@@ -37,9 +39,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Captación abierta. Contacto por WhatsApp en el 675 759 841. Los grupos de 2019 a 2021 son de iniciación.",
+  "notas": "Contacta con el club por WhatsApp. El teléfono está en el apartado de contacto.",
   "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-06"
+  "fechaActualizacion": "2026-08-08"
  },
  {
   "clubId": "cv-alcala",
@@ -48,7 +50,7 @@
   "tipoEntidad": "federado",
   "nivel": "",
   "temporada": "2026-27",
-  "tipoFecha": "abierta",
+  "tipoFecha": "por-confirmar",
   "fecha": "",
   "mesAprox": "",
   "estadoFecha": "confirmada",
@@ -58,9 +60,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Captación abierta. Contacto por WhatsApp en el 675 759 841.",
+  "notas": "Contacta con el club por WhatsApp. El teléfono está en el apartado de contacto.",
   "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-06"
+  "fechaActualizacion": "2026-08-08"
  },
  {
   "clubId": "cv-alcala",
@@ -69,7 +71,7 @@
   "tipoEntidad": "federado",
   "nivel": "",
   "temporada": "2026-27",
-  "tipoFecha": "abierta",
+  "tipoFecha": "por-confirmar",
   "fecha": "",
   "mesAprox": "",
   "estadoFecha": "confirmada",
@@ -79,9 +81,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Captación abierta. Contacto por WhatsApp en el 675 759 841.",
+  "notas": "Contacta con el club por WhatsApp. El teléfono está en el apartado de contacto.",
   "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-06"
+  "fechaActualizacion": "2026-08-08"
  },
  {
   "clubId": "cv-alcala",
@@ -90,7 +92,7 @@
   "tipoEntidad": "federado",
   "nivel": "",
   "temporada": "2026-27",
-  "tipoFecha": "abierta",
+  "tipoFecha": "por-confirmar",
   "fecha": "",
   "mesAprox": "",
   "estadoFecha": "confirmada",
@@ -100,9 +102,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Captación abierta. Contacto por WhatsApp en el 675 759 841.",
+  "notas": "Contacta con el club por WhatsApp. El teléfono está en el apartado de contacto.",
   "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-06"
+  "fechaActualizacion": "2026-08-08"
  },
  {
   "clubId": "cv-alcala",
@@ -111,7 +113,7 @@
   "tipoEntidad": "federado",
   "nivel": "",
   "temporada": "2026-27",
-  "tipoFecha": "abierta",
+  "tipoFecha": "por-confirmar",
   "fecha": "",
   "mesAprox": "",
   "estadoFecha": "confirmada",
@@ -121,8 +123,8 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Captación abierta. Contacto por WhatsApp en el 675 759 841.",
+  "notas": "Contacta con el club por WhatsApp. El teléfono está en el apartado de contacto.",
   "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-06"
+  "fechaActualizacion": "2026-08-08"
  }
 ]

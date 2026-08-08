@@ -29,6 +29,7 @@ import {
   etiquetasConvocatoria,
   fechaLarga,
   partesFecha,
+  textoAnios,
 } from "@/lib/datos";
 import { EMAIL_CORRECCIONES, URL_SITIO } from "@/lib/config";
 
@@ -82,6 +83,14 @@ function FechaConvocatoria({ c }: { c: Convocatoria }) {
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
         <span className="text-[11px] uppercase leading-[1.4] text-tinta-3">{mes}</span>
         <CalendarClock size={17} className="mt-[4px] text-tinta-3" strokeWidth={1.75} />
+      </div>
+    );
+  }
+
+  if (c.tipoFecha === "por-confirmar") {
+    return (
+      <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
+        <CalendarClock size={17} className="mt-[8px] text-tinta-3" strokeWidth={1.75} />
       </div>
     );
   }
@@ -227,6 +236,7 @@ export default async function FichaClub({
         )}
         {lista.map((c, i) => {
           const etiquetas = etiquetasConvocatoria(c);
+          const anios = textoAnios(c);
           const linea = [
             `${etiquetaCategoria(c.categoria)} ${etiquetaSexo(c.sexo).toLowerCase()}`,
             c.nivel || null,
@@ -244,6 +254,11 @@ export default async function FichaClub({
                   <h3 className="text-[15px] font-medium leading-snug text-tinta">
                     {linea}
                   </h3>
+                  {anios && (
+                    <p className="mt-[2px] text-[12.5px] leading-snug text-tinta-2">
+                      {anios}
+                    </p>
+                  )}
                   {c.temporada && (
                     <p className="mt-[2px] text-[12.5px] text-tinta-3">
                       Temporada {c.temporada}

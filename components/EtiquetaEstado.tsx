@@ -13,6 +13,10 @@ const ESTILOS: Record<Exclude<Estado, null>, { texto: string; clases: string }> 
     texto: "Día por confirmar",
     clases: "bg-gris-tinte text-gris-etiqueta",
   },
+  "fecha-por-confirmar": {
+    texto: "Fecha por confirmar",
+    clases: "bg-gris-tinte text-gris-etiqueta",
+  },
   abierta: {
     texto: "Inscripción abierta todo el año",
     clases: "bg-azul-tinte text-azul",
