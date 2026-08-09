@@ -10,7 +10,6 @@ import {
   Instagram,
   Link2,
   MapPin,
-  Phone,
   RefreshCw,
   Twitter,
   Users,
@@ -210,7 +209,7 @@ export default async function FichaClub({
           </div>
         )}
 
-        <div id="contacto" className="mt-4 scroll-mt-4">
+        <div className="mt-4">
           <ContactoClub email={club.email} telefono={club.telefono} />
         </div>
       </header>
@@ -314,13 +313,6 @@ export default async function FichaClub({
                       ))}
                     </div>
                   )}
-                  <a
-                    href="#contacto"
-                    className="mt-[10px] inline-flex items-center gap-[5px] rounded-[6px] bg-acento px-3 py-[7px] text-[12.5px] font-medium text-white hover:opacity-90"
-                  >
-                    <Phone size={13} strokeWidth={1.75} />
-                    Contactar con el club
-                  </a>
                 </div>
               </div>
             </article>
