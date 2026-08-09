@@ -96,7 +96,7 @@ export default function FilaConvocatoria({
         )}
         {enlazar && (
           <span className="mt-[10px] inline-flex items-center gap-[4px] rounded-[6px] bg-acento px-3 py-[7px] text-[12.5px] font-medium text-white">
-            Ver convocatoria
+            Ver más información
             <ChevronRight size={13} strokeWidth={2} />
           </span>
         )}
