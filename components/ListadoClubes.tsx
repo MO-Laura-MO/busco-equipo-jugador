@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { MapPin, Search, Users } from "lucide-react";
+import { MapPin, Search, Users, X } from "lucide-react";
 import { Club, ZONAS, Zona } from "@/lib/datos";
 
 interface ClubConDatos extends Club {
@@ -36,6 +36,14 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
     () => clubes.some((c) => c.numConvocatorias > 0),
     [clubes]
   );
+
+  const hayFiltros = busqueda.trim() !== "" || zona !== null || soloConPruebas;
+
+  const limpiarFiltros = () => {
+    setBusqueda("");
+    setZona(null);
+    setSoloConPruebas(false);
+  };
 
   const filtrados = useMemo(() => {
     const q = busqueda.trim().toLowerCase();
@@ -98,10 +106,20 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
       </div>
 
       {/* Barra de resultados */}
-      <div className="bg-barra px-4 py-[9px]">
+      <div className="flex items-center gap-3 bg-barra px-4 py-[9px]">
         <span className="text-[12.5px] text-tinta-2">
           {filtrados.length} {filtrados.length === 1 ? "club" : "clubes"}
         </span>
+        {hayFiltros && (
+          <button
+            type="button"
+            onClick={limpiarFiltros}
+            className="flex items-center gap-[3px] text-[12.5px] font-medium text-acento hover:underline"
+          >
+            <X size={13} strokeWidth={2} />
+            Quitar filtros
+          </button>
+        )}
       </div>
 
       {/* Listado */}
@@ -154,7 +172,14 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
         </ul>
       ) : (
         <p className="px-4 py-10 text-center text-[13.5px] text-tinta-3">
-          No hay clubes con esos filtros.
+          No hay clubes con esos filtros.{" "}
+          <button
+            type="button"
+            onClick={limpiarFiltros}
+            className="text-acento underline underline-offset-2 decoration-acento/40 hover:decoration-acento"
+          >
+            Quitar filtros
+          </button>
         </p>
       )}
     </div>

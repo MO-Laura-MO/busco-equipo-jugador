@@ -9,6 +9,7 @@ import {
   MapPin,
   Search,
   Users,
+  X,
 } from "lucide-react";
 import {
   CATEGORIAS,
@@ -142,6 +143,26 @@ export default function Listado({ clubes, convocatorias }: Props) {
 
   const alternarDesplegable = (f: Filtro) =>
     setDesplegado((actual) => (actual === f ? null : f));
+
+  const hayFiltros =
+    busqueda.trim() !== "" ||
+    categoria !== null ||
+    sexo !== null ||
+    zona !== null ||
+    mes !== null ||
+    temporada !== null ||
+    soloEntrenador;
+
+  const limpiarFiltros = () => {
+    setBusqueda("");
+    setCategoria(null);
+    setSexo(null);
+    setZona(null);
+    setMes(null);
+    setTemporada(null);
+    setSoloEntrenador(false);
+    setDesplegado(null);
+  };
 
   const opciones: Record<
     Filtro,
@@ -290,7 +311,7 @@ export default function Listado({ clubes, convocatorias }: Props) {
 
       {/* Barra de resultados */}
       <div className="flex items-center justify-between bg-barra px-4 py-[9px]">
-        <span className="text-[12.5px] text-tinta-2">
+        <span className="flex items-center gap-3 text-[12.5px] text-tinta-2">
           {soloEntrenador
             ? `${clubesFiltrados.length} ${
                 clubesFiltrados.length === 1
@@ -300,6 +321,16 @@ export default function Listado({ clubes, convocatorias }: Props) {
             : `${filtradas.length} ${
                 filtradas.length === 1 ? "convocatoria" : "convocatorias"
               }`}
+          {hayFiltros && (
+            <button
+              type="button"
+              onClick={limpiarFiltros}
+              className="flex items-center gap-[3px] font-medium text-acento hover:underline"
+            >
+              <X size={13} strokeWidth={2} />
+              Quitar filtros
+            </button>
+          )}
         </span>
         {!soloEntrenador && (
           <button
@@ -365,7 +396,14 @@ export default function Listado({ clubes, convocatorias }: Props) {
           </ul>
         ) : (
           <p className="px-4 py-10 text-center text-[13.5px] text-tinta-3">
-            No hay clubes que busquen entrenador con esos filtros.
+            No hay clubes que busquen entrenador con esos filtros.{" "}
+            <button
+              type="button"
+              onClick={limpiarFiltros}
+              className="text-acento underline underline-offset-2 decoration-acento/40 hover:decoration-acento"
+            >
+              Quitar filtros
+            </button>
           </p>
         )
       ) : filtradas.length > 0 ? (
@@ -385,7 +423,14 @@ export default function Listado({ clubes, convocatorias }: Props) {
         </ul>
       ) : (
         <p className="px-4 py-10 text-center text-[13.5px] text-tinta-3">
-          No hay convocatorias con esos filtros.
+          No hay convocatorias con esos filtros.{" "}
+          <button
+            type="button"
+            onClick={limpiarFiltros}
+            className="text-acento underline underline-offset-2 decoration-acento/40 hover:decoration-acento"
+          >
+            Quitar filtros
+          </button>
         </p>
       )}
     </div>
