@@ -28,6 +28,8 @@ export interface Club {
   telefono: string;
   logo: string;
   descripcion: string;
+  /** Emails adicionales con etiqueta (p. ej. Formación / Rendimiento); se muestran tras "Ver contacto". */
+  emailsExtra?: { etiqueta: string; email: string }[];
   /** true si el club busca entrenador/a; se muestra en la ficha y en el filtro de portada. */
   buscaEntrenador?: boolean;
   /** Detalle corto y opcional (máx ~150 car.), p. ej. "Cadete femenino, martes y jueves". */

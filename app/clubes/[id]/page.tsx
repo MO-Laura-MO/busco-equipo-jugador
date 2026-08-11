@@ -210,7 +210,11 @@ export default async function FichaClub({
         )}
 
         <div className="mt-4">
-          <ContactoClub email={club.email} telefono={club.telefono} />
+          <ContactoClub
+            email={club.email}
+            telefono={club.telefono}
+            emailsExtra={club.emailsExtra}
+          />
         </div>
       </header>
 

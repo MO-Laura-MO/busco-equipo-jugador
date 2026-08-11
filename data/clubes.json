@@ -298,21 +298,31 @@
  },
  {
   "id": "cde-vb-villanueva-del-pardillo",
-  "nombre": "CDE VB Villanueva Del Pardillo",
+  "nombre": "CV Bulldogs (Villanueva del Pardillo)",
   "municipio": "Villanueva del Pardillo",
   "zona": "oeste",
-  "web": "",
+  "web": "https://www.cvbulldogs.com",
   "redes": [
    {
     "tipo": "instagram",
     "url": "https://instagram.com/cvbulldogs"
    }
   ],
-  "email": "voleibolbulldogs@hotmail.com",
-  "telefono": "+34 611762428",
+  "email": "administracion@cvbulldogs.com",
+  "telefono": "+34 626 40 56 84",
   "logo": "",
-  "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "descripcion": "Club de voleibol femenino con dos itinerarios: Bulldogs Formación (de escuela a cadete) y Bulldogs Rendimiento (juvenil, júnior y sénior). Sedes en Villanueva del Pardillo, Villanueva de la Cañada y Valdemorillo.",
+  "fechaActualizacion": "2026-08-11",
+  "emailsExtra": [
+   {
+    "etiqueta": "Formación",
+    "email": "formacion@cvbulldogs.com"
+   },
+   {
+    "etiqueta": "Rendimiento",
+    "email": "rendimiento@cvbulldogs.com"
+   }
+  ]
  },
  {
   "id": "cde-voleibol-algete",
