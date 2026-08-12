@@ -24,3 +24,10 @@ export const URL_FORMULARIO_ALTA = "https://tally.so/r/NpxY2j";
 
 /** Email al que llegan las correcciones de datos. */
 export const EMAIL_CORRECCIONES = "voley.app.es@gmail.com";
+
+/** Canal de WhatsApp donde se avisa de cada convocatoria nueva. */
+export const URL_CANAL_WHATSAPP =
+  "https://whatsapp.com/channel/0029Vb8BzKk4tRrsGOYbUR04";
+
+/** Instagram del directorio. */
+export const URL_INSTAGRAM = "https://instagram.com/voley.app";

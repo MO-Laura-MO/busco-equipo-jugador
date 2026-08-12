@@ -1,6 +1,7 @@
 import { ClipboardList, Search } from "lucide-react";
 import Link from "next/link";
 import Listado from "@/components/Listado";
+import Seguir from "@/components/Seguir";
 import { clubes, convocatorias } from "@/lib/datos";
 
 export default function Home() {
@@ -52,6 +53,11 @@ export default function Home() {
       <div id="convocatorias">
         <Listado clubes={clubes} convocatorias={convocatorias} />
       </div>
+
+      <Seguir
+        titulo="¿No está todavía la prueba que buscas?"
+        texto="Cargamos clubes cada semana. Te avisamos de cada convocatoria nueva en el canal de WhatsApp y en Instagram: gratis, y puedes salir cuando quieras."
+      />
     </main>
   );
 }

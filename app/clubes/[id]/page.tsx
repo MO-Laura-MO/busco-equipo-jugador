@@ -16,6 +16,7 @@ import {
   Youtube,
 } from "lucide-react";
 import ContactoClub from "@/components/ContactoClub";
+import Seguir from "@/components/Seguir";
 import EtiquetaEstado from "@/components/EtiquetaEstado";
 import {
   Convocatoria,
@@ -325,6 +326,8 @@ export default async function FichaClub({
           );
         })}
       </section>
+
+      <Seguir texto="Publicamos cada convocatoria nueva de este club y del resto en el canal de WhatsApp y en Instagram. Gratis, y puedes salir cuando quieras." />
 
       <div className="border-t border-borde px-4 py-4">
         <p className="text-[12.5px] text-tinta-3">

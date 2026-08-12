@@ -8,6 +8,8 @@ import {
   NOMBRE_AMBITO_LARGO,
   NOMBRE_MARCA,
   TITULO_SITIO,
+  URL_CANAL_WHATSAPP,
+  URL_INSTAGRAM,
   URL_SITIO,
 } from "@/lib/config";
 import "./globals.css";
@@ -76,6 +78,22 @@ export default function RootLayout({
               <Link href="/blog" className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta">
                 Blog
               </Link>
+              <a
+                href={URL_CANAL_WHATSAPP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta"
+              >
+                Canal de WhatsApp
+              </a>
+              <a
+                href={URL_INSTAGRAM}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta"
+              >
+                Instagram
+              </a>
               <Link href="/aviso-legal" className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta">
                 Aviso legal y privacidad
               </Link>

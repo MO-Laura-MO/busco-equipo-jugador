@@ -29,6 +29,13 @@
   --color-azul: #1e4fa3; /* azul discreto para "Inscripción abierta" */
   --color-azul-tinte: #e9f0fa;
 
+  /* Colores de plataforma, solo para los botones de seguir: verde de WhatsApp
+     y rosa de Instagram, aclarados y desaturados para que no griten al lado
+     del azul de marca. Llevan el texto en tinta oscura, igual que el botón
+     amarillo (5.7:1 y 5.9:1). Planos, sin degradado. */
+  --color-whatsapp: #4da36a;
+  --color-instagram: #e0709e;
+
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 

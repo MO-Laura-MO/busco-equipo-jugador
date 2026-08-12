@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, Volleyball } from "lucide-react";
+import Seguir from "./Seguir";
 import { fechaLarga } from "@/lib/datos";
 
 /**
@@ -44,6 +45,9 @@ export default function Articulo({
           </p>
         </header>
         <div className="prose-voley mt-5 px-4">{children}</div>
+        <div className="mt-8">
+          <Seguir />
+        </div>
       </article>
     </main>
   );
