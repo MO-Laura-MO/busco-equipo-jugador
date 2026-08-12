@@ -3,7 +3,9 @@
   "clubId": "cv-alcala",
   "categoria": "benjamin",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -25,7 +27,9 @@
   "clubId": "cv-alcala",
   "categoria": "benjamin",
   "sexo": "masculino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -47,7 +51,9 @@
   "clubId": "cv-alcala",
   "categoria": "alevin",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -68,7 +74,9 @@
   "clubId": "cv-alcala",
   "categoria": "alevin",
   "sexo": "masculino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -89,7 +97,9 @@
   "clubId": "cv-alcala",
   "categoria": "infantil",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -110,7 +120,9 @@
   "clubId": "cv-alcala",
   "categoria": "infantil",
   "sexo": "masculino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -131,7 +143,9 @@
   "clubId": "cde-vb-villanueva-del-pardillo",
   "categoria": "benjamin",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "Bulldogs Formación",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -152,7 +166,9 @@
   "clubId": "cde-vb-villanueva-del-pardillo",
   "categoria": "alevin",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "Bulldogs Formación",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -173,7 +189,9 @@
   "clubId": "cde-vb-villanueva-del-pardillo",
   "categoria": "infantil",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "Bulldogs Formación",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -194,7 +212,9 @@
   "clubId": "cde-vb-villanueva-del-pardillo",
   "categoria": "cadete",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "Bulldogs Formación",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -215,7 +235,9 @@
   "clubId": "cde-vb-villanueva-del-pardillo",
   "categoria": "juvenil",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "Bulldogs Rendimiento",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -236,7 +258,9 @@
   "clubId": "cde-vb-villanueva-del-pardillo",
   "categoria": "junior",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "Bulldogs Rendimiento",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -257,7 +281,9 @@
   "clubId": "cde-vb-villanueva-del-pardillo",
   "categoria": "senior",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": [
+   "federado"
+  ],
   "nivel": "Bulldogs Rendimiento",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -273,5 +299,189 @@
   "notas": "Inscripción por email al grupo de Rendimiento (en Ver contacto). Sedes en Villanueva del Pardillo, Villanueva de la Cañada y Valdemorillo.",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-11"
+ },
+ {
+  "clubId": "voleibol-maria-rodrigo",
+  "categoria": "infantil",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "IES María Rodrigo",
+  "direccion": "C/ Talamanca del Jarama, 2, 28051 Madrid",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "El formulario de inscripción está en Contacto.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-12"
+ },
+ {
+  "clubId": "voleibol-maria-rodrigo",
+  "categoria": "cadete",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "IES María Rodrigo",
+  "direccion": "C/ Talamanca del Jarama, 2, 28051 Madrid",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "El formulario de inscripción está en Contacto.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-12"
+ },
+ {
+  "clubId": "voleibol-maria-rodrigo",
+  "categoria": "juvenil",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "IES María Rodrigo",
+  "direccion": "C/ Talamanca del Jarama, 2, 28051 Madrid",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "El formulario de inscripción está en Contacto.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-12"
+ },
+ {
+  "clubId": "voleibol-maria-rodrigo",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "Equipo de nueva creación",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "IES María Rodrigo",
+  "direccion": "C/ Talamanca del Jarama, 2, 28051 Madrid",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Entrenamientos lunes y miércoles de 21:00 a 23:00. El formulario de inscripción está en Contacto.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-12"
+ },
+ {
+  "clubId": "avp-parla",
+  "categoria": "infantil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Cantera masculina",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Proyecto de cantera masculina.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-12"
+ },
+ {
+  "clubId": "club-voleibol-torrelodones",
+  "categoria": "infantil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-12"
+ },
+ {
+  "clubId": "club-voleibol-torrelodones",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-12"
+ },
+ {
+  "clubId": "ad-perales-del-rio",
+  "categoria": "infantil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "El email de la sección de voleibol está en Contacto.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-12"
  }
 ]

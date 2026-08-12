@@ -15,6 +15,18 @@ export type Sexo = "femenino" | "masculino" | "mixto";
 export type TipoFecha = "exacta" | "mes" | "por-confirmar" | "abierta";
 export type EstadoFecha = "confirmada" | "provisional";
 export type Origen = "club" | "fuentes-publicas";
+/**
+ * Tipo de competición en la que juega el equipo de la convocatoria:
+ * - federado: liga de la Federación Madrileña de Voleibol (licencia federativa).
+ * - municipal: juegos deportivos municipales u otra liga de ayuntamiento.
+ * - escuela: formación e iniciación, sin competición o solo interna.
+ * No son lo mismo: un equipo municipal compite, una escuela no.
+ *
+ * Se guarda como lista porque una misma convocatoria puede dar acceso a más
+ * de una liga: hay clubes con equipos federados y municipales en la misma
+ * categoría, y una sola prueba sirve para las dos.
+ */
+export type TipoEntidad = "federado" | "municipal" | "escuela";
 export type TipoRed = "instagram" | "tiktok" | "facebook" | "youtube" | "x" | "otra";
 
 export interface Club {
@@ -34,6 +46,10 @@ export interface Club {
   buscaEntrenador?: boolean;
   /** Detalle corto y opcional (máx ~150 car.), p. ej. "Cadete femenino, martes y jueves". */
   notasEntrenador?: string;
+  /** Formulario de inscripción del club. Se muestra tras el botón de contacto, sin enseñar la URL. */
+  formularioUrl?: string;
+  /** Nota corta bajo el formulario, p. ej. la vía alternativa por redes. */
+  formularioNota?: string;
   fechaActualizacion: string;
 }
 
@@ -41,7 +57,8 @@ export interface Convocatoria {
   clubId: string;
   categoria: Categoria;
   sexo: Sexo;
-  tipoEntidad: "federado" | "escuela";
+  /** Una o varias: un equipo puede jugar liga federada y municipal a la vez. */
+  tipoEntidad: TipoEntidad[];
   nivel: string;
   /** Temporada a la que pertenece la prueba, p. ej. "2026-27". */
   temporada: string;
@@ -141,6 +158,17 @@ export function ordenCategoria(c: Categoria): number {
   return i === -1 ? CATEGORIAS.length : i;
 }
 
+/** Etiquetas del tipo de competición, en el orden en que deben mostrarse. */
+export const TIPOS_ENTIDAD: { valor: TipoEntidad; etiqueta: string }[] = [
+  { valor: "federado", etiqueta: "Federado" },
+  { valor: "municipal", etiqueta: "Liga municipal" },
+  { valor: "escuela", etiqueta: "Escuela" },
+];
+
+export function etiquetaTipoEntidad(t: TipoEntidad): string {
+  return TIPOS_ENTIDAD.find((x) => x.valor === t)?.etiqueta ?? t;
+}
+
 export const SEXOS: { valor: Sexo; etiqueta: string }[] = [
   { valor: "femenino", etiqueta: "Femenino" },
   { valor: "masculino", etiqueta: "Masculino" },
@@ -216,6 +244,9 @@ export function mesesDisponibles(lista: Convocatoria[]): { valor: string; etique
 /** Etiquetas de estado de una convocatoria. */
 export type Estado =
   | "verificado"
+  | "federado"
+  | "municipal"
+  | "escuela"
   | "provisional"
   | "por-confirmar"
   | "fecha-por-confirmar"
@@ -223,15 +254,24 @@ export type Estado =
   | null;
 
 /**
- * Una convocatoria puede llevar hasta dos etiquetas:
+ * Etiquetas de una convocatoria, en este orden:
  * - "Verificado por el club" (verde), siempre que origen = club.
+ * - El tipo o tipos de competición (gris).
  * - La de estado de fecha que corresponda: abierta (azul), día por
  *   confirmar (gris, hay mes pero no día), fecha por confirmar (gris,
  *   sin fecha anunciada) o fecha provisional (ámbar).
+ *
+ * El tipo de competición se muestra SIEMPRE, también cuando el equipo es solo
+ * federado: es de lo primero que mira quien busca club, porque determina la
+ * cuota, los desplazamientos y el compromiso de fin de semana. Si el equipo
+ * juega en varias ligas se muestran todas.
  */
 export function etiquetasConvocatoria(c: Convocatoria): Exclude<Estado, null>[] {
   const etiquetas: Exclude<Estado, null>[] = [];
   if (c.origen === "club") etiquetas.push("verificado");
+  for (const t of TIPOS_ENTIDAD) {
+    if ((c.tipoEntidad ?? []).includes(t.valor)) etiquetas.push(t.valor);
+  }
   if (c.tipoFecha === "abierta") etiquetas.push("abierta");
   else if (c.tipoFecha === "por-confirmar") etiquetas.push("fecha-por-confirmar");
   else if (c.tipoFecha === "mes") etiquetas.push("por-confirmar");

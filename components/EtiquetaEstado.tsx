@@ -5,6 +5,18 @@ const ESTILOS: Record<Exclude<Estado, null>, { texto: string; clases: string }> 
     texto: "Verificado por el club",
     clases: "bg-verificado-tinte text-verificado",
   },
+  federado: {
+    texto: "Federado",
+    clases: "bg-gris-tinte text-gris-etiqueta",
+  },
+  municipal: {
+    texto: "Liga municipal",
+    clases: "bg-gris-tinte text-gris-etiqueta",
+  },
+  escuela: {
+    texto: "Escuela",
+    clases: "bg-gris-tinte text-gris-etiqueta",
+  },
   provisional: {
     texto: "Fecha provisional",
     clases: "bg-ambar-tinte text-ambar",
@@ -18,7 +30,7 @@ const ESTILOS: Record<Exclude<Estado, null>, { texto: string; clases: string }> 
     clases: "bg-gris-tinte text-gris-etiqueta",
   },
   abierta: {
-    texto: "Inscripción abierta todo el año",
+    texto: "Inscripción abierta",
     clases: "bg-azul-tinte text-azul",
   },
 };

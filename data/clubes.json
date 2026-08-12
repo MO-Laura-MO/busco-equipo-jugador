@@ -10,7 +10,13 @@
   "telefono": "+34 609 061 092",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-12",
+  "emailsExtra": [
+   {
+    "etiqueta": "Voleibol",
+    "email": "voley@adperales.es"
+   }
+  ]
  },
  {
   "id": "ad-voleibol-rivas",
@@ -129,7 +135,7 @@
   "telefono": "",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-12"
  },
  {
   "id": "las-nieves-sports",
@@ -534,7 +540,7 @@
   "telefono": "+34 645192939",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-08-12"
  },
  {
   "id": "colegio-miramadrid",
@@ -917,5 +923,43 @@
   "logo": "",
   "descripcion": "",
   "fechaActualizacion": "2026-08-05"
+ },
+ {
+  "id": "voleibol-maria-rodrigo",
+  "nombre": "CD Voleibol María Rodrigo",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/cdevmariarodrigo"
+   }
+  ],
+  "email": "",
+  "telefono": "",
+  "logo": "",
+  "descripcion": "Club de voleibol femenino del Ensanche de Vallecas, con sede en el IES María Rodrigo. Tiene equipos de liga municipal en categorías infantil, cadete, juvenil y sénior.",
+  "formularioUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeyBNl8NX6jlHi2HZH3gV5qh-gLnVYI3RCbkVzWJ1V4J3aF1Q/viewform",
+  "formularioNota": "También puedes apuntarte por mensaje directo en su Instagram.",
+  "fechaActualizacion": "2026-08-12"
+ },
+ {
+  "id": "wonders-club-deportivo",
+  "nombre": "Wonder's Club Deportivo",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/wondersvoley.madrid"
+   }
+  ],
+  "email": "",
+  "telefono": "+34 641 198 256",
+  "logo": "",
+  "descripcion": "Club de voleibol con sede en el CMD Orcasur, en Madrid. Compite en los juegos deportivos municipales. La cuota incluye entrenamientos, equipación de competición y camiseta de entrenamiento.",
+  "fechaActualizacion": "2026-08-12"
  }
 ]

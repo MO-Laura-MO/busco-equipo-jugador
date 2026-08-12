@@ -214,6 +214,8 @@ export default async function FichaClub({
             email={club.email}
             telefono={club.telefono}
             emailsExtra={club.emailsExtra}
+            formularioUrl={club.formularioUrl}
+            formularioNota={club.formularioNota}
           />
         </div>
       </header>
