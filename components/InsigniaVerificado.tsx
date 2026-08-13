@@ -26,9 +26,9 @@ export default function InsigniaVerificado() {
           }
         }}
         onBlur={() => setVisible(false)}
-        className="flex items-center justify-center text-verificado"
+        className="flex h-5 w-5 items-center justify-center rounded-full bg-verificado-tinte text-verificado"
       >
-        <BadgeCheck size={15} strokeWidth={1.75} />
+        <BadgeCheck size={14} strokeWidth={2} />
       </span>
       <span
         className={`pointer-events-none absolute left-1/2 top-full z-10 mt-1 -translate-x-1/2 whitespace-nowrap rounded-[6px] bg-tinta px-2 py-1 text-[11px] leading-none text-white transition-opacity ${

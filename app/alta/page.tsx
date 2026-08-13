@@ -67,8 +67,8 @@ export default function Alta() {
         <p className="relative mt-3 max-w-[520px] text-[13.5px] leading-relaxed text-white/85">
           Si tu club o escuela está en la Comunidad de Madrid, añádelo gratis:
           tendrá su perfil en voley.app y podrás publicar convocatorias de
-          pruebas y vacantes de entrenador. Así, jugadores y entrenadores
-          encontrarán vuestro club fácilmente.
+          pruebas y vacantes de entrenador. Así, jugadores y entrenadores lo
+          encontrarán fácilmente.
         </p>
         <a
           href={URL_FORMULARIO_ALTA}

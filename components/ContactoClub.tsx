@@ -33,7 +33,7 @@ export default function ContactoClub({
       <button
         type="button"
         onClick={() => setVisible(true)}
-        className="rounded-[6px] bg-acento px-4 py-[8px] text-[13.5px] font-medium text-white hover:opacity-90"
+        className="rounded-[6px] bg-white px-4 py-[8px] text-[13.5px] font-medium text-acento hover:bg-white/90"
       >
         {formularioUrl ? "Contacto e inscripción" : "Ver contacto"}
       </button>
@@ -48,13 +48,13 @@ export default function ContactoClub({
             href={formularioUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-[13.5px] font-medium text-acento hover:underline underline-offset-2"
+            className="flex items-center gap-2 text-[13.5px] font-medium text-white hover:underline underline-offset-2"
           >
             <ClipboardList size={15} strokeWidth={1.75} />
             Formulario de inscripción
           </a>
           {formularioNota && (
-            <p className="mt-[3px] pl-[23px] text-[12.5px] leading-relaxed text-tinta-3">
+            <p className="mt-[3px] pl-[23px] text-[12.5px] leading-relaxed text-white/70">
               {formularioNota}
             </p>
           )}
@@ -63,9 +63,9 @@ export default function ContactoClub({
       {email && (
         <a
           href={`mailto:${email}`}
-          className="flex items-center gap-2 text-[13.5px] text-tinta hover:text-acento"
+          className="flex items-center gap-2 text-[13.5px] text-white hover:text-white/80"
         >
-          <Mail size={15} strokeWidth={1.75} className="text-tinta-3" />
+          <Mail size={15} strokeWidth={1.75} className="text-white/60" />
           {email}
         </a>
       )}
@@ -73,12 +73,12 @@ export default function ContactoClub({
         <a
           key={e.email}
           href={`mailto:${e.email}`}
-          className="flex items-center gap-2 text-[13.5px] text-tinta hover:text-acento"
+          className="flex items-center gap-2 text-[13.5px] text-white hover:text-white/80"
         >
-          <Mail size={15} strokeWidth={1.75} className="text-tinta-3" />
+          <Mail size={15} strokeWidth={1.75} className="text-white/60" />
           <span>
             {e.email}
-            <span className="ml-2 rounded-[4px] bg-acento-tinte px-[6px] py-[2px] text-[11px] text-acento">
+            <span className="ml-2 rounded-[4px] bg-white/15 px-[6px] py-[2px] text-[11px] text-white">
               {e.etiqueta}
             </span>
           </span>
@@ -87,9 +87,9 @@ export default function ContactoClub({
       {telefono && (
         <a
           href={`tel:${telefono.replace(/\s/g, "")}`}
-          className="flex items-center gap-2 text-[13.5px] text-tinta hover:text-acento"
+          className="flex items-center gap-2 text-[13.5px] text-white hover:text-white/80"
         >
-          <Phone size={15} strokeWidth={1.75} className="text-tinta-3" />
+          <Phone size={15} strokeWidth={1.75} className="text-white/60" />
           {telefono}
         </a>
       )}

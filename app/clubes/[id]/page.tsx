@@ -21,6 +21,7 @@ import ContactoClub from "@/components/ContactoClub";
 import FilaVacante from "@/components/FilaVacante";
 import Seguir from "@/components/Seguir";
 import EtiquetaEstado from "@/components/EtiquetaEstado";
+import InsigniaVerificado from "@/components/InsigniaVerificado";
 import {
   Convocatoria,
   TipoRed,
@@ -164,8 +165,14 @@ export default async function FichaClub({
         Todos los clubes
       </Link>
 
-      <header className="px-4 pb-4">
-        <div className="flex items-center gap-3">
+      <header className="relative overflow-hidden bg-acento px-4 pb-6 pt-5">
+        <Volleyball
+          size={140}
+          strokeWidth={1.2}
+          className="absolute -right-6 -top-6 text-white/10"
+        />
+
+        <div className="relative flex items-center gap-3">
           {club.logo ? (
             <img
               src={club.logo}
@@ -173,20 +180,20 @@ export default async function FichaClub({
               className="h-14 w-14 shrink-0 rounded-full object-cover"
             />
           ) : (
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-acento-tinte text-[18px] font-medium text-acento">
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white/15 text-[18px] font-medium text-white">
               {iniciales(club.nombre)}
             </span>
           )}
           <div className="min-w-0 flex-1">
-            <h1 className="text-[19px] font-medium text-tinta">{club.nombre}</h1>
-            <p className="mt-[2px] flex items-center gap-[5px] text-[13.5px] text-tinta-2">
-              <MapPin size={14} strokeWidth={1.75} className="text-tinta-3" />
+            <h1 className="text-[19px] font-medium text-white">{club.nombre}</h1>
+            <p className="mt-[2px] flex items-center gap-[5px] text-[13.5px] text-white/80">
+              <MapPin size={14} strokeWidth={1.75} className="text-white/60" />
               {club.municipio} · zona {zona.toLowerCase()}
             </p>
           </div>
         </div>
         {club.descripcion && (
-          <p className="mt-3 text-[13.5px] leading-relaxed text-tinta-2">
+          <p className="relative mt-3 text-[13.5px] leading-relaxed text-white/85">
             {club.descripcion}
           </p>
         )}
@@ -194,7 +201,7 @@ export default async function FichaClub({
         {vacantes.length > 0 && (
           <a
             href="#entrenadores"
-            className="mt-3 flex items-center gap-[6px] text-[13px] font-medium text-acento hover:underline"
+            className="relative mt-3 flex items-center gap-[6px] text-[13px] font-medium text-amarillo hover:underline"
           >
             <Users size={14} strokeWidth={1.75} className="shrink-0" />
             Este club busca entrenador o entrenadora
@@ -203,13 +210,13 @@ export default async function FichaClub({
         )}
 
         {(club.web || club.redes.length > 0) && (
-          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+          <div className="relative mt-3 flex flex-wrap gap-x-4 gap-y-2">
             {club.web && (
               <a
                 href={club.web}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-[5px] text-[12.5px] text-tinta-2 hover:text-acento"
+                className="flex items-center gap-[5px] text-[12.5px] text-white/80 hover:text-white"
               >
                 <Globe size={14} strokeWidth={1.75} />
                 Web
@@ -223,7 +230,7 @@ export default async function FichaClub({
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-[5px] text-[12.5px] text-tinta-2 hover:text-acento"
+                  className="flex items-center gap-[5px] text-[12.5px] text-white/80 hover:text-white"
                 >
                   <Icono size={14} strokeWidth={1.75} />
                   {NOMBRE_RED[r.tipo]}
@@ -233,7 +240,7 @@ export default async function FichaClub({
           </div>
         )}
 
-        <div className="mt-4">
+        <div className="relative mt-4">
           <ContactoClub
             email={club.email}
             telefono={club.telefono}
@@ -266,7 +273,7 @@ export default async function FichaClub({
           </p>
         )}
         {lista.map((c, i) => {
-          const etiquetas = etiquetasConvocatoria(c);
+          const etiquetas = etiquetasConvocatoria(c).filter((e) => e !== "verificado");
           const anios = textoAnios(c);
           const linea = [
             `${etiquetaCategoria(c.categoria)} ${etiquetaSexo(c.sexo).toLowerCase()}`,
@@ -282,8 +289,9 @@ export default async function FichaClub({
               <div className="flex gap-3">
                 <FechaConvocatoria c={c} />
                 <div className="min-w-0 flex-1">
-                  <h3 className="text-[15px] font-medium leading-snug text-tinta">
-                    {linea}
+                  <h3 className="flex items-center gap-[5px] text-[15px] font-medium leading-snug text-tinta">
+                    <span>{linea}</span>
+                    {c.origen === "club" && <InsigniaVerificado />}
                   </h3>
                   {anios && (
                     <p className="mt-[2px] text-[12.5px] leading-snug text-tinta-2">
@@ -352,7 +360,7 @@ export default async function FichaClub({
       </section>
 
       {vacantes.length > 0 && (
-        <section id="entrenadores">
+        <section id="entrenadores" className="scroll-mt-[100px]">
           <h2 className="flex items-center gap-[6px] bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
             <Users size={14} strokeWidth={1.75} className="shrink-0" />
             {vacantes.length === 1

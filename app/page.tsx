@@ -86,7 +86,7 @@ export default function Home() {
             <Link
               key={a.href}
               href={a.href}
-              className="flex items-center gap-3 rounded-[10px] border border-borde px-4 py-[14px] hover:border-tinta-3 hover:bg-barra/60"
+              className="flex items-center gap-3 rounded-[10px] border border-borde bg-acento/[0.04] px-4 py-[14px] hover:border-tinta-3 hover:bg-acento/[0.08]"
             >
               <a.icono size={19} strokeWidth={1.75} className="shrink-0 text-acento" />
               <div className="min-w-0 flex-1">
