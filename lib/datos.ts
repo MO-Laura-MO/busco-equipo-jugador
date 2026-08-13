@@ -19,6 +19,8 @@ export type Origen = "club" | "fuentes-publicas";
  * Tipo de competición en la que juega el equipo de la convocatoria:
  * - federado: liga de la Federación Madrileña de Voleibol (licencia federativa).
  * - municipal: juegos deportivos municipales u otra liga de ayuntamiento.
+ * - mancomunada: liga mancomunada, equipos formados juntando jugadores de
+ *   varias entidades para poder completar una categoría.
  * - escuela: formación e iniciación, sin competición o solo interna.
  * No son lo mismo: un equipo municipal compite, una escuela no.
  *
@@ -26,7 +28,7 @@ export type Origen = "club" | "fuentes-publicas";
  * de una liga: hay clubes con equipos federados y municipales en la misma
  * categoría, y una sola prueba sirve para las dos.
  */
-export type TipoEntidad = "federado" | "municipal" | "escuela";
+export type TipoEntidad = "federado" | "mancomunada" | "municipal" | "escuela";
 export type TipoRed = "instagram" | "tiktok" | "facebook" | "youtube" | "x" | "otra";
 
 export interface Club {
@@ -161,6 +163,7 @@ export function ordenCategoria(c: Categoria): number {
 /** Etiquetas del tipo de competición, en el orden en que deben mostrarse. */
 export const TIPOS_ENTIDAD: { valor: TipoEntidad; etiqueta: string }[] = [
   { valor: "federado", etiqueta: "Federado" },
+  { valor: "mancomunada", etiqueta: "Liga mancomunada" },
   { valor: "municipal", etiqueta: "Liga municipal" },
   { valor: "escuela", etiqueta: "Escuela" },
 ];
@@ -245,6 +248,7 @@ export function mesesDisponibles(lista: Convocatoria[]): { valor: string; etique
 export type Estado =
   | "verificado"
   | "federado"
+  | "mancomunada"
   | "municipal"
   | "escuela"
   | "provisional"

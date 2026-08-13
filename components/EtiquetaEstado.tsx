@@ -9,6 +9,10 @@ const ESTILOS: Record<Exclude<Estado, null>, { texto: string; clases: string }> 
     texto: "Federado",
     clases: "bg-gris-tinte text-gris-etiqueta",
   },
+  mancomunada: {
+    texto: "Liga mancomunada",
+    clases: "bg-gris-tinte text-gris-etiqueta",
+  },
   municipal: {
     texto: "Liga municipal",
     clases: "bg-gris-tinte text-gris-etiqueta",
