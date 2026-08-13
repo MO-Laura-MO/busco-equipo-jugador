@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import {
   ArrowLeft,
   CalendarClock,
+  Check,
   ChevronDown,
   Clock,
   Facebook,
@@ -126,6 +127,10 @@ export default async function FichaClub({
   const lista = convocatoriasDeClub(club.id);
   const vacantes = vacantesDeClub(club.id);
   const zona = ZONAS.find((z) => z.valor === club.zona)?.etiqueta ?? club.zona;
+  // No hay un campo "origen" propio en Club: se considera el perfil verificado
+  // por el club si al menos una convocatoria o vacante suya viene de origen "club".
+  const perfilVerificado =
+    lista.some((c) => c.origen === "club") || vacantes.some((v) => v.origen === "club");
 
   const eventosJsonLd = lista
     .filter((c) => c.tipoFecha === "exacta" && c.fecha)
@@ -192,6 +197,14 @@ export default async function FichaClub({
             </p>
           </div>
         </div>
+
+        {perfilVerificado && (
+          <span className="relative mt-3 inline-flex items-center gap-[5px] rounded-[6px] bg-verificado-tinte px-[10px] py-[5px] text-[12.5px] font-medium text-verificado">
+            <Check size={13} strokeWidth={2.5} />
+            Verificado por el club
+          </span>
+        )}
+
         {club.descripcion && (
           <p className="relative mt-3 text-[13.5px] leading-relaxed text-white/85">
             {club.descripcion}
@@ -201,7 +214,7 @@ export default async function FichaClub({
         {vacantes.length > 0 && (
           <a
             href="#entrenadores"
-            className="relative mt-3 flex items-center gap-[6px] text-[13px] font-medium text-amarillo hover:underline"
+            className="relative mt-3 flex items-center gap-[6px] text-[13px] font-medium text-acento-claro hover:underline"
           >
             <Users size={14} strokeWidth={1.75} className="shrink-0" />
             Este club busca entrenador o entrenadora
@@ -216,7 +229,7 @@ export default async function FichaClub({
                 href={club.web}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-[5px] text-[12.5px] text-white/80 hover:text-white"
+                className="flex items-center gap-[5px] text-[12.5px] text-acento-claro hover:text-white"
               >
                 <Globe size={14} strokeWidth={1.75} />
                 Web
@@ -230,7 +243,7 @@ export default async function FichaClub({
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-[5px] text-[12.5px] text-white/80 hover:text-white"
+                  className="flex items-center gap-[5px] text-[12.5px] text-acento-claro hover:text-white"
                 >
                   <Icono size={14} strokeWidth={1.75} />
                   {NOMBRE_RED[r.tipo]}

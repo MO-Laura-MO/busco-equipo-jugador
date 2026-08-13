@@ -15,6 +15,7 @@
 
   --color-acento: #1e3a8a; /* azul marca */
   --color-acento-tinte: #e3e9f8;
+  --color-acento-claro: #6ea3f5; /* azul claro, para enlaces y botones sobre fondo bg-acento */
   --color-amarillo: #ffc000; /* segundo color de marca */
 
   --color-verificado: #0e5c4a; /* verde semántico (solo etiqueta Verificado) */
