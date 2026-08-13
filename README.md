@@ -20,6 +20,8 @@ Todo el contenido está en `data/`:
 
 - `data/clubes.json` — un objeto por club
 - `data/convocatorias.json` — un objeto por convocatoria, enlazada por `clubId`
+- `data/vacantes.json` — un objeto por vacante de entrenador/a, enlazada por
+  `clubId`
 
 Editar directamente en GitHub y hacer commit; Vercel redespliega solo.
 
@@ -41,12 +43,12 @@ Reglas del modelo de datos:
   Temporada solo aparece en la web cuando conviven dos o más temporadas
   en los datos
 - `descripcion` del club: máximo 300 caracteres
-- `buscaEntrenador` (club, opcional): `true` si el club busca
-  entrenador/a. Muestra el aviso en la ficha y hace aparecer el chip
-  "Buscan entrenador" en la portada
-- `notasEntrenador` (club, opcional): detalle corto (~150 caracteres),
-  p. ej. "Cadete femenino, martes y jueves"; si está vacío no se muestra
-  nada
+- `tipoEntidad` (convocatoria y vacante): lista, no texto — un equipo puede
+  jugar en varias ligas a la vez. Valores: `federado | mancomunada |
+  municipal | escuela`
+- Las vacantes de entrenador/a caducan a los 45 días sin actualizar
+  (`fechaActualizacion`); pasado ese plazo dejan de mostrarse solas, igual
+  que las convocatorias caducan por fecha
 
 Etiquetas de estado que pinta la web (hasta dos por fila): la verde
 "Verificado por el club" siempre que `origen: club`, y además la de
@@ -67,8 +69,6 @@ exacta provisional → ámbar.
   "telefono": "+34 600 000 000",
   "logo": "",
   "descripcion": "Descripción breve del club (máx. 300 caracteres).",
-  "buscaEntrenador": false,
-  "notasEntrenador": "",
   "fechaActualizacion": "2026-08-05"
 }
 ```
@@ -83,12 +83,13 @@ enlaza las convocatorias y forma la URL de la ficha (`/clubes/<id>`).
   "clubId": "nombre-del-club",
   "categoria": "cadete",
   "sexo": "femenino",
-  "tipoEntidad": "federado",
+  "tipoEntidad": ["federado"],
   "nivel": "",
   "temporada": "2026-27",
   "tipoFecha": "exacta",
   "fecha": "2026-09-12",
   "mesAprox": "",
+  "anios": "",
   "estadoFecha": "confirmada",
   "hora": "10:00",
   "pabellon": "Pabellón Ejemplo",
@@ -103,9 +104,39 @@ enlaza las convocatorias y forma la URL de la ficha (`/clubes/<id>`).
 ```
 
 Si `tipoFecha` es `mes`, deja `fecha` vacía y rellena `mesAprox`
-("2026-09"). Si es `abierta`, deja las dos vacías. Con los dos archivos
+("2026-09"). Si es `abierta`, deja las dos vacías. Con los archivos
 vacíos (`[]`), la portada muestra un mensaje de lanzamiento que invita
 a los clubes a darse de alta.
+
+### Plantilla de vacante (copiar dentro de `data/vacantes.json`)
+
+```json
+{
+  "clubId": "nombre-del-club",
+  "puesto": "entrenador",
+  "categoria": "cadete",
+  "sexo": "femenino",
+  "tipoEntidad": ["federado"],
+  "nivel": "",
+  "titulacion": "",
+  "requisitos": "",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-05"
+}
+```
+
+`puesto`: `entrenador | segundo-entrenador | ayudante | monitor |
+coordinador | preparador-fisico`. `categoria` y `sexo` se dejan vacíos si la
+vacante no es de un equipo concreto (por ejemplo, de escuelas en general).
+`compensacion`: `remunerada | ayuda-gastos | voluntaria | por-determinar`;
+solo se muestra en la web si no es `por-determinar`. Las vacantes caducan a
+los 45 días sin actualizar `fechaActualizacion`.
 
 ## Configurar antes de publicar
 

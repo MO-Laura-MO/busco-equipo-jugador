@@ -107,7 +107,7 @@ export default function Pagina() {
         <h2>Dónde mirar</h2>
         <p>Tres sitios, en este orden.</p>
         <p>
-          El <Link href="/">buscador de nuestra web voley.app</Link>,
+          El <Link href="/pruebas">buscador de nuestra web voley.app</Link>,
           filtrando por masculino y también por mixto. En las categorías
           inferiores sobre todo, merece la pena explorar también la opción de
           equipo mixto.

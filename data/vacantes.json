@@ -1,0 +1,40 @@
+[
+ {
+  "clubId": "cv-mostoles",
+  "puesto": "entrenador",
+  "categoria": "senior",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Primera división autonómica",
+  "titulacion": "Nivel 2 o 3",
+  "requisitos": "Experiencia entrenando equipos sénior y residencia en Madrid",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-13"
+ },
+ {
+  "clubId": "cv-mostoles",
+  "puesto": "entrenador",
+  "tipoEntidad": [
+   "escuela"
+  ],
+  "nivel": "Escuelas",
+  "titulacion": "",
+  "requisitos": "",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "Más información con el club.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-13"
+ }
+]

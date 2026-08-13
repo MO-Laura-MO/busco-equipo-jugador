@@ -122,7 +122,7 @@ export default function Pagina() {
           <strong>finales de agosto y finales de septiembre</strong>, para
           completar las plantillas. Y no te asustes con la palabra "prueba":
           suele ser simplemente un entrenamiento abierto para conocer al grupo
-          y organizar los equipos. En <Link href="/">voley.app</Link> vamos
+          y organizar los equipos. En <Link href="/pruebas">voley.app</Link> vamos
           publicando las convocatorias de cada club con fecha, pabellón y
           contacto, filtrables por categoría, zona y mes. Te contamos qué
           esperar en{" "}

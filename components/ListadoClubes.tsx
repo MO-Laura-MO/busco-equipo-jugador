@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { MapPin, Search, Users, X } from "lucide-react";
+import { MapPin, Search, X } from "lucide-react";
 import { Club, ZONAS, Zona } from "@/lib/datos";
 
 interface ClubConDatos extends Club {
@@ -155,12 +155,6 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
                         <span className="rounded-[5px] bg-amarillo px-[7px] py-[3px] text-[11px] font-medium leading-[1.3] text-[#111827]">
                           {c.numConvocatorias}{" "}
                           {c.numConvocatorias === 1 ? "prueba" : "pruebas"}
-                        </span>
-                      )}
-                      {c.buscaEntrenador && (
-                        <span className="flex items-center gap-[4px] rounded-[5px] bg-verificado-tinte px-[7px] py-[3px] text-[11px] leading-[1.3] text-verificado">
-                          <Users size={11} strokeWidth={1.75} />
-                          entrenador
                         </span>
                       )}
                     </div>

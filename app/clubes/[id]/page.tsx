@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import {
   ArrowLeft,
   CalendarClock,
+  ChevronDown,
   Clock,
   Facebook,
   Globe,
@@ -13,9 +14,11 @@ import {
   RefreshCw,
   Twitter,
   Users,
+  Volleyball,
   Youtube,
 } from "lucide-react";
 import ContactoClub from "@/components/ContactoClub";
+import FilaVacante from "@/components/FilaVacante";
 import Seguir from "@/components/Seguir";
 import EtiquetaEstado from "@/components/EtiquetaEstado";
 import {
@@ -31,6 +34,7 @@ import {
   fechaLarga,
   partesFecha,
   textoAnios,
+  vacantesDeClub,
 } from "@/lib/datos";
 import { EMAIL_CORRECCIONES, URL_SITIO } from "@/lib/config";
 
@@ -46,9 +50,13 @@ export async function generateMetadata({
   const { id } = await params;
   const club = clubPorId(id);
   if (!club) return {};
+  const tieneVacantes = vacantesDeClub(club.id).length > 0;
+  const description = `Convocatorias de pruebas de voleibol de ${club.nombre} (${club.municipio}). Categorías, fechas, pabellón y contacto del club.${
+    tieneVacantes ? " Además, busca entrenador o entrenadora." : ""
+  }`;
   return {
     title: `${club.nombre} — pruebas de voleibol en ${club.municipio}`,
-    description: `Convocatorias de pruebas de voleibol de ${club.nombre} (${club.municipio}). Categorías, fechas, pabellón y contacto del club.`,
+    description,
   };
 }
 
@@ -114,6 +122,7 @@ export default async function FichaClub({
   if (!club) notFound();
 
   const lista = convocatoriasDeClub(club.id);
+  const vacantes = vacantesDeClub(club.id);
   const zona = ZONAS.find((z) => z.valor === club.zona)?.etiqueta ?? club.zona;
 
   const eventosJsonLd = lista
@@ -146,14 +155,15 @@ export default async function FichaClub({
         />
       )}
 
-      <header className="px-4 pb-4 pt-5">
-        <Link
-          href="/"
-          className="mb-4 flex items-center gap-1 text-[12.5px] text-tinta-2 hover:text-tinta"
-        >
-          <ArrowLeft size={14} strokeWidth={1.75} />
-          Todas las convocatorias
-        </Link>
+      <Link
+        href="/clubes"
+        className="mx-4 mt-5 mb-4 flex items-center gap-1 text-[12.5px] text-tinta-2 hover:text-tinta"
+      >
+        <ArrowLeft size={14} strokeWidth={1.75} />
+        Todos los clubes
+      </Link>
+
+      <header className="px-4 pb-4">
         <h1 className="text-[19px] font-medium text-tinta">{club.nombre}</h1>
         <p className="mt-[2px] flex items-center gap-[5px] text-[13.5px] text-tinta-2">
           <MapPin size={14} strokeWidth={1.75} className="text-tinta-3" />
@@ -165,18 +175,15 @@ export default async function FichaClub({
           </p>
         )}
 
-        {club.buscaEntrenador && (
-          <div className="mt-3 rounded-[6px] bg-acento-tinte px-3 py-[9px]">
-            <p className="flex items-center gap-[6px] text-[13px] font-medium text-acento">
-              <Users size={14} strokeWidth={1.75} className="shrink-0" />
-              Este club busca entrenador
-            </p>
-            {club.notasEntrenador && (
-              <p className="mt-[3px] text-[12.5px] leading-relaxed text-tinta-2">
-                {club.notasEntrenador}
-              </p>
-            )}
-          </div>
+        {vacantes.length > 0 && (
+          <a
+            href="#entrenadores"
+            className="mt-3 flex items-center gap-[6px] text-[13px] font-medium text-acento hover:underline"
+          >
+            <Users size={14} strokeWidth={1.75} className="shrink-0" />
+            Este club busca entrenador o entrenadora
+            <ChevronDown size={14} strokeWidth={1.75} />
+          </a>
         )}
 
         {(club.web || club.redes.length > 0) && (
@@ -222,10 +229,11 @@ export default async function FichaClub({
       </header>
 
       <section>
-        <h2 className="bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+        <h2 className="flex items-center gap-[6px] bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+          <Volleyball size={14} strokeWidth={1.75} className="shrink-0" />
           {lista.length === 1
-            ? "1 convocatoria"
-            : `${lista.length} convocatorias`}
+            ? "1 convocatoria para jugadores"
+            : `${lista.length} convocatorias para jugadores`}
         </h2>
         {lista.length === 0 && (
           <p className="px-4 py-6 text-[13px] leading-relaxed text-tinta-3">
@@ -326,6 +334,30 @@ export default async function FichaClub({
           );
         })}
       </section>
+
+      {vacantes.length > 0 && (
+        <section id="entrenadores">
+          <h2 className="flex items-center gap-[6px] bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+            <Users size={14} strokeWidth={1.75} className="shrink-0" />
+            {vacantes.length === 1
+              ? "1 vacante de entrenador"
+              : `${vacantes.length} vacantes de entrenador`}
+          </h2>
+          {vacantes.map((v, i) => (
+            <FilaVacante
+              key={`${v.clubId}-${v.puesto}-${i}`}
+              vacante={v}
+              club={club}
+              mostrarClub={false}
+              enlazar={false}
+            />
+          ))}
+          <p className="px-4 py-4 text-[12.5px] text-tinta-3">
+            Escribe al club con el contacto de arriba. voley.app solo
+            publica: el acuerdo es directamente con el club.
+          </p>
+        </section>
+      )}
 
       <Seguir texto="Publicamos cada convocatoria nueva de este club y del resto en el canal de WhatsApp y en Instagram. Gratis, y puedes salir cuando quieras." />
 

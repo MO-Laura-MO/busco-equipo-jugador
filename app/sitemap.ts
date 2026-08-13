@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { ARTICULOS } from "@/lib/blog";
-import { clubes } from "@/lib/datos";
+import { clubes, hayVacantes } from "@/lib/datos";
 import { URL_SITIO } from "@/lib/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -17,6 +17,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1,
     },
+    {
+      url: `${URL_SITIO}/pruebas`,
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    ...(hayVacantes
+      ? [
+          {
+            url: `${URL_SITIO}/entrenadores`,
+            changeFrequency: "weekly" as const,
+            priority: 0.7,
+          },
+        ]
+      : []),
     {
       url: `${URL_SITIO}/clubes`,
       changeFrequency: "weekly",

@@ -62,12 +62,13 @@ export default function Alta() {
           Para clubes y escuelas
         </p>
         <h1 className="relative mt-2 text-[23px] font-medium leading-snug text-white">
-          Publica tus pruebas donde las familias buscan
+          Añade tu club donde te están buscando
         </h1>
         <p className="relative mt-3 max-w-[520px] text-[13.5px] leading-relaxed text-white/85">
-          Si tu club hace pruebas o captaciones (de benjamín a máster) en la
-          Comunidad de Madrid, publícalas gratis. También puedes indicar si
-          buscáis entrenador/a.
+          Si tu club o escuela está en la Comunidad de Madrid, añádelo gratis,
+          tengas o no pruebas abiertas. Puedes publicar además tus
+          convocatorias y, si buscáis entrenador o entrenadora, vuestras
+          vacantes.
         </p>
         <a
           href={URL_FORMULARIO_ALTA}

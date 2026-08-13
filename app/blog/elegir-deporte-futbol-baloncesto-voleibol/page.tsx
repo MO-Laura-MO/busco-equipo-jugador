@@ -213,7 +213,7 @@ export default function Pagina() {
 
         <h2>Si os decidís por el voleibol</h2>
         <p>
-          En <Link href="/">nuestra web voley.app</Link> están las pruebas y
+          En <Link href="/pruebas">nuestra web voley.app</Link> están las pruebas y
           captaciones de los clubes y escuelas de la Comunidad de Madrid, con
           categoría, sexo, zona, fecha, pabellón y el contacto directo de cada
           club. Es gratis, no hay que registrarse y se habla directamente con

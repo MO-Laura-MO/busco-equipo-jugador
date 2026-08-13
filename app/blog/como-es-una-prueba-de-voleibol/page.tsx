@@ -113,7 +113,7 @@ export default function Pagina() {
           cambian con facilidad.
           Confirma siempre con el club por email o teléfono antes de acudir, y
           pregunta si hace falta inscripción previa. En{" "}
-          <Link href="/">voley.app</Link> publicamos las convocatorias con su
+          <Link href="/pruebas">voley.app</Link> publicamos las convocatorias con su
           contacto directo y avisamos de si el club pide aviso previo.
         </p>
 

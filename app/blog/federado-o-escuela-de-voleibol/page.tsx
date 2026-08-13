@@ -152,7 +152,7 @@ export default function Pagina() {
 
         <h2>Y después</h2>
         <p>
-          En <Link href="/">nuestra web voley.app</Link> cada convocatoria
+          En <Link href="/pruebas">nuestra web voley.app</Link> cada convocatoria
           indica si es de club federado o de escuela, y puedes filtrar por
           categoría, sexo, zona y mes. El contacto de cada club está en su
           ficha: no hay intermediarios, se escribe directamente. La vamos

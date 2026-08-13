@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import Link from "next/link";
-import { Volleyball } from "lucide-react";
+import { Plus, Volleyball } from "lucide-react";
+import Pestanas from "@/components/Pestanas";
 import {
   AMBITO,
   NOMBRE_AMBITO_LARGO,
@@ -12,6 +13,7 @@ import {
   URL_INSTAGRAM,
   URL_SITIO,
 } from "@/lib/config";
+import { hayVacantes } from "@/lib/datos";
 import "./globals.css";
 
 // Inter auto-alojada (sin peticiones a Google Fonts).
@@ -38,32 +40,36 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pestanas = [
+    { href: "/", etiqueta: "Inicio" },
+    { href: "/pruebas", etiqueta: "Pruebas" },
+    ...(hayVacantes ? [{ href: "/entrenadores", etiqueta: "Entrenadores" }] : []),
+    { href: "/clubes", etiqueta: "Clubes" },
+    { href: "/blog", etiqueta: "Blog" },
+  ];
+
   return (
     <html lang="es" className={inter.variable}>
       <body className="font-sans text-tinta bg-fondo">
         <div className="mx-auto min-h-screen w-full max-w-[720px]">
-          <header className="flex items-center justify-between gap-3 border-b border-borde px-4 py-3">
-            <Link
-              href="/"
-              className="flex shrink-0 items-center gap-[6px] text-[13px] font-medium text-acento"
-            >
-              <Volleyball size={17} strokeWidth={1.75} />
-              {NOMBRE_MARCA}
-            </Link>
-            <nav className="sin-scrollbar flex items-center gap-3 overflow-x-auto text-[13px]">
-              <Link href="/#convocatorias" className="shrink-0 text-tinta-2 hover:text-tinta">
-                Pruebas
+          <header>
+            <div className="flex items-center justify-between gap-3 px-4 py-3">
+              <Link
+                href="/"
+                className="flex shrink-0 items-center gap-[6px] text-[13px] font-medium text-acento"
+              >
+                <Volleyball size={17} strokeWidth={1.75} />
+                {NOMBRE_MARCA}
               </Link>
-              <Link href="/clubes" className="shrink-0 text-tinta-2 hover:text-tinta">
-                Clubes
+              <Link
+                href="/alta"
+                className="flex shrink-0 items-center gap-[5px] rounded-[7px] border border-borde-control px-[10px] py-[6px] text-[12.5px] text-tinta hover:border-tinta-3"
+              >
+                <Plus size={13} strokeWidth={1.75} />
+                Añadir club
               </Link>
-              <Link href="/alta" className="shrink-0 text-tinta-2 hover:text-tinta">
-                Soy un club
-              </Link>
-              <Link href="/blog" className="shrink-0 text-tinta-2 hover:text-tinta">
-                Blog
-              </Link>
-            </nav>
+            </div>
+            <Pestanas pestanas={pestanas} />
           </header>
           {children}
           <footer className="border-t border-borde px-4 py-5">

@@ -125,7 +125,7 @@ export default function Pagina() {
         <h2>Siguiente paso: encontrar equipo</h2>
         <p>
           Con la categoría clara, toca buscar club con hueco en ella. En{" "}
-          <Link href="/">voley.app</Link> publicamos las pruebas y
+          <Link href="/pruebas">voley.app</Link> publicamos las pruebas y
           captaciones de los clubes de Madrid filtrables por categoría, zona y
           fecha. Y si quieres saber cómo es ese primer día, aquí lo contamos:{" "}
           <Link href="/blog/como-es-una-prueba-de-voleibol">

@@ -163,7 +163,7 @@ export default function Pagina() {
         </p>
         <p>
           Y lo cuarto, ponerte en contacto con el club. Entra en{" "}
-          <Link href="/">nuestra web voley.app</Link>, filtra por tu
+          <Link href="/pruebas">nuestra web voley.app</Link>, filtra por tu
           categoría, tu sexo y tu zona, y escribe o llama al club que te
           encaje. En cada ficha está su email y su teléfono.
         </p>
@@ -202,7 +202,7 @@ export default function Pagina() {
         </p>
         <p>
           Las convocatorias de los clubes de Madrid están en{" "}
-          <Link href="/">voley.app</Link>, y son gratis, sin registro y con el
+          <Link href="/pruebas">voley.app</Link>, y son gratis, sin registro y con el
           contacto directo del club. Lo único que hay que hacer es
           contactarles.
         </p>

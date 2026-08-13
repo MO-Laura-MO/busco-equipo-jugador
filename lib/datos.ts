@@ -1,5 +1,6 @@
 import clubesJson from "@/data/clubes.json";
 import convocatoriasJson from "@/data/convocatorias.json";
+import vacantesJson from "@/data/vacantes.json";
 
 export type Zona = "norte" | "sur" | "este" | "oeste" | "centro";
 export type Categoria =
@@ -44,10 +45,6 @@ export interface Club {
   descripcion: string;
   /** Emails adicionales con etiqueta (p. ej. Formación / Rendimiento); se muestran tras "Ver contacto". */
   emailsExtra?: { etiqueta: string; email: string }[];
-  /** true si el club busca entrenador/a; se muestra en la ficha y en el filtro de portada. */
-  buscaEntrenador?: boolean;
-  /** Detalle corto y opcional (máx ~150 car.), p. ej. "Cadete femenino, martes y jueves". */
-  notasEntrenador?: string;
   /** Formulario de inscripción del club. Se muestra tras el botón de contacto, sin enseñar la URL. */
   formularioUrl?: string;
   /** Nota corta bajo el formulario, p. ej. la vía alternativa por redes. */
@@ -84,6 +81,53 @@ export interface Convocatoria {
   fechaActualizacion: string;
 }
 
+/**
+ * Puesto que busca cubrir la vacante. La mayoría son de un equipo (entrenador
+ * principal o segundo), pero también hay perfiles transversales como monitor
+ * de escuela o preparador físico de todo el club.
+ */
+export type Puesto =
+  | "entrenador"
+  | "segundo-entrenador"
+  | "ayudante"
+  | "monitor"
+  | "coordinador"
+  | "preparador-fisico";
+export type Compensacion =
+  | "remunerada"
+  | "ayuda-gastos"
+  | "voluntaria"
+  | "por-determinar";
+
+/**
+ * Vacante de entrenador/a de un club. Es una entidad propia, igual que la
+ * convocatoria: un mismo club puede tener varias vacantes abiertas a la vez,
+ * con requisitos y equipos distintos.
+ */
+export interface Vacante {
+  clubId: string;
+  puesto: Puesto;
+  /** Vacío si el puesto no es de un equipo concreto (por ejemplo, escuelas). */
+  categoria?: Categoria;
+  sexo?: Sexo;
+  tipoEntidad: TipoEntidad[];
+  /** Texto libre corto: "Primera división autonómica", "Escuelas". */
+  nivel: string;
+  /** Texto libre corto: "Nivel 2 o 3". No se filtra por él. */
+  titulacion: string;
+  /** Texto libre corto con lo que pide el club. */
+  requisitos: string;
+  dias: string;
+  horario: string;
+  pabellon: string;
+  compensacion: Compensacion;
+  /** Texto libre corto: "Inmediata", "Septiembre". */
+  incorporacion: string;
+  notas: string;
+  origen: Origen;
+  fechaActualizacion: string;
+}
+
 export const clubes = clubesJson as Club[];
 /**
  * Las convocatorias con fecha exacta ya pasada (más de 3 días) se ocultan
@@ -98,12 +142,83 @@ export const convocatorias = (convocatoriasJson as Convocatoria[]).filter(
   (c) => !(c.tipoFecha === "exacta" && c.fecha && c.fecha < CORTE)
 );
 
+/**
+ * Las vacantes caducan a los 45 días sin actualizar, igual que las
+ * convocatorias caducan por fecha: un tablón con ofertas muertas se lleva
+ * por delante la credibilidad del resto de la web.
+ */
+const CORTE_VACANTES = new Date(Date.now() - 45 * 24 * 60 * 60 * 1000)
+  .toISOString()
+  .slice(0, 10);
+
+export const vacantes = (vacantesJson as Vacante[]).filter(
+  (v) => v.fechaActualizacion >= CORTE_VACANTES
+);
+
+/** true si hay alguna vacante viva; la usan la cabecera y la portada. */
+export const hayVacantes = vacantes.length > 0;
+
 export function clubPorId(id: string): Club | undefined {
   return clubes.find((c) => c.id === id);
 }
 
 export function convocatoriasDeClub(clubId: string): Convocatoria[] {
   return ordenarConvocatorias(convocatorias.filter((c) => c.clubId === clubId));
+}
+
+/** Posición de orden por categoría de una vacante; sin categoría va al final. */
+function ordenCategoriaVacante(v: Vacante): number {
+  return v.categoria ? ordenCategoria(v.categoria) : CATEGORIAS.length;
+}
+
+export function vacantesDeClub(clubId: string): Vacante[] {
+  return vacantes
+    .filter((v) => v.clubId === clubId)
+    .sort((a, b) => ordenCategoriaVacante(a) - ordenCategoriaVacante(b));
+}
+
+/**
+ * Vacantes ordenadas por nombre de club (A-Z) y, dentro de cada club, por
+ * orden de categoría de edad; las que no tienen categoría, al final.
+ */
+export function vacantesOrdenadas(): { vacante: Vacante; club: Club }[] {
+  return vacantes
+    .map((vacante) => ({ vacante, club: clubPorId(vacante.clubId)! }))
+    .filter((v) => v.club)
+    .sort((a, b) => {
+      const nombre = a.club.nombre.localeCompare(b.club.nombre, "es");
+      if (nombre !== 0) return nombre;
+      return ordenCategoriaVacante(a.vacante) - ordenCategoriaVacante(b.vacante);
+    });
+}
+
+/**
+ * Título de una vacante: "Categoría sexo" si tiene categoría (con el nivel
+ * detrás separado por "·", igual que en las convocatorias de la ficha de
+ * club); si no, el nivel; y si tampoco hay nivel, la etiqueta de su tipo de
+ * competición.
+ */
+export function tituloVacante(v: Vacante): string {
+  if (v.categoria) {
+    const base = [etiquetaCategoria(v.categoria), v.sexo ? etiquetaSexo(v.sexo).toLowerCase() : null]
+      .filter(Boolean)
+      .join(" ");
+    return [base, v.nivel || null].filter(Boolean).join(" · ");
+  }
+  if (v.nivel) return v.nivel;
+  return etiquetaTipoEntidad(v.tipoEntidad[0]);
+}
+
+const ETIQUETAS_COMPENSACION: Record<Compensacion, string> = {
+  remunerada: "Remunerada",
+  "ayuda-gastos": "Ayuda de gastos",
+  voluntaria: "Voluntaria",
+  "por-determinar": "",
+};
+
+/** Etiqueta de la compensación de una vacante; vacío si es "por-determinar" (no se muestra). */
+export function etiquetaCompensacion(c: Compensacion): string {
+  return ETIQUETAS_COMPENSACION[c];
 }
 
 /**
@@ -319,13 +434,6 @@ export function textoAnios(c: Convocatoria): string | null {
   // Rango ("2017 a 2021") → "de 2017 a 2021"; pareja ("2015 y 2016") → "en 2015 y 2016".
   const preposicion = anios.includes(" a ") ? "de" : "en";
   return `${prefijo} ${preposicion} ${anios}`;
-}
-
-/** Clubes que buscan entrenador/a, ordenados por nombre. */
-export function clubesBuscanEntrenador(lista: Club[]): Club[] {
-  return lista
-    .filter((c) => c.buscaEntrenador)
-    .sort((a, b) => a.nombre.localeCompare(b.nombre, "es"));
 }
 
 /** Temporadas presentes en los datos (p. ej. "2026-27"), ordenadas. */

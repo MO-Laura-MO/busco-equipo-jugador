@@ -123,7 +123,7 @@ export default function Pagina() {
 
         <h2>Cómo enterarte a tiempo</h2>
         <p>
-          En <Link href="/">nuestra web voley.app</Link> puedes filtrar las
+          En <Link href="/pruebas">nuestra web voley.app</Link> puedes filtrar las
           convocatorias por categoría, sexo, zona y mes, y cada ficha lleva el
           contacto directo del club. Las que tienen fecha exacta salen
           primero, después las provisionales, luego las que solo tienen mes y
