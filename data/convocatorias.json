@@ -483,5 +483,77 @@
   "notas": "El email de la sección de voleibol está en Contacto.",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-12"
+ },
+ {
+  "clubId": "cv-mostoles",
+  "categoria": "infantil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "anios": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Los equipos empiezan a primeros de septiembre. El formulario de inscripción está en Contacto.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-13"
+ },
+ {
+  "clubId": "cv-mostoles",
+  "categoria": "junior",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "anios": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Los equipos empiezan a primeros de septiembre. El formulario de inscripción está en Contacto.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-13"
+ },
+ {
+  "clubId": "cv-mostoles",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Primer equipo",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "anios": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan jugadoras con experiencia en competición federada. Los equipos empiezan a primeros de septiembre. El formulario de inscripción está en Contacto.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-13"
  }
 ]
