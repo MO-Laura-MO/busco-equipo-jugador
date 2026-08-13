@@ -33,7 +33,7 @@ export default function ContactoClub({
       <button
         type="button"
         onClick={() => setVisible(true)}
-        className="rounded-[6px] bg-acento-claro px-4 py-[8px] text-[13.5px] font-medium text-acento hover:opacity-90"
+        className="rounded-[6px] bg-club-boton px-4 py-[8px] text-[13.5px] font-medium text-club-fondo hover:opacity-90"
       >
         {formularioUrl ? "Contacto e inscripción" : "Ver contacto"}
       </button>

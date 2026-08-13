@@ -170,7 +170,7 @@ export default async function FichaClub({
         Todos los clubes
       </Link>
 
-      <header className="relative overflow-hidden bg-acento px-4 pb-6 pt-5">
+      <header className="relative overflow-hidden bg-club-fondo px-4 pb-6 pt-5">
         <Volleyball
           size={140}
           strokeWidth={1.2}
@@ -214,7 +214,7 @@ export default async function FichaClub({
         {vacantes.length > 0 && (
           <a
             href="#entrenadores"
-            className="relative mt-3 flex items-center gap-[6px] text-[13px] font-medium text-acento-claro hover:underline"
+            className="relative mt-3 flex items-center gap-[6px] rounded-[8px] bg-club-recuadro px-3 py-[10px] text-[13px] font-medium text-club-boton hover:opacity-90"
           >
             <Users size={14} strokeWidth={1.75} className="shrink-0" />
             Este club busca entrenador o entrenadora
@@ -229,7 +229,7 @@ export default async function FichaClub({
                 href={club.web}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-[5px] text-[12.5px] text-acento-claro hover:text-white"
+                className="flex items-center gap-[5px] text-[12.5px] text-club-boton hover:text-white"
               >
                 <Globe size={14} strokeWidth={1.75} />
                 Web
@@ -243,7 +243,7 @@ export default async function FichaClub({
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-[5px] text-[12.5px] text-acento-claro hover:text-white"
+                  className="flex items-center gap-[5px] text-[12.5px] text-club-boton hover:text-white"
                 >
                   <Icono size={14} strokeWidth={1.75} />
                   {NOMBRE_RED[r.tipo]}

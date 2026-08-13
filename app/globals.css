@@ -15,8 +15,12 @@
 
   --color-acento: #1e3a8a; /* azul marca */
   --color-acento-tinte: #e3e9f8;
-  --color-acento-claro: #6ea3f5; /* azul claro, para enlaces y botones sobre fondo bg-acento */
   --color-amarillo: #ffc000; /* segundo color de marca */
+
+  /* Cabecera de ficha de club: dos azules propios, distintos del azul de marca. */
+  --color-club-fondo: #14314f;
+  --color-club-boton: #2db4e8;
+  --color-club-recuadro: #354e67;
 
   --color-verificado: #0e5c4a; /* verde semántico (solo etiqueta Verificado) */
   --color-verificado-tinte: #e3f1ed;
