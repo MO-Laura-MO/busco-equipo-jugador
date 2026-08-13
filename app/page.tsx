@@ -61,8 +61,8 @@ export default function Home() {
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
         />
-        {/* Velo suave para que el texto se lea sobre cualquier imagen. */}
-        <div className="absolute inset-0 bg-[#101A33]/45" />
+        {/* Velo azul de marca, suave, para que el texto se lea sobre cualquier imagen. */}
+        <div className="absolute inset-0 bg-acento/55" />
         <div className="relative px-4 py-14 sm:py-16">
           <h1
             className="max-w-[420px] text-[24px] font-medium leading-snug text-white"
@@ -80,13 +80,13 @@ export default function Home() {
         </div>
       </section>
 
-      <nav>
+      <nav className="flex flex-col gap-3 px-4 py-4">
         {ACCESOS.filter((a) => a.href !== "/entrenadores" || hayVacantes).map(
           (a) => (
             <Link
               key={a.href}
               href={a.href}
-              className="flex items-center gap-3 border-b border-borde-fila px-4 py-[14px] hover:bg-barra/60"
+              className="flex items-center gap-3 rounded-[10px] border border-borde px-4 py-[14px] hover:border-tinta-3 hover:bg-barra/60"
             >
               <a.icono size={19} strokeWidth={1.75} className="shrink-0 text-acento" />
               <div className="min-w-0 flex-1">

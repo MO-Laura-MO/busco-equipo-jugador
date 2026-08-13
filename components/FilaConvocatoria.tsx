@@ -9,6 +9,7 @@ import {
   textoAnios,
 } from "@/lib/datos";
 import EtiquetaEstado from "./EtiquetaEstado";
+import InsigniaVerificado from "./InsigniaVerificado";
 
 interface Props {
   convocatoria: Convocatoria;
@@ -61,7 +62,7 @@ export default function FilaConvocatoria({
   municipio,
   enlazar = true,
 }: Props) {
-  const etiquetas = etiquetasConvocatoria(c);
+  const etiquetas = etiquetasConvocatoria(c).filter((e) => e !== "verificado");
   const anios = textoAnios(c);
   const linea2 = [
     `${etiquetaCategoria(c.categoria)} ${etiquetaSexo(c.sexo).toLowerCase()}`,
@@ -76,7 +77,10 @@ export default function FilaConvocatoria({
     <div className="flex gap-3 px-4 py-[14px]">
       <ColumnaFecha c={c} />
       <div className="min-w-0 flex-1">
-        <h3 className="text-[15px] font-medium leading-snug text-tinta">{nombreClub}</h3>
+        <h3 className="flex items-center gap-[5px] text-[15px] font-medium leading-snug text-tinta">
+          <span className="truncate">{nombreClub}</span>
+          {c.origen === "club" && <InsigniaVerificado />}
+        </h3>
         <p className="mt-[2px] text-[13.5px] leading-snug text-tinta-2">{linea2}</p>
         {anios && (
           <p className="mt-[2px] text-[12.5px] leading-snug text-tinta-2">{anios}</p>

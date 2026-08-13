@@ -27,7 +27,7 @@ const PASOS = [
   {
     titulo: "Publicado, gratis",
     texto:
-      "Vuestra ficha y vuestras pruebas, visibles para las familias que buscan equipo.",
+      "Vuestra ficha, vuestras pruebas y vuestras vacantes, visibles para las familias y los entrenadores que buscan equipo.",
   },
 ];
 
@@ -65,10 +65,10 @@ export default function Alta() {
           Añade tu club donde te están buscando
         </h1>
         <p className="relative mt-3 max-w-[520px] text-[13.5px] leading-relaxed text-white/85">
-          Si tu club o escuela está en la Comunidad de Madrid, añádelo gratis,
-          tengas o no pruebas abiertas. Puedes publicar además tus
-          convocatorias y, si buscáis entrenador o entrenadora, vuestras
-          vacantes.
+          Si tu club o escuela está en la Comunidad de Madrid, añádelo gratis:
+          tendrá su perfil en voley.app y podrás publicar convocatorias de
+          pruebas y vacantes de entrenador. Así, jugadores y entrenadores
+          encontrarán vuestro club fácilmente.
         </p>
         <a
           href={URL_FORMULARIO_ALTA}

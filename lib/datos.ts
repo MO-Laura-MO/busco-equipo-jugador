@@ -162,6 +162,25 @@ export function clubPorId(id: string): Club | undefined {
   return clubes.find((c) => c.id === id);
 }
 
+const SIGLAS_CLUB = new Set([
+  "CV", "CDE", "CD", "CDB", "CDV", "AD", "ADV", "ADC", "SAD", "CP", "ABV",
+  "C.D.", "C.D.E", "C.D", "CLUB", "DEPORTIVO", "ELEMENTAL", "DE", "DEL",
+  "LA", "EL", "LOS", "LAS", "Y",
+]);
+
+/** Iniciales para el avatar de un club cuando no tiene escudo subido. */
+export function iniciales(nombre: string): string {
+  const palabras = nombre
+    .split(/\s+/)
+    .filter((p) => !SIGLAS_CLUB.has(p.toUpperCase().replace(/\.+$/, "")));
+  const base = palabras.length > 0 ? palabras : nombre.split(/\s+/);
+  return base
+    .slice(0, 2)
+    .map((p) => p[0])
+    .join("")
+    .toUpperCase();
+}
+
 export function convocatoriasDeClub(clubId: string): Convocatoria[] {
   return ordenarConvocatorias(convocatorias.filter((c) => c.clubId === clubId));
 }

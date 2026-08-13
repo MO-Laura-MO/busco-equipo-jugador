@@ -52,7 +52,7 @@ export default function RootLayout({
     <html lang="es" className={inter.variable}>
       <body className="font-sans text-tinta bg-fondo">
         <div className="mx-auto min-h-screen w-full max-w-[720px]">
-          <header>
+          <header className="sticky top-0 z-20 bg-fondo">
             <div className="flex items-center justify-between gap-3 px-4 py-3">
               <Link
                 href="/"

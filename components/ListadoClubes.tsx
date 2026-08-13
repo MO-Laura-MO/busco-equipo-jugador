@@ -3,28 +3,10 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { MapPin, Search, X } from "lucide-react";
-import { Club, ZONAS, Zona } from "@/lib/datos";
+import { Club, ZONAS, Zona, iniciales } from "@/lib/datos";
 
 interface ClubConDatos extends Club {
   numConvocatorias: number;
-}
-
-/** Iniciales para el avatar cuando el club no tiene escudo subido. */
-function iniciales(nombre: string): string {
-  const SIGLAS = new Set([
-    "CV", "CDE", "CD", "CDB", "CDV", "AD", "ADV", "ADC", "SAD", "CP", "ABV",
-    "C.D.", "C.D.E", "C.D", "CLUB", "DEPORTIVO", "ELEMENTAL", "DE", "DEL",
-    "LA", "EL", "LOS", "LAS", "Y",
-  ]);
-  const palabras = nombre
-    .split(/\s+/)
-    .filter((p) => !SIGLAS.has(p.toUpperCase().replace(/\.+$/, "")));
-  const base = palabras.length > 0 ? palabras : nombre.split(/\s+/);
-  return base
-    .slice(0, 2)
-    .map((p) => p[0])
-    .join("")
-    .toUpperCase();
 }
 
 export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {

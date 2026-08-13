@@ -32,6 +32,7 @@ import {
   etiquetaSexo,
   etiquetasConvocatoria,
   fechaLarga,
+  iniciales,
   partesFecha,
   textoAnios,
   vacantesDeClub,
@@ -164,11 +165,26 @@ export default async function FichaClub({
       </Link>
 
       <header className="px-4 pb-4">
-        <h1 className="text-[19px] font-medium text-tinta">{club.nombre}</h1>
-        <p className="mt-[2px] flex items-center gap-[5px] text-[13.5px] text-tinta-2">
-          <MapPin size={14} strokeWidth={1.75} className="text-tinta-3" />
-          {club.municipio} · zona {zona.toLowerCase()}
-        </p>
+        <div className="flex items-center gap-3">
+          {club.logo ? (
+            <img
+              src={club.logo}
+              alt=""
+              className="h-14 w-14 shrink-0 rounded-full object-cover"
+            />
+          ) : (
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-acento-tinte text-[18px] font-medium text-acento">
+              {iniciales(club.nombre)}
+            </span>
+          )}
+          <div className="min-w-0 flex-1">
+            <h1 className="text-[19px] font-medium text-tinta">{club.nombre}</h1>
+            <p className="mt-[2px] flex items-center gap-[5px] text-[13.5px] text-tinta-2">
+              <MapPin size={14} strokeWidth={1.75} className="text-tinta-3" />
+              {club.municipio} · zona {zona.toLowerCase()}
+            </p>
+          </div>
+        </div>
         {club.descripcion && (
           <p className="mt-3 text-[13.5px] leading-relaxed text-tinta-2">
             {club.descripcion}

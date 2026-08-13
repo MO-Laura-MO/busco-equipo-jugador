@@ -26,7 +26,7 @@ export default function Blog() {
             <li key={a.slug}>
               <Link
                 href={`/blog/${a.slug}`}
-                className="block overflow-hidden rounded-[12px] border border-borde-fila"
+                className="block overflow-hidden rounded-[12px] border border-borde-fila shadow-[0_1px_3px_rgba(17,24,39,0.09)]"
               >
                 <div
                   className={`relative overflow-hidden px-4 pb-5 pt-4 ${
