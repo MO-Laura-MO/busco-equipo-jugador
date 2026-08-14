@@ -197,14 +197,14 @@ export default async function FichaClub({
         )}
 
         <div className="relative flex items-center gap-3">
-          {club.logo ? (
+          {club.logo && perfilVerificado ? (
             <img
               src={club.logo}
               alt=""
               className={
                 colores
-                  ? "h-14 w-14 shrink-0 rounded-full bg-white object-cover"
-                  : "h-14 w-14 shrink-0 rounded-full border border-borde-control bg-barra object-cover"
+                  ? "h-14 w-14 shrink-0 rounded-full bg-white object-contain p-[3px]"
+                  : "h-14 w-14 shrink-0 rounded-full border border-borde-control bg-white object-contain p-[3px]"
               }
             />
           ) : (

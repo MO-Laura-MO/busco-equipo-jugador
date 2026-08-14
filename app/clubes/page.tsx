@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ListadoClubes from "@/components/ListadoClubes";
 import { AMBITO, URL_FORMULARIO_ALTA } from "@/lib/config";
-import { clubes, convocatorias } from "@/lib/datos";
+import { clubes, convocatorias, vacantes } from "@/lib/datos";
 
 export const metadata: Metadata = {
   title: `Clubes de voleibol de ${AMBITO}`,
@@ -11,10 +11,19 @@ export const metadata: Metadata = {
 export default function Clubes() {
   const lista = [...clubes]
     .sort((a, b) => a.nombre.localeCompare(b.nombre, "es"))
-    .map((c) => ({
-      ...c,
-      numConvocatorias: convocatorias.filter((x) => x.clubId === c.id).length,
-    }));
+    .map((c) => {
+      const suyas = convocatorias.filter((x) => x.clubId === c.id);
+      return {
+        ...c,
+        numConvocatorias: suyas.length,
+        // Mismo criterio que la ficha: el club está verificado si al menos una
+        // convocatoria o vacante suya viene de origen "club". El escudo, igual
+        // que los colores, solo se enseña si lo está.
+        verificado:
+          suyas.some((x) => x.origen === "club") ||
+          vacantes.some((v) => v.clubId === c.id && v.origen === "club"),
+      };
+    });
 
   return (
     <main>

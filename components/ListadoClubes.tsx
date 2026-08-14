@@ -7,6 +7,8 @@ import { Club, ZONAS, Zona, iniciales } from "@/lib/datos";
 
 interface ClubConDatos extends Club {
   numConvocatorias: number;
+  /** Perfil verificado por el club: es lo que da derecho a enseñar su escudo. */
+  verificado: boolean;
 }
 
 export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
@@ -118,9 +120,17 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
                   className="block border-b border-borde-fila hover:bg-barra/60"
                 >
                   <div className="flex items-center gap-3 px-4 py-[12px]">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-acento-tinte text-[14px] font-medium text-acento">
-                      {iniciales(c.nombre)}
-                    </span>
+                    {c.logo && c.verificado ? (
+                      <img
+                        src={c.logo}
+                        alt=""
+                        className="h-11 w-11 shrink-0 rounded-full border border-borde-fila bg-white object-contain p-[3px]"
+                      />
+                    ) : (
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-acento-tinte text-[14px] font-medium text-acento">
+                        {iniciales(c.nombre)}
+                      </span>
+                    )}
                     <div className="min-w-0 flex-1">
                       <h2 className="truncate text-[14.5px] font-medium leading-snug text-tinta">
                         {c.nombre}
