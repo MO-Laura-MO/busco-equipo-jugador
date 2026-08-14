@@ -259,10 +259,9 @@ export default async function FichaClub({
             href="#entrenadores"
             className={
               colores
-                ? "relative mt-3 inline-flex w-fit items-center gap-[6px] rounded-[8px] border px-3 py-[10px] text-[13px] font-medium text-[var(--acento-club)] hover:border-white/60"
+                ? "relative mt-3 inline-flex w-fit items-center gap-[6px] rounded-[8px] bg-white/[0.06] px-3 py-[10px] text-[13px] font-medium text-[var(--acento-club)] hover:bg-white/[0.12]"
                 : "relative mt-3 inline-flex w-fit items-center gap-[6px] rounded-[8px] bg-acento-tinte px-3 py-[10px] text-[13px] font-medium text-acento hover:bg-acento-tinte/70"
             }
-            style={colores ? { borderColor: "rgba(255,255,255,0.35)" } : undefined}
           >
             <Users size={14} strokeWidth={1.75} className="shrink-0" />
             Este club busca entrenador o entrenadora
