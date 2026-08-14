@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -40,6 +41,7 @@ import {
   vacantesDeClub,
 } from "@/lib/datos";
 import { EMAIL_CORRECCIONES, URL_SITIO } from "@/lib/config";
+import { coloresClub } from "@/lib/color";
 
 export function generateStaticParams() {
   return clubes.map((c) => ({ id: c.id }));
@@ -131,6 +133,7 @@ export default async function FichaClub({
   // por el club si al menos una convocatoria o vacante suya viene de origen "club".
   const perfilVerificado =
     lista.some((c) => c.origen === "club") || vacantes.some((v) => v.origen === "club");
+  const colores = coloresClub(club, perfilVerificado);
 
   const eventosJsonLd = lista
     .filter((c) => c.tipoFecha === "exacta" && c.fecha)
@@ -170,29 +173,65 @@ export default async function FichaClub({
         Todos los clubes
       </Link>
 
-      <header className="relative overflow-hidden bg-club-fondo px-4 pb-6 pt-5">
-        <Volleyball
-          size={140}
-          strokeWidth={1.2}
-          className="absolute -right-6 -top-6 text-white/10"
-        />
+      <header
+        className={
+          colores
+            ? "relative overflow-hidden px-4 pb-6 pt-5"
+            : "relative overflow-hidden border-b border-borde px-4 pb-6 pt-5"
+        }
+        style={
+          colores
+            ? ({
+                backgroundColor: colores.fondo,
+                "--acento-club": colores.acento,
+              } as CSSProperties)
+            : undefined
+        }
+      >
+        {colores && (
+          <Volleyball
+            size={140}
+            strokeWidth={1.2}
+            className="absolute -right-6 -top-6 text-white/10"
+          />
+        )}
 
         <div className="relative flex items-center gap-3">
           {club.logo ? (
             <img
               src={club.logo}
               alt=""
-              className="h-14 w-14 shrink-0 rounded-full object-cover"
+              className={
+                colores
+                  ? "h-14 w-14 shrink-0 rounded-full bg-white object-cover"
+                  : "h-14 w-14 shrink-0 rounded-full border border-borde-control bg-barra object-cover"
+              }
             />
           ) : (
-            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white/15 text-[18px] font-medium text-white">
+            <span
+              className={
+                colores
+                  ? "flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white/15 text-[18px] font-medium text-white"
+                  : "flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-borde-control bg-barra text-[18px] font-medium text-tinta-2"
+              }
+            >
               {iniciales(club.nombre)}
             </span>
           )}
           <div className="min-w-0 flex-1">
-            <h1 className="text-[19px] font-medium text-white">{club.nombre}</h1>
-            <p className="mt-[2px] flex items-center gap-[5px] text-[13.5px] text-white/80">
-              <MapPin size={14} strokeWidth={1.75} className="text-white/60" />
+            <h1 className={`text-[19px] font-medium ${colores ? "text-white" : "text-tinta"}`}>
+              {club.nombre}
+            </h1>
+            <p
+              className={`mt-[2px] flex items-center gap-[5px] text-[13.5px] ${
+                colores ? "text-white/80" : "text-tinta-2"
+              }`}
+            >
+              <MapPin
+                size={14}
+                strokeWidth={1.75}
+                className={colores ? "text-white/60" : "text-tinta-3"}
+              />
               {club.municipio} · zona {zona.toLowerCase()}
             </p>
           </div>
@@ -206,7 +245,11 @@ export default async function FichaClub({
         )}
 
         {club.descripcion && (
-          <p className="relative mt-3 text-[13.5px] leading-relaxed text-white/85">
+          <p
+            className={`relative mt-3 text-[13.5px] leading-relaxed ${
+              colores ? "text-white/85" : "text-tinta-2"
+            }`}
+          >
             {club.descripcion}
           </p>
         )}
@@ -214,7 +257,12 @@ export default async function FichaClub({
         {vacantes.length > 0 && (
           <a
             href="#entrenadores"
-            className="relative mt-3 flex items-center gap-[6px] rounded-[8px] bg-club-recuadro px-3 py-[10px] text-[13px] font-medium text-club-boton hover:opacity-90"
+            className={
+              colores
+                ? "relative mt-3 flex items-center gap-[6px] rounded-[8px] border px-3 py-[10px] text-[13px] font-medium text-[var(--acento-club)] hover:opacity-90"
+                : "relative mt-3 flex items-center gap-[6px] rounded-[8px] bg-acento-tinte px-3 py-[10px] text-[13px] font-medium text-acento hover:opacity-90"
+            }
+            style={colores ? { borderColor: "rgba(255,255,255,0.35)" } : undefined}
           >
             <Users size={14} strokeWidth={1.75} className="shrink-0" />
             Este club busca entrenador o entrenadora
@@ -229,7 +277,11 @@ export default async function FichaClub({
                 href={club.web}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-[5px] text-[12.5px] text-club-boton hover:text-white"
+                className={
+                  colores
+                    ? "flex items-center gap-[5px] text-[12.5px] text-[var(--acento-club)] hover:text-white"
+                    : "flex items-center gap-[5px] text-[12.5px] text-tinta-2 hover:text-acento"
+                }
               >
                 <Globe size={14} strokeWidth={1.75} />
                 Web
@@ -243,7 +295,11 @@ export default async function FichaClub({
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-[5px] text-[12.5px] text-club-boton hover:text-white"
+                  className={
+                    colores
+                      ? "flex items-center gap-[5px] text-[12.5px] text-[var(--acento-club)] hover:text-white"
+                      : "flex items-center gap-[5px] text-[12.5px] text-tinta-2 hover:text-acento"
+                  }
                 >
                   <Icono size={14} strokeWidth={1.75} />
                   {NOMBRE_RED[r.tipo]}
@@ -260,6 +316,7 @@ export default async function FichaClub({
             emailsExtra={club.emailsExtra}
             formularioUrl={club.formularioUrl}
             formularioNota={club.formularioNota}
+            colores={colores}
           />
         </div>
       </header>

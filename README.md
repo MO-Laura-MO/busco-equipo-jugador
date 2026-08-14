@@ -76,6 +76,14 @@ exacta provisional → ámbar.
 El `id` se escribe en minúsculas con guiones, sin acentos, y es el que
 enlaza las convocatorias y forma la URL de la ficha (`/clubes/<id>`).
 
+`colorFondo` y `colorAcento` (opcionales, hex de seis dígitos) son los
+colores propios del club para la cabecera de su ficha. Solo se pintan si,
+además de tenerlos, el club tiene el perfil verificado (alguna convocatoria
+o vacante suya con `origen: club`); si no, la ficha va en blanco con la
+paleta normal del sitio. El contraste lo corrige siempre `lib/color.ts`
+(`coloresClub()`) — nunca se escriben colores ya ajustados a mano en un
+componente.
+
 ### Plantilla de convocatoria (copiar dentro de `data/convocatorias.json`)
 
 ```json

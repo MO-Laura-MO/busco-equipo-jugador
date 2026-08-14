@@ -49,6 +49,12 @@ export interface Club {
   formularioUrl?: string;
   /** Nota corta bajo el formulario, p. ej. la vía alternativa por redes. */
   formularioNota?: string;
+  /** Color de fondo de la cabecera de su ficha, tal como lo ha dado el club.
+   *  Solo se usa si el club tiene perfil verificado. Puede venir ilegible:
+   *  `coloresClub()` lo corrige. */
+  colorFondo?: string;
+  /** Color de los enlaces, el aviso de entrenador y el botón de contacto. */
+  colorAcento?: string;
   fechaActualizacion: string;
 }
 
