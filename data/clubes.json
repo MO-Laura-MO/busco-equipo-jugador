@@ -535,12 +535,19 @@
   "municipio": "Torrelodones",
   "zona": "oeste",
   "web": "https://www.cvtorrelodones.com/",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/cvtorrelodones"
+   }
+  ],
   "email": "cvtorrelodones@gmail.com",
-  "telefono": "+34 645192939",
-  "logo": "",
-  "descripcion": "",
-  "fechaActualizacion": "2026-08-12"
+  "telefono": "+34 645 19 29 39",
+  "logo": "/clubes/club-voleibol-torrelodones.png",
+  "descripcion": "Club de voleibol de Torrelodones, en la zona oeste de la Comunidad de Madrid. Compite en liga federada con ocho equipos y tiene una sección de voley playa con clases por niveles.",
+  "colorFondo": "#1B2D6F",
+  "colorAcento": "#B6C5D9",
+  "fechaActualizacion": "2026-08-14"
  },
  {
   "id": "colegio-miramadrid",
