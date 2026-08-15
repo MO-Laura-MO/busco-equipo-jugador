@@ -736,11 +736,11 @@
   ],
   "email": "cvmostoles@hotmail.com",
   "telefono": "+34 639 39 35 61",
-  "logo": "",
+  "logo": "/clubes/cv-mostoles.png",
   "descripcion": "Club de voleibol de Móstoles. Tiene equipos federados y equipos en los juegos deportivos municipales, además de escuela de voleibol.",
   "colorFondo": "#14314F",
   "colorAcento": "#2DB4E8",
-  "fechaActualizacion": "2026-08-14",
+  "fechaActualizacion": "2026-08-15",
   "formularioUrl": "https://forms.gle/fpmeJzTWqnrjmRKm7",
   "formularioNota": "También puedes escribirles por Instagram o al email del club."
  },
