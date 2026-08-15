@@ -1,25 +1,5 @@
 [
  {
-  "clubId": "club-voleibol-torrelodones",
-  "puesto": "entrenador",
-  "categoria": "senior",
-  "sexo": "femenino",
-  "tipoEntidad": [
-   "federado"
-  ],
-  "nivel": "",
-  "titulacion": "",
-  "requisitos": "Experiencia entrenando voleibol y ganas de liderar el equipo",
-  "dias": "",
-  "horario": "",
-  "pabellon": "",
-  "compensacion": "por-determinar",
-  "incorporacion": "Temporada 2026-27",
-  "notas": "Para presentarte, escribe al club contando tu experiencia (email en Contacto).",
-  "origen": "club",
-  "fechaActualizacion": "2026-08-14"
- },
- {
   "clubId": "cv-mostoles",
   "puesto": "entrenador",
   "categoria": "senior",
