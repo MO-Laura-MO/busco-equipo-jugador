@@ -198,6 +198,22 @@ export function iniciales(nombre: string): string {
     .toUpperCase();
 }
 
+/**
+ * Texto listo para buscar: en minúsculas y sin tildes ni diéresis, para que
+ * "mostoles" encuentre "CV Móstoles" y "alcala" encuentre "CV Alcalá". Se
+ * aplica a los dos lados de la comparación, así que también funciona al revés:
+ * quien escriba "Móstoles" con tilde encuentra lo mismo.
+ *
+ * La eñe pierde la virgulilla y se compara como ene, que es justo lo que
+ * queremos: "señora" y "senora" tienen que devolver lo mismo.
+ */
+export function normalizar(texto: string): string {
+  return texto
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
 export function convocatoriasDeClub(clubId: string): Convocatoria[] {
   return ordenarConvocatorias(convocatorias.filter((c) => c.clubId === clubId));
 }

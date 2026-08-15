@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { MapPin, Search, X } from "lucide-react";
-import { Club, ZONAS, Zona, iniciales } from "@/lib/datos";
+import { Club, ZONAS, Zona, iniciales, normalizar } from "@/lib/datos";
 
 interface ClubConDatos extends Club {
   numConvocatorias: number;
@@ -30,12 +30,11 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
   };
 
   const filtrados = useMemo(() => {
-    const q = busqueda.trim().toLowerCase();
+    const q = normalizar(busqueda.trim());
     return clubes.filter((c) => {
       if (zona && c.zona !== zona) return false;
       if (soloConPruebas && c.numConvocatorias === 0) return false;
-      if (q && !`${c.nombre} ${c.municipio}`.toLowerCase().includes(q))
-        return false;
+      if (q && !normalizar(`${c.nombre} ${c.municipio}`).includes(q)) return false;
       return true;
     });
   }, [busqueda, zona, soloConPruebas, clubes]);

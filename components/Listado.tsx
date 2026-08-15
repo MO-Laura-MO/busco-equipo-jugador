@@ -18,6 +18,7 @@ import {
   ZONAS,
   Zona,
   mesesDisponibles,
+  normalizar,
   ordenarConvocatorias,
   temporadasDisponibles,
 } from "@/lib/datos";
@@ -91,7 +92,7 @@ export default function Listado({ clubes, convocatorias }: Props) {
   );
 
   const filtradas = useMemo(() => {
-    const q = busqueda.trim().toLowerCase();
+    const q = normalizar(busqueda.trim());
     const lista = convocatorias.filter((c) => {
       const club = clubesPorId.get(c.clubId);
       if (!club) return false;
@@ -110,7 +111,7 @@ export default function Listado({ clubes, convocatorias }: Props) {
         if (suMes !== null && suMes !== mes) return false;
       }
       if (q) {
-        const texto = `${club.nombre} ${club.municipio}`.toLowerCase();
+        const texto = normalizar(`${club.nombre} ${club.municipio}`);
         if (!texto.includes(q)) return false;
       }
       return true;
