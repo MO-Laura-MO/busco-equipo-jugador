@@ -176,10 +176,21 @@ const SIGLAS_CLUB = new Set([
 
 /** Iniciales para el avatar de un club cuando no tiene escudo subido. */
 export function iniciales(nombre: string): string {
-  const palabras = nombre
+  // El municipio entre paréntesis no son iniciales del club, y los signos
+  // sueltos tampoco: sin esto, "CV Bulldogs (Villanueva del Pardillo)" da "B(".
+  const limpio = nombre.replace(/\([^)]*\)/g, " ");
+  const palabras = limpio
     .split(/\s+/)
-    .filter((p) => !SIGLAS_CLUB.has(p.toUpperCase().replace(/\.+$/, "")));
-  const base = palabras.length > 0 ? palabras : nombre.split(/\s+/);
+    .map((p) => p.replace(/[^\p{L}\p{N}]/gu, ""))
+    .filter(Boolean)
+    .filter((p) => !SIGLAS_CLUB.has(p.toUpperCase()));
+  const base =
+    palabras.length > 0
+      ? palabras
+      : limpio
+          .split(/\s+/)
+          .map((p) => p.replace(/[^\p{L}\p{N}]/gu, ""))
+          .filter(Boolean);
   return base
     .slice(0, 2)
     .map((p) => p[0])
