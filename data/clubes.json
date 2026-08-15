@@ -318,7 +318,9 @@
   "telefono": "+34 626 40 56 84",
   "logo": "",
   "descripcion": "Club de voleibol femenino con dos itinerarios: Bulldogs Formación (de escuela a cadete) y Bulldogs Rendimiento (juvenil, júnior y sénior). Sedes en Villanueva del Pardillo, Villanueva de la Cañada y Valdemorillo.",
-  "fechaActualizacion": "2026-08-11",
+  "colorFondo": "#753E90",
+  "colorAcento": "#B6F9A4",
+  "fechaActualizacion": "2026-08-14",
   "emailsExtra": [
    {
     "etiqueta": "Formación",
