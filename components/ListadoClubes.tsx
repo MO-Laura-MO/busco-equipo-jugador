@@ -51,7 +51,7 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
             placeholder="Buscar club o municipio"
-            className="w-full bg-transparent text-[14px] text-tinta outline-none placeholder:text-tinta-3"
+            className="w-full bg-transparent text-[16px] text-tinta outline-none placeholder:text-tinta-3"
           />
         </div>
       </div>

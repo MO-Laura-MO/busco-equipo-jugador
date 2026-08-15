@@ -50,6 +50,14 @@ body {
   font-weight: 400;
 }
 
+/* iOS hace zoom al enfocar un campo con letra de menos de 16 px y deja la
+   página desencajada. Todos los campos del sitio van a 16 px. */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
 /* Scroll horizontal de filtros sin barra visible */
 .sin-scrollbar {
   scrollbar-width: none;
