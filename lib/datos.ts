@@ -250,15 +250,34 @@ export function vacantesOrdenadas(): { vacante: Vacante; club: Club }[] {
  * club); si no, el nivel; y si tampoco hay nivel, la etiqueta de su tipo de
  * competición.
  */
+const ETIQUETAS_PUESTO: Record<Puesto, string> = {
+  entrenador: "Entrenador/a",
+  "segundo-entrenador": "Segundo entrenador/a",
+  ayudante: "Ayudante",
+  monitor: "Monitor/a",
+  coordinador: "Coordinador/a",
+  "preparador-fisico": "Preparador/a física",
+};
+
 export function tituloVacante(v: Vacante): string {
+  const partes: string[] = [];
+  // El entrenador principal no se nombra: es el caso por defecto y la barra de
+  // la sección ya dice "vacantes de entrenador". Los demás puestos sí, porque
+  // cambian por completo lo que se ofrece.
+  if (v.puesto !== "entrenador") partes.push(ETIQUETAS_PUESTO[v.puesto]);
   if (v.categoria) {
-    const base = [etiquetaCategoria(v.categoria), v.sexo ? etiquetaSexo(v.sexo).toLowerCase() : null]
-      .filter(Boolean)
-      .join(" ");
-    return [base, v.nivel || null].filter(Boolean).join(" · ");
+    partes.push(
+      [etiquetaCategoria(v.categoria), v.sexo ? etiquetaSexo(v.sexo).toLowerCase() : null]
+        .filter(Boolean)
+        .join(" ")
+    );
+    if (v.nivel) partes.push(v.nivel);
+  } else if (v.nivel) {
+    partes.push(v.nivel);
+  } else {
+    partes.push(etiquetaTipoEntidad(v.tipoEntidad[0]));
   }
-  if (v.nivel) return v.nivel;
-  return etiquetaTipoEntidad(v.tipoEntidad[0]);
+  return partes.join(" · ");
 }
 
 const ETIQUETAS_COMPENSACION: Record<Compensacion, string> = {
