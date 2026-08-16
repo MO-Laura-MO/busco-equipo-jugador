@@ -36,5 +36,25 @@
   "notas": "Más información con el club.",
   "origen": "club",
   "fechaActualizacion": "2026-08-13"
+ },
+ {
+  "clubId": "cv-collado-villalba",
+  "puesto": "segundo-entrenador",
+  "categoria": "senior",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Superliga 2",
+  "titulacion": "",
+  "requisitos": "Pasión por el voleibol, compromiso y trabajo en equipo",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "Se contacta por teléfono o WhatsApp: 658 277 180.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-16"
  }
 ]
