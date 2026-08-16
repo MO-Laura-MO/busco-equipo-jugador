@@ -5,6 +5,7 @@ import {
   ExternalLink,
   Megaphone,
   ShieldCheck,
+  Users,
   Volleyball,
 } from "lucide-react";
 import { URL_FORMULARIO_ALTA } from "@/lib/config";
@@ -36,6 +37,11 @@ const VENTAJAS = [
     icono: Megaphone,
     texto:
       "Las familias que buscan “pruebas de voleibol” en tu zona te encuentran a ti.",
+  },
+  {
+    icono: Users,
+    texto:
+      "¿Buscáis entrenador o entrenadora? Publicamos también vuestras vacantes, y quien busca equipo técnico las encuentra por categoría y por zona.",
   },
   {
     icono: BadgeCheck,
