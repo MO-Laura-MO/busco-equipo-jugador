@@ -819,5 +819,29 @@
   "notas": "Sesión abierta de entrenamiento de los equipos mancomunados. Inscripción previa por el formulario del club; el email de escuelas está en Contacto.",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-13"
+ },
+ {
+  "clubId": "cv-collado-villalba",
+  "categoria": "senior",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Primera división autonómica",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "anios": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan centrales. Se contacta por teléfono o WhatsApp con el club: 620 549 346.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-15"
  }
 ]
