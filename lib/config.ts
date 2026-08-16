@@ -20,7 +20,7 @@ export const TITULO_SITIO = `Pruebas de voleibol · ${AMBITO}`;
 export const URL_SITIO = "https://voley.app";
 
 /** Formulario externo de alta de clubes (Tally). */
-export const URL_FORMULARIO_ALTA = "https://tally.so/r/NpxY2j";
+export const URL_FORMULARIO_ALTA = "https://tally.so/r/680lMN";
 
 /** Email al que llegan las correcciones de datos. */
 export const EMAIL_CORRECCIONES = "voley.app.es@gmail.com";
