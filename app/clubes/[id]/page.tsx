@@ -321,7 +321,16 @@ export default async function FichaClub({
       </header>
 
       <section>
-        <h2 className="flex items-center gap-[6px] bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+        <h2
+          className={`flex items-center gap-[6px] px-4 py-[9px] text-[12.5px] ${
+            colores ? "" : "bg-barra text-tinta-2"
+          }`}
+          style={
+            colores
+              ? { backgroundColor: colores.barra, color: colores.fondo }
+              : undefined
+          }
+        >
           <Volleyball size={14} strokeWidth={1.75} className="shrink-0" />
           {lista.length === 1
             ? "1 convocatoria para jugadores"
@@ -430,7 +439,16 @@ export default async function FichaClub({
 
       {vacantes.length > 0 && (
         <section id="entrenadores" className="scroll-mt-[100px]">
-          <h2 className="flex items-center gap-[6px] bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+          <h2
+            className={`flex items-center gap-[6px] px-4 py-[9px] text-[12.5px] ${
+              colores ? "" : "bg-barra text-tinta-2"
+            }`}
+            style={
+              colores
+                ? { backgroundColor: colores.barra, color: colores.fondo }
+                : undefined
+            }
+          >
             <Users size={14} strokeWidth={1.75} className="shrink-0" />
             {vacantes.length === 1
               ? "1 vacante de entrenador"

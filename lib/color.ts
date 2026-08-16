@@ -95,6 +95,22 @@ export interface ColoresClub {
   fondo: string; // fondo de la cabecera
   acento: string; // enlaces, aviso de entrenador y relleno del botón
   textoBoton: string; // TINTA o #FFFFFF, el que más contraste dé con el acento
+  barra: string; // fondo de las barras de sección: el del club al 10% sobre blanco
+}
+
+/** Mezcla `hex` con blanco: proporcion 0.1 devuelve un 10% de color. */
+function sobreBlanco(hex: string, proporcion: number): string {
+  const c = hex.replace("#", "");
+  const canal = (i: number) => {
+    const v = parseInt(c.slice(i, i + 2), 16);
+    return Math.round(v * proporcion + 255 * (1 - proporcion));
+  };
+  return (
+    "#" +
+    [0, 2, 4]
+      .map((i) => canal(i).toString(16).padStart(2, "0"))
+      .join("")
+  );
 }
 
 /**
@@ -125,5 +141,11 @@ export function coloresClub(club: Club, verificado: boolean): ColoresClub | null
   const acento = ajustarAcento(acentoHex, fondo);
   const textoBoton = contraste(TINTA, acento) >= contraste("#ffffff", acento) ? TINTA : "#ffffff";
 
-  return { fondo, acento, textoBoton };
+  // El fondo del club al 10% sobre blanco. Como `fondo` ya cumple 4,5:1 con el
+  // blanco, siempre es oscuro, y su propio texto se lee de sobra encima de este
+  // tinte. Aun así se comprueba: si no llegara, la barra se queda gris.
+  const tinte = sobreBlanco(fondo, 0.1);
+  const barra = contraste(fondo, tinte) >= 4.5 ? tinte : "#f7f8f9";
+
+  return { fondo, acento, textoBoton, barra };
 }

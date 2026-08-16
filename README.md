@@ -82,7 +82,10 @@ además de tenerlos, el club tiene el perfil verificado (alguna convocatoria
 o vacante suya con `origen: club`); si no, la ficha va en blanco con la
 paleta normal del sitio. El contraste lo corrige siempre `lib/color.ts`
 (`coloresClub()`) — nunca se escriben colores ya ajustados a mano en un
-componente.
+componente. Además de la cabecera, los enlaces y el botón, el color del club
+tiñe también las dos barras de sección de su ficha ("N convocatorias para
+jugadores" y "N vacantes de entrenador"), al 10% sobre blanco; ese tinte
+también lo calcula solo `lib/color.ts`.
 
 ### Plantilla de convocatoria (copiar dentro de `data/convocatorias.json`)
 
