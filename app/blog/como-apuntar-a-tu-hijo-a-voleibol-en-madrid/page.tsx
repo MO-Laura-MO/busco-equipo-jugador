@@ -104,7 +104,12 @@ export default function Pagina() {
           Dicho esto, también hay familias y jugadores que eligen desplazarse
           un poco más porque un club concreto les encaja mejor por su
           ambiente, su proyecto deportivo o su nivel. Al final no se trata
-          solo de cercanía, sino de encontrar el sitio donde estar a gusto. En{" "}
+          solo de cercanía, sino de encontrar el sitio donde estar a gusto, y
+          donde el club cumpla{" "}
+          <Link href="/blog/requisitos-entrenar-menores-voleibol">
+            lo que la ley exige para trabajar con menores
+          </Link>
+          . En{" "}
           <Link href="/clubes">el directorio de clubes de voley.app</Link>{" "}
           puedes ver los de cada zona con su municipio y su contacto directo.
         </p>

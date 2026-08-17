@@ -51,8 +51,11 @@ export default function Pagina() {
       <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
         <p>
           Cuando una familia empieza a buscar voleibol en Madrid se encuentra
-          con dos cosas que parecen lo mismo y no lo son: los clubes federados
-          y las escuelas. Elegir mal no es grave, pero cuesta una temporada, y
+          con dos cosas que parecen lo mismo y no lo son:{" "}
+          <Link href="/blog/como-ser-entrenador-de-voleibol-madrid">
+            los clubes federados y las escuelas
+          </Link>
+          . Elegir mal no es grave, pero cuesta una temporada, y
           a veces cuesta que un chaval se aburra y lo deje. Esta es la
           diferencia, en corto.
         </p>

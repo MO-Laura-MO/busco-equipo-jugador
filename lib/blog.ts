@@ -10,6 +10,48 @@ export interface Articulo {
 
 export const ARTICULOS: Articulo[] = [
   {
+    slug: "como-ser-entrenador-de-voleibol-madrid",
+    titulo:
+      "Cómo ser entrenador de voleibol federado en Madrid: titulación, cursos y por dónde se empieza",
+    descripcion:
+      "Qué título hace falta para entrenar a un equipo de voleibol federado en Madrid, cuánto cuesta el curso de nivel 1 de la federación, cuándo es la próxima convocatoria y cómo se hacen las prácticas.",
+    fecha: "2026-08-17",
+    etiqueta: "Guía para entrenadores",
+  },
+  {
+    slug: "cursos-entrenador-voleibol-madrid",
+    titulo: "Cursos de entrenador de voleibol en Madrid: convocatorias, precios y plazos",
+    descripcion:
+      "Convocatorias abiertas de los cursos de entrenador de voleibol de la Federación de Madrid: fechas, precio, plazo de inscripción y qué habilita cada nivel. Actualizado en agosto de 2026.",
+    fecha: "2026-08-17",
+    etiqueta: "Guía para entrenadores",
+  },
+  {
+    slug: "requisitos-entrenar-menores-voleibol",
+    titulo: "Qué necesitas legalmente para entrenar a menores en un club de voleibol",
+    descripcion:
+      "Certificado de delitos de naturaleza sexual, título, licencia federativa y LOPIVI: lo que te va a pedir un club de voleibol antes de dejarte entrenar a niños, en liga federada, municipal o escuela.",
+    fecha: "2026-08-17",
+    etiqueta: "Guía para entrenadores",
+  },
+  {
+    slug: "niveles-entrenador-voleibol",
+    titulo: "Los niveles de entrenador de voleibol, explicados: qué te deja entrenar cada uno",
+    descripcion:
+      "Nivel 0, 1, 2 y 3 de entrenador de voleibol: requisitos, precios, prácticas y hasta qué categoría federada habilita cada título. Y por qué un curso online no federativo no sirve para el banquillo.",
+    fecha: "2026-08-17",
+    etiqueta: "Guía para entrenadores",
+  },
+  {
+    slug: "buscar-equipo-entrenador-voleibol-madrid",
+    titulo:
+      "Buscar equipo como entrenador de voleibol en Madrid: cuándo y cómo se mueven los banquillos",
+    descripcion:
+      "Cuándo buscan entrenador los clubes de voleibol de Madrid, qué piden, cómo se escribe un mensaje que se responde y qué preguntar antes de aceptar un equipo.",
+    fecha: "2026-08-17",
+    etiqueta: "Guía para entrenadores",
+  },
+  {
     slug: "elegir-deporte-futbol-baloncesto-voleibol",
     titulo: "Fútbol, baloncesto o voleibol: cómo elegir el deporte de este curso",
     descripcion:

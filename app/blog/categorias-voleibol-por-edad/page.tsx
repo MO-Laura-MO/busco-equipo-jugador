@@ -84,8 +84,11 @@ export default function Pagina() {
           <strong>jugadores de primer año y de segundo año</strong>: los del
           año de nacimiento más joven acaban de llegar a la categoría, y los
           del año mayor ya están en su segunda temporada en ella. Es la
-          rotación natural de todas las categorías, salvo sénior y máster,
-          donde ya no hay ese relevo por edad.
+          rotación natural de{" "}
+          <Link href="/blog/niveles-entrenador-voleibol">
+            todas las categorías
+          </Link>
+          , salvo sénior y máster, donde ya no hay ese relevo por edad.
         </p>
 
         <h2>¿Y el júnior?</h2>

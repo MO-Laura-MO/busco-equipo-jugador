@@ -78,7 +78,10 @@ export default function Pagina() {
         <h2>Qué miran los entrenadores (de verdad)</h2>
         <p>
           Menos de lo que las familias temen y otras cosas distintas de las
-          que imaginan. En benjamín, alevín e infantil, los entrenadores
+          que imaginan. En benjamín, alevín e infantil,{" "}
+          <Link href="/blog/como-ser-entrenador-de-voleibol-madrid">
+            los entrenadores
+          </Link>{" "}
           buscan sobre todo <strong>coordinación general, actitud y ganas</strong>:
           a esas edades{" "}
           <Link href="/blog/haikyuu-empezar-a-jugar-voleibol">
