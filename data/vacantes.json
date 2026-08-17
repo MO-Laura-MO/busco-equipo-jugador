@@ -56,5 +56,23 @@
   "notas": "Se contacta por teléfono o WhatsApp: 658 277 180.",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-16"
+ },
+ {
+  "clubId": "club-voleibol-madrid-ciudad",
+  "puesto": "entrenador",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "titulacion": "Titulación de entrenador",
+  "requisitos": "",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "El club no ha detallado equipos ni categorías. Se contacta por correo o por mensaje privado en sus redes.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-16"
  }
 ]

@@ -537,6 +537,24 @@
   "fechaActualizacion": "2026-08-05"
  },
  {
+  "id": "club-voleibol-madrid-ciudad",
+  "nombre": "Club Voleibol Madrid Ciudad",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/voleibolmadrid"
+   }
+  ],
+  "email": "club@voleibolmadrid.com",
+  "telefono": "",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-16"
+ },
+ {
   "id": "club-voleibol-torrelodones",
   "nombre": "Club Voleibol Torrelodones",
   "municipio": "Torrelodones",
