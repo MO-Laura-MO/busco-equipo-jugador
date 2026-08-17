@@ -5,12 +5,17 @@
   "municipio": "Getafe",
   "zona": "sur",
   "web": "https://www.agrupaciondeportivaperales.es",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/adperales"
+   }
+  ],
   "email": "agrupaciondeportivaperales@gmail.com",
   "telefono": "+34 609 061 092",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-12",
+  "fechaActualizacion": "2026-08-17",
   "emailsExtra": [
    {
     "etiqueta": "Voleibol",
