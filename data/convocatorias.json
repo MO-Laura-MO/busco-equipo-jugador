@@ -510,6 +510,30 @@
  },
  {
   "clubId": "cv-mostoles",
+  "categoria": "cadete",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Segunda división autonómica",
+  "temporada": "2026-27",
+  "tipoFecha": "mes",
+  "fecha": "",
+  "mesAprox": "2026-09",
+  "anios": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "Pabellón Pau4",
+  "direccion": "Calle Perseo 95, Móstoles",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-16"
+ },
+ {
+  "clubId": "cv-mostoles",
   "categoria": "junior",
   "sexo": "masculino",
   "tipoEntidad": [
