@@ -39,7 +39,17 @@ export default function ContactoClub({
         className={`rounded-[6px] px-4 py-[8px] text-[13.5px] font-medium hover:opacity-90 ${
           colores ? "" : "bg-acento text-white"
         }`}
-        style={colores ? { backgroundColor: colores.acento, color: colores.textoBoton } : undefined}
+        style={
+          colores
+            ? colores.claro
+              ? {
+                  backgroundColor: "#ffffff",
+                  color: colores.texto,
+                  border: `1px solid ${colores.oscuro}`,
+                }
+              : { backgroundColor: colores.acento, color: colores.textoBoton }
+            : undefined
+        }
       >
         {formularioUrl ? "Contacto e inscripción" : "Ver contacto"}
       </button>

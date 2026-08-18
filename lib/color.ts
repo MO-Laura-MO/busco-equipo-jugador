@@ -104,9 +104,11 @@ export interface ColoresClub {
   fondo: string; // fondo de la cabecera: el del club, tal cual si se lee, si no ajustado
   texto: string; // blanco o TINTA, el que se lea sobre `fondo`
   textoRgb: string; // "R G B" de `texto`, para las variantes con opacidad (rgb(var(..)/NN%))
-  acento: string; // enlaces, aviso de entrenador y relleno del botón
+  claro: boolean; // true si la cabecera terminó en modo claro (fondo real, letra oscura)
+  oscuro: string; // versión oscura del tono del club: barras, y borde del botón en modo claro
+  acento: string; // enlaces, aviso de entrenador y relleno del botón (en modo oscuro)
   textoBoton: string; // TINTA o #FFFFFF, el que más contraste dé con el acento
-  barra: string; // fondo de las barras de sección: un tono del club al 10% sobre blanco
+  barra: string; // fondo de las barras de sección: `oscuro` al 10% sobre blanco
   barraTexto: string; // texto e icono de las barras de sección
 }
 
@@ -178,11 +180,21 @@ export function coloresClub(club: Club, verificado: boolean): ColoresClub | null
   const acento = ajustarAcento(acentoHex, fondo, fondoEsClaro);
   const textoBoton = contraste(TINTA, acento) >= contraste("#ffffff", acento) ? TINTA : "#ffffff";
 
-  const base = fondoEsClaro ? ajustarFondo(fondoHex) ?? TINTA : fondo;
-  const tinte = sobreBlanco(base, 0.1);
-  const barraOk = contraste(base, tinte) >= 4.5;
+  const oscuro = fondoEsClaro ? ajustarFondo(fondoHex) ?? TINTA : fondo;
+  const tinte = sobreBlanco(oscuro, 0.1);
+  const barraOk = contraste(oscuro, tinte) >= 4.5;
   const barra = barraOk ? tinte : "#f7f8f9";
-  const barraTexto = barraOk ? base : TINTA;
+  const barraTexto = barraOk ? oscuro : TINTA;
 
-  return { fondo, texto, textoRgb: hexToRgbTriplet(texto), acento, textoBoton, barra, barraTexto };
+  return {
+    fondo,
+    texto,
+    textoRgb: hexToRgbTriplet(texto),
+    claro: fondoEsClaro,
+    oscuro,
+    acento,
+    textoBoton,
+    barra,
+    barraTexto,
+  };
 }
