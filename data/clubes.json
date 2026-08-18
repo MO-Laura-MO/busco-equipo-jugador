@@ -628,10 +628,12 @@
    }
   ],
   "email": "info@cvoleibolalcala.com",
-  "telefono": "+34 675759841",
-  "logo": "",
+  "telefono": "+34 675 75 98 41",
+  "logo": "/clubes/cv-alcala.png",
   "descripcion": "Club de voleibol de Alcalá de Henares. Tiene equipos federados masculinos, femeninos y máster, equipos en la liga mancomunada, y escuelas de iniciación y de adultos.",
-  "fechaActualizacion": "2026-08-13",
+  "colorFondo": "#56b5e1",
+  "colorAcento": "#ffffff",
+  "fechaActualizacion": "2026-08-18",
   "emailsExtra": [
    {
     "etiqueta": "Escuelas",
