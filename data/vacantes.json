@@ -92,5 +92,24 @@
   "notas": "Club en crecimiento, con equipos de varias categorías. No han dicho para cuáles es la vacante. Se contacta por mensaje directo en su Instagram.",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-16"
+ },
+ {
+  "clubId": "cv-san-fernando",
+  "puesto": "entrenador",
+  "tipoEntidad": [
+   "federado",
+   "escuela"
+  ],
+  "nivel": "De categorías base a sénior",
+  "titulacion": "",
+  "requisitos": "",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "Más información con el club.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-18"
  }
 ]

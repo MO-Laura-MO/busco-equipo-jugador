@@ -1022,5 +1022,23 @@
   "logo": "",
   "descripcion": "Club de voleibol con sede en el CMD Orcasur, en Madrid. Compite en los juegos deportivos municipales. La cuota incluye entrenamientos, equipación de competición y camiseta de entrenamiento.",
   "fechaActualizacion": "2026-08-12"
+ },
+ {
+  "id": "cv-san-fernando",
+  "nombre": "Club Voleibol San Fernando",
+  "municipio": "San Fernando de Henares",
+  "zona": "este",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/clubvoleibolsanfernando"
+   }
+  ],
+  "email": "",
+  "telefono": "+34 657 22 34 96",
+  "logo": "",
+  "descripcion": "Club de voleibol de San Fernando de Henares. Tiene equipos de formación y equipos federados, en categorías que van de la base al sénior.",
+  "fechaActualizacion": "2026-08-18"
  }
 ]
