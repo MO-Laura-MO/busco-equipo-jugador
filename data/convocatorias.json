@@ -512,6 +512,30 @@
  },
  {
   "clubId": "cv-mostoles",
+  "categoria": "juvenil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Primera división preferente",
+  "temporada": "2026-27",
+  "tipoFecha": "exacta",
+  "fecha": "2026-08-24",
+  "mesAprox": "",
+  "anios": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "Pabellón Pau4",
+  "direccion": "Calle Perseo 95, Móstoles",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Las pruebas están abiertas a partir del 24 de agosto. Buscan centrales para el primer equipo.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-18"
+ },
+ {
+  "clubId": "cv-mostoles",
   "categoria": "junior",
   "sexo": "masculino",
   "tipoEntidad": [
