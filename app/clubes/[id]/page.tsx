@@ -184,6 +184,8 @@ export default async function FichaClub({
             ? ({
                 backgroundColor: colores.fondo,
                 "--acento-club": colores.acento,
+                "--texto-cabecera": colores.texto,
+                "--texto-cabecera-rgb": colores.textoRgb,
               } as CSSProperties)
             : undefined
         }
@@ -192,7 +194,7 @@ export default async function FichaClub({
           <Volleyball
             size={140}
             strokeWidth={1.2}
-            className="absolute -right-6 -top-6 text-white/10"
+            className="absolute -right-6 -top-6 text-[rgb(var(--texto-cabecera-rgb)/10%)]"
           />
         )}
 
@@ -211,7 +213,7 @@ export default async function FichaClub({
             <span
               className={
                 colores
-                  ? "flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white/15 text-[18px] font-medium text-white"
+                  ? "flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[rgb(var(--texto-cabecera-rgb)/15%)] text-[18px] font-medium text-[var(--texto-cabecera)]"
                   : "flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-borde-control bg-barra text-[18px] font-medium text-tinta-2"
               }
             >
@@ -219,18 +221,22 @@ export default async function FichaClub({
             </span>
           )}
           <div className="min-w-0 flex-1">
-            <h1 className={`text-[19px] font-medium ${colores ? "text-white" : "text-tinta"}`}>
+            <h1
+              className={`text-[19px] font-medium ${
+                colores ? "text-[var(--texto-cabecera)]" : "text-tinta"
+              }`}
+            >
               {club.nombre}
             </h1>
             <p
               className={`mt-[2px] flex items-center gap-[5px] text-[13.5px] ${
-                colores ? "text-white/80" : "text-tinta-2"
+                colores ? "text-[rgb(var(--texto-cabecera-rgb)/80%)]" : "text-tinta-2"
               }`}
             >
               <MapPin
                 size={14}
                 strokeWidth={1.75}
-                className={colores ? "text-white/60" : "text-tinta-3"}
+                className={colores ? "text-[rgb(var(--texto-cabecera-rgb)/60%)]" : "text-tinta-3"}
               />
               {club.municipio} · zona {zona.toLowerCase()}
             </p>
@@ -247,7 +253,7 @@ export default async function FichaClub({
         {club.descripcion && (
           <p
             className={`relative mt-3 text-[13.5px] leading-relaxed ${
-              colores ? "text-white/85" : "text-tinta-2"
+              colores ? "text-[rgb(var(--texto-cabecera-rgb)/85%)]" : "text-tinta-2"
             }`}
           >
             {club.descripcion}
@@ -259,7 +265,7 @@ export default async function FichaClub({
             href="#entrenadores"
             className={
               colores
-                ? "relative mt-3 inline-flex w-fit items-center gap-[6px] rounded-[8px] bg-white/[0.06] px-3 py-[10px] text-[13px] font-medium text-[var(--acento-club)] hover:bg-white/[0.12]"
+                ? "relative mt-3 inline-flex w-fit items-center gap-[6px] rounded-[8px] bg-[rgb(var(--texto-cabecera-rgb)/6%)] px-3 py-[10px] text-[13px] font-medium text-[var(--acento-club)] hover:bg-[rgb(var(--texto-cabecera-rgb)/12%)]"
                 : "relative mt-3 inline-flex w-fit items-center gap-[6px] rounded-[8px] bg-acento-tinte px-3 py-[10px] text-[13px] font-medium text-acento hover:bg-acento-tinte/70"
             }
           >
@@ -278,7 +284,7 @@ export default async function FichaClub({
                 rel="noopener noreferrer"
                 className={
                   colores
-                    ? "flex items-center gap-[5px] text-[12.5px] text-white hover:text-white/80"
+                    ? "flex items-center gap-[5px] text-[12.5px] text-[var(--texto-cabecera)] hover:text-[rgb(var(--texto-cabecera-rgb)/80%)]"
                     : "flex items-center gap-[5px] text-[12.5px] text-tinta-2 hover:text-acento"
                 }
               >
@@ -296,7 +302,7 @@ export default async function FichaClub({
                   rel="noopener noreferrer"
                   className={
                     colores
-                      ? "flex items-center gap-[5px] text-[12.5px] text-white hover:text-white/80"
+                      ? "flex items-center gap-[5px] text-[12.5px] text-[var(--texto-cabecera)] hover:text-[rgb(var(--texto-cabecera-rgb)/80%)]"
                       : "flex items-center gap-[5px] text-[12.5px] text-tinta-2 hover:text-acento"
                   }
                 >
@@ -327,7 +333,7 @@ export default async function FichaClub({
           }`}
           style={
             colores
-              ? { backgroundColor: colores.barra, color: colores.fondo }
+              ? { backgroundColor: colores.barra, color: colores.barraTexto }
               : undefined
           }
         >
@@ -445,7 +451,7 @@ export default async function FichaClub({
             }`}
             style={
               colores
-                ? { backgroundColor: colores.barra, color: colores.fondo }
+                ? { backgroundColor: colores.barra, color: colores.barraTexto }
                 : undefined
             }
           >

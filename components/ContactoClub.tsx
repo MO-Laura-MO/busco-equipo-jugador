@@ -46,10 +46,16 @@ export default function ContactoClub({
     );
   }
 
-  const textoBase = colores ? "text-white" : "text-tinta";
-  const textoHover = colores ? "hover:text-white/80" : "hover:text-tinta-2";
-  const textoSecundario = colores ? "text-white/60" : "text-tinta-3";
-  const etiquetaFondo = colores ? "bg-white/15 text-white" : "bg-borde text-tinta-2";
+  const textoBase = colores ? "text-[var(--texto-cabecera)]" : "text-tinta";
+  const textoHover = colores
+    ? "hover:text-[rgb(var(--texto-cabecera-rgb)/80%)]"
+    : "hover:text-tinta-2";
+  const textoSecundario = colores
+    ? "text-[rgb(var(--texto-cabecera-rgb)/60%)]"
+    : "text-tinta-3";
+  const etiquetaFondo = colores
+    ? "bg-[rgb(var(--texto-cabecera-rgb)/15%)] text-[var(--texto-cabecera)]"
+    : "bg-borde text-tinta-2";
 
   return (
     <div className="space-y-[6px]">
@@ -67,7 +73,7 @@ export default function ContactoClub({
           {formularioNota && (
             <p
               className={`mt-[3px] pl-[23px] text-[12.5px] leading-relaxed ${
-                colores ? "text-white/70" : "text-tinta-3"
+                colores ? "text-[rgb(var(--texto-cabecera-rgb)/70%)]" : "text-tinta-3"
               }`}
             >
               {formularioNota}

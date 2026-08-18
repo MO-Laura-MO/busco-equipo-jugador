@@ -78,12 +78,21 @@ function ajustarFondo(hex: string): string | null {
 }
 
 /**
- * Aclara `hex` en pasos de 2% de luminosidad hasta dar 4,5:1 con `fondo`,
- * sin tocarlo si ya lo cumple. Blanco si no lo consigue.
+ * Ajusta `hex` hasta dar 4,5:1 con `fondo`, sin tocarlo si ya lo cumple.
+ * Se mueve en la dirección contraria a `fondo` (lo aclara si el fondo es
+ * oscuro, lo oscurece si es claro) para no perder el tono. Si no lo
+ * consigue moviéndose hasta el extremo, cae en blanco o TINTA.
  */
-function ajustarAcento(hex: string, fondo: string): string {
+function ajustarAcento(hex: string, fondo: string, fondoEsClaro: boolean): string {
   if (contraste(hex, fondo) >= 4.5) return hex;
   const { h, s, l } = hexToHsl(hex);
+  if (fondoEsClaro) {
+    for (let L = Math.round(l) - 2; L >= 0; L -= 2) {
+      const candidato = hslToHex(h, s, L);
+      if (contraste(candidato, fondo) >= 4.5) return candidato;
+    }
+    return TINTA;
+  }
   for (let L = Math.round(l) + 2; L < 100; L += 2) {
     const candidato = hslToHex(h, s, L);
     if (contraste(candidato, fondo) >= 4.5) return candidato;
@@ -92,10 +101,13 @@ function ajustarAcento(hex: string, fondo: string): string {
 }
 
 export interface ColoresClub {
-  fondo: string; // fondo de la cabecera
+  fondo: string; // fondo de la cabecera: el del club, tal cual si se lee, si no ajustado
+  texto: string; // blanco o TINTA, el que se lea sobre `fondo`
+  textoRgb: string; // "R G B" de `texto`, para las variantes con opacidad (rgb(var(..)/NN%))
   acento: string; // enlaces, aviso de entrenador y relleno del botón
   textoBoton: string; // TINTA o #FFFFFF, el que más contraste dé con el acento
-  barra: string; // fondo de las barras de sección: el del club al 10% sobre blanco
+  barra: string; // fondo de las barras de sección: un tono del club al 10% sobre blanco
+  barraTexto: string; // texto e icono de las barras de sección
 }
 
 /** Mezcla `hex` con blanco: proporcion 0.1 devuelve un 10% de color. */
@@ -113,6 +125,12 @@ function sobreBlanco(hex: string, proporcion: number): string {
   );
 }
 
+/** "#rrggbb" → "R G B", para meter en una variable CSS y poder hacer rgb(var(..)/NN%). */
+function hexToRgbTriplet(hex: string): string {
+  const c = hex.replace("#", "");
+  return [0, 2, 4].map((i) => parseInt(c.slice(i, i + 2), 16)).join(" ");
+}
+
 /**
  * Devuelve los colores ya corregidos, o null si la ficha va en blanco.
  *
@@ -121,13 +139,19 @@ function sobreBlanco(hex: string, proporcion: number): string {
  * los clubes que han confirmado sus datos.
  *
  * Si los devuelve:
- * - fondo: se oscurece en pasos de 2% de luminosidad, conservando el tono,
- *   hasta llegar a 4,5:1 con el blanco, porque encima va el nombre del club.
- *   Si no lo consigue al 10% de luminosidad, devuelve null (mejor blanco que
- *   una cabecera ilegible).
- * - acento: se aclara hasta llegar a 4,5:1 con el fondo ya corregido. Si no lo
- *   consigue, blanco.
+ * - fondo y texto: el color del club se queda tal cual si ya se lee con
+ *   blanco o con TINTA encima (se usa el que funcione). Si no se lee con
+ *   ninguno de los dos, se oscurece conservando el tono hasta dar 4,5:1 con
+ *   blanco, como antes. Si ni oscureciéndolo al máximo lo consigue, null
+ *   (mejor blanco que una cabecera ilegible).
+ * - acento: se ajusta hasta llegar a 4,5:1 con el fondo ya corregido,
+ *   aclarándolo si el fondo quedó oscuro u oscureciéndolo si quedó claro.
  * - textoBoton: entre TINTA y blanco, el que más contraste dé con el acento.
+ * - barra y barraTexto: para que las barras de sección se lean también en
+ *   fichas de fondo claro, se calculan siempre a partir de una versión
+ *   oscura del tono del club (la misma `fondo` si ya salió oscura, o el
+ *   `colorFondo` oscurecido aparte si la cabecera terminó en modo claro),
+ *   nunca del `fondo` claro que se ve en la cabecera.
  */
 export function coloresClub(club: Club, verificado: boolean): ColoresClub | null {
   if (!verificado) return null;
@@ -135,17 +159,30 @@ export function coloresClub(club: Club, verificado: boolean): ColoresClub | null
   const acentoHex = normalizarHex(club.colorAcento);
   if (!fondoHex || !acentoHex) return null;
 
-  const fondo = ajustarFondo(fondoHex);
-  if (!fondo) return null;
+  let fondo: string;
+  let texto: string;
+  if (contraste(fondoHex, "#ffffff") >= 4.5) {
+    fondo = fondoHex;
+    texto = "#ffffff";
+  } else if (contraste(fondoHex, TINTA) >= 4.5) {
+    fondo = fondoHex;
+    texto = TINTA;
+  } else {
+    const oscurecido = ajustarFondo(fondoHex);
+    if (!oscurecido) return null;
+    fondo = oscurecido;
+    texto = "#ffffff";
+  }
+  const fondoEsClaro = texto === TINTA;
 
-  const acento = ajustarAcento(acentoHex, fondo);
+  const acento = ajustarAcento(acentoHex, fondo, fondoEsClaro);
   const textoBoton = contraste(TINTA, acento) >= contraste("#ffffff", acento) ? TINTA : "#ffffff";
 
-  // El fondo del club al 10% sobre blanco. Como `fondo` ya cumple 4,5:1 con el
-  // blanco, siempre es oscuro, y su propio texto se lee de sobra encima de este
-  // tinte. Aun así se comprueba: si no llegara, la barra se queda gris.
-  const tinte = sobreBlanco(fondo, 0.1);
-  const barra = contraste(fondo, tinte) >= 4.5 ? tinte : "#f7f8f9";
+  const base = fondoEsClaro ? ajustarFondo(fondoHex) ?? TINTA : fondo;
+  const tinte = sobreBlanco(base, 0.1);
+  const barraOk = contraste(base, tinte) >= 4.5;
+  const barra = barraOk ? tinte : "#f7f8f9";
+  const barraTexto = barraOk ? base : TINTA;
 
-  return { fondo, acento, textoBoton, barra };
+  return { fondo, texto, textoRgb: hexToRgbTriplet(texto), acento, textoBoton, barra, barraTexto };
 }
