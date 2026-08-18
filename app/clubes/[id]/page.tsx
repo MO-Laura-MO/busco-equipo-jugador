@@ -278,7 +278,7 @@ export default async function FichaClub({
                 rel="noopener noreferrer"
                 className={
                   colores
-                    ? "flex items-center gap-[5px] text-[12.5px] text-[var(--acento-club)] hover:text-white"
+                    ? "flex items-center gap-[5px] text-[12.5px] text-white hover:text-white/80"
                     : "flex items-center gap-[5px] text-[12.5px] text-tinta-2 hover:text-acento"
                 }
               >
@@ -296,7 +296,7 @@ export default async function FichaClub({
                   rel="noopener noreferrer"
                   className={
                     colores
-                      ? "flex items-center gap-[5px] text-[12.5px] text-[var(--acento-club)] hover:text-white"
+                      ? "flex items-center gap-[5px] text-[12.5px] text-white hover:text-white/80"
                       : "flex items-center gap-[5px] text-[12.5px] text-tinta-2 hover:text-acento"
                   }
                 >
