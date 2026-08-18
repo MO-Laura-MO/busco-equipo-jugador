@@ -302,29 +302,6 @@
  },
  {
   "clubId": "voleibol-maria-rodrigo",
-  "categoria": "infantil",
-  "sexo": "femenino",
-  "tipoEntidad": [
-   "municipal"
-  ],
-  "nivel": "",
-  "temporada": "2026-27",
-  "tipoFecha": "por-confirmar",
-  "fecha": "",
-  "mesAprox": "",
-  "estadoFecha": "confirmada",
-  "hora": "",
-  "pabellon": "IES María Rodrigo",
-  "direccion": "C/ Talamanca del Jarama, 2, 28051 Madrid",
-  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
-  "avisoPrevio": true,
-  "cuotaOrientativa": "",
-  "notas": "El formulario de inscripción está en Contacto.",
-  "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-12"
- },
- {
-  "clubId": "voleibol-maria-rodrigo",
   "categoria": "cadete",
   "sexo": "femenino",
   "tipoEntidad": [
@@ -342,32 +319,9 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "El formulario de inscripción está en Contacto.",
-  "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-12"
- },
- {
-  "clubId": "voleibol-maria-rodrigo",
-  "categoria": "juvenil",
-  "sexo": "femenino",
-  "tipoEntidad": [
-   "municipal"
-  ],
-  "nivel": "",
-  "temporada": "2026-27",
-  "tipoFecha": "por-confirmar",
-  "fecha": "",
-  "mesAprox": "",
-  "estadoFecha": "confirmada",
-  "hora": "",
-  "pabellon": "IES María Rodrigo",
-  "direccion": "C/ Talamanca del Jarama, 2, 28051 Madrid",
-  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
-  "avisoPrevio": true,
-  "cuotaOrientativa": "",
-  "notas": "El formulario de inscripción está en Contacto.",
-  "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-12"
+  "notas": "Inscripción por email. El email del club está en Contacto.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-18"
  },
  {
   "clubId": "voleibol-maria-rodrigo",
@@ -389,8 +343,32 @@
   "avisoPrevio": true,
   "cuotaOrientativa": "",
   "notas": "Entrenamientos lunes y miércoles de 21:00 a 23:00. El formulario de inscripción está en Contacto.",
-  "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-12"
+  "origen": "club",
+  "fechaActualizacion": "2026-08-18"
+ },
+ {
+  "clubId": "voleibol-maria-rodrigo",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "anios": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "IES María Rodrigo",
+  "direccion": "C/ Talamanca del Jarama, 2, 28051 Madrid",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan una líbero. Inscripción por email, que está en Contacto.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-18"
  },
  {
   "clubId": "avp-parla",
