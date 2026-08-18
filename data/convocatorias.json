@@ -868,5 +868,53 @@
   "notas": "Buscan centrales. Se contacta por mensaje directo en su Instagram.",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-16"
+ },
+ {
+  "clubId": "club-unificado-voleibol-alcorcon",
+  "categoria": "infantil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Equipo B · Segunda división",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "anios": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "Polideportivo Municipal Los Cantos",
+  "direccion": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Polideportivo+Municipal+Los+Cantos%2C+Alcorc%C3%B3n",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan jugadores para completar el equipo. Entrenamientos lunes, martes y jueves por la tarde a partir de septiembre.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-18"
+ },
+ {
+  "clubId": "club-unificado-voleibol-alcorcon",
+  "categoria": "juvenil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Equipo B · Segunda división",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "anios": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "Polideportivo Municipal Los Cantos",
+  "direccion": "",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Polideportivo+Municipal+Los+Cantos%2C+Alcorc%C3%B3n",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan jugadores para completar el equipo. Entrenamientos lunes, martes y viernes por la tarde a partir de septiembre.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-18"
  }
 ]
