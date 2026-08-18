@@ -74,5 +74,23 @@
   "notas": "El club no ha detallado equipos ni categorías. Se contacta por correo o por mensaje privado en sus redes.",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-16"
+ },
+ {
+  "clubId": "ad-voleibol-rivas",
+  "puesto": "entrenador",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "titulacion": "Nivel 2",
+  "requisitos": "",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "Club en crecimiento, con equipos de varias categorías. No han dicho para cuáles es la vacante. Se contacta por mensaje directo en su Instagram.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-16"
  }
 ]

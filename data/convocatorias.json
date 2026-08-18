@@ -867,5 +867,28 @@
   "notas": "Buscan centrales. Se contacta por teléfono o WhatsApp con el club: 620 549 346.",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-15"
+ },
+ {
+  "clubId": "ad-voleibol-rivas",
+  "categoria": "junior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Segunda preferente",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan centrales. Se contacta por mensaje directo en su Instagram.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-16"
  }
 ]
