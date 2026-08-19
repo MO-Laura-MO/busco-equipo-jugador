@@ -189,7 +189,12 @@ export default async function VoleibolEnMunicipio({
               if (!club) return null;
               return (
                 <li key={`${c.clubId}-${i}`}>
-                  <FilaConvocatoria convocatoria={c} nombreClub={club.nombre} municipio={club.municipio} />
+                  <FilaConvocatoria
+                    convocatoria={c}
+                    nombreClub={club.nombre}
+                    municipio={club.municipio}
+                    logoClub={club.logo && c.origen === "club" ? club.logo : undefined}
+                  />
                 </li>
               );
             })}

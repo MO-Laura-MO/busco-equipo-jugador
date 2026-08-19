@@ -142,6 +142,7 @@ export default function Home() {
                     convocatoria={c}
                     nombreClub={club.nombre}
                     municipio={club.municipio}
+                    logoClub={club.logo && c.origen === "club" ? club.logo : undefined}
                   />
                 </li>
               );

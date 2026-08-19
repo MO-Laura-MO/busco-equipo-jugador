@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CalendarClock, ChevronRight, MapPin, RefreshCw } from "lucide-react";
 import {
   Convocatoria,
@@ -15,6 +16,8 @@ interface Props {
   convocatoria: Convocatoria;
   nombreClub: string;
   municipio: string;
+  /** Ruta del escudo del club, solo si lo ha mandado él. Sin escudo, no se pinta nada. */
+  logoClub?: string;
   /** Si es false, la fila no enlaza a la ficha (se usa dentro de la propia ficha). */
   enlazar?: boolean;
 }
@@ -60,6 +63,7 @@ export default function FilaConvocatoria({
   convocatoria: c,
   nombreClub,
   municipio,
+  logoClub,
   enlazar = true,
 }: Props) {
   const etiquetas = etiquetasConvocatoria(c).filter((e) => e !== "verificado");
@@ -78,6 +82,15 @@ export default function FilaConvocatoria({
       <ColumnaFecha c={c} />
       <div className="min-w-0 flex-1">
         <h3 className="flex items-center gap-[5px] text-[15px] font-medium leading-snug text-tinta">
+          {logoClub && (
+            <Image
+              src={logoClub}
+              alt=""
+              width={26}
+              height={26}
+              className="h-[26px] w-[26px] shrink-0 rounded-full border border-borde-fila bg-white object-contain p-[2px]"
+            />
+          )}
           <span className="truncate">{nombreClub}</span>
           {c.origen === "club" && <InsigniaVerificado />}
         </h3>
