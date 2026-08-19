@@ -1,13 +1,18 @@
 import Link from "next/link";
-import { MapPin, Users } from "lucide-react";
+import Image from "next/image";
+import { ChevronRight, MapPin, Users } from "lucide-react";
 import {
   Club,
+  Puesto,
   Vacante,
   ZONAS,
+  etiquetaCategoria,
   etiquetaCompensacion,
+  etiquetaSexo,
   tituloVacante,
 } from "@/lib/datos";
 import EtiquetaEstado from "./EtiquetaEstado";
+import InsigniaVerificado from "./InsigniaVerificado";
 
 interface Props {
   vacante: Vacante;
@@ -18,6 +23,15 @@ interface Props {
   enlazar?: boolean;
 }
 
+const ETIQUETAS_PUESTO: Record<Puesto, string> = {
+  entrenador: "Entrenador/a",
+  "segundo-entrenador": "Segundo entrenador/a",
+  ayudante: "Ayudante",
+  monitor: "Monitor/a",
+  coordinador: "Coordinador/a",
+  "preparador-fisico": "Preparador/a física",
+};
+
 export default function FilaVacante({
   vacante: v,
   club,
@@ -27,8 +41,74 @@ export default function FilaVacante({
   const compensacion = etiquetaCompensacion(v.compensacion);
   const diasHorario = [v.dias, v.horario].filter(Boolean).join(" · ");
   const zona = ZONAS.find((z) => z.valor === club.zona)?.etiqueta.toLowerCase() ?? club.zona;
+  const logoClub = club.logo && v.origen === "club" ? club.logo : undefined;
 
-  const contenido = (
+  const equipo = [
+    v.categoria
+      ? `${etiquetaCategoria(v.categoria)}${v.sexo ? ` ${etiquetaSexo(v.sexo).toLowerCase()}` : ""}`
+      : null,
+    v.nivel || null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+
+  const contenido = mostrarClub ? (
+    <div className="flex gap-3 px-4 py-[14px]">
+      <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
+        <Users size={17} className="mt-[8px] text-acento" strokeWidth={1.75} />
+      </div>
+      <div className="min-w-0 flex-1">
+        <h3 className="flex items-center gap-[5px] text-[15px] font-medium leading-snug text-tinta">
+          {logoClub && (
+            <Image
+              src={logoClub}
+              alt=""
+              width={26}
+              height={26}
+              className="h-[26px] w-[26px] shrink-0 rounded-full border border-borde-fila bg-white object-contain p-[2px]"
+            />
+          )}
+          <span className="truncate">{club.nombre}</span>
+          {v.origen === "club" && <InsigniaVerificado />}
+        </h3>
+        {equipo && (
+          <p className="mt-[2px] text-[13.5px] leading-snug text-tinta-2">{equipo}</p>
+        )}
+        {v.puesto !== "entrenador" && (
+          <p className="mt-[2px] text-[12.5px] leading-snug text-tinta-2">
+            {ETIQUETAS_PUESTO[v.puesto]}
+          </p>
+        )}
+        {v.titulacion && (
+          <p className="mt-[2px] text-[12.5px] leading-snug text-tinta-2">
+            Titulación: {v.titulacion}
+          </p>
+        )}
+        <p className="mt-[3px] flex items-center gap-[5px] text-[12.5px] leading-snug text-tinta-3">
+          <MapPin size={13} strokeWidth={1.75} className="shrink-0" />
+          <span className="truncate">
+            {club.municipio} · zona {zona}
+          </span>
+        </p>
+        <div className="mt-[7px] flex flex-wrap gap-[6px]">
+          {v.tipoEntidad.map((t) => (
+            <EtiquetaEstado key={t} estado={t} />
+          ))}
+          {compensacion && (
+            <span className="inline-block rounded-[5px] bg-gris-tinte px-[8px] py-[3px] text-[11.5px] leading-[1.3] text-gris-etiqueta">
+              {compensacion}
+            </span>
+          )}
+        </div>
+        {enlazar && (
+          <span className="mt-[10px] inline-flex items-center gap-[4px] rounded-[6px] bg-acento px-3 py-[7px] text-[12.5px] font-medium text-white">
+            Ver más información
+            <ChevronRight size={13} strokeWidth={2} />
+          </span>
+        )}
+      </div>
+    </div>
+  ) : (
     <div className="flex gap-3 px-4 py-[14px]">
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
         <Users size={17} className="mt-[8px] text-acento" strokeWidth={1.75} />
@@ -37,17 +117,6 @@ export default function FilaVacante({
         <h3 className="text-[15px] font-medium leading-snug text-tinta">
           {tituloVacante(v)}
         </h3>
-        {mostrarClub && (
-          <p className="mt-[2px] text-[13.5px] leading-snug text-tinta-2">{club.nombre}</p>
-        )}
-        {mostrarClub && (
-          <p className="mt-[2px] flex items-center gap-[5px] text-[12.5px] leading-snug text-tinta-3">
-            <MapPin size={13} strokeWidth={1.75} className="shrink-0" />
-            <span className="truncate">
-              {club.municipio} · zona {zona}
-            </span>
-          </p>
-        )}
         {v.titulacion && (
           <p className="mt-[3px] text-[12.5px] leading-snug text-tinta-2">
             Titulación: {v.titulacion}
