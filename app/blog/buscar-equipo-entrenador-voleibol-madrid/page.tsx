@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Articulo from "@/components/Articulo";
-import { ARTICULOS } from "@/lib/blog";
+import { ARTICULOS, etiquetaDe } from "@/lib/blog";
 import { URL_FORMULARIO_ALTA } from "@/lib/config";
 
 const ART = ARTICULOS.find(
@@ -51,7 +51,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={etiquetaDe(ART)}>
         <p>
           Si tienes nivel 1 o nivel 2 y quieres banquillo esta temporada, el
           problema no es que no haya sitios. Es que no hay ningún lugar donde

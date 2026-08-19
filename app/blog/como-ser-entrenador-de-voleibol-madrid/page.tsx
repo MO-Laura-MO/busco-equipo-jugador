@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Articulo from "@/components/Articulo";
-import { ARTICULOS } from "@/lib/blog";
+import { ARTICULOS, etiquetaDe } from "@/lib/blog";
 
 const ART = ARTICULOS.find(
   (a) => a.slug === "como-ser-entrenador-de-voleibol-madrid"
@@ -66,7 +66,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={etiquetaDe(ART)}>
         <p>
           Este artículo va sobre entrenar en <strong>competición federada</strong>:
           la liga que organiza la Federación de Madrid de Voleibol, con

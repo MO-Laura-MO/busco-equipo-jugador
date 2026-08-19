@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Articulo from "@/components/Articulo";
-import { ARTICULOS } from "@/lib/blog";
+import { ARTICULOS, etiquetaDe } from "@/lib/blog";
 
 const ART = ARTICULOS.find((a) => a.slug === "como-es-una-prueba-de-voleibol")!;
 
@@ -40,7 +40,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={etiquetaDe(ART)}>
         <p>
           La palabra "prueba" impone, pero en el voleibol base es mucho menos
           dramática de lo que suena: en la mayoría de los casos es un

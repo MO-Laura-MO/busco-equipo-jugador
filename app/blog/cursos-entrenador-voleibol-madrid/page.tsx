@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Articulo from "@/components/Articulo";
-import { ARTICULOS } from "@/lib/blog";
+import { ARTICULOS, etiquetaDe } from "@/lib/blog";
 
 const ART = ARTICULOS.find(
   (a) => a.slug === "cursos-entrenador-voleibol-madrid"
@@ -58,7 +58,7 @@ export default function Pagina() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={ART.etiqueta}>
+      <Articulo titulo={ART.titulo} fecha={ART.fecha} etiqueta={etiquetaDe(ART)}>
         <p>
           La Federación de Madrid de Voleibol convoca sus{" "}
           <Link href="/blog/como-ser-entrenador-de-voleibol-madrid">
