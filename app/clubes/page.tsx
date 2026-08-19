@@ -33,14 +33,41 @@ export default function Clubes() {
     <main>
       <header className="px-4 pb-3 pt-5">
         <h1 className="text-[19px] font-medium text-tinta">Clubes de voleibol en Madrid</h1>
-        <div className="mt-2 space-y-2 text-[13.5px] leading-relaxed text-tinta-2">
-          <p>
-            Este es el directorio de clubes y escuelas de voleibol de la
-            Comunidad de Madrid: {lista.length} entidades en {numMunicipios}{" "}
-            municipios, cada una con su municipio, su zona, su web, sus redes
-            y su contacto directo. No cobramos nada a nadie y no hacemos de
-            intermediarios: escribes tú al club.
+        <p className="mt-2 text-[13.5px] text-tinta-2">
+          Este es el directorio de clubes y escuelas de voleibol de la
+          Comunidad de Madrid: {lista.length} entidades en {numMunicipios}{" "}
+          municipios, cada una con su municipio, su zona, su web, sus redes
+          y su contacto directo. No cobramos nada a nadie y no hacemos de
+          intermediarios: escribes tú al club.
+        </p>
+      </header>
+
+      {lista.length > 0 ? (
+        <ListadoClubes clubes={lista} />
+      ) : (
+        <div className="border-t border-borde px-4 py-10 text-center">
+          <p className="text-[13.5px] leading-relaxed text-tinta-2">
+            Todavía no hay clubes publicados. Estamos contactando con los
+            primeros.
           </p>
+          <p className="mt-3 text-[13.5px] text-tinta-2">
+            ¿Eres un club?{" "}
+            <a
+              href={URL_FORMULARIO_ALTA}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-acento underline underline-offset-2 decoration-acento/40 hover:decoration-acento"
+            >
+              Publica tus pruebas gratis
+            </a>
+            .
+          </p>
+        </div>
+      )}
+
+      <div className="border-t border-borde px-4 py-4">
+        <h2 className="text-[12.5px] font-medium text-tinta-2">Sobre este directorio</h2>
+        <div className="mt-2 space-y-2 text-[13.5px] leading-relaxed text-tinta-2">
           <p>
             Puedes buscar por nombre o municipio, filtrar por zona (norte,
             sur, este, oeste y centro) y quedarte solo con los clubes que
@@ -68,30 +95,7 @@ export default function Clubes() {
             </Link>
           </p>
         </div>
-      </header>
-
-      {lista.length > 0 ? (
-        <ListadoClubes clubes={lista} />
-      ) : (
-        <div className="border-t border-borde px-4 py-10 text-center">
-          <p className="text-[13.5px] leading-relaxed text-tinta-2">
-            Todavía no hay clubes publicados. Estamos contactando con los
-            primeros.
-          </p>
-          <p className="mt-3 text-[13.5px] text-tinta-2">
-            ¿Eres un club?{" "}
-            <a
-              href={URL_FORMULARIO_ALTA}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-acento underline underline-offset-2 decoration-acento/40 hover:decoration-acento"
-            >
-              Publica tus pruebas gratis
-            </a>
-            .
-          </p>
-        </div>
-      )}
+      </div>
 
       <div className="border-t border-borde px-4 py-4">
         <h2 className="text-[12.5px] font-medium text-tinta-2">Clubes por municipio</h2>
