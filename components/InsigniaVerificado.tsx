@@ -31,7 +31,7 @@ export default function InsigniaVerificado() {
         <BadgeCheck size={17} strokeWidth={2.5} className="fill-verificado text-white" />
       </span>
       <span
-        className={`pointer-events-none absolute left-1/2 top-full z-10 mt-1 -translate-x-1/2 whitespace-nowrap rounded-[6px] bg-tinta px-2 py-1 text-[11px] leading-none text-white transition-opacity ${
+        className={`pointer-events-none absolute right-0 top-full z-10 mt-1 max-w-[min(220px,calc(100vw-32px))] whitespace-nowrap rounded-[6px] bg-tinta px-2 py-1 text-[11px] leading-none text-white transition-opacity ${
           visible ? "opacity-100" : "opacity-0"
         } group-hover:opacity-100`}
       >
