@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Plus, Volleyball } from "lucide-react";
 import Pestanas from "@/components/Pestanas";
 import {
-  AMBITO,
   NOMBRE_AMBITO_LARGO,
   NOMBRE_MARCA,
   TITULO_SITIO,
@@ -30,7 +29,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(URL_SITIO),
   title: {
     default: TITULO_SITIO,
-    template: `%s · Pruebas de voleibol ${AMBITO}`,
+    template: `%s · voley.app`,
   },
   description: `Directorio de convocatorias de pruebas de voleibol base en ${NOMBRE_AMBITO_LARGO}. Busca por categoría, sexo, zona y mes, y contacta directamente con el club.`,
 };

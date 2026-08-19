@@ -515,3 +515,17 @@ export function temporadasDisponibles(
   for (const c of lista) if (c.temporada) temporadas.add(c.temporada);
   return [...temporadas].sort().map((t) => ({ valor: t, etiqueta: t }));
 }
+
+/**
+ * Fecha de actualización más reciente entre una lista de convocatorias, en
+ * formato ISO (AAAA-MM-DD). Vacío si la lista está vacía. La usan el listado
+ * de pruebas y las páginas por categoría, municipio y zona para decir cuándo
+ * se revisó por última vez lo que se está mostrando.
+ */
+export function ultimaActualizacion(lista: { fechaActualizacion: string }[]): string {
+  if (lista.length === 0) return "";
+  return lista.reduce(
+    (max, c) => (c.fechaActualizacion > max ? c.fechaActualizacion : max),
+    lista[0].fechaActualizacion
+  );
+}

@@ -63,19 +63,26 @@ export default function Home() {
         />
         {/* Velo azul de marca, suave, para que el texto se lea sobre cualquier imagen. */}
         <div className="absolute inset-0 bg-acento/55" />
-        <div className="relative px-4 py-14 sm:py-16">
+        <div className="relative px-4 py-5 sm:py-7">
           <h1
             className="max-w-[420px] text-[24px] font-medium leading-snug text-white"
             style={{ textShadow: "0 1px 12px rgba(11, 31, 26, 0.55)" }}
           >
-            Tu próximo equipo te está buscando
+            Voleibol en la Comunidad de Madrid
           </h1>
+          <p
+            className="mt-2 max-w-[440px] text-[15px] leading-relaxed text-white/90"
+            style={{ textShadow: "0 1px 10px rgba(11, 31, 26, 0.55)" }}
+          >
+            Tu próximo equipo te está buscando.
+          </p>
           <p
             className="mt-2 max-w-[440px] text-[13.5px] leading-relaxed text-white/90"
             style={{ textShadow: "0 1px 10px rgba(11, 31, 26, 0.55)" }}
           >
-            Seas jugador o entrenador, aquí está tu próximo equipo: clubes y
-            escuelas de la Comunidad de Madrid, de benjamín a máster.
+            Pruebas de clubes y escuelas para jugadores, vacantes para
+            entrenadores y el directorio de clubes de Madrid. Gratis, sin
+            registro y sin intermediarios.
           </p>
         </div>
       </section>

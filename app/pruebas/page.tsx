@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Actualizado from "@/components/Actualizado";
 import Listado from "@/components/Listado";
 import Seguir from "@/components/Seguir";
 import { AMBITO } from "@/lib/config";
-import { clubes, convocatorias } from "@/lib/datos";
+import { clubes, convocatorias, ultimaActualizacion } from "@/lib/datos";
 
 const DESCRIPCION = `Convocatorias de pruebas de voleibol de clubes y escuelas de ${AMBITO}, de benjamín a máster. Filtra por categoría, sexo, zona y mes, y escribe directamente al club.`;
 
@@ -23,6 +24,8 @@ export default function Pruebas() {
       </header>
 
       <Listado clubes={clubes} convocatorias={convocatorias} />
+
+      <Actualizado fecha={ultimaActualizacion(convocatorias)} />
 
       <Seguir />
     </main>

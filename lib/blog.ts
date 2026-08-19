@@ -98,7 +98,7 @@ export const ARTICULOS: Articulo[] = [
     slug: "categorias-voleibol-por-edad",
     titulo: "Categorías del voleibol por edad: de benjamín a máster (2026-27)",
     descripcion:
-      "Qué categoría corresponde a cada año de nacimiento en la temporada 2026-27: benjamín, alevín, infantil, cadete, juvenil, júnior, sénior y máster.",
+      "Qué categoría corresponde a cada año de nacimiento en la temporada 2026-27, de benjamín a máster, y qué clubes de Madrid tienen pruebas abiertas en cada una.",
     fecha: "2026-08-06",
   },
   {
