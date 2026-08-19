@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ListadoClubes from "@/components/ListadoClubes";
 import { URL_FORMULARIO_ALTA } from "@/lib/config";
-import { clubes, convocatorias, vacantes } from "@/lib/datos";
+import { ZONAS, clubes, convocatorias, municipiosConPagina, slug, vacantes } from "@/lib/datos";
 
 export const metadata: Metadata = {
   title: { absolute: "Clubes de voleibol en Madrid: directorio por municipio" },
@@ -92,6 +92,36 @@ export default function Clubes() {
           </p>
         </div>
       )}
+
+      <div className="border-t border-borde px-4 py-4">
+        <h2 className="text-[12.5px] font-medium text-tinta-2">Clubes por municipio</h2>
+        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-2">
+          {municipiosConPagina().map((m) => (
+            <Link
+              key={m}
+              href={`/voleibol-en/${slug(m)}`}
+              className="text-[13px] text-acento hover:underline"
+            >
+              {m}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className="px-4 pb-4">
+        <h2 className="text-[12.5px] font-medium text-tinta-2">Voleibol por zona</h2>
+        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-2">
+          {ZONAS.map((z) => (
+            <Link
+              key={z.valor}
+              href={`/voleibol-en/zona/${z.valor}`}
+              className="text-[13px] text-acento hover:underline"
+            >
+              {z.etiqueta}
+            </Link>
+          ))}
+        </div>
+      </div>
     </main>
   );
 }

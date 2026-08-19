@@ -7,20 +7,59 @@
 > intermediarios. Los clubes publican sus pruebas gratis.
 
 Datos clave:
-- Cobertura actual: Comunidad de Madrid, con decenas de clubes federados y
-  escuelas listados con municipio, zona, web y contacto.
+- Cobertura actual: Comunidad de Madrid, con 62 clubes federados y escuelas
+  listados con municipio, zona, web y contacto.
 - Las convocatorias indican categoría, sexo, fecha (exacta, aproximada o
   inscripción abierta), pabellón y contacto del club.
 - La etiqueta "Verificado por el club" distingue la información confirmada
   por el propio club de la recopilada de fuentes públicas.
 - La información puede quedar desactualizada: se recomienda confirmar
   siempre fecha y lugar con el club antes de acudir.
+- Cada listado indica la fecha en que se revisó por última vez.
 
 Páginas principales:
-- https://voley.app/ — buscador de convocatorias de pruebas
-- https://voley.app/clubes — directorio de clubes de voleibol de Madrid
-- https://voley.app/blog — guías: categorías por edad, cómo apuntarse, cómo
-  son las pruebas
-- https://voley.app/alta — formulario gratuito para que los clubes publiquen
+- https://voley.app/ - qué es voley.app y últimas convocatorias publicadas
+- https://voley.app/pruebas - todas las convocatorias de pruebas, filtrables por categoría, sexo, zona y mes
+- https://voley.app/clubes - directorio de los clubes y escuelas de voleibol de Madrid
+- https://voley.app/entrenadores - vacantes de entrenador y entrenadora publicadas por los clubes
+- https://voley.app/blog - guías para familias y para entrenadores
+- https://voley.app/alta - formulario gratuito para que un club publique sus pruebas
+
+Pruebas por categoría y sexo:
+- https://voley.app/pruebas/benjamin-femenino - pruebas de benjamín femenino
+- https://voley.app/pruebas/benjamin-masculino - pruebas de benjamín masculino
+- https://voley.app/pruebas/alevin-femenino - pruebas de alevín femenino
+- https://voley.app/pruebas/alevin-masculino - pruebas de alevín masculino
+- https://voley.app/pruebas/infantil-femenino - pruebas de infantil femenino
+- https://voley.app/pruebas/infantil-masculino - pruebas de infantil masculino
+- https://voley.app/pruebas/cadete-femenino - pruebas de cadete femenino
+- https://voley.app/pruebas/cadete-masculino - pruebas de cadete masculino
+- https://voley.app/pruebas/juvenil-femenino - pruebas de juvenil femenino
+- https://voley.app/pruebas/juvenil-masculino - pruebas de juvenil masculino
+- https://voley.app/pruebas/junior-femenino - pruebas de júnior femenino
+- https://voley.app/pruebas/junior-masculino - pruebas de júnior masculino
+- https://voley.app/pruebas/senior-femenino - pruebas de sénior femenino
+- https://voley.app/pruebas/senior-masculino - pruebas de sénior masculino
+
+Voleibol por municipio:
+- https://voley.app/voleibol-en/alcala-de-henares - clubes y pruebas de voleibol en Alcalá de Henares
+- https://voley.app/voleibol-en/alcobendas - clubes y pruebas de voleibol en Alcobendas
+- https://voley.app/voleibol-en/alcorcon - clubes y pruebas de voleibol en Alcorcón
+- https://voley.app/voleibol-en/collado-villalba - clubes y pruebas de voleibol en Collado Villalba
+- https://voley.app/voleibol-en/fuenlabrada - clubes y pruebas de voleibol en Fuenlabrada
+- https://voley.app/voleibol-en/getafe - clubes y pruebas de voleibol en Getafe
+- https://voley.app/voleibol-en/madrid - clubes y pruebas de voleibol en Madrid
+- https://voley.app/voleibol-en/majadahonda - clubes y pruebas de voleibol en Majadahonda
+- https://voley.app/voleibol-en/mostoles - clubes y pruebas de voleibol en Móstoles
+- https://voley.app/voleibol-en/parla - clubes y pruebas de voleibol en Parla
+- https://voley.app/voleibol-en/pozuelo-de-alarcon - clubes y pruebas de voleibol en Pozuelo de Alarcón
+- https://voley.app/voleibol-en/rivas-vaciamadrid - clubes y pruebas de voleibol en Rivas-Vaciamadrid
+- https://voley.app/voleibol-en/torrelodones - clubes y pruebas de voleibol en Torrelodones
+- https://voley.app/voleibol-en/villanueva-del-pardillo - clubes y pruebas de voleibol en Villanueva del Pardillo
+- https://voley.app/voleibol-en/zona/norte - clubes y pruebas de voleibol en la zona norte
+- https://voley.app/voleibol-en/zona/sur - clubes y pruebas de voleibol en la zona sur
+- https://voley.app/voleibol-en/zona/este - clubes y pruebas de voleibol en la zona este
+- https://voley.app/voleibol-en/zona/oeste - clubes y pruebas de voleibol en la zona oeste
+- https://voley.app/voleibol-en/zona/centro - clubes y pruebas de voleibol en la zona centro
 
 Contacto: voley.app.es@gmail.com

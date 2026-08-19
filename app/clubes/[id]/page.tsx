@@ -36,7 +36,9 @@ import {
   etiquetasConvocatoria,
   fechaLarga,
   iniciales,
+  municipiosConPagina,
   partesFecha,
+  slug,
   textoAnios,
   vacantesDeClub,
 } from "@/lib/datos";
@@ -129,6 +131,7 @@ export default async function FichaClub({
   const lista = convocatoriasDeClub(club.id);
   const vacantes = vacantesDeClub(club.id);
   const zona = ZONAS.find((z) => z.valor === club.zona)?.etiqueta ?? club.zona;
+  const tieneMunicipioPagina = municipiosConPagina().includes(club.municipio);
   // No hay un campo "origen" propio en Club: se considera el perfil verificado
   // por el club si al menos una convocatoria o vacante suya viene de origen "club".
   const perfilVerificado =
@@ -238,7 +241,17 @@ export default async function FichaClub({
                 strokeWidth={1.75}
                 className={colores ? "text-[rgb(var(--texto-cabecera-rgb)/60%)]" : "text-tinta-3"}
               />
-              {club.municipio} · zona {zona.toLowerCase()}
+              {tieneMunicipioPagina ? (
+                <Link href={`/voleibol-en/${slug(club.municipio)}`} className="underline underline-offset-2 hover:no-underline">
+                  {club.municipio}
+                </Link>
+              ) : (
+                club.municipio
+              )}
+              {" · "}
+              <Link href={`/voleibol-en/zona/${club.zona}`} className="underline underline-offset-2 hover:no-underline">
+                zona {zona.toLowerCase()}
+              </Link>
             </p>
           </div>
         </div>

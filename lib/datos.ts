@@ -149,6 +149,12 @@ export const convocatorias = (convocatoriasJson as Convocatoria[]).filter(
 );
 
 /**
+ * Todas las convocatorias del JSON, incluidas las caducadas. Solo para
+ * decidir qué páginas existen: las URLs no pueden aparecer y desaparecer.
+ */
+export const convocatoriasTodas = convocatoriasJson as Convocatoria[];
+
+/**
  * Las vacantes caducan a los 45 días sin actualizar, igual que las
  * convocatorias caducan por fecha: un tablón con ofertas muertas se lleva
  * por delante la credibilidad del resto de la web.
@@ -212,6 +218,13 @@ export function normalizar(texto: string): string {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
+}
+
+/** Slug de URL a partir de un texto: "Alcala de Henares" pasa a "alcala-de-henares". */
+export function slug(texto: string): string {
+  return normalizar(texto)
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 export function convocatoriasDeClub(clubId: string): Convocatoria[] {
@@ -372,6 +385,10 @@ export const ZONAS: { valor: Zona; etiqueta: string }[] = [
   { valor: "centro", etiqueta: "Centro" },
 ];
 
+export function etiquetaZona(z: Zona): string {
+  return ZONAS.find((x) => x.valor === z)?.etiqueta ?? z;
+}
+
 export function etiquetaCategoria(c: Categoria): string {
   return CATEGORIAS.find((x) => x.valor === c)?.etiqueta ?? c;
 }
@@ -528,4 +545,42 @@ export function ultimaActualizacion(lista: { fechaActualizacion: string }[]): st
     (max, c) => (c.fechaActualizacion > max ? c.fechaActualizacion : max),
     lista[0].fechaActualizacion
   );
+}
+
+/**
+ * Pares categoría + sexo con página propia en /pruebas/[slug]: los que
+ * tienen al menos una convocatoria alguna vez (viva o caducada), en orden de
+ * edad y luego sexo. Decide qué páginas existen; las URLs no pueden
+ * aparecer y desaparecer según haya o no convocatorias vivas.
+ */
+export function paresCategoriaSexo(): { categoria: Categoria; sexo: Sexo; slug: string }[] {
+  const pares: { categoria: Categoria; sexo: Sexo; slug: string }[] = [];
+  for (const c of CATEGORIAS) {
+    for (const s of SEXOS) {
+      if (convocatoriasTodas.some((x) => x.categoria === c.valor && x.sexo === s.valor)) {
+        pares.push({ categoria: c.valor, sexo: s.valor, slug: `${c.valor}-${s.valor}` });
+      }
+    }
+  }
+  return pares;
+}
+
+/**
+ * Municipios con página propia en /voleibol-en/[municipio]: los que tienen
+ * dos o más clubes, o al menos una convocatoria (viva o caducada). Un
+ * municipio con un solo club y ninguna convocatoria sería un duplicado de la
+ * ficha del club; lo cubre la página de su zona.
+ */
+export function municipiosConPagina(): string[] {
+  const numClubes = new Map<string, number>();
+  for (const c of clubes) numClubes.set(c.municipio, (numClubes.get(c.municipio) ?? 0) + 1);
+  const conConvocatoria = new Set(
+    convocatoriasTodas
+      .map((c) => clubPorId(c.clubId)?.municipio)
+      .filter((m): m is string => Boolean(m))
+  );
+  const municipios = [...new Set(clubes.map((c) => c.municipio))];
+  return municipios
+    .filter((m) => (numClubes.get(m) ?? 0) >= 2 || conConvocatoria.has(m))
+    .sort((a, b) => a.localeCompare(b, "es"));
 }
