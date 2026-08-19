@@ -1040,5 +1040,23 @@
   "logo": "",
   "descripcion": "Club de voleibol de San Fernando de Henares. Tiene equipos de formación y equipos federados, en categorías que van de la base al sénior.",
   "fechaActualizacion": "2026-08-18"
+ },
+ {
+  "id": "cv-getafe",
+  "nombre": "CV Getafe",
+  "municipio": "Getafe",
+  "zona": "sur",
+  "web": "https://cvgetafe.com",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/cdevoleibolgetafeoficial"
+   }
+  ],
+  "email": "",
+  "telefono": "+34 624403693",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-19"
  }
 ]

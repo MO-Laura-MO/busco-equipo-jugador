@@ -940,5 +940,29 @@
   "notas": "Buscan jugadores para completar el equipo. Entrenamientos lunes, martes y viernes por la tarde a partir de septiembre.",
   "origen": "club",
   "fechaActualizacion": "2026-08-18"
+ },
+ {
+  "clubId": "cv-getafe",
+  "categoria": "juvenil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado",
+   "municipal"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Les quedan plazas para completar sus dos equipos juveniles masculinos, el federado y el municipal. Se contacta por mensaje directo en su Instagram o por WhatsApp al 624 40 36 93.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-19"
  }
 ]

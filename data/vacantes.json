@@ -111,5 +111,23 @@
   "notas": "Más información con el club.",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-18"
+ },
+ {
+  "clubId": "cv-getafe",
+  "puesto": "entrenador",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "titulacion": "",
+  "requisitos": "",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "Para equipos federados. No han dicho de qué categorías. Se contacta por mensaje directo en su Instagram o por WhatsApp al 624 40 36 93.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-19"
  }
 ]
