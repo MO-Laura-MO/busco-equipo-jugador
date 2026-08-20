@@ -132,10 +132,13 @@ export default async function FichaClub({
   const vacantes = vacantesDeClub(club.id);
   const zona = ZONAS.find((z) => z.valor === club.zona)?.etiqueta ?? club.zona;
   const tieneMunicipioPagina = municipiosConPagina().includes(club.municipio);
-  // No hay un campo "origen" propio en Club: se considera el perfil verificado
-  // por el club si al menos una convocatoria o vacante suya viene de origen "club".
+  // El perfil está verificado si el club lo ha confirmado explícitamente
+  // (campo `verificado`, para cuando no tiene ninguna convocatoria ni vacante
+  // publicada) o si al menos una convocatoria o vacante suya viene de origen "club".
   const perfilVerificado =
-    lista.some((c) => c.origen === "club") || vacantes.some((v) => v.origen === "club");
+    club.verificado === true ||
+    lista.some((c) => c.origen === "club") ||
+    vacantes.some((v) => v.origen === "club");
   const colores = coloresClub(club, perfilVerificado);
 
   const eventosJsonLd = lista
@@ -351,9 +354,11 @@ export default async function FichaClub({
           }
         >
           <Volleyball size={14} strokeWidth={1.75} className="shrink-0" />
-          {lista.length === 1
-            ? "1 convocatoria para jugadores"
-            : `${lista.length} convocatorias para jugadores`}
+          {lista.length === 0
+            ? "En este momento, el club no tiene convocatorias abiertas"
+            : lista.length === 1
+              ? "1 convocatoria para jugadores"
+              : `${lista.length} convocatorias para jugadores`}
         </h2>
         {lista.length === 0 && (
           <p className="px-4 py-6 text-[13px] leading-relaxed text-tinta-3">

@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { MapPin, Search, X } from "lucide-react";
 import { Club, ZONAS, Zona, iniciales, normalizar } from "@/lib/datos";
+import InsigniaVerificado from "./InsigniaVerificado";
 
 interface ClubConDatos extends Club {
   numConvocatorias: number;
@@ -131,8 +132,9 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
                       </span>
                     )}
                     <div className="min-w-0 flex-1">
-                      <h2 className="truncate text-[14.5px] font-medium leading-snug text-tinta">
-                        {c.nombre}
+                      <h2 className="flex items-center gap-[5px] text-[14.5px] font-medium leading-snug text-tinta">
+                        <span className="truncate">{c.nombre}</span>
+                        {c.verificado && <InsigniaVerificado />}
                       </h2>
                       <p className="mt-[2px] flex items-center gap-[5px] text-[12.5px] leading-snug text-tinta-3">
                         <MapPin size={12} strokeWidth={1.75} className="shrink-0" />

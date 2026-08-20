@@ -55,6 +55,12 @@ export interface Club {
   colorFondo?: string;
   /** Color de los enlaces, el aviso de entrenador y el botón de contacto. */
   colorAcento?: string;
+  /**
+   * Perfil confirmado por el club aunque todavía no tenga ninguna convocatoria
+   * ni vacante publicada. Sin esto, un club que nos manda sus datos y su escudo
+   * pero no tiene pruebas abiertas no podría lucir el tic ni sus colores.
+   */
+  verificado?: boolean;
   fechaActualizacion: string;
 }
 
