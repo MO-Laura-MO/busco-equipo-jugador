@@ -129,5 +129,25 @@
   "notas": "Para equipos federados. No han dicho de qué categorías. Se contacta por mensaje directo en su Instagram o por WhatsApp al 624 40 36 93.",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-19"
+ },
+ {
+  "clubId": "club-unificado-voleibol-alcorcon",
+  "puesto": "entrenador",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "titulacion": "Nivel 2 o 3",
+  "requisitos": "Experiencia previa entrenando",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-20"
  }
 ]
