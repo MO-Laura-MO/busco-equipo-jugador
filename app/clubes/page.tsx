@@ -19,6 +19,7 @@ export default function Clubes() {
       return {
         ...c,
         numConvocatorias: suyas.length,
+        numVacantes: vacantes.filter((v) => v.clubId === c.id).length,
         // Mismo criterio que la ficha: el club está verificado si lo ha
         // confirmado explícitamente (campo `verificado`) o si al menos una
         // convocatoria o vacante suya viene de origen "club". El escudo, igual

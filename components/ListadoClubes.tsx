@@ -8,6 +8,8 @@ import InsigniaVerificado from "./InsigniaVerificado";
 
 interface ClubConDatos extends Club {
   numConvocatorias: number;
+  /** Vacantes de entrenador abiertas del club. */
+  numVacantes: number;
   /** Perfil verificado por el club: es lo que da derecho a enseñar su escudo. */
   verificado: boolean;
 }
@@ -148,6 +150,11 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
                         <span className="rounded-[5px] bg-amarillo px-[7px] py-[3px] text-[11px] font-medium leading-[1.3] text-[#111827]">
                           {c.numConvocatorias}{" "}
                           {c.numConvocatorias === 1 ? "prueba" : "pruebas"}
+                        </span>
+                      )}
+                      {c.numVacantes > 0 && (
+                        <span className="rounded-[5px] bg-acento-tinte px-[7px] py-[3px] text-[11px] font-medium leading-[1.3] text-acento">
+                          {c.numVacantes} {c.numVacantes === 1 ? "vacante" : "vacantes"}
                         </span>
                       )}
                     </div>
