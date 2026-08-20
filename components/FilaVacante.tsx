@@ -55,19 +55,20 @@ export default function FilaVacante({
   const contenido = mostrarClub ? (
     <div className="flex gap-3 px-4 py-[14px]">
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
-        <Users size={17} className="mt-[8px] text-acento" strokeWidth={1.75} />
+        {logoClub ? (
+          <Image
+            src={logoClub}
+            alt=""
+            width={32}
+            height={32}
+            className="mt-[4px] h-8 w-8 rounded-full border border-borde-fila bg-white object-contain p-[3px]"
+          />
+        ) : (
+          <Users size={17} className="mt-[8px] text-acento" strokeWidth={1.75} />
+        )}
       </div>
       <div className="min-w-0 flex-1">
         <h3 className="flex items-center gap-[5px] text-[15px] font-medium leading-snug text-tinta">
-          {logoClub && (
-            <Image
-              src={logoClub}
-              alt=""
-              width={26}
-              height={26}
-              className="h-[26px] w-[26px] shrink-0 rounded-full border border-borde-fila bg-white object-contain p-[2px]"
-            />
-          )}
           <span className="truncate">{club.nombre}</span>
           {v.origen === "club" && <InsigniaVerificado />}
         </h3>

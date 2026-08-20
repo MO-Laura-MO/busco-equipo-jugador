@@ -243,14 +243,17 @@ export function vacantesDeClub(clubId: string): Vacante[] {
 }
 
 /**
- * Vacantes ordenadas por nombre de club (A-Z) y, dentro de cada club, por
- * orden de categoría de edad; las que no tienen categoría, al final.
+ * Vacantes ordenadas con los clubes verificados primero, luego por nombre de
+ * club (A-Z) y, dentro de cada club, por orden de categoría de edad; las que
+ * no tienen categoría, al final.
  */
 export function vacantesOrdenadas(): { vacante: Vacante; club: Club }[] {
   return vacantes
     .map((vacante) => ({ vacante, club: clubPorId(vacante.clubId)! }))
     .filter((v) => v.club)
     .sort((a, b) => {
+      const verificada = Number(b.vacante.origen === "club") - Number(a.vacante.origen === "club");
+      if (verificada !== 0) return verificada;
       const nombre = a.club.nombre.localeCompare(b.club.nombre, "es");
       if (nombre !== 0) return nombre;
       return ordenCategoriaVacante(a.vacante) - ordenCategoriaVacante(b.vacante);
