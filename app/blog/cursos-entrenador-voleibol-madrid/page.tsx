@@ -29,7 +29,7 @@ const faqJsonLd = {
       name: "¿Cuánto cuesta el curso de entrenador de voleibol de nivel 1 en Madrid?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "210 euros la tarifa general, 189 euros para titulados en TSEAS o TAFAD y 105 euros para quien acude autorizado por un club federado. Una asignatura suelta cuesta 55 euros.",
+        text: "210 euros la tarifa general, 189 euros para titulados en TSEAS o TAFAD y 55 euros la asignatura suelta.",
       },
     },
     {
@@ -105,8 +105,7 @@ export default function Pagina() {
           </li>
           <li>
             <strong>Precio:</strong> 210 € general, 189 € con TSEAS o TAFAD,
-            105 € para quien acude autorizado por un club federado, 55 € la
-            asignatura suelta.
+            55 € la asignatura suelta.
           </li>
           <li>
             <strong>Requisitos:</strong> cumplir 16 años durante 2026. No hace
@@ -171,11 +170,10 @@ export default function Pagina() {
 
         <h2>Antes de matricularte</h2>
         <p>
-          Dos cosas que ahorran disgustos. La primera: si un club te quiere,
-          puede apuntarte como autorizado y la matrícula baja a 105 euros.
-          Pregúntalo antes de pagar. La segunda: el curso no te da el título
-          definitivo, sino el provisional; el definitivo llega tras una
-          temporada de prácticas con un equipo federado, así que conviene{" "}
+          Antes de matricularte, una cosa que ahorra disgustos: el curso no
+          te da el título definitivo, sino el provisional. El definitivo
+          llega tras una temporada de prácticas con un equipo federado, así
+          que conviene{" "}
           <Link href="/entrenadores">tener club antes de empezar</Link>.
         </p>
       </Articulo>

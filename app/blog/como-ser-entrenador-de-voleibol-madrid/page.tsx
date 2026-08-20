@@ -29,7 +29,7 @@ const faqJsonLd = {
       name: "¿Cuándo es el próximo curso de entrenador de voleibol de nivel 1 en Madrid y cuánto cuesta?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La Federación de Madrid de Voleibol ha convocado el curso de Técnico de Competición de Nivel I del 13 al 24 de octubre de 2026, con inscripción hasta el 7 de octubre a las 12:00. Cuesta 210 euros, 189 euros con TAFAD o TSEAS y 105 euros para quien acude autorizado por un club federado.",
+        text: "La Federación de Madrid de Voleibol ha convocado el curso de Técnico de Competición de Nivel I del 13 al 24 de octubre de 2026, con inscripción hasta el 7 de octubre a las 12:00. Cuesta 210 euros, 189 euros con TAFAD o TSEAS y 55 euros la asignatura suelta.",
       },
     },
     {
@@ -182,9 +182,8 @@ export default function Pagina() {
             Filipinas 54.
           </li>
           <li>
-            <strong>Precio:</strong> 210 € general, <strong>189 €</strong> con
-            TAFAD o TSEAS, y <strong>105 €</strong> si te apunta un club
-            federado como autorizado. Una asignatura suelta, 55 €.
+            <strong>Precio:</strong> 210 € general y <strong>189 €</strong> con
+            TAFAD o TSEAS. Una asignatura suelta, 55 €.
           </li>
           <li>
             <strong>Requisitos para aprobar:</strong> asistir al menos al 80 %
@@ -193,16 +192,17 @@ export default function Pagina() {
           </li>
         </ul>
         <p>
-          Ese descuento de 105 euros lo conoce poca gente: si un club te
-          quiere, esa es la conversación que hay que tener con él antes de
-          pagar la matrícula entera.
-        </p>
-        <p>
           Las asignaturas cubren metodología, planificación, análisis técnico,
           táctica, minivoley, reglamento, psicología y dirección de grupo,
           condición física y primeros auxilios. Si vienes de TAFAD, TSEAS o de
           un grado de Educación Física, varias de esas asignaturas te las
           convalidan.
+        </p>
+        <p>
+          La federación tiene otras tarifas para algunos casos, pero no
+          dependen solo de que un club te apunte: pregunta en tu club y en la
+          federación antes de matricularte, porque las condiciones cambian de
+          una convocatoria a otra.
         </p>
 
         <h2>El título no es tuyo hasta que entrenas una temporada</h2>
@@ -263,8 +263,8 @@ export default function Pagina() {
         <p>
           Eres el perfil que los clubes buscan y casi nunca encuentran. Sabes
           jugar, conoces la competición y ya estás en un pabellón tres días
-          por semana. Lo que falta es el título, y el club puede apuntarte por
-          105 euros.
+          por semana. Lo que falta es el título, y el club es justo quien
+          puede orientarte sobre cómo sacártelo.
         </p>
         <p>
           Lo habitual es empezar como segundo entrenador de un equipo de base,

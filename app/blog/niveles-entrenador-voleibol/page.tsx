@@ -177,9 +177,7 @@ export default function Pagina() {
         <h2>Cuánto cuesta subir de nivel</h2>
         <p>
           El <strong>nivel 1</strong> de la Federación de Madrid cuesta 210
-          euros, con tarifa de 189 euros para TAFAD y TSEAS y de 105 euros
-          para quien va{" "}
-          <Link href="/entrenadores">autorizado por un club federado</Link>.{" "}
+          euros, con tarifa de 189 euros para TAFAD y TSEAS.{" "}
           <Link href="/blog/cursos-entrenador-voleibol-madrid">
             La convocatoria abierta es la de octubre de 2026
           </Link>
