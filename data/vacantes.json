@@ -149,5 +149,65 @@
   "notas": "",
   "origen": "club",
   "fechaActualizacion": "2026-08-20"
+ },
+ {
+  "clubId": "voleibol-maria-rodrigo",
+  "puesto": "entrenador",
+  "categoria": "juvenil",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "titulacion": "",
+  "requisitos": "",
+  "dias": "Miércoles y viernes",
+  "horario": "19:00-21:00 y 18:00-20:00",
+  "pabellon": "IES María Rodrigo",
+  "compensacion": "por-determinar",
+  "incorporacion": "Próxima temporada",
+  "notas": "Compite en liga federada los fines de semana.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-20"
+ },
+ {
+  "clubId": "voleibol-maria-rodrigo",
+  "puesto": "entrenador",
+  "categoria": "cadete",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "",
+  "titulacion": "",
+  "requisitos": "",
+  "dias": "Viernes",
+  "horario": "16:00-18:00",
+  "pabellon": "IES María Rodrigo",
+  "compensacion": "por-determinar",
+  "incorporacion": "Próxima temporada",
+  "notas": "Compite en liga municipal los fines de semana.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-20"
+ },
+ {
+  "clubId": "voleibol-maria-rodrigo",
+  "puesto": "entrenador",
+  "categoria": "senior",
+  "sexo": "mixto",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "",
+  "titulacion": "",
+  "requisitos": "",
+  "dias": "Lunes",
+  "horario": "19:00-21:00",
+  "pabellon": "IES María Rodrigo",
+  "compensacion": "por-determinar",
+  "incorporacion": "Próxima temporada",
+  "notas": "Compite en liga municipal los fines de semana.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-20"
  }
 ]
