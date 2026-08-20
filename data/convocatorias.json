@@ -879,7 +879,7 @@
   ],
   "nivel": "Segunda preferente",
   "temporada": "2026-27",
-  "tipoFecha": "por-confirmar",
+  "tipoFecha": "abierta",
   "fecha": "",
   "mesAprox": "",
   "estadoFecha": "confirmada",
@@ -889,9 +889,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Buscan centrales. Se contacta por mensaje directo en su Instagram.",
-  "origen": "fuentes-publicas",
-  "fechaActualizacion": "2026-08-16"
+  "notas": "Buscan centrales.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-19"
  },
  {
   "clubId": "club-unificado-voleibol-alcorcon",
@@ -963,6 +963,29 @@
   "cuotaOrientativa": "",
   "notas": "Les quedan plazas para completar sus dos equipos juveniles masculinos, el federado y el municipal. Se contacta por mensaje directo en su Instagram o por WhatsApp al 624 40 36 93.",
   "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-19"
+ },
+ {
+  "clubId": "ad-voleibol-rivas",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Primera división autonómica",
+  "temporada": "2026-27",
+  "tipoFecha": "abierta",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan colocadoras.",
+  "origen": "club",
   "fechaActualizacion": "2026-08-19"
  }
 ]

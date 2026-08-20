@@ -28,7 +28,7 @@
   "nombre": "AD Voleibol Rivas",
   "municipio": "Rivas-Vaciamadrid",
   "zona": "este",
-  "web": "",
+  "web": "https://www.advoleibolrivas.es",
   "redes": [
    {
     "tipo": "instagram",
@@ -37,9 +37,11 @@
   ],
   "email": "advoleibolrivas@voleibolrivas.es",
   "telefono": "+34 636827313",
-  "logo": "",
+  "logo": "/clubes/ad-voleibol-rivas.png",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-16"
+  "colorFondo": "#000000",
+  "colorAcento": "#95ca3d",
+  "fechaActualizacion": "2026-08-19"
  },
  {
   "id": "ancora-galapagar",
