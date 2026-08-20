@@ -361,7 +361,7 @@ export function ordenCategoria(c: Categoria): number {
 
 /** Etiquetas del tipo de competición, en el orden en que deben mostrarse. */
 export const TIPOS_ENTIDAD: { valor: TipoEntidad; etiqueta: string }[] = [
-  { valor: "federado", etiqueta: "Federado" },
+  { valor: "federado", etiqueta: "Liga federada" },
   { valor: "mancomunada", etiqueta: "Liga mancomunada" },
   { valor: "municipal", etiqueta: "Liga municipal" },
   { valor: "escuela", etiqueta: "Escuela" },

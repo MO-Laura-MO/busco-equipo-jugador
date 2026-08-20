@@ -6,7 +6,7 @@ const ESTILOS: Record<Exclude<Estado, null>, { texto: string; clases: string }> 
     clases: "bg-verificado-tinte text-verificado",
   },
   federado: {
-    texto: "Federado",
+    texto: "Liga federada",
     clases: "bg-gris-tinte text-gris-etiqueta",
   },
   mancomunada: {
@@ -30,7 +30,7 @@ const ESTILOS: Record<Exclude<Estado, null>, { texto: string; clases: string }> 
     clases: "bg-gris-tinte text-gris-etiqueta",
   },
   "fecha-por-confirmar": {
-    texto: "Fecha por confirmar",
+    texto: "Día por confirmar",
     clases: "bg-gris-tinte text-gris-etiqueta",
   },
   abierta: {
