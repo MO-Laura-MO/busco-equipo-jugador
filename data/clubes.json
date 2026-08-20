@@ -841,10 +841,13 @@
   "web": "",
   "redes": [],
   "email": "cgvoleiboltorrejon@gmail.com",
-  "telefono": "+34 602599011",
-  "logo": "",
+  "telefono": "+34 602 59 90 11",
+  "logo": "/clubes/cv-torrejon.png",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "colorFondo": "#e72125",
+  "colorAcento": "#000000",
+  "verificado": true,
+  "fechaActualizacion": "2026-08-20"
  },
  {
   "id": "marianistas-amoros",
