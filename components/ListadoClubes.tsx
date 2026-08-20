@@ -83,33 +83,37 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
               {z.etiqueta}
             </button>
           ))}
-          {hayPruebas && (
-            <button
-              type="button"
-              onClick={() => setSoloConPruebas(!soloConPruebas)}
-              className={`shrink-0 rounded-[6px] px-[10px] py-[5px] text-[12.5px] leading-none whitespace-nowrap ${
-                soloConPruebas
-                  ? "bg-acento text-white"
-                  : "border border-borde-control text-tinta-2 hover:border-tinta-3"
-              }`}
-            >
-              Con pruebas publicadas
-            </button>
-          )}
-          {hayVacantes && (
-            <button
-              type="button"
-              onClick={() => setSoloConVacantes(!soloConVacantes)}
-              className={`shrink-0 rounded-[6px] px-[10px] py-[5px] text-[12.5px] leading-none whitespace-nowrap ${
-                soloConVacantes
-                  ? "bg-acento text-white"
-                  : "border border-borde-control text-tinta-2 hover:border-tinta-3"
-              }`}
-            >
-              Con vacantes publicadas
-            </button>
-          )}
         </div>
+        {(hayPruebas || hayVacantes) && (
+          <div className="sin-scrollbar mt-2 flex gap-2 overflow-x-auto px-4">
+            {hayPruebas && (
+              <button
+                type="button"
+                onClick={() => setSoloConPruebas(!soloConPruebas)}
+                className={`shrink-0 rounded-[6px] px-[10px] py-[5px] text-[12.5px] leading-none whitespace-nowrap ${
+                  soloConPruebas
+                    ? "bg-acento text-white"
+                    : "border border-borde-control text-tinta-2 hover:border-tinta-3"
+                }`}
+              >
+                Con pruebas publicadas
+              </button>
+            )}
+            {hayVacantes && (
+              <button
+                type="button"
+                onClick={() => setSoloConVacantes(!soloConVacantes)}
+                className={`shrink-0 rounded-[6px] px-[10px] py-[5px] text-[12.5px] leading-none whitespace-nowrap ${
+                  soloConVacantes
+                    ? "bg-acento text-white"
+                    : "border border-borde-control text-tinta-2 hover:border-tinta-3"
+                }`}
+              >
+                Con vacantes publicadas
+              </button>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Barra de resultados */}
