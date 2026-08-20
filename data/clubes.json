@@ -839,7 +839,12 @@
   "municipio": "Torrejón de Ardoz",
   "zona": "este",
   "web": "",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/clubvoleiboltorrejon"
+   }
+  ],
   "email": "cgvoleiboltorrejon@gmail.com",
   "telefono": "+34 602 59 90 11",
   "logo": "/clubes/cv-torrejon.png",
