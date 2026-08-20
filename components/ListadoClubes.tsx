@@ -18,18 +18,25 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
   const [busqueda, setBusqueda] = useState("");
   const [zona, setZona] = useState<Zona | null>(null);
   const [soloConPruebas, setSoloConPruebas] = useState(false);
+  const [soloConVacantes, setSoloConVacantes] = useState(false);
 
   const hayPruebas = useMemo(
     () => clubes.some((c) => c.numConvocatorias > 0),
     [clubes]
   );
+  const hayVacantes = useMemo(
+    () => clubes.some((c) => c.numVacantes > 0),
+    [clubes]
+  );
 
-  const hayFiltros = busqueda.trim() !== "" || zona !== null || soloConPruebas;
+  const hayFiltros =
+    busqueda.trim() !== "" || zona !== null || soloConPruebas || soloConVacantes;
 
   const limpiarFiltros = () => {
     setBusqueda("");
     setZona(null);
     setSoloConPruebas(false);
+    setSoloConVacantes(false);
   };
 
   const filtrados = useMemo(() => {
@@ -37,10 +44,11 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
     return clubes.filter((c) => {
       if (zona && c.zona !== zona) return false;
       if (soloConPruebas && c.numConvocatorias === 0) return false;
+      if (soloConVacantes && c.numVacantes === 0) return false;
       if (q && !normalizar(`${c.nombre} ${c.municipio}`).includes(q)) return false;
       return true;
     });
-  }, [busqueda, zona, soloConPruebas, clubes]);
+  }, [busqueda, zona, soloConPruebas, soloConVacantes, clubes]);
 
   return (
     <div>
@@ -88,6 +96,19 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
               Con pruebas publicadas
             </button>
           )}
+          {hayVacantes && (
+            <button
+              type="button"
+              onClick={() => setSoloConVacantes(!soloConVacantes)}
+              className={`shrink-0 rounded-[6px] px-[10px] py-[5px] text-[12.5px] leading-none whitespace-nowrap ${
+                soloConVacantes
+                  ? "bg-acento text-white"
+                  : "border border-borde-control text-tinta-2 hover:border-tinta-3"
+              }`}
+            >
+              Con vacantes publicadas
+            </button>
+          )}
         </div>
       </div>
 
@@ -107,6 +128,23 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
           </button>
         )}
       </div>
+
+      {(hayPruebas || hayVacantes) && (
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-b border-borde px-4 py-[9px] text-[11.5px] text-tinta-3">
+          {hayPruebas && (
+            <span className="flex items-center gap-[5px]">
+              <span className="h-[8px] w-[8px] shrink-0 rounded-full bg-amarillo" />
+              Convocatorias para jugadores
+            </span>
+          )}
+          {hayVacantes && (
+            <span className="flex items-center gap-[5px]">
+              <span className="h-[8px] w-[8px] shrink-0 rounded-full bg-acento" />
+              Vacantes para entrenadores
+            </span>
+          )}
+        </div>
+      )}
 
       {/* Listado */}
       {filtrados.length > 0 ? (
