@@ -879,7 +879,7 @@
   ],
   "nivel": "Segunda preferente",
   "temporada": "2026-27",
-  "tipoFecha": "abierta",
+  "tipoFecha": "por-confirmar",
   "fecha": "",
   "mesAprox": "",
   "estadoFecha": "confirmada",
@@ -891,7 +891,7 @@
   "cuotaOrientativa": "",
   "notas": "Buscan centrales.",
   "origen": "club",
-  "fechaActualizacion": "2026-08-19"
+  "fechaActualizacion": "2026-08-20"
  },
  {
   "clubId": "club-unificado-voleibol-alcorcon",
@@ -974,7 +974,7 @@
   ],
   "nivel": "Primera división autonómica",
   "temporada": "2026-27",
-  "tipoFecha": "abierta",
+  "tipoFecha": "por-confirmar",
   "fecha": "",
   "mesAprox": "",
   "estadoFecha": "confirmada",
@@ -986,6 +986,6 @@
   "cuotaOrientativa": "",
   "notas": "Buscan colocadoras.",
   "origen": "club",
-  "fechaActualizacion": "2026-08-19"
+  "fechaActualizacion": "2026-08-20"
  }
 ]
