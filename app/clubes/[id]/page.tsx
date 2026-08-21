@@ -281,8 +281,8 @@ export default async function FichaClub({
             href="#entrenadores"
             className={
               colores
-                ? "relative mt-3 inline-flex w-fit items-center gap-[6px] rounded-[8px] bg-[rgb(var(--texto-cabecera-rgb)/6%)] px-3 py-[10px] text-[13px] font-medium text-[var(--acento-club)] hover:bg-[rgb(var(--texto-cabecera-rgb)/12%)]"
-                : "relative mt-3 inline-flex w-fit items-center gap-[6px] rounded-[8px] bg-acento-tinte px-3 py-[10px] text-[13px] font-medium text-acento hover:bg-acento-tinte/70"
+                ? "relative mt-3 flex w-fit items-center gap-[6px] rounded-[8px] bg-[rgb(var(--texto-cabecera-rgb)/6%)] px-3 py-[10px] text-[13px] font-medium text-[var(--acento-club)] hover:bg-[rgb(var(--texto-cabecera-rgb)/12%)]"
+                : "relative mt-3 flex w-fit items-center gap-[6px] rounded-[8px] bg-acento-tinte px-3 py-[10px] text-[13px] font-medium text-acento hover:bg-acento-tinte/70"
             }
           >
             <Users size={14} strokeWidth={1.75} className="shrink-0" />
