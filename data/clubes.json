@@ -483,16 +483,18 @@
  },
  {
   "id": "club-saint-louis-des-francais",
-  "nombre": "Club Saint Louis Des Francais",
+  "nombre": "Club Saint Louis des Français",
   "municipio": "Pozuelo de Alarcón",
   "zona": "oeste",
   "web": "https://www.stlouisfrancais.com",
   "redes": [],
   "email": "victorcamposgonzalez@gmail.com",
   "telefono": "+34 652866293",
-  "logo": "",
+  "logo": "/clubes/club-saint-louis-des-francais.png",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "colorFondo": "#122143",
+  "colorAcento": "#cc1b2b",
+  "fechaActualizacion": "2026-08-19"
  },
  {
   "id": "san-agustin",

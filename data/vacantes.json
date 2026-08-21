@@ -209,5 +209,25 @@
   "notas": "Compite en liga municipal los fines de semana.",
   "origen": "club",
   "fechaActualizacion": "2026-08-20"
+ },
+ {
+  "clubId": "club-saint-louis-des-francais",
+  "puesto": "entrenador",
+  "categoria": "junior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "titulacion": "Nivel 2",
+  "requisitos": "Experiencia de varios años entrenando equipos",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-19"
  }
 ]
