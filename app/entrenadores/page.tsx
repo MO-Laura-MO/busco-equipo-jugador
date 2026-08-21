@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ExternalLink } from "lucide-react";
-import FilaVacante from "@/components/FilaVacante";
+import ListadoEntrenadores from "@/components/ListadoEntrenadores";
 import { URL_FORMULARIO_ALTA } from "@/lib/config";
 import { vacantesOrdenadas } from "@/lib/datos";
 
@@ -57,20 +57,7 @@ export default function Entrenadores() {
         <p className="mt-[2px] text-[13.5px] text-tinta-2">{DESCRIPCION}</p>
       </header>
 
-      <div className="bg-barra px-4 py-[9px]">
-        <span className="text-[12.5px] text-tinta-2">
-          {FILAS.length}{" "}
-          {FILAS.length === 1 ? "vacante de entrenador" : "vacantes de entrenador"}
-        </span>
-      </div>
-
-      <ul>
-        {FILAS.map(({ vacante, club }, i) => (
-          <li key={`${vacante.clubId}-${vacante.puesto}-${i}`}>
-            <FilaVacante vacante={vacante} club={club} />
-          </li>
-        ))}
-      </ul>
+      <ListadoEntrenadores filas={FILAS} />
 
       <Captacion />
 
