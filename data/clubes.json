@@ -1019,21 +1019,29 @@
  },
  {
   "id": "wonders-club-deportivo",
-  "nombre": "Wonder's Club Deportivo",
+  "nombre": "Club Deportivo Elemental Wonder's",
   "municipio": "Madrid",
-  "zona": "centro",
-  "web": "",
+  "zona": "sur",
+  "web": "https://www.clubdeportivowonders.com",
   "redes": [
    {
     "tipo": "instagram",
     "url": "https://instagram.com/wondersvoley.madrid"
+   },
+   {
+    "tipo": "facebook",
+    "url": "https://facebook.com/wondersvoley.madrid"
    }
   ],
-  "email": "",
+  "email": "clubdeportivowonders@gmail.com",
   "telefono": "+34 641 198 256",
-  "logo": "",
-  "descripcion": "Club de voleibol con sede en el CMD Orcasur, en Madrid. Compite en los juegos deportivos municipales. La cuota incluye entrenamientos, equipación de competición y camiseta de entrenamiento.",
-  "fechaActualizacion": "2026-08-12"
+  "logo": "/clubes/wonders-club-deportivo.png",
+  "descripcion": "Wonder's es un club deportivo comprometido con la formación integral de jóvenes a través del voleibol. Impulsamos el talento, los valores y el trabajo en equipo, creando oportunidades para crecer dentro y fuera de la cancha. Especializado en la participación en eventos internacionales con resultados positivos: oro en la AMB Volleyball Cup Espinho 2026 en juvenil femenino.",
+  "colorFondo": "#e10509",
+  "colorAcento": "#000000",
+  "formularioUrl": "https://app.cluber.es/clubes/6a298cd45d19c937959488/inscripcion",
+  "formularioNota": "La preinscripción para todas las categorías se hace en Cluber.",
+  "fechaActualizacion": "2026-08-20"
  },
  {
   "id": "cv-san-fernando",
