@@ -41,13 +41,7 @@ export default function ContactoClub({
         }`}
         style={
           colores
-            ? colores.claro
-              ? {
-                  backgroundColor: "#ffffff",
-                  color: colores.texto,
-                  border: `1px solid ${colores.oscuro}`,
-                }
-              : { backgroundColor: colores.acento, color: colores.textoBoton }
+            ? { backgroundColor: colores.acento, color: colores.textoBoton }
             : undefined
         }
       >
