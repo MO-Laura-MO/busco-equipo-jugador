@@ -200,7 +200,7 @@ export default async function FichaClub({
           <Volleyball
             size={140}
             strokeWidth={1.2}
-            className="absolute -right-6 -top-6 opacity-10"
+            className="absolute -right-6 -top-6 opacity-50"
             style={{ color: club.colorAcento }}
           />
         )}
