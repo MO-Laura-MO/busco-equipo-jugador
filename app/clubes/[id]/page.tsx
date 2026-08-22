@@ -337,6 +337,7 @@ export default async function FichaClub({
             telefono={club.telefono}
             emailsExtra={club.emailsExtra}
             formularioUrl={club.formularioUrl}
+            formularioProveedor={club.formularioProveedor}
             formularioNota={club.formularioNota}
             colores={colores}
           />

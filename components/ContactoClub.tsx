@@ -14,6 +14,7 @@ export default function ContactoClub({
   telefono,
   emailsExtra = [],
   formularioUrl,
+  formularioProveedor,
   formularioNota,
   colores,
 }: {
@@ -21,6 +22,7 @@ export default function ContactoClub({
   telefono: string;
   emailsExtra?: EmailExtra[];
   formularioUrl?: string;
+  formularioProveedor?: string;
   formularioNota?: string;
   colores?: ColoresClub | null;
 }) {
@@ -72,7 +74,9 @@ export default function ContactoClub({
             className={`flex items-center gap-2 text-[13.5px] font-medium hover:underline underline-offset-2 ${textoBase}`}
           >
             <ClipboardList size={15} strokeWidth={1.75} />
-            Formulario de inscripción
+            {formularioProveedor
+              ? `${formularioProveedor}: Formulario de inscripción`
+              : "Formulario de inscripción"}
           </a>
           {formularioNota && (
             <p

@@ -47,6 +47,8 @@ export interface Club {
   emailsExtra?: { etiqueta: string; email: string }[];
   /** Formulario de inscripción del club. Se muestra tras el botón de contacto, sin enseñar la URL. */
   formularioUrl?: string;
+  /** Plataforma que aloja el formulario, p. ej. "Cluber", si el club usa una de terceros. */
+  formularioProveedor?: string;
   /** Nota corta bajo el formulario, p. ej. la vía alternativa por redes. */
   formularioNota?: string;
   /** Color de fondo de la cabecera de su ficha, tal como lo ha dado el club.

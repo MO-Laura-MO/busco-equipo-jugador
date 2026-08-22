@@ -1040,8 +1040,9 @@
   "colorFondo": "#eb0509",
   "colorAcento": "#000000",
   "formularioUrl": "https://app.cluber.es/clubes/6a298cd45d19c937959488/inscripcion",
-  "formularioNota": "La preinscripción para todas las categorías se hace en Cluber.",
-  "fechaActualizacion": "2026-08-21"
+  "formularioProveedor": "Cluber",
+  "formularioNota": "La preinscripción es para todas las categorías.",
+  "fechaActualizacion": "2026-08-22"
  },
  {
   "id": "cv-san-fernando",
