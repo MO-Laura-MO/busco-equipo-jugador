@@ -1217,5 +1217,27 @@
   "notas": "",
   "origen": "club",
   "fechaActualizacion": "2026-08-20"
+ },
+ {
+  "clubId": "cv-majadahonda",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": ["federado"],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "mes",
+  "fecha": "",
+  "mesAprox": "2026-09",
+  "anios": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "Pabellón Príncipe Felipe",
+  "direccion": "Avenida de Guadarrama, 53, Majadahonda",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Pabell%C3%B3n+Pr%C3%ADncipe+Felipe%2C+Avenida+de+Guadarrama+53%2C+Majadahonda",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan una central.",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-20"
  }
 ]
