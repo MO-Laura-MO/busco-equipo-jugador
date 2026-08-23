@@ -991,8 +991,10 @@
   ],
   "email": "clubvoleibolmajadahonda@hotmail.com",
   "telefono": "+34 689 15 11 71",
-  "logo": "",
+  "logo": "/clubes/cv-majadahonda.png",
   "descripcion": "",
+  "colorFondo": "#0363cb",
+  "colorAcento": "#d50606",
   "fechaActualizacion": "2026-08-20"
  },
  {
