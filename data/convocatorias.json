@@ -1239,5 +1239,26 @@
   "notas": "Buscan una central.",
   "origen": "club",
   "fechaActualizacion": "2026-08-20"
+ },
+ {
+  "clubId": "boadilla-dos-de-mayo",
+  "categoria": "senior",
+  "sexo": "masculino",
+  "tipoEntidad": ["federado"],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "abierta",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-23"
  }
 ]
