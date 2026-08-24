@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { CalendarClock, ChevronRight, MapPin, RefreshCw } from "lucide-react";
+import { CalendarClock, ChevronRight, MapPin, RefreshCw, TriangleAlert } from "lucide-react";
 import {
   Convocatoria,
   etiquetaCategoria,
@@ -102,6 +102,12 @@ export default function FilaConvocatoria({
           <p className="mt-[3px] flex items-center gap-[5px] text-[12.5px] leading-snug text-tinta-3">
             <MapPin size={13} strokeWidth={1.75} className="shrink-0" />
             <span className="truncate">{lugar}</span>
+          </p>
+        )}
+        {c.avisoPrevio && (
+          <p className="mt-[3px] flex items-center gap-[5px] text-[12.5px] leading-snug text-ambar">
+            <TriangleAlert size={13} strokeWidth={2} className="shrink-0" />
+            <span>Avisa al club antes de ir</span>
           </p>
         )}
         {etiquetas.length > 0 && (
