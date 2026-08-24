@@ -33,6 +33,24 @@ export const metadata: Metadata = {
     template: `%s · voley.app`,
   },
   description: `Directorio de convocatorias de pruebas de voleibol base en ${NOMBRE_AMBITO_LARGO}. Busca por categoría, sexo, zona y mes, y contacta directamente con el club.`,
+  // Sin title/description propios: la miniatura es común y el texto del
+  // enlace lo hereda cada página del suyo.
+  openGraph: {
+    siteName: "voley.app",
+    type: "website",
+    locale: "es_ES",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "voley.app · Pruebas de voleibol en la Comunidad de Madrid",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
