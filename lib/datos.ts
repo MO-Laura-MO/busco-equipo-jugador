@@ -13,7 +13,7 @@ export type Categoria =
   | "senior"
   | "master";
 export type Sexo = "femenino" | "masculino" | "mixto";
-export type TipoFecha = "exacta" | "mes" | "por-confirmar" | "abierta";
+export type TipoFecha = "exacta" | "mes" | "por-confirmar" | "abierta" | "desde";
 export type EstadoFecha = "confirmada" | "provisional";
 export type Origen = "club" | "fuentes-publicas";
 /**
@@ -152,6 +152,8 @@ const CORTE = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000)
   .toISOString()
   .slice(0, 10);
 
+// Las de tipo "desde" no caducan a propósito: el día de arranque pasa, pero el
+// equipo sigue admitiendo gente. Solo caducan las de fecha exacta.
 export const convocatorias = (convocatoriasJson as Convocatoria[]).filter(
   (c) => !(c.tipoFecha === "exacta" && c.fecha && c.fecha < CORTE)
 );
@@ -316,13 +318,19 @@ export function etiquetaCompensacion(c: Compensacion): string {
   return ETIQUETAS_COMPENSACION[c];
 }
 
+const HOY = new Date().toISOString().slice(0, 10);
+
 /**
  * Orden del listado:
- * 1. fechas exactas confirmadas → 2. exactas provisionales → 3. por mes →
- * 4. fecha por confirmar → 5. inscripción abierta todo el año.
+ * 1. fechas exactas confirmadas y arranques ("desde") aún por llegar →
+ * 2. exactas provisionales → 3. por mes → 4. fecha por confirmar →
+ * 5. inscripción abierta todo el año y arranques ya pasados.
  * Dentro de cada grupo, por fecha/mes ascendente.
  */
 export function grupoOrden(c: Convocatoria): number {
+  // "desde": mientras no llega el día va con las fechas firmes; cuando ya ha
+  // pasado, el equipo está entrenando y se comporta como inscripción abierta.
+  if (c.tipoFecha === "desde" && c.fecha) return c.fecha >= HOY ? 0 : 4;
   if (c.tipoFecha === "exacta" && c.estadoFecha === "confirmada") return 0;
   if (c.tipoFecha === "exacta") return 1;
   if (c.tipoFecha === "mes") return 2;
@@ -425,6 +433,14 @@ export function partesFecha(c: Convocatoria): {
       mes: MESES_CORTOS[d.getMonth()],
     };
   }
+  if (c.tipoFecha === "desde" && c.fecha) {
+    const d = new Date(c.fecha + "T12:00:00");
+    return {
+      diaSemana: "",
+      dia: String(d.getDate()),
+      mes: MESES_CORTOS[d.getMonth()],
+    };
+  }
   if (c.tipoFecha === "mes" && c.mesAprox) {
     const [, mes] = c.mesAprox.split("-");
     return { diaSemana: "", dia: "", mes: MESES_CORTOS[Number(mes) - 1] ?? "" };
@@ -441,11 +457,23 @@ export function fechaLarga(iso: string): string {
   return `${d.getDate()} de ${meses[d.getMonth()]} de ${d.getFullYear()}`;
 }
 
+/**
+ * Frase de las convocatorias que arrancan en una fecha ("a partir del"): el
+ * club no hace una prueba un día suelto, reanuda entrenamientos y admite gente
+ * desde entonces. La escribe la web con la fecha del JSON, no se teclea a mano.
+ */
+export function textoDesde(c: Convocatoria): string | null {
+  if (c.tipoFecha !== "desde" || !c.fecha) return null;
+  const verbo = c.fecha < HOY ? "empezaron" : "empiezan";
+  return `Los entrenamientos del equipo ${verbo} el ${fechaLarga(c.fecha)}. Ponte en contacto con el club para unirte y hacer la prueba.`;
+}
+
 /** Meses (AAAA-MM) con alguna convocatoria de fecha exacta o aproximada, para el filtro Mes. */
 export function mesesDisponibles(lista: Convocatoria[]): { valor: string; etiqueta: string }[] {
   const meses = new Set<string>();
   for (const c of lista) {
     if (c.tipoFecha === "exacta" && c.fecha) meses.add(c.fecha.slice(0, 7));
+    if (c.tipoFecha === "desde" && c.fecha) meses.add(c.fecha.slice(0, 7));
     if (c.tipoFecha === "mes" && c.mesAprox) meses.add(c.mesAprox);
   }
   const nombres = [

@@ -40,6 +40,7 @@ import {
   partesFecha,
   slug,
   textoAnios,
+  textoDesde,
   vacantesDeClub,
 } from "@/lib/datos";
 import { EMAIL_CORRECCIONES, URL_SITIO } from "@/lib/config";
@@ -94,6 +95,16 @@ function FechaConvocatoria({ c }: { c: Convocatoria }) {
       </div>
     );
   }
+  if (c.tipoFecha === "desde") {
+    return (
+      <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
+        <span className="text-[11px] uppercase leading-[1.4] text-tinta-3">desde</span>
+        <span className="text-[22px] font-medium leading-[1.15] text-tinta">{dia}</span>
+        <span className="text-[11px] leading-[1.4] text-tinta-3">{mes}</span>
+      </div>
+    );
+  }
+
   if (c.tipoFecha === "mes") {
     return (
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
@@ -448,6 +459,11 @@ export default async function FichaClub({
                   {c.avisoPrevio && (
                     <p className="mt-[3px] text-[12.5px] text-tinta-3">
                       Hay que avisar al club antes de acudir.
+                    </p>
+                  )}
+                  {textoDesde(c) && (
+                    <p className="mt-[6px] text-[12.5px] leading-relaxed text-tinta-2">
+                      {textoDesde(c)}
                     </p>
                   )}
                   {c.notas && (

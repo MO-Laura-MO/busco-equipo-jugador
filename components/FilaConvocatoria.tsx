@@ -33,6 +33,16 @@ function ColumnaFecha({ c }: { c: Convocatoria }) {
     );
   }
 
+  if (c.tipoFecha === "desde") {
+    return (
+      <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
+        <span className="text-[11px] uppercase leading-[1.4] text-tinta-3">desde</span>
+        <span className="text-[22px] font-medium leading-[1.15] text-tinta">{dia}</span>
+        <span className="text-[11px] leading-[1.4] text-tinta-3">{mes}</span>
+      </div>
+    );
+  }
+
   if (c.tipoFecha === "mes") {
     return (
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
