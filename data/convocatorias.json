@@ -471,9 +471,9 @@
   ],
   "nivel": "",
   "temporada": "2026-27",
-  "tipoFecha": "mes",
-  "fecha": "",
-  "mesAprox": "2026-09",
+  "tipoFecha": "desde",
+  "fecha": "2026-08-31",
+  "mesAprox": "",
   "anios": "",
   "estadoFecha": "confirmada",
   "hora": "",
@@ -484,7 +484,7 @@
   "cuotaOrientativa": "",
   "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-13"
+  "fechaActualizacion": "2026-08-24"
  },
  {
   "clubId": "cv-mostoles",
@@ -495,9 +495,9 @@
   ],
   "nivel": "Segunda división autonómica",
   "temporada": "2026-27",
-  "tipoFecha": "mes",
-  "fecha": "",
-  "mesAprox": "2026-09",
+  "tipoFecha": "desde",
+  "fecha": "2026-08-31",
+  "mesAprox": "",
   "anios": "",
   "estadoFecha": "confirmada",
   "hora": "",
@@ -508,7 +508,7 @@
   "cuotaOrientativa": "",
   "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-16"
+  "fechaActualizacion": "2026-08-24"
  },
  {
   "clubId": "cv-mostoles",
@@ -519,7 +519,7 @@
   ],
   "nivel": "Primera división preferente",
   "temporada": "2026-27",
-  "tipoFecha": "exacta",
+  "tipoFecha": "desde",
   "fecha": "2026-08-24",
   "mesAprox": "",
   "anios": "",
@@ -530,9 +530,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Las pruebas están abiertas a partir del 24 de agosto. Buscan centrales para el primer equipo.",
+  "notas": "Buscan centrales para el primer equipo.",
   "origen": "club",
-  "fechaActualizacion": "2026-08-18"
+  "fechaActualizacion": "2026-08-24"
  },
  {
   "clubId": "cv-mostoles",
@@ -567,9 +567,9 @@
   ],
   "nivel": "Primer equipo",
   "temporada": "2026-27",
-  "tipoFecha": "mes",
-  "fecha": "",
-  "mesAprox": "2026-09",
+  "tipoFecha": "desde",
+  "fecha": "2026-08-31",
+  "mesAprox": "",
   "anios": "",
   "estadoFecha": "confirmada",
   "hora": "",
@@ -580,7 +580,7 @@
   "cuotaOrientativa": "",
   "notas": "Buscan jugadoras con experiencia en competición federada.",
   "origen": "club",
-  "fechaActualizacion": "2026-08-15"
+  "fechaActualizacion": "2026-08-24"
  },
  {
   "clubId": "cv-mostoles",
@@ -591,9 +591,9 @@
   ],
   "nivel": "Primera división autonómica",
   "temporada": "2026-27",
-  "tipoFecha": "mes",
-  "fecha": "",
-  "mesAprox": "2026-09",
+  "tipoFecha": "desde",
+  "fecha": "2026-08-31",
+  "mesAprox": "",
   "anios": "",
   "estadoFecha": "confirmada",
   "hora": "",
@@ -604,7 +604,7 @@
   "cuotaOrientativa": "",
   "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-13"
+  "fechaActualizacion": "2026-08-24"
  },
  {
   "clubId": "cv-alcala",
