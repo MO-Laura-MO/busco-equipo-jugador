@@ -128,6 +128,8 @@ export default function FilaConvocatoria({
   return (
     <Link
       href={`/clubes/${c.clubId}`}
+      data-umami-event="fila-convocatoria"
+      data-umami-event-club={c.clubId}
       className="block border-b border-borde-fila last:border-b-0 hover:bg-barra/60"
     >
       {contenido}

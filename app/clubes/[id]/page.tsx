@@ -299,6 +299,8 @@ export default async function FichaClub({
                 href={club.web}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-umami-event="clic-web-club"
+                data-umami-event-club={id}
                 className={
                   colores
                     ? "flex items-center gap-[5px] text-[12.5px] text-[var(--texto-cabecera)] hover:text-[rgb(var(--texto-cabecera-rgb)/80%)]"
@@ -317,6 +319,9 @@ export default async function FichaClub({
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-umami-event="clic-red-club"
+                  data-umami-event-club={id}
+                  data-umami-event-red={r.tipo}
                   className={
                     colores
                       ? "flex items-center gap-[5px] text-[12.5px] text-[var(--texto-cabecera)] hover:text-[rgb(var(--texto-cabecera-rgb)/80%)]"
@@ -333,6 +338,7 @@ export default async function FichaClub({
 
         <div className="relative mt-4">
           <ContactoClub
+            clubId={id}
             email={club.email}
             telefono={club.telefono}
             emailsExtra={club.emailsExtra}

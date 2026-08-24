@@ -165,6 +165,8 @@ export default function FilaVacante({
   return (
     <Link
       href={`/clubes/${club.id}`}
+      data-umami-event="fila-vacante"
+      data-umami-event-club={club.id}
       className="block border-b border-borde-fila last:border-b-0 hover:bg-barra/60"
     >
       {contenido}

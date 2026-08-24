@@ -10,6 +10,7 @@ export interface EmailExtra {
 }
 
 export default function ContactoClub({
+  clubId,
   email,
   telefono,
   emailsExtra = [],
@@ -18,6 +19,7 @@ export default function ContactoClub({
   formularioNota,
   colores,
 }: {
+  clubId: string;
   email: string;
   telefono: string;
   emailsExtra?: EmailExtra[];
@@ -38,6 +40,9 @@ export default function ContactoClub({
       <button
         type="button"
         onClick={() => setVisible(true)}
+        data-umami-event="ver-contacto"
+        data-umami-event-club={clubId}
+        data-umami-event-tipo={formularioUrl ? "formulario" : "normal"}
         className={`rounded-[6px] px-4 py-[8px] text-[13.5px] font-medium hover:opacity-90 ${
           colores ? "" : "bg-acento text-white"
         }`}
@@ -71,6 +76,9 @@ export default function ContactoClub({
             href={formularioUrl}
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="clic-formulario"
+            data-umami-event-club={clubId}
+            data-umami-event-proveedor={formularioProveedor}
             className={`flex items-center gap-2 text-[13.5px] font-medium hover:underline underline-offset-2 ${textoBase}`}
           >
             <ClipboardList size={15} strokeWidth={1.75} />
@@ -92,6 +100,8 @@ export default function ContactoClub({
       {email && (
         <a
           href={`mailto:${email}`}
+          data-umami-event="clic-email"
+          data-umami-event-club={clubId}
           className={`flex items-center gap-2 text-[13.5px] ${textoBase} ${textoHover}`}
         >
           <Mail size={15} strokeWidth={1.75} className={textoSecundario} />
@@ -102,6 +112,9 @@ export default function ContactoClub({
         <a
           key={e.email}
           href={`mailto:${e.email}`}
+          data-umami-event="clic-email"
+          data-umami-event-club={clubId}
+          data-umami-event-etiqueta={e.etiqueta}
           className={`flex items-center gap-2 text-[13.5px] ${textoBase} ${textoHover}`}
         >
           <Mail size={15} strokeWidth={1.75} className={textoSecundario} />
@@ -116,6 +129,8 @@ export default function ContactoClub({
       {telefono && (
         <a
           href={`tel:${telefono.replace(/\s/g, "")}`}
+          data-umami-event="clic-telefono"
+          data-umami-event-club={clubId}
           className={`flex items-center gap-2 text-[13.5px] ${textoBase} ${textoHover}`}
         >
           <Phone size={15} strokeWidth={1.75} className={textoSecundario} />

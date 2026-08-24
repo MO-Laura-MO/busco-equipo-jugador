@@ -27,6 +27,7 @@ export default function Seguir({
           href={URL_CANAL_WHATSAPP}
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="seguir-whatsapp"
           className="flex items-center justify-center gap-2 rounded-[8px] bg-whatsapp px-4 py-[10px] text-[13.5px] font-medium text-[#111827] hover:opacity-90"
         >
           <MessageCircle size={16} strokeWidth={1.75} />
@@ -36,6 +37,7 @@ export default function Seguir({
           href={URL_INSTAGRAM}
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="seguir-instagram"
           className="flex items-center justify-center gap-2 rounded-[8px] bg-instagram px-4 py-[10px] text-[13.5px] font-medium text-[#111827] hover:opacity-90"
         >
           <Instagram size={16} strokeWidth={1.75} />

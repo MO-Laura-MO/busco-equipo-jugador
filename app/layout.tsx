@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import Link from "next/link";
+import Script from "next/script";
 import { Plus, Volleyball } from "lucide-react";
 import Pestanas from "@/components/Pestanas";
 import {
@@ -106,6 +107,13 @@ export default function RootLayout({
           </footer>
         </div>
         <Analytics />
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            src="https://cloud.umami.is/script.js"
+            data-website-id="479e677a-8d57-4b2b-a1a0-dc47acda684c"
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );
