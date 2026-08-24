@@ -543,9 +543,9 @@
   ],
   "nivel": "Segunda división autonómica",
   "temporada": "2026-27",
-  "tipoFecha": "mes",
-  "fecha": "",
-  "mesAprox": "2026-09",
+  "tipoFecha": "desde",
+  "fecha": "2026-08-31",
+  "mesAprox": "",
   "anios": "2007 y 2008",
   "estadoFecha": "confirmada",
   "hora": "",
@@ -556,7 +556,7 @@
   "cuotaOrientativa": "",
   "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-13"
+  "fechaActualizacion": "2026-08-24"
  },
  {
   "clubId": "cv-mostoles",
