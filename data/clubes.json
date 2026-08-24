@@ -1081,5 +1081,23 @@
   "logo": "",
   "descripcion": "",
   "fechaActualizacion": "2026-08-19"
+ },
+ {
+  "id": "cv-el-escorial",
+  "nombre": "CV El Escorial",
+  "municipio": "El Escorial",
+  "zona": "oeste",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://instagram.com/voleyescorial"
+   }
+  ],
+  "email": "",
+  "telefono": "+34 686058213",
+  "logo": "",
+  "descripcion": "",
+  "fechaActualizacion": "2026-08-23"
  }
 ]

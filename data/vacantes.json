@@ -229,5 +229,24 @@
   "notas": "",
   "origen": "club",
   "fechaActualizacion": "2026-08-19"
+ },
+ {
+  "clubId": "cv-el-escorial",
+  "puesto": "segundo-entrenador",
+  "categoria": "infantil",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Segunda división preferente",
+  "titulacion": "Nivel 1",
+  "requisitos": "",
+  "dias": "Partidos el fin de semana",
+  "horario": "Seis horas semanales de entrenamiento",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-23"
  }
 ]
