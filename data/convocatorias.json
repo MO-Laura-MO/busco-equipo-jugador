@@ -894,6 +894,27 @@
   "fechaActualizacion": "2026-08-15"
  },
  {
+  "clubId": "cv-collado-villalba",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": ["federado"],
+  "nivel": "Segunda división",
+  "temporada": "2026-27",
+  "tipoFecha": "abierta",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Equipo con el objetivo de ascender a primera. Se contacta por teléfono o WhatsApp: 619 254 270.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-25"
+ },
+ {
   "clubId": "ad-voleibol-rivas",
   "categoria": "junior",
   "sexo": "femenino",
