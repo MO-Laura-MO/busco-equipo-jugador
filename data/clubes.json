@@ -1015,12 +1015,12 @@
   "email": "cdevmariarodrigo@gmail.com",
   "telefono": "",
   "logo": "/clubes/voleibol-maria-rodrigo.png",
-  "descripcion": "Club de voleibol femenino del Ensanche de Vallecas, con sede en el IES María Rodrigo. Tiene equipos de liga municipal en categorías infantil, cadete, juvenil y sénior.",
+  "descripcion": "Club de voleibol del Ensanche de Vallecas, con sede en el IES María Rodrigo. Tiene equipos de liga municipal en categorías cadete, juvenil y sénior.",
   "colorFondo": "#000000",
   "colorAcento": "#f03e5c",
   "formularioUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeyBNl8NX6jlHi2HZH3gV5qh-gLnVYI3RCbkVzWJ1V4J3aF1Q/viewform",
   "formularioNota": "El formulario es para el equipo sénior de liga municipal. Para el resto de categorías, escríbeles al email del club.",
-  "fechaActualizacion": "2026-08-18"
+  "fechaActualizacion": "2026-08-25"
  },
  {
   "id": "wonders-club-deportivo",

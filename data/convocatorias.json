@@ -371,6 +371,29 @@
   "fechaActualizacion": "2026-08-18"
  },
  {
+  "clubId": "voleibol-maria-rodrigo",
+  "categoria": "senior",
+  "sexo": "mixto",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "Equipo de nueva creación",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "IES María Rodrigo",
+  "direccion": "C/ Talamanca del Jarama, 2, 28051 Madrid",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-25"
+ },
+ {
   "clubId": "avp-parla",
   "categoria": "infantil",
   "sexo": "masculino",
