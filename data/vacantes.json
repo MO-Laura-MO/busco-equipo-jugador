@@ -248,5 +248,23 @@
   "notas": "",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-23"
+ },
+ {
+  "clubId": "cde-voleibol-moralzarzal",
+  "puesto": "entrenador",
+  "tipoEntidad": [
+   "escuela"
+  ],
+  "nivel": "Escuelas municipales",
+  "titulacion": "",
+  "requisitos": "Pasión por el voleibol, disfrutar enseñando y compromiso con los valores del club",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-25"
  }
 ]
