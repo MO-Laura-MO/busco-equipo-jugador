@@ -35,6 +35,8 @@ export type TipoRed = "instagram" | "tiktok" | "facebook" | "youtube" | "x" | "o
 export interface Club {
   id: string;
   nombre: string;
+  /** Nombre anterior o alternativo por el que también se le busca (p. ej. su nombre federativo previo). No se muestra, solo cuenta para la búsqueda del directorio. */
+  aliasBusqueda?: string;
   municipio: string;
   zona: Zona;
   web: string;

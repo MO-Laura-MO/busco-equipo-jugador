@@ -111,7 +111,9 @@ export default function Listado({ clubes, convocatorias }: Props) {
         if (suMes !== null && suMes !== mes) return false;
       }
       if (q) {
-        const texto = normalizar(`${club.nombre} ${club.municipio}`);
+        const texto = normalizar(
+          `${club.nombre} ${club.municipio} ${club.aliasBusqueda ?? ""}`
+        );
         if (!texto.includes(q)) return false;
       }
       return true;

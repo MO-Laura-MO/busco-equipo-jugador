@@ -45,7 +45,11 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
       if (zona && c.zona !== zona) return false;
       if (soloConPruebas && c.numConvocatorias === 0) return false;
       if (soloConVacantes && c.numVacantes === 0) return false;
-      if (q && !normalizar(`${c.nombre} ${c.municipio}`).includes(q)) return false;
+      if (
+        q &&
+        !normalizar(`${c.nombre} ${c.municipio} ${c.aliasBusqueda ?? ""}`).includes(q)
+      )
+        return false;
       return true;
     });
   }, [busqueda, zona, soloConPruebas, soloConVacantes, clubes]);

@@ -218,7 +218,8 @@
  },
  {
   "id": "cde-chamartin-vergara",
-  "nombre": "CDE Chamartín Vergara",
+  "nombre": "CHV1995",
+  "aliasBusqueda": "CDE Chamartín Vergara",
   "municipio": "Madrid",
   "zona": "centro",
   "web": "https://chv1995.es",
