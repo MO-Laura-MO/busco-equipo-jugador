@@ -230,9 +230,12 @@
   ],
   "email": "voleibol@chv1995.es",
   "telefono": "+34 635147425",
-  "logo": "",
+  "logo": "/clubes/cde-chamartin-vergara.png",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-06"
+  "colorFondo": "#ffed00",
+  "colorAcento": "#000000",
+  "verificado": true,
+  "fechaActualizacion": "2026-08-25"
  },
  {
   "id": "intervoley-fuenlabrada",
