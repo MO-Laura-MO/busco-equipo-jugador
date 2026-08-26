@@ -49,12 +49,19 @@
   "municipio": "Galapagar",
   "zona": "oeste",
   "web": "",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/ancoragalapagar"
+   }
+  ],
   "email": "ancoragalapagarvoleibol@gmail.com",
   "telefono": "+34 689798590",
-  "logo": "",
+  "logo": "/clubes/ancora-galapagar.png",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-25"
+  "colorFondo": "#721422",
+  "colorAcento": "#ffffff",
+  "fechaActualizacion": "2026-08-26"
  },
  {
   "id": "block-out-beach",
