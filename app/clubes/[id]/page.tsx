@@ -357,6 +357,7 @@ export default async function FichaClub({
             formularioProveedor={club.formularioProveedor}
             formularioNota={club.formularioNota}
             colores={colores}
+            contactoBotonBlanco={club.contactoBotonBlanco}
           />
         </div>
       </header>

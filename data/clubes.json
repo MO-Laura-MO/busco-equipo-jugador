@@ -145,12 +145,13 @@
     "url": "https://instagram.com/voleibol_avp"
    }
   ],
-  "email": "",
-  "telefono": "",
+  "email": "direcciondeportivaavp@gmail.com",
+  "telefono": "+34 614412510",
   "logo": "/clubes/avp-parla.png",
   "descripcion": "AVP es un club que nace desde el carácter, la pasión y el compromiso con el deporte. Un proyecto con la iniciativa de formar deportistas dentro y fuera del campo, impulsando valores como el esfuerzo, la disciplina, el respeto, el compañerismo y la superación. Más que un club, AVP busca construir una identidad y una comunidad donde cada deportista pueda crecer, competir y desarrollarse como persona. Formamos carácter. Formamos valores. Formamos deportistas.",
   "colorFondo": "#da629c",
   "colorAcento": "#ffffff",
+  "contactoBotonBlanco": true,
   "fechaActualizacion": "2026-08-26"
  },
  {

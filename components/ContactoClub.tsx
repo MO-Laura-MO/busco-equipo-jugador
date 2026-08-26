@@ -18,6 +18,7 @@ export default function ContactoClub({
   formularioProveedor,
   formularioNota,
   colores,
+  contactoBotonBlanco,
 }: {
   clubId: string;
   email: string;
@@ -27,6 +28,7 @@ export default function ContactoClub({
   formularioProveedor?: string;
   formularioNota?: string;
   colores?: ColoresClub | null;
+  contactoBotonBlanco?: boolean;
 }) {
   const [visible, setVisible] = useState(false);
 
@@ -48,7 +50,13 @@ export default function ContactoClub({
         }`}
         style={
           colores
-            ? { backgroundColor: colores.acento, color: colores.textoBoton }
+            ? contactoBotonBlanco
+              ? {
+                  backgroundColor: "#ffffff",
+                  color: colores.texto,
+                  border: `1px solid ${colores.oscuro}`,
+                }
+              : { backgroundColor: colores.acento, color: colores.textoBoton }
             : undefined
         }
       >

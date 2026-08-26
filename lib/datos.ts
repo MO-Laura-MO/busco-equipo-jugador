@@ -60,6 +60,13 @@ export interface Club {
   /** Color de los enlaces, el aviso de entrenador y el botón de contacto. */
   colorAcento?: string;
   /**
+   * Excepción para clubes cuyo acento no aguanta contraste contra su fondo
+   * por ningún lado (p. ej. blanco sobre un rosa medio): el botón de contacto
+   * usa una caja blanca fija con el texto y borde de la cabecera, en vez del
+   * `acento` corregido. Decidido caso a caso, nunca por defecto.
+   */
+  contactoBotonBlanco?: boolean;
+  /**
    * Perfil confirmado por el club aunque todavía no tenga ninguna convocatoria
    * ni vacante publicada. Sin esto, un club que nos manda sus datos y su escudo
    * pero no tiene pruebas abiertas no podría lucir el tic ni sus colores.
