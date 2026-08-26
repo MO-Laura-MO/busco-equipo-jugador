@@ -54,7 +54,7 @@ export default function ContactoClub({
               ? {
                   backgroundColor: "#ffffff",
                   color: colores.texto,
-                  border: `1px solid ${colores.oscuro}`,
+                  border: "1px solid #000000",
                 }
               : { backgroundColor: colores.acento, color: colores.textoBoton }
             : undefined
