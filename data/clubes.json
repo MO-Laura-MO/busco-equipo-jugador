@@ -938,21 +938,24 @@
  },
  {
   "id": "sad-colegio-claret",
-  "nombre": "SAD Colegio Claret",
+  "nombre": "Claret Madrid",
   "municipio": "Madrid",
   "zona": "centro",
   "web": "http://www.claretmadrid.es",
   "redes": [
    {
     "tipo": "instagram",
-    "url": "https://instagram.com/voleyclaretmadrid"
+    "url": "https://www.instagram.com/voleyclaretmadrid"
    }
   ],
-  "email": "",
-  "telefono": "+34 914 152 154",
-  "logo": "",
-  "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "email": "voleyclaretmadrid@gmail.com",
+  "telefono": "+34 619809254",
+  "logo": "/clubes/sad-colegio-claret.png",
+  "descripcion": "Club con más de 20 equipos entre federación y escuelas católicas. Federado desde infantil hasta sénior femenino.",
+  "colorFondo": "#205349",
+  "colorAcento": "#ffffff",
+  "verificado": true,
+  "fechaActualizacion": "2026-08-26"
  },
  {
   "id": "fusp-ceu",
