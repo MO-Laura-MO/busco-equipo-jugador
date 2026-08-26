@@ -436,12 +436,17 @@
   "municipio": "Madrid",
   "zona": "centro",
   "web": "https://www.vpmadrid.com/contacts/",
-  "redes": [],
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/clubvpmadrid"
+   }
+  ],
   "email": "info@vpmadrid.com",
   "telefono": "+34 656469949",
   "logo": "",
-  "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "descripcion": "Club de voleibol de Madrid con equipos federados de pista en todas las categorías, de benjamín a sénior, y en las dos ramas. Pese a su nombre, no es solo un club de voley playa: sus pruebas de acceso son de pista.",
+  "fechaActualizacion": "2026-08-26"
  },
  {
   "id": "yma-sports",
