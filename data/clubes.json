@@ -1,25 +1,31 @@
 [
  {
   "id": "ad-perales-del-rio",
-  "nombre": "AD Perales del Río",
-  "municipio": "Getafe",
+  "nombre": "AD Perales",
+  "municipio": "Perales del Río (Getafe)",
   "zona": "sur",
-  "web": "https://www.agrupaciondeportivaperales.es",
+  "web": "https://adperales.es",
   "redes": [
    {
     "tipo": "instagram",
     "url": "https://www.instagram.com/adperales"
+   },
+   {
+    "tipo": "tiktok",
+    "url": "https://www.tiktok.com/@voleyadperales"
    }
   ],
-  "email": "agrupaciondeportivaperales@gmail.com",
-  "telefono": "+34 609 061 092",
-  "logo": "",
-  "descripcion": "",
-  "fechaActualizacion": "2026-08-17",
+  "email": "voley@adperales.es",
+  "telefono": "",
+  "logo": "/clubes/ad-perales-del-rio.png",
+  "descripcion": "La Agrupación Deportiva Perales del Río es un club deportivo del sur de Madrid comprometido con la formación, el deporte y los valores del trabajo en equipo. Desarrollamos principalmente nuestra actividad en el voleibol, desde las categorías de base hasta la competición federada.",
+  "colorFondo": "#000000",
+  "colorAcento": "#ffffff",
+  "fechaActualizacion": "2026-08-27",
   "emailsExtra": [
    {
-    "etiqueta": "Voleibol",
-    "email": "voley@adperales.es"
+    "etiqueta": "General",
+    "email": "agrupaciondeportivaperales@gmail.com"
    }
   ]
  },
