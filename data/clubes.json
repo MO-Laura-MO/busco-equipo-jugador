@@ -1127,5 +1127,25 @@
   "logo": "",
   "descripcion": "",
   "fechaActualizacion": "2026-08-23"
+ },
+ {
+  "id": "cde-sanagus-team-voley",
+  "nombre": "CDE Sanagus Team Vóley",
+  "municipio": "San Agustín del Guadalix",
+  "zona": "norte",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/sanagusteamvoley"
+   }
+  ],
+  "email": "sanagusteamvoley@gmail.com",
+  "telefono": "+34 667792896",
+  "logo": "/clubes/cde-sanagus-team-voley.png",
+  "descripcion": "Club de pequeña localidad al norte de Madrid fundado hace 4 años.",
+  "colorFondo": "#f44b82",
+  "colorAcento": "#000000",
+  "fechaActualizacion": "2026-08-27"
  }
 ]
