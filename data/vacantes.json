@@ -266,5 +266,21 @@
   "notas": "",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-25"
+ },
+ {
+  "clubId": "cde-manzanares-voley",
+  "puesto": "entrenador",
+  "tipoEntidad": ["federado"],
+  "nivel": "",
+  "titulacion": "",
+  "requisitos": "Ganas y pasión por el voleibol. El club ayuda a sacarse la titulación.",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-08-27"
  }
 ]
