@@ -15,10 +15,14 @@ interface Audiencia {
   nombreCorto: string; // sustantivo capitalizado, para la fila comprimida
   href: string;
   prefijos: string[]; // prefijos de ruta que cuentan como esta audiencia activa
-  subLabel?: string; // línea bajo las pestañas cuando solo hay una sección real
-  secciones?: Seccion[]; // subnav real, cuando hay más de una sección
+  secciones: Seccion[]; // subnav; "Directorio" va siempre el primero, en las tres
   visible: boolean;
 }
+
+// Presente en el subnav de las tres audiencias, siempre en primer lugar: el
+// directorio de clubes no cambia aunque se cambie de pestaña (pedido
+// explícito, ya especificado en Design).
+const DIRECTORIO: Seccion = { label: "Directorio", href: "/clubes" };
 
 function coincide(pathname: string, prefijo: string): boolean {
   return pathname === prefijo || pathname.startsWith(prefijo + "/");
@@ -59,7 +63,7 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
       nombreCorto: "Jugador",
       href: "/pruebas",
       prefijos: ["/pruebas"],
-      subLabel: "Convocatorias a pruebas",
+      secciones: [DIRECTORIO, { label: "Pruebas", href: "/pruebas" }],
       visible: true,
     },
     {
@@ -67,8 +71,12 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
       nombre: "entrenador",
       nombreCorto: "Entrenador",
       href: "/entrenadores",
-      prefijos: ["/entrenadores"],
-      subLabel: "Vacantes de entrenador en clubes",
+      prefijos: ["/entrenadores", "/cursos"],
+      secciones: [
+        DIRECTORIO,
+        { label: "Vacantes", href: "/entrenadores" },
+        { label: "Cursos", href: "/cursos" },
+      ],
       visible: hayVacantes,
     },
     {
@@ -77,10 +85,7 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
       nombreCorto: "Club",
       href: "/clubes",
       prefijos: ["/clubes", "/alta", "/amistosos"],
-      secciones: [
-        { label: "Directorio", href: "/clubes" },
-        { label: "Amistosos", href: "/amistosos" },
-      ],
+      secciones: [DIRECTORIO, { label: "Amistosos", href: "/amistosos" }],
       visible: true,
     },
     // "árbitro", "afición" y "campeonatos" no se pintan: sin contenido todavía.
@@ -167,11 +172,6 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
               </Link>
             );
           })}
-        </div>
-      )}
-      {dentroDeSeccion && activa?.subLabel && (
-        <div className="border-b border-borde bg-barra px-4 py-[9px] text-[12px] text-tinta-2">
-          {activa.subLabel}
         </div>
       )}
     </div>

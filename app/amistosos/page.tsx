@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { ExternalLink } from "lucide-react";
+import { URL_FORMULARIO_AMISTOSOS } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: { absolute: "Amistosos entre clubes de voleibol en Madrid" },
   description:
-    "Próximamente: partidos amistosos entre clubes de voleibol de la Comunidad de Madrid.",
+    "Clubes de voleibol de Madrid que buscan jugar partidos amistosos con otros clubes.",
   alternates: { canonical: "/amistosos" },
-  // Sin contenido real todavía, no la indexamos.
+  // Sin listado real todavía, no la indexamos.
   robots: { index: false },
 };
 
@@ -15,10 +17,25 @@ export default function Amistosos() {
       <header className="px-4 pb-4 pt-5">
         <h1 className="text-[19px] font-medium text-tinta">Amistosos entre clubes</h1>
         <p className="mt-[2px] text-[13.5px] text-tinta-2">
-          Muy pronto podrás publicar y encontrar aquí partidos amistosos entre
-          clubes de voleibol de Madrid.
+          Estamos calentando para el partido: muy pronto podrás ver aquí qué
+          clubes de Madrid buscan jugar amistosos.
         </p>
       </header>
+      <div className="bg-barra px-4 py-5">
+        <h2 className="text-[15px] font-medium text-tinta">
+          ¿Tu club busca jugar amistosos?
+        </h2>
+        <p className="mt-1 max-w-[520px] text-[13px] leading-relaxed text-tinta-2">
+          Apunta a tu club y te avisamos en cuanto encontremos rival.
+        </p>
+        <a
+          href={URL_FORMULARIO_AMISTOSOS}
+          className="mt-3 inline-flex items-center gap-2 rounded-[8px] bg-acento px-4 py-[10px] text-[13.5px] font-medium text-white hover:opacity-90"
+        >
+          Apuntar mi club
+          <ExternalLink size={14} strokeWidth={1.75} />
+        </a>
+      </div>
     </main>
   );
 }
