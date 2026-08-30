@@ -17,8 +17,7 @@ export default function Amistosos() {
       <header className="px-4 pb-4 pt-5">
         <h1 className="text-[19px] font-medium text-tinta">Amistosos entre clubes</h1>
         <p className="mt-[2px] text-[13.5px] text-tinta-2">
-          Estamos calentando para el partido: muy pronto podrás ver aquí qué
-          clubes de Madrid buscan jugar amistosos.
+          Estamos calentando... atent@ que empieza el partido en breve!
         </p>
       </header>
       <div className="bg-barra px-4 py-5">
