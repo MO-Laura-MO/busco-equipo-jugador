@@ -3,8 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import Link from "next/link";
 import Script from "next/script";
-import { Plus, Volleyball } from "lucide-react";
-import Pestanas from "@/components/Pestanas";
+import NavAudiencias from "@/components/NavAudiencias";
 import {
   NOMBRE_AMBITO_LARGO,
   NOMBRE_MARCA,
@@ -58,37 +57,26 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pestanas = [
-    { href: "/", etiqueta: "Inicio" },
-    { href: "/pruebas", etiqueta: "Pruebas" },
-    ...(hayVacantes ? [{ href: "/entrenadores", etiqueta: "Entrenadores" }] : []),
-    { href: "/clubes", etiqueta: "Clubes" },
-    { href: "/blog", etiqueta: "Blog" },
-  ];
-
   return (
     <html lang="es" className={inter.variable}>
       <body className="font-sans text-tinta bg-fondo">
         <div className="mx-auto min-h-screen w-full max-w-[720px]">
-          <header className="sticky top-0 z-20 bg-fondo">
-            <div className="flex items-center justify-between gap-3 px-4 py-3">
-              <Link
-                href="/"
-                className="flex shrink-0 items-center gap-[6px] text-[13px] font-medium text-acento"
-              >
-                <Volleyball size={17} strokeWidth={1.75} />
-                {NOMBRE_MARCA}
-              </Link>
-              <Link
-                href="/alta"
-                className="flex shrink-0 items-center gap-[5px] rounded-[7px] border border-borde-control px-[10px] py-[6px] text-[12.5px] text-tinta hover:border-tinta-3"
-              >
-                <Plus size={13} strokeWidth={1.75} />
-                Añadir club
-              </Link>
-            </div>
-            <Pestanas pestanas={pestanas} />
+          <header className="flex items-center justify-between gap-3 border-b border-borde bg-barra px-4 py-3">
+            <Link href="/" className="shrink-0 text-[16px] font-medium text-tinta">
+              {NOMBRE_MARCA}
+            </Link>
+            <Link
+              href="/alta"
+              className="shrink-0 border border-borde-control px-[10px] py-[5px] text-[13px] text-acento hover:border-tinta-3"
+            >
+              Añadir club
+            </Link>
           </header>
+          {/* Fuera del <header>, a propósito: el nav sticky necesita que su
+              contenedor abarque toda la página para poder quedar fijo al
+              hacer scroll; dentro del header (~44px) se saldría de pantalla
+              en cuanto se superase esa altura. */}
+          <NavAudiencias hayVacantes={hayVacantes} />
           {children}
           <footer className="border-t border-borde px-4 py-5">
             <p className="text-[12.5px] leading-relaxed text-tinta-3">
