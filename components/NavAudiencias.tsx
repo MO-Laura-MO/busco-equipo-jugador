@@ -71,12 +71,8 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
       nombre: "entrenador",
       nombreCorto: "Entrenador",
       href: "/entrenadores",
-      prefijos: ["/entrenadores", "/cursos"],
-      secciones: [
-        DIRECTORIO,
-        { label: "Vacantes", href: "/entrenadores" },
-        { label: "Cursos", href: "/cursos" },
-      ],
+      prefijos: ["/entrenadores"],
+      secciones: [DIRECTORIO, { label: "Vacantes", href: "/entrenadores" }],
       visible: hayVacantes,
     },
     {
@@ -92,9 +88,34 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
   ];
 
   const visibles = audiencias.filter((a) => a.visible);
-  const activa = visibles.find((a) =>
-    pathname === "/" ? a.id === "jugador" : a.prefijos.some((p) => coincide(pathname, p))
+
+  // Ruta exclusiva de una audiencia: la única que puede forzar el cambio de
+  // pestaña. "/clubes" no cuenta como exclusiva de "un club" aquí porque el
+  // Directorio se enlaza también desde el subnav de jugador y entrenador, y
+  // seguir ese enlace no debe cambiar la pestaña principal (pedido explícito).
+  function audienciaExclusivaDeRuta(): Audiencia | undefined {
+    if (pathname === "/") return visibles.find((a) => a.id === "jugador");
+    return visibles.find((a) =>
+      a.prefijos.some((p) => p !== DIRECTORIO.href && coincide(pathname, p))
+    );
+  }
+
+  // Si la ruta actual no pertenece a ninguna audiencia (blog, aviso legal...)
+  // no hay pestaña ni subnav que mostrar, igual que en la portada.
+  const esRutaDeAudiencias =
+    pathname === "/" || audiencias.some((a) => a.prefijos.some((p) => coincide(pathname, p)));
+
+  const [audienciaId, setAudienciaId] = useState(
+    () => audienciaExclusivaDeRuta()?.id ?? "un-club"
   );
+
+  useEffect(() => {
+    const exclusiva = audienciaExclusivaDeRuta();
+    if (exclusiva) setAudienciaId(exclusiva.id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+
+  const activa = esRutaDeAudiencias ? visibles.find((a) => a.id === audienciaId) : undefined;
   // La portada no lleva subnav ni título: ese contexto es propio de estar
   // dentro de la sección, no de la home (así lo marca la referencia).
   const dentroDeSeccion = pathname !== "/";

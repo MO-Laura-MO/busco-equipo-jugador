@@ -22,14 +22,6 @@ export const URL_SITIO = "https://voley.app";
 /** Formulario externo de alta de clubes (Tally). */
 export const URL_FORMULARIO_ALTA = "https://tally.so/r/680lMN";
 
-/**
- * Apuntarse a amistosos entre clubes. Todavía no hay formulario externo:
- * de momento es un mailto directo. Sustituir por la URL del formulario
- * (Tally u otro) en cuanto exista.
- */
-export const URL_FORMULARIO_AMISTOSOS =
-  "mailto:voley.app.es@gmail.com?subject=Amistosos%20entre%20clubes";
-
 /** Email al que llegan las correcciones de datos. */
 export const EMAIL_CORRECCIONES = "voley.app.es@gmail.com";
 

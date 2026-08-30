@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import Link from "next/link";
 import Script from "next/script";
+import { Volleyball } from "lucide-react";
 import NavAudiencias from "@/components/NavAudiencias";
 import {
   NOMBRE_AMBITO_LARGO,
@@ -62,7 +63,11 @@ export default function RootLayout({
       <body className="font-sans text-tinta bg-fondo">
         <div className="mx-auto min-h-screen w-full max-w-[720px]">
           <header className="flex items-center justify-between gap-3 border-b border-borde bg-barra px-4 py-3">
-            <Link href="/" className="shrink-0 text-[16px] font-medium text-tinta">
+            <Link
+              href="/"
+              className="flex shrink-0 items-center gap-[6px] text-[16px] font-medium text-tinta"
+            >
+              <Volleyball size={18} strokeWidth={1.75} />
               {NOMBRE_MARCA}
             </Link>
             <Link

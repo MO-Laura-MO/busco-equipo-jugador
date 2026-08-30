@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { ExternalLink } from "lucide-react";
-import { URL_FORMULARIO_AMISTOSOS } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: { absolute: "Amistosos entre clubes de voleibol en Madrid" },
@@ -20,21 +18,6 @@ export default function Amistosos() {
           Estamos calentando... atent@ que empieza el partido en breve!
         </p>
       </header>
-      <div className="bg-barra px-4 py-5">
-        <h2 className="text-[15px] font-medium text-tinta">
-          ¿Tu club busca jugar amistosos?
-        </h2>
-        <p className="mt-1 max-w-[520px] text-[13px] leading-relaxed text-tinta-2">
-          Apunta a tu club y te avisamos en cuanto encontremos rival.
-        </p>
-        <a
-          href={URL_FORMULARIO_AMISTOSOS}
-          className="mt-3 inline-flex items-center gap-2 rounded-[8px] bg-acento px-4 py-[10px] text-[13.5px] font-medium text-white hover:opacity-90"
-        >
-          Apuntar mi club
-          <ExternalLink size={14} strokeWidth={1.75} />
-        </a>
-      </div>
     </main>
   );
 }
