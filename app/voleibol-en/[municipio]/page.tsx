@@ -147,7 +147,7 @@ export default async function VoleibolEnMunicipio({
       </header>
 
       <section>
-        <h2 className="bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+        <h2 className="bg-acento-tinte px-4 py-[9px] text-[12.5px] text-tinta-2">
           {clubesMunicipio.length === 1
             ? "1 club de voleibol"
             : `${clubesMunicipio.length} clubes de voleibol`}
@@ -178,7 +178,7 @@ export default async function VoleibolEnMunicipio({
 
       {convocatoriasMunicipio.length > 0 && (
         <section>
-          <h2 className="bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+          <h2 className="bg-acento-tinte px-4 py-[9px] text-[12.5px] text-tinta-2">
             {convocatoriasMunicipio.length === 1
               ? "1 convocatoria de pruebas"
               : `${convocatoriasMunicipio.length} convocatorias de pruebas`}

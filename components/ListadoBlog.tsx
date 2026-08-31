@@ -41,7 +41,7 @@ export default function ListadoBlog({ articulos }: { articulos: Articulo[] }) {
         </div>
       </div>
 
-      <p className="bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+      <p className="bg-acento-tinte px-4 py-[9px] text-[12.5px] text-tinta-2">
         {filtrados.length === 1 ? "1 artículo" : `${filtrados.length} artículos`}
         {publico
           ? ` para ${PUBLICOS.find((p) => p.valor === publico)!.chip.toLowerCase()}`

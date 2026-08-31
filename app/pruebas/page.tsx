@@ -26,7 +26,7 @@ export default function Pruebas() {
   return (
     <main>
       <header className="px-4 pb-4 pt-5">
-        <h1 className="text-[19px] font-medium text-tinta">
+        <h1 className="border-l-4 border-amarillo pl-[10px] text-[19px] font-medium text-acento">
           Pruebas de voleibol en la Comunidad de Madrid
         </h1>
         <p className="mt-[2px] text-[13.5px] text-tinta-2">{DESCRIPCION}</p>

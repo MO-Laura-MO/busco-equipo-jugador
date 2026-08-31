@@ -277,7 +277,7 @@ export default function Listado({ clubes, convocatorias }: Props) {
       </div>
 
       {/* Barra de resultados */}
-      <div className="flex items-center justify-between bg-barra px-4 py-[9px]">
+      <div className="flex items-center justify-between bg-acento-tinte px-4 py-[9px]">
         <span className="flex items-center gap-3 text-[12.5px] text-tinta-2">
           {filtradas.length} {filtradas.length === 1 ? "convocatoria" : "convocatorias"}
           {hayFiltros && (

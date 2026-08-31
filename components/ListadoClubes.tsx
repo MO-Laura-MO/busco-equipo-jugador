@@ -121,7 +121,7 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
       </div>
 
       {/* Barra de resultados */}
-      <div className="flex items-center gap-3 bg-barra px-4 py-[9px]">
+      <div className="flex items-center gap-3 bg-acento-tinte px-4 py-[9px]">
         <span className="text-[12.5px] text-tinta-2">
           {filtrados.length} {filtrados.length === 1 ? "club" : "clubes"}
         </span>

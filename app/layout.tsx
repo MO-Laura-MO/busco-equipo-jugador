@@ -63,7 +63,7 @@ export default function RootLayout({
     <html lang="es" className={inter.variable}>
       <body className="font-sans text-tinta bg-fondo">
         <div className="mx-auto min-h-screen w-full max-w-[720px]">
-          <header className="flex items-center justify-between gap-3 border-b border-borde bg-barra px-4 py-3">
+          <header className="flex items-center justify-between gap-3 border-b border-borde bg-acento-tinte px-4 py-3">
             <Link
               href="/"
               className="flex shrink-0 items-center gap-[6px] text-[16px] font-medium text-acento"

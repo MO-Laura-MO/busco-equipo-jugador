@@ -146,7 +146,7 @@ export default function ListadoEntrenadores({ filas }: { filas: Fila[] }) {
       </div>
 
       {/* Barra de resultados */}
-      <div className="flex items-center gap-3 bg-barra px-4 py-[9px]">
+      <div className="flex items-center gap-3 bg-acento-tinte px-4 py-[9px]">
         <span className="text-[12.5px] text-tinta-2">
           {filtradas.length}{" "}
           {filtradas.length === 1 ? "vacante de entrenador" : "vacantes de entrenador"}

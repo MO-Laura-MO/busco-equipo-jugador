@@ -141,7 +141,7 @@ export default async function VoleibolEnZona({
       </header>
 
       <section>
-        <h2 className="bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+        <h2 className="bg-acento-tinte px-4 py-[9px] text-[12.5px] text-tinta-2">
           {clubesZona.length === 1 ? "1 club de voleibol" : `${clubesZona.length} clubes de voleibol`}
         </h2>
         {municipiosClubes.map(({ municipio, clubes: clubesMunicipio }) => (
@@ -175,7 +175,7 @@ export default async function VoleibolEnZona({
 
       {convocatoriasZona.length > 0 && (
         <section>
-          <h2 className="bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+          <h2 className="bg-acento-tinte px-4 py-[9px] text-[12.5px] text-tinta-2">
             {convocatoriasZona.length === 1
               ? "1 convocatoria de pruebas"
               : `${convocatoriasZona.length} convocatorias de pruebas`}

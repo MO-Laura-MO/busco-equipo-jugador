@@ -101,10 +101,10 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
     );
   }
 
-  // Si la ruta actual no pertenece a ninguna audiencia (blog, aviso legal...)
-  // no hay pestaña ni subnav que mostrar, igual que en la portada.
-  const esRutaDeAudiencias =
-    pathname === "/" || audiencias.some((a) => a.prefijos.some((p) => coincide(pathname, p)));
+  // La portada es neutral: ninguna pestaña se marca como activa ahí, igual
+  // que en el blog o el aviso legal, aunque "/" sí decide la audiencia por
+  // defecto (jugador) para cuando se navegue a una ruta compartida después.
+  const esRutaDeAudiencias = audiencias.some((a) => a.prefijos.some((p) => coincide(pathname, p)));
 
   const [audienciaId, setAudienciaId] = useState(
     () => audienciaExclusivaDeRuta()?.id ?? "un-club"
@@ -158,7 +158,7 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
           })}
         </nav>
       ) : (
-        <nav className="flex items-center gap-4 bg-barra px-4 py-[9px]">
+        <nav className="flex items-center gap-4 bg-acento-tinte px-4 py-[9px]">
           <Link href="/" aria-label="Inicio" className="shrink-0 text-acento">
             <Volleyball size={16} strokeWidth={1.75} />
           </Link>
@@ -182,7 +182,7 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
         </nav>
       )}
       {dentroDeSeccion && activa?.secciones && (
-        <div className="sin-scrollbar flex gap-2 overflow-x-auto border-b border-borde bg-barra px-4 py-[9px]">
+        <div className="sin-scrollbar flex gap-2 overflow-x-auto border-b border-borde bg-acento-tinte px-4 py-[9px]">
           {activa.secciones.map((s) => {
             const on = coincide(pathname, s.href);
             return (

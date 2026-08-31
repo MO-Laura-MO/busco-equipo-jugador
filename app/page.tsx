@@ -122,7 +122,7 @@ export default function Home() {
 
       {ultimas.length > 0 && (
         <section className="border-t border-borde">
-          <h2 className="bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
+          <h2 className="bg-acento-tinte px-4 py-[9px] text-[12.5px] text-tinta-2">
             Últimas convocatorias publicadas
           </h2>
           <ul>
