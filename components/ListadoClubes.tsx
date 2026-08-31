@@ -12,6 +12,10 @@ interface ClubConDatos extends Club {
   numVacantes: number;
   /** Perfil verificado por el club: es lo que da derecho a enseñar su escudo. */
   verificado: boolean;
+  /** Fondo del círculo de iniciales cuando el club nos ha dado colores. */
+  circuloFondo: string | null;
+  /** Texto de ese círculo. Null cuando circuloFondo es null. */
+  circuloTexto: string | null;
 }
 
 export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
@@ -175,7 +179,16 @@ export default function ListadoClubes({ clubes }: { clubes: ClubConDatos[] }) {
                         className="h-11 w-11 shrink-0 rounded-full border border-borde-fila bg-white object-contain p-[3px]"
                       />
                     ) : (
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-acento-tinte text-[14px] font-medium text-acento">
+                      <span
+                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-[14px] font-medium ${
+                          c.circuloFondo ? "" : "bg-acento-tinte text-acento"
+                        }`}
+                        style={
+                          c.circuloFondo
+                            ? { backgroundColor: c.circuloFondo, color: c.circuloTexto ?? undefined }
+                            : undefined
+                        }
+                      >
                         {iniciales(c.nombre)}
                       </span>
                     )}

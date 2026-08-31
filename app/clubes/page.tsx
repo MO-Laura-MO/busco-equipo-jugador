@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ListadoClubes from "@/components/ListadoClubes";
+import { coloresClub } from "@/lib/color";
 import { URL_FORMULARIO_ALTA } from "@/lib/config";
 import { ZONAS, clubes, convocatorias, municipiosConPagina, slug, vacantes } from "@/lib/datos";
 
@@ -16,18 +17,22 @@ export default function Clubes() {
     .sort((a, b) => a.nombre.localeCompare(b.nombre, "es"))
     .map((c) => {
       const suyas = convocatorias.filter((x) => x.clubId === c.id);
+      // Mismo criterio que la ficha: el club está verificado si lo ha
+      // confirmado explícitamente (campo `verificado`) o si al menos una
+      // convocatoria o vacante suya viene de origen "club". El escudo, igual
+      // que los colores, solo se enseña si lo está.
+      const verificado =
+        c.verificado === true ||
+        suyas.some((x) => x.origen === "club") ||
+        vacantes.some((v) => v.clubId === c.id && v.origen === "club");
+      const colores = coloresClub(c, verificado);
       return {
         ...c,
         numConvocatorias: suyas.length,
         numVacantes: vacantes.filter((v) => v.clubId === c.id).length,
-        // Mismo criterio que la ficha: el club está verificado si lo ha
-        // confirmado explícitamente (campo `verificado`) o si al menos una
-        // convocatoria o vacante suya viene de origen "club". El escudo, igual
-        // que los colores, solo se enseña si lo está.
-        verificado:
-          c.verificado === true ||
-          suyas.some((x) => x.origen === "club") ||
-          vacantes.some((v) => v.clubId === c.id && v.origen === "club"),
+        verificado,
+        circuloFondo: colores?.barra ?? null,
+        circuloTexto: colores?.barraTexto ?? null,
       };
     });
   const numMunicipios = new Set(clubes.map((c) => c.municipio)).size;
