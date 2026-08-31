@@ -533,6 +533,7 @@
  {
   "id": "club-unificado-voleibol-alcorcon",
   "nombre": "Club Unificado Voleibol Alcorcón",
+  "aliasBusqueda": "CUVA",
   "municipio": "Alcorcón",
   "zona": "sur",
   "web": "https://www.cuvalcorcon.com",
