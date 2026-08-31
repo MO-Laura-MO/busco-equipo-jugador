@@ -64,6 +64,21 @@ function hslToHex(h: number, s: number, l: number): string {
 }
 
 /**
+ * Oscurece `hex` en pasos de 2% de luminosidad hasta dar 4,5:1 con
+ * `fondo`, sin tocarlo si ya lo cumple. Null si no lo consigue antes de
+ * `minL`.
+ */
+function oscurecerHastaLegible(hex: string, fondo: string, minL = 5): string | null {
+  if (contraste(hex, fondo) >= 4.5) return hex;
+  const { h, s, l } = hexToHsl(hex);
+  for (let L = Math.round(l) - 2; L >= minL; L -= 2) {
+    const candidato = hslToHex(h, s, L);
+    if (contraste(candidato, fondo) >= 4.5) return candidato;
+  }
+  return null;
+}
+
+/**
  * Oscurece `hex` en pasos de 2% de luminosidad hasta dar 4,5:1 con el
  * blanco, sin tocarlo si ya lo cumple. Null si no lo consigue al 10%.
  */
@@ -108,7 +123,7 @@ export interface ColoresClub {
   oscuro: string; // versión oscura del tono del club: barras, y borde del botón en modo claro
   acento: string; // enlaces, aviso de entrenador y relleno del botón (en modo oscuro)
   textoBoton: string; // TINTA o #FFFFFF, el que más contraste dé con el acento
-  barra: string; // fondo de las barras de sección: `oscuro` al 10% sobre blanco
+  barra: string; // fondo de las barras de sección: colorFondo original al 10% sobre blanco
   barraTexto: string; // texto e icono de las barras de sección
 }
 
@@ -149,14 +164,13 @@ function hexToRgbTriplet(hex: string): string {
  * - acento: se ajusta hasta llegar a 4,5:1 con el fondo ya corregido,
  *   aclarándolo si el fondo quedó oscuro u oscureciéndolo si quedó claro.
  * - textoBoton: entre TINTA y blanco, el que más contraste dé con el acento.
- * - barra y barraTexto: para que las barras de sección se lean también en
- *   fichas de fondo claro, se calculan siempre a partir de una versión
- *   oscura del tono del club (la misma `fondo` si ya salió oscura, o el
- *   `colorFondo` oscurecido aparte si la cabecera terminó en modo claro),
- *   nunca del `fondo` claro que se ve en la cabecera. El tinte suave al 10%
- *   es lo normal; si ese tono no da 4,5:1 sobre su propio tinte, la barra
- *   pasa a la versión sólida con letra blanca en vez de caer en gris
- *   neutro, para no perder el color del club.
+ * - barra y barraTexto: mismo criterio en fichas claras y oscuras, y
+ *   siempre distinto de `fondo`. Un tinte al 10% del `colorFondo` original
+ *   del club (nunca de la versión ya oscurecida de la cabecera), con el
+ *   propio tono oscurecido lo justo para leerse encima. Oscurecer el tono
+ *   para un fondo sólido, en vez de aclararlo hacia blanco, se probó y se
+ *   descartó: en amarillos y verdes da un oliva/marrón que ya no se
+ *   reconoce como el color del club.
  */
 export function coloresClub(club: Club, verificado: boolean): ColoresClub | null {
   if (!verificado) return null;
@@ -184,16 +198,17 @@ export function coloresClub(club: Club, verificado: boolean): ColoresClub | null
   const textoBoton = contraste(TINTA, acento) >= contraste("#ffffff", acento) ? TINTA : "#ffffff";
 
   const oscuro = fondoEsClaro ? ajustarFondo(fondoHex) ?? TINTA : fondo;
-  const tinte = sobreBlanco(oscuro, 0.1);
-  const barraOk = contraste(oscuro, tinte) >= 4.5;
-  // Si el tono no se lee sobre su propio tinte al 10%, no hay término medio
-  // que valga: en vez de cbaer en gris neutro (indistinguible de "sin
-  // color"), la barra pasa a la versión sólida de `oscuro` con letra
-  // blanca, igual que la cabecera. `oscuro` siempre da >=4,5:1 con blanco
-  // por construcción (es `fondo` o el resultado de `ajustarFondo`), así que
-  // esta combinación nunca falla el contraste.
-  const barra = barraOk ? tinte : oscuro;
-  const barraTexto = barraOk ? oscuro : "#ffffff";
+
+  // La barra usa siempre un tinte al 10% del color ORIGINAL del club (no
+  // `oscuro`, que puede venir ya oscurecido para la cabecera): mismo
+  // criterio para fichas claras y oscuras, y nunca coincide con la
+  // cabecera. Se probó oscurecer el tono para un fondo sólido en cabeceras
+  // claras (el mismo tratamiento que usa `fondo` en modo oscuro) y se
+  // descartó: en amarillos y verdes da un oliva/marrón que ya no se
+  // reconoce como el color del club. El tinte hacia blanco no tiene ese
+  // problema en ningún tono probado.
+  const barra = sobreBlanco(fondoHex, 0.1);
+  const barraTexto = oscurecerHastaLegible(fondoHex, barra) ?? TINTA;
 
   return {
     fondo,
