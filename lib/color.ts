@@ -153,7 +153,10 @@ function hexToRgbTriplet(hex: string): string {
  *   fichas de fondo claro, se calculan siempre a partir de una versión
  *   oscura del tono del club (la misma `fondo` si ya salió oscura, o el
  *   `colorFondo` oscurecido aparte si la cabecera terminó en modo claro),
- *   nunca del `fondo` claro que se ve en la cabecera.
+ *   nunca del `fondo` claro que se ve en la cabecera. El tinte suave al 10%
+ *   es lo normal; si ese tono no da 4,5:1 sobre su propio tinte, la barra
+ *   pasa a la versión sólida con letra blanca en vez de caer en gris
+ *   neutro, para no perder el color del club.
  */
 export function coloresClub(club: Club, verificado: boolean): ColoresClub | null {
   if (!verificado) return null;
@@ -183,8 +186,14 @@ export function coloresClub(club: Club, verificado: boolean): ColoresClub | null
   const oscuro = fondoEsClaro ? ajustarFondo(fondoHex) ?? TINTA : fondo;
   const tinte = sobreBlanco(oscuro, 0.1);
   const barraOk = contraste(oscuro, tinte) >= 4.5;
-  const barra = barraOk ? tinte : "#f7f8f9";
-  const barraTexto = barraOk ? oscuro : TINTA;
+  // Si el tono no se lee sobre su propio tinte al 10%, no hay término medio
+  // que valga: en vez de cbaer en gris neutro (indistinguible de "sin
+  // color"), la barra pasa a la versión sólida de `oscuro` con letra
+  // blanca, igual que la cabecera. `oscuro` siempre da >=4,5:1 con blanco
+  // por construcción (es `fondo` o el resultado de `ajustarFondo`), así que
+  // esta combinación nunca falla el contraste.
+  const barra = barraOk ? tinte : oscuro;
+  const barraTexto = barraOk ? oscuro : "#ffffff";
 
   return {
     fondo,
