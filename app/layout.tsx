@@ -67,7 +67,7 @@ export default function RootLayout({
               href="/"
               className="flex shrink-0 items-center gap-[6px] text-[16px] font-medium text-tinta"
             >
-              <Volleyball size={18} strokeWidth={1.75} />
+              <Volleyball size={18} strokeWidth={1.75} className="text-acento" />
               {NOMBRE_MARCA}
             </Link>
             <Link
