@@ -65,9 +65,9 @@ export default function RootLayout({
           <header className="flex items-center justify-between gap-3 border-b border-borde bg-barra px-4 py-3">
             <Link
               href="/"
-              className="flex shrink-0 items-center gap-[6px] text-[16px] font-medium text-tinta"
+              className="flex shrink-0 items-center gap-[6px] text-[16px] font-medium text-acento"
             >
-              <Volleyball size={18} strokeWidth={1.75} className="text-acento" />
+              <Volleyball size={18} strokeWidth={1.75} />
               {NOMBRE_MARCA}
             </Link>
             <Link
