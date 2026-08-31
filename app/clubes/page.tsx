@@ -69,7 +69,7 @@ export default function Clubes() {
       )}
 
       <div className="border-t border-borde px-4 py-4">
-        <h2 className="text-[12.5px] font-medium text-tinta-2">Sobre este directorio</h2>
+        <h2 className="text-[12.5px] font-medium text-acento">Sobre este directorio</h2>
         <div className="mt-2 space-y-2 text-[13.5px] leading-relaxed text-tinta-2">
           <p>
             Puedes buscar por nombre o municipio, filtrar por zona (norte,
@@ -101,7 +101,7 @@ export default function Clubes() {
       </div>
 
       <div className="border-t border-borde px-4 py-4">
-        <h2 className="text-[12.5px] font-medium text-tinta-2">Clubes por municipio</h2>
+        <h2 className="text-[12.5px] font-medium text-acento">Clubes por municipio</h2>
         <div className="mt-2 flex flex-wrap gap-x-3 gap-y-2">
           {municipiosConPagina().map((m) => (
             <Link
@@ -116,7 +116,7 @@ export default function Clubes() {
       </div>
 
       <div className="px-4 pb-4">
-        <h2 className="text-[12.5px] font-medium text-tinta-2">Voleibol por zona</h2>
+        <h2 className="text-[12.5px] font-medium text-acento">Voleibol por zona</h2>
         <div className="mt-2 flex flex-wrap gap-x-3 gap-y-2">
           {ZONAS.map((z) => (
             <Link

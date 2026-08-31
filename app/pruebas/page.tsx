@@ -35,7 +35,7 @@ export default function Pruebas() {
       <Listado clubes={clubes} convocatorias={convocatorias} />
 
       <div className="border-t border-borde px-4 py-4">
-        <h2 className="text-[12.5px] font-medium text-tinta-2">Pruebas por categoría</h2>
+        <h2 className="text-[12.5px] font-medium text-acento">Pruebas por categoría</h2>
         <div className="mt-2 flex flex-wrap gap-x-3 gap-y-2">
           {paresCategoriaSexo().map((p) => (
             <Link
@@ -50,7 +50,7 @@ export default function Pruebas() {
       </div>
 
       <div className="px-4 pb-4">
-        <h2 className="text-[12.5px] font-medium text-tinta-2">Voleibol por zona</h2>
+        <h2 className="text-[12.5px] font-medium text-acento">Voleibol por zona</h2>
         <div className="mt-2 flex flex-wrap gap-x-3 gap-y-2">
           {ZONAS.map((z) => (
             <Link
