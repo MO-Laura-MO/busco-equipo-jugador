@@ -1,5 +1,6 @@
 "use client";
 
+import { Volleyball } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -157,7 +158,10 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
           })}
         </nav>
       ) : (
-        <nav className="flex gap-4 bg-barra px-4 py-[9px]">
+        <nav className="flex items-center gap-4 bg-barra px-4 py-[9px]">
+          <Link href="/" aria-label="Inicio" className="shrink-0 text-acento">
+            <Volleyball size={16} strokeWidth={1.75} />
+          </Link>
           {visibles.map((a) => {
             const on = a === activa;
             return (

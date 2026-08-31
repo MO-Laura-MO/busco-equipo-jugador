@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Link from "next/link";
 import Script from "next/script";
 import { Volleyball } from "lucide-react";
+import MenuSitio from "@/components/MenuSitio";
 import NavAudiencias from "@/components/NavAudiencias";
 import {
   NOMBRE_AMBITO_LARGO,
@@ -70,12 +71,15 @@ export default function RootLayout({
               <Volleyball size={18} strokeWidth={1.75} />
               {NOMBRE_MARCA}
             </Link>
-            <Link
-              href="/alta"
-              className="shrink-0 border border-borde-control px-[10px] py-[5px] text-[13px] text-acento hover:border-tinta-3"
-            >
-              Añadir club
-            </Link>
+            <div className="flex shrink-0 items-center gap-2">
+              <Link
+                href="/alta"
+                className="border border-borde-control px-[10px] py-[5px] text-[13px] text-acento hover:border-tinta-3"
+              >
+                Añadir club
+              </Link>
+              <MenuSitio />
+            </div>
           </header>
           {/* Fuera del <header>, a propósito: el nav sticky necesita que su
               contenedor abarque toda la página para poder quedar fijo al
@@ -83,23 +87,23 @@ export default function RootLayout({
               en cuanto se superase esa altura. */}
           <NavAudiencias hayVacantes={hayVacantes} />
           {children}
-          <footer className="border-t border-borde px-4 py-5">
-            <p className="text-[12.5px] leading-relaxed text-tinta-3">
+          <footer className="border-t border-borde bg-acento-tinte px-4 py-5">
+            <p className="text-[12.5px] leading-relaxed text-tinta-2">
               Información recopilada de fuentes públicas y de los propios
               clubes. Confirma siempre fecha y lugar antes de acudir.
             </p>
             <nav className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[12.5px]">
-              <Link href="/alta" className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta">
+              <Link href="/alta" className="text-acento underline underline-offset-2 hover:text-tinta">
                 Dar de alta un club
               </Link>
-              <Link href="/blog" className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta">
+              <Link href="/blog" className="text-acento underline underline-offset-2 hover:text-tinta">
                 Blog
               </Link>
               <a
                 href={URL_CANAL_WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta"
+                className="text-acento underline underline-offset-2 hover:text-tinta"
               >
                 Canal de WhatsApp
               </a>
@@ -107,11 +111,11 @@ export default function RootLayout({
                 href={URL_INSTAGRAM}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta"
+                className="text-acento underline underline-offset-2 hover:text-tinta"
               >
                 Instagram
               </a>
-              <Link href="/aviso-legal" className="text-tinta-2 underline underline-offset-2 decoration-borde-control hover:text-tinta">
+              <Link href="/aviso-legal" className="text-acento underline underline-offset-2 hover:text-tinta">
                 Aviso legal y privacidad
               </Link>
             </nav>

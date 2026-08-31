@@ -9,14 +9,7 @@ import {
 import Link from "next/link";
 import FilaConvocatoria from "@/components/FilaConvocatoria";
 import Seguir from "@/components/Seguir";
-import {
-  clubes,
-  convocatorias,
-  etiquetaCategoria,
-  etiquetaSexo,
-  hayVacantes,
-  paresCategoriaSexo,
-} from "@/lib/datos";
+import { clubes, convocatorias, hayVacantes } from "@/lib/datos";
 
 export const metadata: Metadata = {
   title: "Voleibol en Madrid: pruebas de clubes y entrenadores",
@@ -155,21 +148,6 @@ export default function Home() {
           </div>
         </section>
       )}
-
-      <div className="border-t border-borde px-4 py-4">
-        <h2 className="text-[12.5px] font-medium text-tinta-2">Busca por categoría</h2>
-        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-2">
-          {paresCategoriaSexo().map((p) => (
-            <Link
-              key={p.slug}
-              href={`/pruebas/${p.slug}`}
-              className="text-[13px] text-acento hover:underline"
-            >
-              {etiquetaCategoria(p.categoria)} {etiquetaSexo(p.sexo).toLowerCase()}
-            </Link>
-          ))}
-        </div>
-      </div>
 
       <Seguir
         titulo="¿No está todavía la prueba que buscas?"
