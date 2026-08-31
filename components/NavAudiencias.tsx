@@ -4,6 +4,7 @@ import { Volleyball } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import MenuSitio from "@/components/MenuSitio";
 
 interface Seccion {
   label: string;
@@ -158,27 +159,30 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
           })}
         </nav>
       ) : (
-        <nav className="flex items-center gap-4 bg-acento-tinte px-4 py-[9px]">
-          <Link href="/" aria-label="Inicio" className="shrink-0 text-acento">
-            <Volleyball size={16} strokeWidth={1.75} />
-          </Link>
-          {visibles.map((a) => {
-            const on = a === activa;
-            return (
-              <Link
-                key={a.id}
-                href={a.href}
-                onClick={() => setAudienciaId(a.id)}
-                className={`shrink-0 whitespace-nowrap text-[13px] ${
-                  on
-                    ? "border-b-2 border-amarillo pb-[2px] font-medium text-tinta"
-                    : "text-tinta-3"
-                }`}
-              >
-                {a.nombreCorto}
-              </Link>
-            );
-          })}
+        <nav className="flex items-center justify-between gap-4 bg-acento-tinte px-4 py-[9px]">
+          <div className="flex items-center gap-4">
+            <Link href="/" aria-label="Inicio" className="shrink-0 text-acento">
+              <Volleyball size={16} strokeWidth={1.75} />
+            </Link>
+            {visibles.map((a) => {
+              const on = a === activa;
+              return (
+                <Link
+                  key={a.id}
+                  href={a.href}
+                  onClick={() => setAudienciaId(a.id)}
+                  className={`shrink-0 whitespace-nowrap text-[13px] ${
+                    on
+                      ? "border-b-2 border-amarillo pb-[2px] font-medium text-tinta"
+                      : "text-tinta-3"
+                  }`}
+                >
+                  {a.nombreCorto}
+                </Link>
+              );
+            })}
+          </div>
+          <MenuSitio />
         </nav>
       )}
       {dentroDeSeccion && activa?.secciones && (
@@ -192,7 +196,7 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
                 className={`shrink-0 whitespace-nowrap rounded-[6px] px-[10px] py-[6px] text-[12px] ${
                   on
                     ? "border border-borde-control bg-fondo font-medium text-tinta"
-                    : "border border-borde text-tinta-2"
+                    : "border border-acento/40 text-tinta-2"
                 }`}
               >
                 {s.label}

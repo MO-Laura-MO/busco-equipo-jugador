@@ -74,7 +74,7 @@ export default function RootLayout({
             <div className="flex shrink-0 items-center gap-2">
               <Link
                 href="/alta"
-                className="border border-borde-control px-[10px] py-[5px] text-[13px] text-acento hover:border-tinta-3"
+                className="bg-acento px-[10px] py-[5px] text-[13px] font-medium text-white hover:opacity-90"
               >
                 Añadir club
               </Link>
