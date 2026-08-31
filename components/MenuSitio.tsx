@@ -41,6 +41,9 @@ export default function MenuSitio() {
       </button>
       {abierto && (
         <nav className="absolute right-0 top-[calc(100%+6px)] z-30 flex w-[210px] flex-col gap-1 rounded-[8px] border border-borde-control bg-fondo p-2 shadow-lg">
+          <Link href="/" onClick={() => setAbierto(false)} className={ENLACE}>
+            Volver a inicio
+          </Link>
           <Link href="/blog" onClick={() => setAbierto(false)} className={ENLACE}>
             Blog
           </Link>
@@ -65,9 +68,6 @@ export default function MenuSitio() {
           >
             Instagram
           </a>
-          <Link href="/aviso-legal" onClick={() => setAbierto(false)} className={ENLACE}>
-            Aviso legal y privacidad
-          </Link>
         </nav>
       )}
     </div>

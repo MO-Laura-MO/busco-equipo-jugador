@@ -133,7 +133,7 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
                 href={a.href}
                 onClick={() => setAudienciaId(a.id)}
                 className={`inline-block shrink-0 py-2 pb-[9px] ${
-                  on ? "-mb-px border-b-2 border-acento" : ""
+                  on ? "-mb-px border-b-2 border-amarillo" : ""
                 }`}
               >
                 <span
@@ -171,7 +171,7 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
                 onClick={() => setAudienciaId(a.id)}
                 className={`shrink-0 whitespace-nowrap text-[13px] ${
                   on
-                    ? "border-b-2 border-acento pb-[2px] font-medium text-tinta"
+                    ? "border-b-2 border-amarillo pb-[2px] font-medium text-tinta"
                     : "text-tinta-3"
                 }`}
               >
