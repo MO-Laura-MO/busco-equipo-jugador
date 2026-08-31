@@ -1143,5 +1143,20 @@
   "colorFondo": "#f12b67",
   "colorAcento": "#000000",
   "fechaActualizacion": "2026-08-27"
+ },
+ {
+  "id": "corazonistas",
+  "nombre": "Corazonistas",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [],
+  "email": "gbueno.roldan@gmail.com",
+  "telefono": "+34 680314988",
+  "logo": "",
+  "descripcion": "Colegio de Madrid con 12 equipos femeninos de voleibol. Cada vez, creciendo más.",
+  "colorFondo": "#d33535",
+  "colorAcento": "#ffffff",
+  "fechaActualizacion": "2026-08-28"
  }
 ]

@@ -282,5 +282,67 @@
   "notas": "",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-08-27"
+ },
+ {
+  "clubId": "corazonistas",
+  "puesto": "entrenador",
+  "categoria": "infantil",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal",
+   "escuela"
+  ],
+  "nivel": "",
+  "titulacion": "Nivel 1",
+  "requisitos": "Al menos una temporada como entrenador o entrenadora en algún club de Madrid",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-28"
+ },
+ {
+  "clubId": "corazonistas",
+  "puesto": "segundo-entrenador",
+  "categoria": "infantil",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal",
+   "escuela"
+  ],
+  "nivel": "",
+  "titulacion": "Nivel 1",
+  "requisitos": "Al menos una temporada como entrenador o entrenadora en algún club de Madrid",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-28"
+ },
+ {
+  "clubId": "corazonistas",
+  "puesto": "entrenador",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "titulacion": "Nivel 2",
+  "requisitos": "Al menos una temporada como entrenador o entrenadora en algún club de Madrid",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-08-28"
  }
 ]
