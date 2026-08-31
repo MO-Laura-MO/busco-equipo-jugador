@@ -193,10 +193,10 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
               <Link
                 key={s.href}
                 href={s.href}
-                className={`shrink-0 whitespace-nowrap rounded-[6px] px-[10px] py-[6px] text-[12px] ${
+                className={`shrink-0 whitespace-nowrap rounded-[6px] border px-[10px] py-[6px] text-[12px] ${
                   on
-                    ? "border border-borde-control bg-fondo font-medium text-tinta"
-                    : "border border-acento/40 text-tinta-2"
+                    ? "border-acento bg-acento font-medium text-white"
+                    : "border-acento/40 text-tinta-2"
                 }`}
               >
                 {s.label}
