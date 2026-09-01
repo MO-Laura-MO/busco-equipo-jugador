@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Megaphone, Search, Users } from "lucide-react";
 import Link from "next/link";
 import { URL_FORMULARIO_AMISTOSOS } from "@/lib/config";
 
@@ -12,21 +12,38 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
+const PUNTOS = [
+  {
+    icono: Users,
+    texto: "Un espacio para que los clubes de Madrid encuentren rivales con quien jugar amistosos.",
+  },
+  {
+    icono: Megaphone,
+    texto:
+      "Nos dices qué buscas —categoría, zona y fechas— y lo publicamos en la página para que otros clubes puedan encontrarte.",
+  },
+  {
+    icono: Search,
+    texto:
+      "Mira qué otros clubes buscan también amistosos: sus datos de contacto están en su ficha, así que habláis directamente y organizáis el partido.",
+  },
+];
+
 export default function Amistosos() {
   return (
     <main>
       <header className="px-4 pb-4 pt-5">
         <h1 className="text-[19px] font-medium text-tinta">Amistosos entre clubes</h1>
-        <ul className="mt-3 list-disc space-y-[6px] pl-5 text-[13px] leading-relaxed text-tinta-2">
-          <li>Un espacio para que los clubes de Madrid encuentren rivales con quien jugar amistosos.</li>
-          <li>Nos dices qué buscas (categoría, zona, fechas) y avisamos en cuanto haya un club compatible.</li>
-          <li>
-            No hacemos de intermediarios: encontráis los datos de contacto en la
-            ficha de cada club y habláis directamente entre vosotros.
-          </li>
+        <ul className="mt-3 space-y-3">
+          {PUNTOS.map((p, i) => (
+            <li key={i} className="flex items-start gap-[10px]">
+              <p.icono size={17} strokeWidth={1.75} className="mt-[1px] shrink-0 text-acento" />
+              <span className="text-[13px] leading-relaxed text-tinta-2">{p.texto}</span>
+            </li>
+          ))}
         </ul>
       </header>
-      <div className="bg-barra px-4 py-5 text-center">
+      <div className="px-4 py-5 text-center">
         <a
           href={URL_FORMULARIO_AMISTOSOS}
           target="_blank"
