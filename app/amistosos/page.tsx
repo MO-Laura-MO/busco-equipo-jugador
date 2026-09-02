@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ExternalLink, MapPin, Megaphone, Search, Users } from "lucide-react";
+import { ChevronRight, ExternalLink, MapPin, Megaphone, Search, Users } from "lucide-react";
 import Link from "next/link";
 import Actualizado from "@/components/Actualizado";
 import EtiquetaEstado from "@/components/EtiquetaEstado";
@@ -73,6 +73,28 @@ export default function Amistosos() {
         </ul>
       </header>
 
+      <div className="px-4 py-5 text-center">
+        <a
+          href={URL_FORMULARIO_AMISTOSOS}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-[8px] bg-amarillo px-4 py-[10px] text-[13.5px] font-medium text-[#111827] hover:bg-amarillo/90"
+        >
+          Apuntarnos a amistosos
+          <ExternalLink size={14} strokeWidth={1.75} />
+        </a>
+        <p className="mt-3 text-[13px] leading-relaxed text-tinta-2">
+          Sólo se pueden apuntar clubes de la Comunidad de Madrid.
+        </p>
+        <p className="mt-1 text-[13px] leading-relaxed text-tinta-2">
+          Si tu club todavía no está dado de alta en voley.app,{" "}
+          <Link href="/alta" className="text-acento underline underline-offset-2">
+            date de alta primero
+          </Link>
+          .
+        </p>
+      </div>
+
       {grupos.length > 0 && (
         <section>
           <h2 className="border-t border-borde bg-barra px-4 py-[9px] text-[12.5px] text-tinta-2">
@@ -145,16 +167,20 @@ export default function Amistosos() {
                             {club.municipio} · Zona {zona}
                           </span>
                         </p>
+                        {disponibilidad && (
+                          <p className="mt-[3px] text-[12.5px] leading-relaxed text-tinta-2">
+                            Disponibilidad: {disponibilidad}
+                          </p>
+                        )}
                         <div className="mt-[7px] flex flex-wrap gap-[6px]">
                           {tipos.map((t) => (
                             <EtiquetaEstado key={t} estado={t} />
                           ))}
-                          {disponibilidad && (
-                            <span className="inline-block rounded-[5px] bg-gris-tinte px-[8px] py-[3px] text-[11.5px] leading-[1.3] text-gris-etiqueta">
-                              {disponibilidad}
-                            </span>
-                          )}
                         </div>
+                        <span className="mt-[10px] inline-flex items-center gap-[4px] rounded-[6px] bg-acento px-3 py-[7px] text-[12.5px] font-medium text-white">
+                          Ver contacto
+                          <ChevronRight size={13} strokeWidth={2} />
+                        </span>
                       </div>
                     </div>
                   </Link>
@@ -179,28 +205,6 @@ export default function Amistosos() {
           </a>
         </section>
       )}
-
-      <div className="px-4 py-5 text-center">
-        <a
-          href={URL_FORMULARIO_AMISTOSOS}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-[8px] bg-amarillo px-4 py-[10px] text-[13.5px] font-medium text-[#111827] hover:bg-amarillo/90"
-        >
-          Apuntarnos a amistosos
-          <ExternalLink size={14} strokeWidth={1.75} />
-        </a>
-        <p className="mt-3 text-[13px] leading-relaxed text-tinta-2">
-          Sólo se pueden apuntar clubes de la Comunidad de Madrid.
-        </p>
-        <p className="mt-1 text-[13px] leading-relaxed text-tinta-2">
-          Si tu club todavía no está dado de alta en voley.app,{" "}
-          <Link href="/alta" className="text-acento underline underline-offset-2">
-            date de alta primero
-          </Link>
-          .
-        </p>
-      </div>
     </main>
   );
 }
