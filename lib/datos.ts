@@ -1,5 +1,6 @@
 import clubesJson from "@/data/clubes.json";
 import convocatoriasJson from "@/data/convocatorias.json";
+import equiposJson from "@/data/equipos.json";
 import vacantesJson from "@/data/vacantes.json";
 
 export type Zona = "norte" | "sur" | "este" | "oeste" | "centro";
@@ -151,6 +152,33 @@ export interface Vacante {
   fechaActualizacion: string;
 }
 
+export type Amistosos = "recibe-y-visita" | "solo-recibe" | "solo-visita" | "no";
+
+export interface Equipo {
+  clubId: string;
+  categoria: Categoria;
+  sexo: Sexo;
+  /** Ligas en las que compite el equipo. Lista cerrada, igual que en las
+   *  convocatorias; será lo único por lo que se filtre. */
+  tipoEntidad: TipoEntidad[];
+  /** Detalle de la liga o división, texto libre corto ("Tercera división
+   *  zonal", "Recién federado"). Se muestra, nunca se filtra. */
+  liga: string;
+  amistosos: Amistosos;
+  /** Pabellón donde entrena este equipo, solo si es distinto del general del club. */
+  pabellon: string;
+  municipioPabellon: string;
+  /** Texto libre corto: "Sábados por la mañana". */
+  disponibilidad: string;
+  /** Texto libre corto: "Septiembre y octubre", "Todo el año". */
+  meses: string;
+  /** Email o teléfono para amistosos, solo si es distinto del general del club. */
+  contactoAmistosos: string;
+  notas: string;
+  origen: Origen;
+  fechaActualizacion: string;
+}
+
 export const clubes = clubesJson as Club[];
 /**
  * Las convocatorias con fecha exacta ya pasada (más de 3 días) se ocultan
@@ -188,6 +216,8 @@ export const vacantes = (vacantesJson as Vacante[]).filter(
 
 /** true si hay alguna vacante viva; la usan la cabecera y la portada. */
 export const hayVacantes = vacantes.length > 0;
+
+export const equipos: Equipo[] = equiposJson as Equipo[];
 
 export function clubPorId(id: string): Club | undefined {
   return clubes.find((c) => c.id === id);
@@ -277,6 +307,34 @@ export function vacantesOrdenadas(): { vacante: Vacante; club: Club }[] {
       if (nombre !== 0) return nombre;
       return ordenCategoriaVacante(a.vacante) - ordenCategoriaVacante(b.vacante);
     });
+}
+
+/** Orden de sexo para agrupar equipos: femenino primero, luego mixto, luego masculino. */
+const ORDEN_SEXO: Record<Sexo, number> = { femenino: 0, mixto: 1, masculino: 2 };
+
+/**
+ * Clubes con al menos un equipo apuntado a amistosos, ordenados por nombre
+ * de club, con sus equipos ordenados por sexo (femenino primero) y edad.
+ */
+export function clubesConAmistosos(): { club: Club; equipos: Equipo[] }[] {
+  const porClub = new Map<string, Equipo[]>();
+  for (const e of equipos) {
+    if (e.amistosos === "no") continue;
+    if (!clubPorId(e.clubId)) continue;
+    const lista = porClub.get(e.clubId) ?? [];
+    lista.push(e);
+    porClub.set(e.clubId, lista);
+  }
+  return [...porClub.entries()]
+    .map(([clubId, equiposClub]) => ({
+      club: clubPorId(clubId)!,
+      equipos: [...equiposClub].sort((a, b) => {
+        const sexo = ORDEN_SEXO[a.sexo] - ORDEN_SEXO[b.sexo];
+        if (sexo !== 0) return sexo;
+        return ordenCategoria(a.categoria) - ordenCategoria(b.categoria);
+      }),
+    }))
+    .sort((a, b) => a.club.nombre.localeCompare(b.club.nombre, "es"));
 }
 
 /**
