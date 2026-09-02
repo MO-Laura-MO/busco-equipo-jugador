@@ -1179,5 +1179,24 @@
   "colorFondo": "#ae0f23",
   "colorAcento": "#202d41",
   "fechaActualizacion": "2026-09-02"
+ },
+ {
+  "id": "voleibol-plaza-castilla",
+  "nombre": "Voleibol Plaza Castilla",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/voleibolplazacastilla"
+   }
+  ],
+  "email": "admplazacastilla@gmail.com",
+  "telefono": "",
+  "logo": "",
+  "descripcion": "Club de voleibol del norte de Madrid con equipos municipales desde benjamín hasta sénior. Entrena en varias sedes de Chamartín y Tetuán.",
+  "formularioUrl": "https://forms.gle/egSk378eieS3E3ri8",
+  "fechaActualizacion": "2026-09-02"
  }
 ]
