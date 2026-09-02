@@ -344,5 +344,45 @@
   "notas": "",
   "origen": "club",
   "fechaActualizacion": "2026-08-28"
+ },
+ {
+  "clubId": "ed-nervion",
+  "puesto": "entrenador",
+  "categoria": "alevin",
+  "sexo": "mixto",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "Distrito de Chamartín",
+  "titulacion": "No es necesaria",
+  "requisitos": "Experiencia como jugador o jugadora",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-01"
+ },
+ {
+  "clubId": "ed-nervion",
+  "puesto": "entrenador",
+  "categoria": "infantil",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "Distrito de Chamartín",
+  "titulacion": "No es necesaria",
+  "requisitos": "Experiencia como jugador o jugadora",
+  "dias": "",
+  "horario": "",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-01"
  }
 ]

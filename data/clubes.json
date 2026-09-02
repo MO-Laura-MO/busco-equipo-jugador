@@ -1159,5 +1159,25 @@
   "colorFondo": "#d33535",
   "colorAcento": "#ffffff",
   "fechaActualizacion": "2026-08-28"
+ },
+ {
+  "id": "ed-nervion",
+  "nombre": "ED Nervión",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "https://colegionervion.com",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/colegio_nervion"
+   }
+  ],
+  "email": "ednervion@gmail.com",
+  "telefono": "+34 611 86 74 31",
+  "logo": "/clubes/ed-nervion.png",
+  "descripcion": "Escuela deportiva de fútbol y voleibol en Madrid, con siete equipos repartidos en cinco categorías de base. Sus equipos de voleibol compiten en la liga municipal del distrito de Chamartín.",
+  "colorFondo": "#ae0f23",
+  "colorAcento": "#202d41",
+  "fechaActualizacion": "2026-09-01"
  }
 ]
