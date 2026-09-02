@@ -384,5 +384,43 @@
   "notas": "",
   "origen": "club",
   "fechaActualizacion": "2026-09-01"
+ },
+ {
+  "clubId": "sad-colegio-claret",
+  "puesto": "entrenador",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "titulacion": "",
+  "requisitos": "",
+  "dias": "Martes y jueves",
+  "horario": "21:30-23:20",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-01"
+ },
+ {
+  "clubId": "sad-colegio-claret",
+  "puesto": "entrenador",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [],
+  "nivel": "Liga Voleibol Centro Madrid",
+  "titulacion": "",
+  "requisitos": "",
+  "dias": "Lunes y jueves",
+  "horario": "22:00-23:20 y 21:30-23:20",
+  "pabellon": "",
+  "compensacion": "por-determinar",
+  "incorporacion": "",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-01"
  }
 ]
