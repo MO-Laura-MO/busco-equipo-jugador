@@ -2738,5 +2738,26 @@
   "notas": "",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-09-02"
+ },
+ {
+  "clubId": "intervoley-fuenlabrada",
+  "categoria": "infantil",
+  "sexo": "femenino",
+  "tipoEntidad": ["federado"],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-09-02"
  }
 ]
