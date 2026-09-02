@@ -81,7 +81,7 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
       id: "un-club",
       nombre: "un club",
       nombreCorto: "Club",
-      href: "/clubes",
+      href: "/amistosos",
       prefijos: ["/clubes", "/alta", "/amistosos"],
       secciones: [DIRECTORIO, { label: "Amistosos", href: "/amistosos" }],
       visible: true,
