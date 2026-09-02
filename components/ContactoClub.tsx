@@ -60,7 +60,7 @@ export default function ContactoClub({
             : undefined
         }
       >
-        {formularioUrl ? "Contacto e inscripción" : "Ver contacto"}
+        {formularioUrl ? "Ver contacto e inscripciones" : "Ver contacto"}
       </button>
     );
   }
