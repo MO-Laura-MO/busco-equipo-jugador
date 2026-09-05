@@ -2759,5 +2759,26 @@
   "notas": "",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-09-02"
+ },
+ {
+  "clubId": "cv-sanse",
+  "categoria": "junior",
+  "sexo": "femenino",
+  "tipoEntidad": ["federado"],
+  "nivel": "Primera división autonómica",
+  "temporada": "2026-27",
+  "tipoFecha": "abierta",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan una receptora con experiencia en primera división autonómica.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-09-05"
  }
 ]
