@@ -1198,5 +1198,25 @@
   "descripcion": "Club de voleibol del norte de Madrid con equipos municipales desde benjamín hasta sénior. Entrena en varias sedes de Chamartín y Tetuán.",
   "formularioUrl": "https://forms.gle/egSk378eieS3E3ri8",
   "fechaActualizacion": "2026-09-02"
+ },
+ {
+  "id": "cd-voleibol-smv",
+  "nombre": "CD Voleibol SMV",
+  "municipio": "San Martín de la Vega",
+  "zona": "sur",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/clubdeportivovoleibolsmv"
+   }
+  ],
+  "email": "coordinacion_deporteeduca-21@outlook.es",
+  "telefono": "+34 614829814",
+  "logo": "/clubes/cd-voleibol-smv.png",
+  "descripcion": "¡SOMOS VOLEY SMV! Un club que nace con un objetivo claro: hacer crecer el voleibol y crear una gran familia alrededor del deporte. Somos ilusión, esfuerzo, compañerismo y ganas de aprender. Aquí no solo enseñamos a jugar al voleibol: enseñamos a crecer, a confiar, a trabajar en equipo y a disfrutar del camino.",
+  "colorFondo": "#b6d806",
+  "colorAcento": "#ffffff",
+  "fechaActualizacion": "2026-09-05"
  }
 ]
