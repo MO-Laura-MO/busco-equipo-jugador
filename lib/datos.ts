@@ -180,26 +180,13 @@ export interface Equipo {
 }
 
 export const clubes = clubesJson as Club[];
-/**
- * Las convocatorias con fecha exacta ya pasada (más de 3 días) se ocultan
- * automáticamente. El filtro se evalúa en cada build (la web se reconstruye
- * con cada cambio de contenido), así el listado nunca muestra pruebas caducadas.
- */
-const CORTE = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000)
-  .toISOString()
-  .slice(0, 10);
-
-// Las de tipo "desde" no caducan a propósito: el día de arranque pasa, pero el
-// equipo sigue admitiendo gente. Solo caducan las de fecha exacta.
-export const convocatorias = (convocatoriasJson as Convocatoria[]).filter(
-  (c) => !(c.tipoFecha === "exacta" && c.fecha && c.fecha < CORTE)
-);
 
 /**
- * Todas las convocatorias del JSON, incluidas las caducadas. Solo para
- * decidir qué páginas existen: las URLs no pueden aparecer y desaparecer.
+ * Ninguna convocatoria se oculta por tener la fecha pasada: una familia que
+ * llega tarde a la temporada tiene que poder seguir viéndola y apuntarse.
+ * Ver `tipoFechaEfectivo()` para cómo se presenta una "exacta" ya pasada.
  */
-export const convocatoriasTodas = convocatoriasJson as Convocatoria[];
+export const convocatorias = convocatoriasJson as Convocatoria[];
 
 /**
  * Las vacantes caducan a los 45 días sin actualizar, igual que las
@@ -388,6 +375,17 @@ export function etiquetaCompensacion(c: Compensacion): string {
 const HOY = new Date().toISOString().slice(0, 10);
 
 /**
+ * Tipo de fecha tal como se presenta, no tal como está escrito en el JSON:
+ * una "exacta" cuya fecha ya ha pasado se comporta como "desde" (el equipo ya
+ * ha empezado a entrenar y sigue admitiendo incorporaciones), sin tener que
+ * ir editando el JSON cada semana a mano.
+ */
+export function tipoFechaEfectivo(c: Convocatoria): TipoFecha {
+  if (c.tipoFecha === "exacta" && c.fecha && c.fecha < HOY) return "desde";
+  return c.tipoFecha;
+}
+
+/**
  * Orden del listado:
  * 1. fechas exactas confirmadas y arranques ("desde") aún por llegar →
  * 2. exactas provisionales → 3. por mes → 4. fecha por confirmar →
@@ -395,13 +393,14 @@ const HOY = new Date().toISOString().slice(0, 10);
  * Dentro de cada grupo, por fecha/mes ascendente.
  */
 export function grupoOrden(c: Convocatoria): number {
+  const tipo = tipoFechaEfectivo(c);
   // "desde": mientras no llega el día va con las fechas firmes; cuando ya ha
   // pasado, el equipo está entrenando y se comporta como inscripción abierta.
-  if (c.tipoFecha === "desde" && c.fecha) return c.fecha >= HOY ? 0 : 4;
-  if (c.tipoFecha === "exacta" && c.estadoFecha === "confirmada") return 0;
-  if (c.tipoFecha === "exacta") return 1;
-  if (c.tipoFecha === "mes") return 2;
-  if (c.tipoFecha === "por-confirmar") return 3;
+  if (tipo === "desde" && c.fecha) return c.fecha >= HOY ? 0 : 4;
+  if (tipo === "exacta" && c.estadoFecha === "confirmada") return 0;
+  if (tipo === "exacta") return 1;
+  if (tipo === "mes") return 2;
+  if (tipo === "por-confirmar") return 3;
   return 4;
 }
 
@@ -492,7 +491,8 @@ export function partesFecha(c: Convocatoria): {
   dia: string;
   mes: string;
 } {
-  if (c.tipoFecha === "exacta" && c.fecha) {
+  const tipo = tipoFechaEfectivo(c);
+  if (tipo === "exacta" && c.fecha) {
     const d = new Date(c.fecha + "T12:00:00");
     return {
       diaSemana: DIAS_CORTOS[d.getDay()],
@@ -500,7 +500,7 @@ export function partesFecha(c: Convocatoria): {
       mes: MESES_CORTOS[d.getMonth()],
     };
   }
-  if (c.tipoFecha === "desde" && c.fecha) {
+  if (tipo === "desde" && c.fecha) {
     const d = new Date(c.fecha + "T12:00:00");
     return {
       diaSemana: "",
@@ -508,7 +508,7 @@ export function partesFecha(c: Convocatoria): {
       mes: MESES_CORTOS[d.getMonth()],
     };
   }
-  if (c.tipoFecha === "mes" && c.mesAprox) {
+  if (tipo === "mes" && c.mesAprox) {
     const [, mes] = c.mesAprox.split("-");
     return { diaSemana: "", dia: "", mes: MESES_CORTOS[Number(mes) - 1] ?? "" };
   }
@@ -530,7 +530,7 @@ export function fechaLarga(iso: string): string {
  * desde entonces. La escribe la web con la fecha del JSON, no se teclea a mano.
  */
 export function textoDesde(c: Convocatoria): string | null {
-  if (c.tipoFecha !== "desde" || !c.fecha) return null;
+  if (tipoFechaEfectivo(c) !== "desde" || !c.fecha) return null;
   const verbo = c.fecha < HOY ? "empezaron" : "empiezan";
   return `Los entrenamientos del equipo ${verbo} el ${fechaLarga(c.fecha)}. Ponte en contacto con el club para unirte y hacer la prueba.`;
 }
@@ -568,11 +568,13 @@ export type Estado =
 
 /**
  * Etiquetas de una convocatoria, en este orden:
- * - "Verificado por el club" (verde), siempre que origen = club.
  * - El tipo o tipos de competición (gris).
  * - La de estado de fecha que corresponda: abierta (azul), día por
  *   confirmar (gris, hay mes pero no día), fecha por confirmar (gris,
  *   sin fecha anunciada) o fecha provisional (ámbar).
+ *
+ * El "Verificado por el club" NO sale de aquí: es un dato del club (campo
+ * `verificado`), no de la convocatoria, así que lo añade quien pinte la fila.
  *
  * El tipo de competición se muestra SIEMPRE, también cuando el equipo es solo
  * federado: es de lo primero que mira quien busca club, porque determina la
@@ -581,7 +583,6 @@ export type Estado =
  */
 export function etiquetasConvocatoria(c: Convocatoria): Exclude<Estado, null>[] {
   const etiquetas: Exclude<Estado, null>[] = [];
-  if (c.origen === "club") etiquetas.push("verificado");
   for (const t of TIPOS_ENTIDAD) {
     if ((c.tipoEntidad ?? []).includes(t.valor)) etiquetas.push(t.valor);
   }
@@ -655,15 +656,13 @@ export function ultimaActualizacion(lista: { fechaActualizacion: string }[]): st
 
 /**
  * Pares categoría + sexo con página propia en /pruebas/[slug]: los que
- * tienen al menos una convocatoria alguna vez (viva o caducada), en orden de
- * edad y luego sexo. Decide qué páginas existen; las URLs no pueden
- * aparecer y desaparecer según haya o no convocatorias vivas.
+ * tienen al menos una convocatoria, en orden de edad y luego sexo.
  */
 export function paresCategoriaSexo(): { categoria: Categoria; sexo: Sexo; slug: string }[] {
   const pares: { categoria: Categoria; sexo: Sexo; slug: string }[] = [];
   for (const c of CATEGORIAS) {
     for (const s of SEXOS) {
-      if (convocatoriasTodas.some((x) => x.categoria === c.valor && x.sexo === s.valor)) {
+      if (convocatorias.some((x) => x.categoria === c.valor && x.sexo === s.valor)) {
         pares.push({ categoria: c.valor, sexo: s.valor, slug: `${c.valor}-${s.valor}` });
       }
     }
@@ -673,15 +672,15 @@ export function paresCategoriaSexo(): { categoria: Categoria; sexo: Sexo; slug: 
 
 /**
  * Municipios con página propia en /voleibol-en/[municipio]: los que tienen
- * dos o más clubes, o al menos una convocatoria (viva o caducada). Un
- * municipio con un solo club y ninguna convocatoria sería un duplicado de la
- * ficha del club; lo cubre la página de su zona.
+ * dos o más clubes, o al menos una convocatoria. Un municipio con un solo
+ * club y ninguna convocatoria sería un duplicado de la ficha del club; lo
+ * cubre la página de su zona.
  */
 export function municipiosConPagina(): string[] {
   const numClubes = new Map<string, number>();
   for (const c of clubes) numClubes.set(c.municipio, (numClubes.get(c.municipio) ?? 0) + 1);
   const conConvocatoria = new Set(
-    convocatoriasTodas
+    convocatorias
       .map((c) => clubPorId(c.clubId)?.municipio)
       .filter((m): m is string => Boolean(m))
   );

@@ -23,6 +23,7 @@
   "colorAcento": "#ffffff",
   "formularioUrl": "https://adperales.es",
   "formularioNota": "Para las pruebas de los equipos federados hay que rellenar en su web el formulario «Solicitud de pruebas para equipos federados». El club se pone en contacto para concertar la prueba.",
+  "verificado": true,
   "fechaActualizacion": "2026-08-28"
  },
  {
@@ -43,6 +44,7 @@
   "descripcion": "Somos un club de voleibol de Rivas-Vaciamadrid que apuesta por el deporte, la formación y el trabajo en equipo. Contamos con 26 equipos, desde las categorías de base hasta nuestros equipos senior, creando un espacio donde crecer, competir y disfrutar del voleibol. Esta temporada 2026/27 contamos con 2 equipos en S2.",
   "colorFondo": "#95ca3d",
   "colorAcento": "#000000",
+  "verificado": true,
   "fechaActualizacion": "2026-08-20"
  },
  {
@@ -63,6 +65,7 @@
   "descripcion": "",
   "colorFondo": "#721422",
   "colorAcento": "#ffffff",
+  "verificado": true,
   "fechaActualizacion": "2026-08-26"
  },
  {
@@ -154,6 +157,7 @@
   "colorFondo": "#da629c",
   "colorAcento": "#ffffff",
   "contactoBotonBlanco": true,
+  "verificado": true,
   "fechaActualizacion": "2026-08-26"
  },
  {
@@ -343,6 +347,7 @@
   "descripcion": "Club de voleibol femenino con dos itinerarios: Bulldogs Formación (de escuela a cadete) y Bulldogs Rendimiento (juvenil, júnior y sénior). Sedes en Villanueva del Pardillo, Villanueva de la Cañada y Valdemorillo.",
   "colorFondo": "#753E90",
   "colorAcento": "#B6F9A4",
+  "verificado": true,
   "fechaActualizacion": "2026-08-19",
   "emailsExtra": [
    {
@@ -515,6 +520,7 @@
   "descripcion": "",
   "colorFondo": "#122143",
   "colorAcento": "#cc1b2b",
+  "verificado": true,
   "fechaActualizacion": "2026-08-19"
  },
  {
@@ -557,6 +563,7 @@
   "descripcion": "Club de voleibol de Alcorcón, heredero de una tradición que arranca en 1977 y refundado como CUVA en 1995. Tanto su equipo femenino como masculino compiten en Primera División Nacional, y mantiene equipos de cantera en categorías de base.",
   "colorFondo": "#a7d7f1",
   "colorAcento": "#ffffff",
+  "verificado": true,
   "fechaActualizacion": "2026-08-18"
  },
  {
@@ -613,6 +620,7 @@
   "descripcion": "Club de voleibol de Torrelodones, en la zona oeste de la Comunidad de Madrid. Compite en liga federada con ocho equipos y tiene una sección de voley playa con clases por niveles.",
   "colorFondo": "#010853",
   "colorAcento": "#F7F76C",
+  "verificado": true,
   "fechaActualizacion": "2026-08-14"
  },
  {
@@ -659,6 +667,7 @@
   "descripcion": "Club de voleibol de Alcalá de Henares. Tiene equipos federados masculinos, femeninos y máster, equipos en la liga mancomunada, y escuelas de iniciación y de adultos.",
   "colorFondo": "#56b5e1",
   "colorAcento": "#ffffff",
+  "verificado": true,
   "fechaActualizacion": "2026-08-18",
   "emailsExtra": [
    {
@@ -806,6 +815,7 @@
   "descripcion": "Club de voleibol de Móstoles. Tiene equipos federados y equipos en los juegos deportivos municipales, además de escuela de voleibol.",
   "colorFondo": "#14314F",
   "colorAcento": "#2DB4E8",
+  "verificado": true,
   "fechaActualizacion": "2026-08-16",
   "formularioUrl": "https://forms.gle/fpmeJzTWqnrjmRKm7",
   "formularioNota": "También puedes escribirles por Instagram o al email del club."
@@ -1020,6 +1030,7 @@
   "descripcion": "",
   "colorFondo": "#0363cb",
   "colorAcento": "#d50606",
+  "verificado": true,
   "fechaActualizacion": "2026-08-20"
  },
  {
@@ -1042,6 +1053,7 @@
   "colorAcento": "#f03e5c",
   "formularioUrl": "https://docs.google.com/forms/d/e/1FAIpQLSeyBNl8NX6jlHi2HZH3gV5qh-gLnVYI3RCbkVzWJ1V4J3aF1Q/viewform",
   "formularioNota": "El formulario es para el equipo sénior de liga municipal. Para el resto de categorías, escríbeles al email del club.",
+  "verificado": true,
   "fechaActualizacion": "2026-08-25"
  },
  {
@@ -1069,6 +1081,7 @@
   "formularioUrl": "https://app.cluber.es/clubes/6a298cd45d19c937959488/inscripcion",
   "formularioProveedor": "Cluber",
   "formularioNota": "La preinscripción es para todas las categorías.",
+  "verificado": true,
   "fechaActualizacion": "2026-08-23"
  },
  {
@@ -1143,6 +1156,7 @@
   "descripcion": "Club de pequeña localidad al norte de Madrid fundado hace 4 años.",
   "colorFondo": "#f12b67",
   "colorAcento": "#000000",
+  "verificado": true,
   "fechaActualizacion": "2026-08-27"
  },
  {
@@ -1158,6 +1172,7 @@
   "descripcion": "Colegio de Madrid con 12 equipos femeninos de voleibol. Cada vez, creciendo más.",
   "colorFondo": "#d33535",
   "colorAcento": "#ffffff",
+  "verificado": true,
   "fechaActualizacion": "2026-08-28"
  },
  {
@@ -1178,6 +1193,7 @@
   "descripcion": "Escuela deportiva de fútbol y voleibol en Madrid, con siete equipos repartidos en cinco categorías de base. Sus equipos de voleibol compiten en la liga municipal del distrito de Chamartín.",
   "colorFondo": "#ae0f23",
   "colorAcento": "#202d41",
+  "verificado": true,
   "fechaActualizacion": "2026-09-02"
  },
  {
@@ -1217,6 +1233,7 @@
   "descripcion": "¡SOMOS VOLEY SMV! Un club que nace con un objetivo claro: hacer crecer el voleibol y crear una gran familia alrededor del deporte. Somos ilusión, esfuerzo, compañerismo y ganas de aprender. Aquí no solo enseñamos a jugar al voleibol: enseñamos a crecer, a confiar, a trabajar en equipo y a disfrutar del camino.",
   "colorFondo": "#b6d806",
   "colorAcento": "#ffffff",
+  "verificado": true,
   "fechaActualizacion": "2026-09-05"
  }
 ]

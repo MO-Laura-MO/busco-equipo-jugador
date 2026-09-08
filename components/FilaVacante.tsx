@@ -41,7 +41,7 @@ export default function FilaVacante({
   const compensacion = etiquetaCompensacion(v.compensacion);
   const diasHorario = [v.dias, v.horario].filter(Boolean).join(" · ");
   const zona = ZONAS.find((z) => z.valor === club.zona)?.etiqueta.toLowerCase() ?? club.zona;
-  const logoClub = club.logo && v.origen === "club" ? club.logo : undefined;
+  const logoClub = club.logo && club.verificado === true ? club.logo : undefined;
 
   const equipo = [
     v.categoria
@@ -70,7 +70,7 @@ export default function FilaVacante({
       <div className="min-w-0 flex-1">
         <h3 className="flex items-center gap-[5px] text-[15px] font-medium leading-snug text-tinta">
           <span className="truncate">{club.nombre}</span>
-          {v.origen === "club" && <InsigniaVerificado />}
+          {club.verificado === true && <InsigniaVerificado />}
         </h3>
         {equipo && (
           <p className="mt-[2px] text-[13.5px] leading-snug text-tinta-2">{equipo}</p>
@@ -144,7 +144,7 @@ export default function FilaVacante({
           <p className="mt-[6px] text-[12.5px] leading-relaxed text-tinta-2">{v.notas}</p>
         )}
         <div className="mt-[7px] flex flex-wrap gap-[6px]">
-          {v.origen === "club" && <EtiquetaEstado estado="verificado" />}
+          {club.verificado === true && <EtiquetaEstado estado="verificado" />}
           {v.tipoEntidad.map((t) => (
             <EtiquetaEstado key={t} estado={t} />
           ))}

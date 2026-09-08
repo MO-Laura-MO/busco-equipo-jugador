@@ -190,7 +190,8 @@ export default async function VoleibolEnZona({
                     convocatoria={c}
                     nombreClub={club.nombre}
                     municipio={club.municipio}
-                    logoClub={club.logo && c.origen === "club" ? club.logo : undefined}
+                    logoClub={club.logo && club.verificado === true ? club.logo : undefined}
+                    verificado={club.verificado === true}
                   />
                 </li>
               );

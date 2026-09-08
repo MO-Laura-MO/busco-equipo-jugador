@@ -10,10 +10,8 @@ import {
   TIPOS_ENTIDAD,
   ZONAS,
   clubesConAmistosos,
-  convocatorias,
   etiquetaCategoria,
   iniciales,
-  vacantes,
 } from "@/lib/datos";
 import { EMAIL_CORRECCIONES, URL_FORMULARIO_AMISTOSOS } from "@/lib/config";
 
@@ -104,10 +102,7 @@ export default function Amistosos() {
           </h2>
           <ul>
             {grupos.map(({ club, equipos: equiposClub }) => {
-              const verificado =
-                club.verificado === true ||
-                convocatorias.some((c) => c.clubId === club.id && c.origen === "club") ||
-                vacantes.some((v) => v.clubId === club.id && v.origen === "club");
+              const verificado = club.verificado === true;
 
               const porSexo = new Map<Sexo, Categoria[]>();
               for (const eq of equiposClub) {

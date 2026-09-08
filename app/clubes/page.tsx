@@ -17,14 +17,11 @@ export default function Clubes() {
     .sort((a, b) => a.nombre.localeCompare(b.nombre, "es"))
     .map((c) => {
       const suyas = convocatorias.filter((x) => x.clubId === c.id);
-      // Mismo criterio que la ficha: el club está verificado si lo ha
-      // confirmado explícitamente (campo `verificado`) o si al menos una
-      // convocatoria o vacante suya viene de origen "club". El escudo, igual
-      // que los colores, solo se enseña si lo está.
-      const verificado =
-        c.verificado === true ||
-        suyas.some((x) => x.origen === "club") ||
-        vacantes.some((v) => v.clubId === c.id && v.origen === "club");
+      // El perfil verificado es un dato del club (campo `verificado`), no
+      // algo que se deduzca de sus convocatorias o vacantes: si no, un club
+      // verificado se "desverifica" solo en cuanto se queda sin nada
+      // publicado. El escudo y los colores solo se enseñan si lo está.
+      const verificado = c.verificado === true;
       const colores = coloresClub(c, verificado);
       return {
         ...c,

@@ -8,6 +8,7 @@ import {
   etiquetasConvocatoria,
   partesFecha,
   textoAnios,
+  tipoFechaEfectivo,
 } from "@/lib/datos";
 import EtiquetaEstado from "./EtiquetaEstado";
 import InsigniaVerificado from "./InsigniaVerificado";
@@ -18,14 +19,17 @@ interface Props {
   municipio: string;
   /** Ruta del escudo del club, solo si lo ha mandado él. Sin escudo, no se pinta nada. */
   logoClub?: string;
+  /** Perfil verificado del club: da el escudo y el tic, nunca la convocatoria. */
+  verificado?: boolean;
   /** Si es false, la fila no enlaza a la ficha (se usa dentro de la propia ficha). */
   enlazar?: boolean;
 }
 
 function ColumnaFecha({ c }: { c: Convocatoria }) {
   const { diaSemana, dia, mes } = partesFecha(c);
+  const tipo = tipoFechaEfectivo(c);
 
-  if (c.tipoFecha === "abierta") {
+  if (tipo === "abierta") {
     return (
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
         <RefreshCw size={17} className="mt-[10px] text-acento" strokeWidth={1.75} />
@@ -33,7 +37,7 @@ function ColumnaFecha({ c }: { c: Convocatoria }) {
     );
   }
 
-  if (c.tipoFecha === "desde") {
+  if (tipo === "desde") {
     return (
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
         <span className="text-[11px] uppercase leading-[1.4] text-tinta-3">desde</span>
@@ -43,7 +47,7 @@ function ColumnaFecha({ c }: { c: Convocatoria }) {
     );
   }
 
-  if (c.tipoFecha === "mes") {
+  if (tipo === "mes") {
     return (
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
         <span className="text-[11px] uppercase leading-[1.4] text-tinta-3">{mes}</span>
@@ -52,7 +56,7 @@ function ColumnaFecha({ c }: { c: Convocatoria }) {
     );
   }
 
-  if (c.tipoFecha === "por-confirmar") {
+  if (tipo === "por-confirmar") {
     return (
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
         <CalendarClock size={17} className="mt-[10px] text-tinta-3" strokeWidth={1.75} />
@@ -74,9 +78,10 @@ export default function FilaConvocatoria({
   nombreClub,
   municipio,
   logoClub,
+  verificado = false,
   enlazar = true,
 }: Props) {
-  const etiquetas = etiquetasConvocatoria(c).filter((e) => e !== "verificado");
+  const etiquetas = etiquetasConvocatoria(c);
   const anios = textoAnios(c);
   const linea2 = [
     `${etiquetaCategoria(c.categoria)} ${etiquetaSexo(c.sexo).toLowerCase()}`,
@@ -102,7 +107,7 @@ export default function FilaConvocatoria({
             />
           )}
           <span className="truncate">{nombreClub}</span>
-          {c.origen === "club" && <InsigniaVerificado />}
+          {verificado && <InsigniaVerificado />}
         </h3>
         <p className="mt-[2px] text-[13.5px] leading-snug text-tinta-2">{linea2}</p>
         {anios && (

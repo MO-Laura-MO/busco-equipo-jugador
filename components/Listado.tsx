@@ -315,7 +315,8 @@ export default function Listado({ clubes, convocatorias }: Props) {
                   convocatoria={c}
                   nombreClub={club.nombre}
                   municipio={club.municipio}
-                  logoClub={club.logo && c.origen === "club" ? club.logo : undefined}
+                  logoClub={club.logo && club.verificado === true ? club.logo : undefined}
+                  verificado={club.verificado === true}
                 />
               </li>
             );

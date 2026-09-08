@@ -41,6 +41,7 @@ import {
   slug,
   textoAnios,
   textoDesde,
+  tipoFechaEfectivo,
   vacantesDeClub,
 } from "@/lib/datos";
 import { EMAIL_CORRECCIONES, URL_SITIO } from "@/lib/config";
@@ -88,14 +89,15 @@ const NOMBRE_RED: Record<TipoRed, string> = {
 
 function FechaConvocatoria({ c }: { c: Convocatoria }) {
   const { diaSemana, dia, mes } = partesFecha(c);
-  if (c.tipoFecha === "abierta") {
+  const tipo = tipoFechaEfectivo(c);
+  if (tipo === "abierta") {
     return (
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
         <RefreshCw size={17} className="mt-[8px] text-acento" strokeWidth={1.75} />
       </div>
     );
   }
-  if (c.tipoFecha === "desde") {
+  if (tipo === "desde") {
     return (
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
         <span className="text-[11px] uppercase leading-[1.4] text-tinta-3">desde</span>
@@ -105,7 +107,7 @@ function FechaConvocatoria({ c }: { c: Convocatoria }) {
     );
   }
 
-  if (c.tipoFecha === "mes") {
+  if (tipo === "mes") {
     return (
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
         <span className="text-[11px] uppercase leading-[1.4] text-tinta-3">{mes}</span>
@@ -114,7 +116,7 @@ function FechaConvocatoria({ c }: { c: Convocatoria }) {
     );
   }
 
-  if (c.tipoFecha === "por-confirmar") {
+  if (tipo === "por-confirmar") {
     return (
       <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
         <CalendarClock size={17} className="mt-[8px] text-tinta-3" strokeWidth={1.75} />
@@ -143,17 +145,14 @@ export default async function FichaClub({
   const vacantes = vacantesDeClub(club.id);
   const zona = ZONAS.find((z) => z.valor === club.zona)?.etiqueta ?? club.zona;
   const tieneMunicipioPagina = municipiosConPagina().includes(club.municipio);
-  // El perfil está verificado si el club lo ha confirmado explícitamente
-  // (campo `verificado`, para cuando no tiene ninguna convocatoria ni vacante
-  // publicada) o si al menos una convocatoria o vacante suya viene de origen "club".
-  const perfilVerificado =
-    club.verificado === true ||
-    lista.some((c) => c.origen === "club") ||
-    vacantes.some((v) => v.origen === "club");
+  // El perfil verificado es un dato del club, no algo que se deduzca de sus
+  // convocatorias o vacantes: si no, un club verificado se "desverifica" solo
+  // en cuanto se queda sin nada publicado.
+  const perfilVerificado = club.verificado === true;
   const colores = coloresClub(club, perfilVerificado);
 
   const eventosJsonLd = lista
-    .filter((c) => c.tipoFecha === "exacta" && c.fecha)
+    .filter((c) => tipoFechaEfectivo(c) === "exacta" && c.fecha)
     .map((c) => ({
       "@context": "https://schema.org",
       "@type": "Event",
@@ -395,7 +394,7 @@ export default async function FichaClub({
           </p>
         )}
         {lista.map((c, i) => {
-          const etiquetas = etiquetasConvocatoria(c).filter((e) => e !== "verificado");
+          const etiquetas = etiquetasConvocatoria(c);
           const anios = textoAnios(c);
           const linea = [
             `${etiquetaCategoria(c.categoria)} ${etiquetaSexo(c.sexo).toLowerCase()}`,
@@ -413,7 +412,7 @@ export default async function FichaClub({
                 <div className="min-w-0 flex-1">
                   <h3 className="flex items-center gap-[5px] text-[15px] font-medium leading-snug text-tinta">
                     <span>{linea}</span>
-                    {c.origen === "club" && <InsigniaVerificado />}
+                    {perfilVerificado && <InsigniaVerificado />}
                   </h3>
                   {anios && (
                     <p className="mt-[2px] text-[12.5px] leading-snug text-tinta-2">
