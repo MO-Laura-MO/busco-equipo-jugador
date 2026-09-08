@@ -20,8 +20,6 @@ export const metadata: Metadata = {
   description:
     "Clubes de voleibol de Madrid que buscan jugar partidos amistosos con otros clubes.",
   alternates: { canonical: "/amistosos" },
-  // Con solo dos clubes todavía no hay masa mínima, no la indexamos.
-  robots: { index: false },
 };
 
 const PUNTOS = [
