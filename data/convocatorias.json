@@ -2781,6 +2781,52 @@
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-09-05"
  },
+ {
+  "clubId": "cv-sanse",
+  "categoria": "alevin",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-09-09"
+ },
+ {
+  "clubId": "cv-sanse",
+  "categoria": "juvenil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "nivel": "Primera división autonómica",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan un colocador, abiertos también a otros puestos. El equipo es subcampeón de Madrid las tres últimas temporadas.",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-09-09"
+ },
 
  {
   "clubId": "cd-voleibol-smv",
