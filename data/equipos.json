@@ -318,5 +318,149 @@
   "notas": "Buscan rivales de la zona sur de Madrid.",
   "origen": "club",
   "fechaActualizacion": "2026-09-05"
+ },
+ {
+  "clubId": "cv-alcala",
+  "categoria": "alevin",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "liga": "",
+  "amistosos": "solo-recibe",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "Fin de semana del 19 y 20 de septiembre",
+  "meses": "",
+  "contactoAmistosos": "dirdeportivacvalcala@gmail.com",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-09"
+ },
+ {
+  "clubId": "cv-alcala",
+  "categoria": "infantil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "liga": "",
+  "amistosos": "solo-recibe",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "Fin de semana del 19 y 20 de septiembre",
+  "meses": "",
+  "contactoAmistosos": "dirdeportivacvalcala@gmail.com",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-09"
+ },
+ {
+  "clubId": "cv-alcala",
+  "categoria": "cadete",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "liga": "",
+  "amistosos": "solo-recibe",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "Fin de semana del 19 y 20 de septiembre",
+  "meses": "",
+  "contactoAmistosos": "dirdeportivacvalcala@gmail.com",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-09"
+ },
+ {
+  "clubId": "cv-alcala",
+  "categoria": "juvenil",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "liga": "",
+  "amistosos": "solo-recibe",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "Fin de semana del 19 y 20 de septiembre",
+  "meses": "",
+  "contactoAmistosos": "dirdeportivacvalcala@gmail.com",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-09"
+ },
+ {
+  "clubId": "cv-alcala",
+  "categoria": "junior",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "liga": "",
+  "amistosos": "solo-recibe",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "Fin de semana del 19 y 20 de septiembre",
+  "meses": "",
+  "contactoAmistosos": "dirdeportivacvalcala@gmail.com",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-09"
+ },
+ {
+  "clubId": "cv-alcala",
+  "categoria": "infantil",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "liga": "",
+  "amistosos": "solo-recibe",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "Fin de semana del 19 y 20 de septiembre",
+  "meses": "",
+  "contactoAmistosos": "dirdeportivacvalcala@gmail.com",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-09"
+ },
+ {
+  "clubId": "cv-alcala",
+  "categoria": "cadete",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "liga": "",
+  "amistosos": "solo-recibe",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "Fin de semana del 19 y 20 de septiembre",
+  "meses": "",
+  "contactoAmistosos": "dirdeportivacvalcala@gmail.com",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-09"
+ },
+ {
+  "clubId": "cv-alcala",
+  "categoria": "juvenil",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "federado"
+  ],
+  "liga": "",
+  "amistosos": "solo-recibe",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "Fin de semana del 19 y 20 de septiembre",
+  "meses": "",
+  "contactoAmistosos": "dirdeportivacvalcala@gmail.com",
+  "notas": "",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-09"
  }
 ]

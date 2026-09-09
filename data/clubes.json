@@ -668,11 +668,15 @@
   "colorFondo": "#56b5e1",
   "colorAcento": "#ffffff",
   "verificado": true,
-  "fechaActualizacion": "2026-08-18",
+  "fechaActualizacion": "2026-09-09",
   "emailsExtra": [
    {
     "etiqueta": "Escuelas",
     "email": "escuelas@cvoleibolalcala.com"
+   },
+   {
+    "etiqueta": "Amistosos",
+    "email": "dirdeportivacvalcala@gmail.com"
    }
   ]
  },
