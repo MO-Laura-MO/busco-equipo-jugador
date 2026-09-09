@@ -3227,10 +3227,8 @@
  {
   "clubId": "spartan-voley",
   "categoria": "senior",
-  "sexo": "femenino",
-  "tipoEntidad": [
-   "municipal"
-  ],
+  "sexo": "mixto",
+  "tipoEntidad": [],
   "nivel": "",
   "temporada": "2026-27",
   "tipoFecha": "mes",
@@ -3242,8 +3240,8 @@
   "direccion": "",
   "mapsUrl": "",
   "avisoPrevio": true,
-  "cuotaOrientativa": "",
-  "notas": "Buscan dos puntas receptoras, o una punta y una central, de nivel medio, para su equipo sénior mixto; plazas abiertas hasta cubrirse. El pabellón se indica al contactar por teléfono.",
+  "cuotaOrientativa": "770 € la temporada",
+  "notas": "Buscan preferiblemente dos chicas para el equipo: dos puntas receptoras, o una punta y una central, de nivel medio; plazas abiertas hasta cubrirse. El pabellón se indica al contactar por teléfono.",
   "origen": "club",
   "fechaActualizacion": "2026-09-09"
  },
@@ -3251,10 +3249,8 @@
   "clubId": "spartan-voley",
   "categoria": "senior",
   "sexo": "mixto",
-  "tipoEntidad": [
-   "municipal"
-  ],
-  "nivel": "",
+  "tipoEntidad": [],
+  "nivel": "Solo entrenamientos",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
   "fecha": "",
@@ -3265,8 +3261,8 @@
   "direccion": "",
   "mapsUrl": "",
   "avisoPrevio": true,
-  "cuotaOrientativa": "",
-  "notas": "Dos plazas solo de entrenamiento, una para jugador y otra para jugadora: participan en todos los entrenamientos pero no en los partidos de liga, con un 40% de descuento en la cuota.",
+  "cuotaOrientativa": "470 € la temporada",
+  "notas": "Dos plazas solo de entrenamiento, una para jugador y otra para jugadora: participan en todos los entrenamientos pero no en los partidos de liga.",
   "origen": "club",
   "fechaActualizacion": "2026-09-09"
  }
