@@ -3223,5 +3223,51 @@
   "notas": "",
   "origen": "club",
   "fechaActualizacion": "2026-09-05"
+ },
+ {
+  "clubId": "spartan-voley",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "mes",
+  "fecha": "",
+  "mesAprox": "2026-09",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan dos puntas receptoras, o una punta y una central, de nivel medio, para su equipo sénior mixto; plazas abiertas hasta cubrirse. El pabellón se indica al contactar por teléfono.",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-09"
+ },
+ {
+  "clubId": "spartan-voley",
+  "categoria": "senior",
+  "sexo": "mixto",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Dos plazas solo de entrenamiento, una para jugador y otra para jugadora: participan en todos los entrenamientos pero no en los partidos de liga, con un 40% de descuento en la cuota.",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-09"
  }
 ]

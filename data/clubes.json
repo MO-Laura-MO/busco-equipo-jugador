@@ -1235,5 +1235,26 @@
   "colorAcento": "#ffffff",
   "verificado": true,
   "fechaActualizacion": "2026-09-05"
+ },
+ {
+  "id": "spartan-voley",
+  "nombre": "Spartan Voley",
+  "municipio": "Madrid",
+  "zona": "centro",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "youtube",
+    "url": "https://youtube.com/@spartanvolei"
+   }
+  ],
+  "email": "jorge-martinez-s@hotmail.com",
+  "telefono": "+34 619 80 47 29",
+  "logo": "/clubes/spartan-voley.png",
+  "descripcion": "Somos un equipo mixto organizado por los propios jugadores. Nos conocimos en los últimos 2 años y lo que queremos es un buen ambiente pero que tambien se compita.",
+  "colorFondo": "#000000",
+  "colorAcento": "#701080",
+  "verificado": true,
+  "fechaActualizacion": "2026-09-09"
  }
 ]
