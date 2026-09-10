@@ -580,9 +580,12 @@
   ],
   "email": "clubvoleibolaranjuez@gmail.com",
   "telefono": "+34 625 12 33 61",
-  "logo": "",
+  "logo": "/clubes/cv-aranjuez.png",
   "descripcion": "",
-  "fechaActualizacion": "2026-09-02"
+  "colorFondo": "#b01020",
+  "colorAcento": "#000000",
+  "verificado": true,
+  "fechaActualizacion": "2026-09-10"
  },
  {
   "id": "club-voleibol-madrid-ciudad",
