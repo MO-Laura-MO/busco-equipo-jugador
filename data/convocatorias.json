@@ -2988,8 +2988,8 @@
   "clubId": "spartan-voley",
   "categoria": "senior",
   "sexo": "mixto",
-  "tipoEntidad": [],
-  "nivel": "",
+  "tipoEntidad": ["privada"],
+  "nivel": "Liga Madrid Voleibol",
   "temporada": "2026-27",
   "tipoFecha": "mes",
   "fecha": "",
@@ -3003,13 +3003,13 @@
   "cuotaOrientativa": "770 € la temporada",
   "notas": "Buscan preferiblemente dos chicas para el equipo: dos puntas receptoras, o una punta y una central, de nivel medio; plazas abiertas hasta cubrirse. El pabellón se indica al contactar por teléfono.",
   "origen": "club",
-  "fechaActualizacion": "2026-09-09"
+  "fechaActualizacion": "2026-09-11"
  },
  {
   "clubId": "spartan-voley",
   "categoria": "senior",
   "sexo": "mixto",
-  "tipoEntidad": [],
+  "tipoEntidad": ["privada"],
   "nivel": "Solo entrenamientos",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
@@ -3024,6 +3024,6 @@
   "cuotaOrientativa": "470 € la temporada",
   "notas": "Dos plazas solo de entrenamiento, una para jugador y otra para jugadora: participan en todos los entrenamientos pero no en los partidos de liga.",
   "origen": "club",
-  "fechaActualizacion": "2026-09-09"
+  "fechaActualizacion": "2026-09-11"
  }
 ]

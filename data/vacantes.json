@@ -410,7 +410,7 @@
   "puesto": "entrenador",
   "categoria": "senior",
   "sexo": "femenino",
-  "tipoEntidad": [],
+  "tipoEntidad": ["privada"],
   "nivel": "Liga Voleibol Centro Madrid",
   "titulacion": "",
   "requisitos": "",
@@ -421,6 +421,6 @@
   "incorporacion": "",
   "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-09-01"
+  "fechaActualizacion": "2026-09-11"
  }
 ]

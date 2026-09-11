@@ -30,7 +30,7 @@ export type Origen = "club" | "fuentes-publicas";
  * de una liga: hay clubes con equipos federados y municipales en la misma
  * categoría, y una sola prueba sirve para las dos.
  */
-export type TipoEntidad = "federado" | "mancomunada" | "municipal" | "escuela";
+export type TipoEntidad = "federado" | "mancomunada" | "municipal" | "escuela" | "privada";
 export type TipoRed = "instagram" | "tiktok" | "facebook" | "youtube" | "x" | "otra";
 
 export interface Club {
@@ -450,6 +450,7 @@ export const TIPOS_ENTIDAD: { valor: TipoEntidad; etiqueta: string }[] = [
   { valor: "mancomunada", etiqueta: "Liga mancomunada" },
   { valor: "municipal", etiqueta: "Liga municipal" },
   { valor: "escuela", etiqueta: "Escuela" },
+  { valor: "privada", etiqueta: "Liga privada" },
 ];
 
 export function etiquetaTipoEntidad(t: TipoEntidad): string {
@@ -560,6 +561,7 @@ export type Estado =
   | "mancomunada"
   | "municipal"
   | "escuela"
+  | "privada"
   | "provisional"
   | "por-confirmar"
   | "fecha-por-confirmar"

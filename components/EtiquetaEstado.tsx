@@ -21,6 +21,10 @@ const ESTILOS: Record<Exclude<Estado, null>, { texto: string; clases: string }> 
     texto: "Escuela",
     clases: "bg-gris-tinte text-gris-etiqueta",
   },
+  privada: {
+    texto: "Liga privada",
+    clases: "bg-gris-tinte text-gris-etiqueta",
+  },
   provisional: {
     texto: "Fecha provisional",
     clases: "bg-ambar-tinte text-ambar",
