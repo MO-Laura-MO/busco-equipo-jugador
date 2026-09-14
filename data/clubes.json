@@ -1263,5 +1263,30 @@
   "colorAcento": "#701080",
   "verificado": true,
   "fechaActualizacion": "2026-09-11"
+ },
+ {
+  "id": "villa-de-aranjuez",
+  "nombre": "Villa de Aranjuez",
+  "municipio": "Aranjuez",
+  "zona": "sur",
+  "web": "",
+  "redes": [
+   {
+    "tipo": "instagram",
+    "url": "https://www.instagram.com/cdvillaaranjuez"
+   },
+   {
+    "tipo": "facebook",
+    "url": "https://www.facebook.com/clubdeportivovilladearanjuez"
+   }
+  ],
+  "email": "velasquez.cristhian@gmail.com",
+  "telefono": "+34 670 37 16 56",
+  "logo": "/clubes/villa-de-aranjuez.png",
+  "descripcion": "Club deportivo de la localidad de aranjuez motivando desde los más pequeños y aportando deporte de calidad a la comunidad. Tenemos puertas abiertas todo el año podeis ponernos en contacto con nosotros.",
+  "colorFondo": "#f0c040",
+  "colorAcento": "#304060",
+  "verificado": true,
+  "fechaActualizacion": "2026-09-12"
  }
 ]
