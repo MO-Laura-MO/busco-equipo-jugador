@@ -21,7 +21,7 @@ const faqJsonLd = {
       name: "¿Cuándo es el próximo curso de entrenador de voleibol en Madrid?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La Federación de Madrid de Voleibol ha convocado el curso de Técnico de Competición de Nivel I del 13 al 24 de octubre de 2026, con inscripción abierta hasta el 7 de octubre a las 12:00.",
+        text: "La Federación de Madrid de Voleibol ha convocado el curso de Técnico de Competición de Nivel I del 13 al 24 de octubre de 2026, con inscripción abierta hasta el 7 de octubre.",
       },
     },
     {
@@ -29,7 +29,7 @@ const faqJsonLd = {
       name: "¿Cuánto cuesta el curso de entrenador de voleibol de nivel 1 en Madrid?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "210 euros la tarifa general, 189 euros para titulados en TSEAS o TAFAD y 55 euros la asignatura suelta.",
+        text: "210 euros la tarifa general, 189 euros para titulados en TSEAS o TAFAD, 105 euros si ya estás autorizado en un club federado y 55 euros la asignatura suelta.",
       },
     },
     {
@@ -70,7 +70,7 @@ export default function Pagina() {
           en la que la hemos comprobado.
         </p>
         <p>
-          <strong>Actualizado el 17 de agosto de 2026.</strong>
+          <strong>Actualizado el 16 de septiembre de 2026.</strong>
         </p>
 
         <h2>Convocatoria abierta: nivel 1, octubre de 2026</h2>
@@ -90,7 +90,7 @@ export default function Pagina() {
             <strong>Fechas:</strong> del 13 al 24 de octubre de 2026.
           </li>
           <li>
-            <strong>Inscripción:</strong> hasta el 7 de octubre a las 12:00.
+            <strong>Inscripción:</strong> hasta el 7 de octubre de 2026.
           </li>
           <li>
             <strong>Formato:</strong> teoría por videoconferencia en directo
@@ -105,7 +105,8 @@ export default function Pagina() {
           </li>
           <li>
             <strong>Precio:</strong> 210 € general, 189 € con TSEAS o TAFAD,
-            55 € la asignatura suelta.
+            105 € si ya estás autorizado en un club federado, y 55 € la
+            asignatura suelta.
           </li>
           <li>
             <strong>Requisitos:</strong> cumplir 16 años durante 2026. No hace
@@ -171,10 +172,19 @@ export default function Pagina() {
         <h2>Antes de matricularte</h2>
         <p>
           Antes de matricularte, una cosa que ahorra disgustos: el curso no
-          te da el título definitivo, sino el provisional. El definitivo
-          llega tras una temporada de prácticas con un equipo federado, así
-          que conviene{" "}
+          te da el título definitivo, sino el provisional. Para el definitivo
+          vale una temporada completa en un equipo federado, o una temporada
+          en un equipo no federado más un trimestre en uno federado; si
+          vienes de TSEyAS o TAFAD, tiene que ser la temporada completa en
+          federado. El definitivo llega tras una temporada de prácticas con
+          un equipo federado, así que conviene{" "}
           <Link href="/entrenadores">tener club antes de empezar</Link>.
+          ¿Y si lo que quieres es estar en la cancha sin dirigir un equipo?
+          Están las otras dos vías:{" "}
+          <Link href="/blog/como-ser-arbitro-de-voleibol-madrid">
+            árbitro y anotador
+          </Link>
+          .
         </p>
       </Articulo>
     </>
