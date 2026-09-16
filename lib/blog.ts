@@ -30,6 +30,15 @@ export interface Articulo {
 
 export const ARTICULOS: Articulo[] = [
   {
+    slug: "como-ser-arbitro-de-voleibol-madrid",
+    titulo: "Cómo ser árbitro o anotador de voleibol en Madrid",
+    descripcion:
+      "Los dos cursos de la Federación de Madrid para estar en la cancha sin entrenar: qué cuestan, cuánto duran, qué piden y hasta qué competición te habilita cada uno.",
+    fecha: "2026-09-16",
+    publico: ["entrenadores"],
+    minutos: 4,
+  },
+  {
     slug: "como-ser-entrenador-de-voleibol-madrid",
     titulo:
       "Cómo ser entrenador de voleibol federado en Madrid: titulación, cursos y por dónde se empieza",
