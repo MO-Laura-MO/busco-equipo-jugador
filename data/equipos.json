@@ -462,5 +462,78 @@
   "notas": "",
   "origen": "club",
   "fechaActualizacion": "2026-09-09"
+ },
+ {
+  "clubId": "ad-perales-del-rio",
+  "categoria": "benjamin",
+  "sexo": "mixto",
+  "tipoEntidad": [
+   "escuela"
+  ],
+  "liga": "",
+  "amistosos": "solo-visita",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "",
+  "meses": "",
+  "contactoAmistosos": "digital@adperales.es",
+  "notas": "Se desplazan preferentemente por la zona sur: Getafe, Vallecas, Leganés, Vicálvaro, Villaverde, Pinto o Aluche.",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-21"
+ },
+ {
+  "clubId": "ad-perales-del-rio",
+  "categoria": "alevin",
+  "sexo": "mixto",
+  "tipoEntidad": [
+   "municipal",
+   "escuela"
+  ],
+  "liga": "",
+  "amistosos": "solo-visita",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "",
+  "meses": "",
+  "contactoAmistosos": "digital@adperales.es",
+  "notas": "Se desplazan preferentemente por la zona sur: Getafe, Vallecas, Leganés, Vicálvaro, Villaverde, Pinto o Aluche.",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-21"
+ },
+ {
+  "clubId": "ad-perales-del-rio",
+  "categoria": "infantil",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "liga": "",
+  "amistosos": "solo-visita",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "",
+  "meses": "",
+  "contactoAmistosos": "digital@adperales.es",
+  "notas": "Se desplazan preferentemente por la zona sur: Getafe, Vallecas, Leganés, Vicálvaro, Villaverde, Pinto o Aluche.",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-21"
+ },
+ {
+  "clubId": "ad-perales-del-rio",
+  "categoria": "juvenil",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "liga": "",
+  "amistosos": "solo-visita",
+  "pabellon": "",
+  "municipioPabellon": "",
+  "disponibilidad": "",
+  "meses": "",
+  "contactoAmistosos": "digital@adperales.es",
+  "notas": "Se desplazan preferentemente por la zona sur: Getafe, Vallecas, Leganés, Vicálvaro, Villaverde, Pinto o Aluche.",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-21"
  }
 ]

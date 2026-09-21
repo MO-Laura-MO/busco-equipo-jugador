@@ -24,7 +24,13 @@
   "formularioUrl": "https://adperales.es",
   "formularioNota": "Para las pruebas de los equipos federados hay que rellenar en su web el formulario «Solicitud de pruebas para equipos federados». El club se pone en contacto para concertar la prueba.",
   "verificado": true,
-  "fechaActualizacion": "2026-09-21"
+  "fechaActualizacion": "2026-09-21",
+  "emailsExtra": [
+   {
+    "etiqueta": "Amistosos",
+    "email": "digital@adperales.es"
+   }
+  ]
  },
  {
   "id": "ad-voleibol-rivas",
