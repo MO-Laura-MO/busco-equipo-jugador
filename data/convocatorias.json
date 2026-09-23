@@ -50,53 +50,7 @@
  {
   "clubId": "cv-alcala",
   "categoria": "alevin",
-  "sexo": "femenino",
-  "tipoEntidad": [
-   "federado"
-  ],
-  "nivel": "",
-  "temporada": "2026-27",
-  "tipoFecha": "por-confirmar",
-  "fecha": "",
-  "mesAprox": "",
-  "estadoFecha": "confirmada",
-  "hora": "",
-  "pabellon": "",
-  "direccion": "",
-  "mapsUrl": "",
-  "avisoPrevio": true,
-  "cuotaOrientativa": "",
-  "notas": "Contacta con el club por WhatsApp. El teléfono está en el apartado de contacto.",
-  "origen": "club",
-  "fechaActualizacion": "2026-08-18"
- },
- {
-  "clubId": "cv-alcala",
-  "categoria": "alevin",
   "sexo": "masculino",
-  "tipoEntidad": [
-   "federado"
-  ],
-  "nivel": "",
-  "temporada": "2026-27",
-  "tipoFecha": "por-confirmar",
-  "fecha": "",
-  "mesAprox": "",
-  "estadoFecha": "confirmada",
-  "hora": "",
-  "pabellon": "",
-  "direccion": "",
-  "mapsUrl": "",
-  "avisoPrevio": true,
-  "cuotaOrientativa": "",
-  "notas": "Contacta con el club por WhatsApp. El teléfono está en el apartado de contacto.",
-  "origen": "club",
-  "fechaActualizacion": "2026-08-18"
- },
- {
-  "clubId": "cv-alcala",
-  "categoria": "infantil",
-  "sexo": "femenino",
   "tipoEntidad": [
    "federado"
   ],
