@@ -3281,5 +3281,28 @@
   "notas": "",
   "origen": "club",
   "fechaActualizacion": "2026-09-12"
+ },
+ {
+  "clubId": "sad-colegio-claret",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "privada"
+  ],
+  "nivel": "Liga Voleibol Centro Madrid (Plata)",
+  "temporada": "2026-27",
+  "tipoFecha": "exacta",
+  "fecha": "2026-09-24",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "22:00",
+  "pabellon": "Colegio Claret",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Aceptan también jugadoras júnior; entrenan lunes y jueves de 22:00 a 23:20. La inscripción es por el formulario (en Contacto).",
+  "origen": "club",
+  "fechaActualizacion": "2026-09-23"
  }
 ]
