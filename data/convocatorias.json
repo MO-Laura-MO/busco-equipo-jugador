@@ -765,9 +765,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Segunda sesión de puertas abiertas el jueves 3 de septiembre, de 20:00 a 22:00.",
+  "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-23"
+  "fechaActualizacion": "2026-09-23"
  },
  {
   "clubId": "wonders-club-deportivo",
@@ -788,9 +788,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Segunda sesión de puertas abiertas el jueves 3 de septiembre, de 20:00 a 22:00.",
+  "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-23"
+  "fechaActualizacion": "2026-09-23"
  },
  {
   "clubId": "wonders-club-deportivo",
@@ -811,9 +811,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Segunda sesión de puertas abiertas el jueves 3 de septiembre, de 20:00 a 22:00.",
+  "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-23"
+  "fechaActualizacion": "2026-09-23"
  },
  {
   "clubId": "wonders-club-deportivo",
@@ -834,9 +834,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Segunda sesión de puertas abiertas el jueves 3 de septiembre, de 20:00 a 22:00.",
+  "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-23"
+  "fechaActualizacion": "2026-09-23"
  },
  {
   "clubId": "wonders-club-deportivo",
@@ -857,9 +857,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Segunda sesión de puertas abiertas el jueves 3 de septiembre, de 20:00 a 22:00.",
+  "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-23"
+  "fechaActualizacion": "2026-09-23"
  },
  {
   "clubId": "wonders-club-deportivo",
@@ -870,19 +870,19 @@
   ],
   "nivel": "",
   "temporada": "2026-27",
-  "tipoFecha": "desde",
-  "fecha": "2026-09-01",
+  "tipoFecha": "exacta",
+  "fecha": "2026-09-24",
   "mesAprox": "",
   "estadoFecha": "confirmada",
-  "hora": "19:00",
-  "pabellon": "CDM Orcasur",
-  "direccion": "Calle Moreja 11, Madrid",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Segunda sesión de puertas abiertas el jueves 3 de septiembre, de 20:00 a 22:00.",
+  "notas": "Puertas abiertas los martes y jueves de 17:00 a 18:30, hasta el 1 de octubre. El club estrena sede en Moraleja de Enmedio; confirma el lugar al contactar.",
   "origen": "club",
-  "fechaActualizacion": "2026-08-23"
+  "fechaActualizacion": "2026-09-23"
  },
  {
   "clubId": "wonders-club-deportivo",
@@ -893,19 +893,19 @@
   ],
   "nivel": "",
   "temporada": "2026-27",
-  "tipoFecha": "desde",
-  "fecha": "2026-09-01",
+  "tipoFecha": "exacta",
+  "fecha": "2026-09-24",
   "mesAprox": "",
   "estadoFecha": "confirmada",
-  "hora": "19:00",
-  "pabellon": "CDM Orcasur",
-  "direccion": "Calle Moreja 11, Madrid",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Segunda sesión de puertas abiertas el jueves 3 de septiembre, de 20:00 a 22:00.",
+  "notas": "Puertas abiertas los martes y jueves de 17:00 a 18:30, hasta el 1 de octubre. El club estrena sede en Moraleja de Enmedio; confirma el lugar al contactar.",
   "origen": "club",
-  "fechaActualizacion": "2026-08-23"
+  "fechaActualizacion": "2026-09-23"
  },
  {
   "clubId": "wonders-club-deportivo",
@@ -916,19 +916,19 @@
   ],
   "nivel": "",
   "temporada": "2026-27",
-  "tipoFecha": "desde",
-  "fecha": "2026-09-01",
+  "tipoFecha": "exacta",
+  "fecha": "2026-09-24",
   "mesAprox": "",
   "estadoFecha": "confirmada",
-  "hora": "19:00",
-  "pabellon": "CDM Orcasur",
-  "direccion": "Calle Moreja 11, Madrid",
+  "hora": "",
+  "pabellon": "",
+  "direccion": "",
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Segunda sesión de puertas abiertas el jueves 3 de septiembre, de 20:00 a 22:00.",
+  "notas": "Puertas abiertas los martes y jueves de 17:00 a 18:30, hasta el 1 de octubre. El club estrena sede en Moraleja de Enmedio; confirma el lugar al contactar.",
   "origen": "club",
-  "fechaActualizacion": "2026-08-23"
+  "fechaActualizacion": "2026-09-23"
  },
  {
   "clubId": "wonders-club-deportivo",
@@ -949,9 +949,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Segunda sesión de puertas abiertas el jueves 3 de septiembre, de 20:00 a 22:00.",
+  "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-23"
+  "fechaActualizacion": "2026-09-23"
  },
  {
   "clubId": "wonders-club-deportivo",
@@ -972,9 +972,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Segunda sesión de puertas abiertas el jueves 3 de septiembre, de 20:00 a 22:00.",
+  "notas": "",
   "origen": "club",
-  "fechaActualizacion": "2026-08-23"
+  "fechaActualizacion": "2026-09-23"
  },
  {
   "clubId": "cv-majadahonda",
