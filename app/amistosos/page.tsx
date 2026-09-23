@@ -115,6 +115,7 @@ export default function Amistosos() {
 
               const desplazamiento = ETIQUETA_AMISTOSOS[equiposClub[0].amistosos];
               const disponibilidad = equiposClub[0].disponibilidad;
+              const notas = equiposClub[0].notas;
               const zona = ZONAS.find((z) => z.valor === club.zona)?.etiqueta ?? club.zona;
 
               return (
@@ -152,6 +153,11 @@ export default function Amistosos() {
                         {desplazamiento && (
                           <p className="mt-[2px] text-[12.5px] leading-snug text-tinta-2">
                             {desplazamiento}
+                          </p>
+                        )}
+                        {notas && (
+                          <p className="mt-[2px] text-[12.5px] leading-relaxed text-tinta-2">
+                            Notas: {notas}
                           </p>
                         )}
                         <p className="mt-[3px] flex items-center gap-[5px] text-[12.5px] leading-snug text-tinta-3">
