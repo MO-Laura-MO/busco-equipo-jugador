@@ -1188,7 +1188,13 @@
   "colorFondo": "#d33535",
   "colorAcento": "#ffffff",
   "verificado": true,
-  "fechaActualizacion": "2026-08-28"
+  "fechaActualizacion": "2026-10-01",
+  "emailsExtra": [
+   {
+    "etiqueta": "Voleibol",
+    "email": "clubcorazonistasvoleibol@gmail.com"
+   }
+  ]
  },
  {
   "id": "ed-nervion",

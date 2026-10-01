@@ -3132,5 +3132,28 @@
   "notas": "Aceptan también jugadoras júnior; entrenan lunes y jueves de 22:00 a 23:20. La inscripción es por el formulario (en Contacto).",
   "origen": "club",
   "fechaActualizacion": "2026-09-23"
+ },
+ {
+  "clubId": "corazonistas",
+  "categoria": "senior",
+  "sexo": "femenino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "Colegio Corazonistas",
+  "direccion": "",
+  "mapsUrl": "",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Pruebas hasta mediados de octubre. Buscan jugadoras con y sin experiencia.",
+  "origen": "club",
+  "fechaActualizacion": "2026-10-01"
  }
 ]
