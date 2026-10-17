@@ -52,7 +52,7 @@ export const ARTICULOS: Articulo[] = [
     slug: "cursos-entrenador-voleibol-madrid",
     titulo: "Cursos de entrenador de voleibol en Madrid: convocatorias, precios y plazos",
     descripcion:
-      "Convocatorias abiertas de los cursos de entrenador de voleibol de la Federación de Madrid: fechas, precio, plazo de inscripción y qué habilita cada nivel. Actualizado en agosto de 2026.",
+      "Convocatorias abiertas de los cursos de entrenador de voleibol de la Federación de Madrid: fechas, precio, plazo de inscripción y qué habilita cada nivel. Actualizado en octubre de 2026.",
     fecha: "2026-08-17",
     publico: ["entrenadores"],
     minutos: 1,

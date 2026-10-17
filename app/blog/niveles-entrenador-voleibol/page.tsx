@@ -27,7 +27,7 @@ const faqJsonLd = {
       name: "¿Qué se necesita para hacer el curso de entrenador de voleibol de nivel 2?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Tener el título definitivo de nivel 1. También se accede con una diplomatura en Educación Física o acreditando cinco temporadas dirigiendo en competiciones estatales absolutas.",
+        text: "Tener el título definitivo de nivel 1. También pueden acceder los diplomados en Educación Física con un curso de voleibol, quien haya jugado 10 partidos internacionales absolutos y quien haya tenido licencia cinco años en categoría absoluta de ligas nacionales.",
       },
     },
     {
@@ -71,7 +71,7 @@ const NIVELES = [
     dirigir:
       "Juvenil, júnior y absolutos en fases nacionales de 2ª división",
     acceso:
-      "Título definitivo de nivel 1, o diplomatura en Educación Física, o 5 temporadas en competición estatal absoluta",
+      "Título definitivo de nivel 1, o diplomatura en Educación Física con curso de voleibol, o 10 partidos internacionales absolutos, o 5 años con licencia absoluta en ligas nacionales",
     horas: "80 lectivas, 40 presenciales",
     practicas: "Una temporada",
     expide: "Federación autonómica",
@@ -179,25 +179,17 @@ export default function Pagina() {
           El <strong>nivel 1</strong> de la Federación de Madrid cuesta 210
           euros, con tarifa de 189 euros para TAFAD y TSEAS.{" "}
           <Link href="/blog/cursos-entrenador-voleibol-madrid">
-            La convocatoria abierta es la de octubre de 2026
+            La última convocatoria
           </Link>
-          : curso del 13 al 24 de octubre, seis tardes por videoconferencia
-          más una jornada presencial de prácticas el sábado 24, e{" "}
-          <a
-            href="https://fmvoley.com/media/e45jp5bg/convocatoria-técnico-deportivo-de-voleibol-ni-octubre-2026.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            inscripción hasta el 7 de octubre a las 12:00
-          </a>
-          .
+          , la de octubre de 2026, ya está cerrada.
         </p>
         <p>
-          El <strong>nivel 2</strong>, en su última convocatoria publicada,
-          costaba 265 euros, con una fase teórica de 32 horas y 20 horas de
-          prácticas. Las tasas del título definitivo van aparte. La
-          federación no publica el calendario del curso con antelación, así
-          que hay que estar pendiente de sus convocatorias.
+          El <strong>nivel 2</strong> tiene 32 horas de teoría y 20 de
+          prácticas.{" "}
+          <Link href="/blog/cursos-entrenador-voleibol-madrid">
+            Hay convocatoria abierta en noviembre de 2026
+          </Link>
+          , por videoconferencia y con inscripción hasta el 3 de noviembre.
         </p>
         <p>
           El <strong>nivel 3</strong> lo convoca{" "}
