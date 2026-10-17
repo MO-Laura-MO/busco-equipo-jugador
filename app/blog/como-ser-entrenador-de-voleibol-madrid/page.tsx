@@ -26,10 +26,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "¿Cuándo es el próximo curso de entrenador de voleibol de nivel 1 en Madrid y cuánto cuesta?",
+      name: "¿Cuándo es el próximo curso de entrenador de voleibol de nivel 1 en Madrid?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La Federación de Madrid de Voleibol ha convocado el curso de Técnico de Competición de Nivel I del 13 al 24 de octubre de 2026, con inscripción hasta el 7 de octubre a las 12:00. Cuesta 210 euros, 189 euros con TAFAD o TSEAS y 55 euros la asignatura suelta.",
+        text: "La última convocatoria de la Federación de Madrid de Voleibol fue del 13 al 24 de octubre de 2026 y ya tiene la inscripción cerrada. La federación anuncia las siguientes con poca antelación.",
       },
     },
     {
@@ -146,51 +146,22 @@ export default function Pagina() {
           empezar.
         </p>
 
-        <h2>El curso de nivel 1: la próxima convocatoria</h2>
+        <h2>El curso de nivel 1</h2>
         <p>
           Lo organiza la Federación de Madrid. Se puede hacer desde los 16
           años (concretamente, quien cumpla 16 en el año en que se imparte el
           curso) y no hace falta haber jugado nunca en competición.
         </p>
         <p>
-          La{" "}
-          <a
-            href="https://fmvoley.com/media/e45jp5bg/convocatoria-técnico-deportivo-de-voleibol-ni-octubre-2026.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            convocatoria abierta
-          </a>{" "}
-          ahora mismo es la de{" "}
+          La última convocatoria fue la de{" "}
           <Link href="/blog/cursos-entrenador-voleibol-madrid">
             octubre de 2026
           </Link>
-          :
+          : del 13 al 24 de octubre, seis tardes por videoconferencia y una
+          jornada presencial de prácticas en las instalaciones del Canal de
+          Isabel II. Para aprobar hay que asistir al 80 % de las horas y sacar
+          un 5.
         </p>
-        <ul>
-          <li>
-            <strong>Curso:</strong> del 13 al 24 de octubre de 2026.
-          </li>
-          <li>
-            <strong>Inscripción:</strong> hasta el <strong>7 de octubre a las 12:00</strong>.
-          </li>
-          <li>
-            <strong>Formato:</strong> seis tardes de teoría por videoconferencia
-            en directo (13, 14, 16, 19, 21 y 23 de octubre, de 16:00 a 20:00)
-            más una jornada presencial de prácticas el sábado 24, mañana y
-            tarde, en las instalaciones del Canal de Isabel II, en Avenida de
-            Filipinas 54.
-          </li>
-          <li>
-            <strong>Precio:</strong> 210 € general y <strong>189 €</strong> con
-            TAFAD o TSEAS. Una asignatura suelta, 55 €.
-          </li>
-          <li>
-            <strong>Requisitos para aprobar:</strong> asistir al menos al 80 %
-            de las horas y sacar un 5. El curso sale adelante con un mínimo de
-            15 alumnos.
-          </li>
-        </ul>
         <p>
           Las asignaturas cubren metodología, planificación, análisis técnico,
           táctica, minivoley, reglamento, psicología y dirección de grupo,

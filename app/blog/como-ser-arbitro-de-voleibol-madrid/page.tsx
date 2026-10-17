@@ -287,8 +287,8 @@ export default function Pagina() {
 
         <h2>Y si lo tuyo es dirigir un equipo</h2>
         <p>
-          Entonces la vía es otra: el curso de técnico deportivo. Ese sí tiene
-          convocatoria abierta ahora mismo, hasta el 7 de octubre. Lo tienes todo
+          Entonces la vía es otra: el curso de técnico deportivo. Ahora mismo
+          está abierto el de nivel 2, hasta el 3 de noviembre. Lo tienes todo
           en nuestra guía de{" "}
           <Link href="/blog/cursos-entrenador-voleibol-madrid">
             cursos de entrenador de voleibol en Madrid

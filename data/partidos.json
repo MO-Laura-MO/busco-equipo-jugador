@@ -1,0 +1,1421 @@
+[
+ {
+  "fecha": "2026-10-03",
+  "hora": "16:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 1,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Aceites Abril Ourense",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-10-03",
+  "hora": "16:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 1,
+  "local": "UCAM Torrejón",
+  "visitante": "CVB Barça",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2026-10-03",
+  "hora": "19:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 1,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Mairena Vóley Club",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-10-03",
+  "hora": "20:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 1,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Guía CDV UFP Canarias",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2026-10-04",
+  "hora": "13:15",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 1,
+  "local": "CDE Parla Vóley",
+  "visitante": "Cisneros La Laguna",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2026-10-10",
+  "hora": "18:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 2,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Voleibol Astillero",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-10-10",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 2,
+  "local": "Madrid Chamberí",
+  "visitante": "Tenerife Libby´s La Laguna",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2026-10-10",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 2,
+  "local": "FEEL Alcobendas",
+  "visitante": "CV Torrelavega",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2026-10-10",
+  "hora": "19:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 2,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Club Voleibol Oviedo",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-10-10",
+  "hora": "20:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 2,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Universidad de Granada",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-10-11",
+  "hora": "10:30",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 2,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Club Voleibol Dumbría",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-10-11",
+  "hora": "12:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 2,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Tenerife Libby´s La Laguna",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-10-11",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 2,
+  "local": "Grupo Egido Pinto",
+  "visitante": "Club Voleibol Vigo",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2026-10-17",
+  "hora": "16:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 3,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Clínica Inmuv. Descubre Fuentes",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-10-17",
+  "hora": "16:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 3,
+  "local": "FEEL Alcobendas",
+  "visitante": "CVB Barça",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2026-10-17",
+  "hora": "17:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 3,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Arona Vóley",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2026-10-17",
+  "hora": "19:30",
+  "competicion": "superliga-masculina",
+  "jornada": 1,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Cisneros La Laguna",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2026-10-17",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 3,
+  "local": "UCAM Torrejón",
+  "visitante": "Servigroup Playas de Benidorm",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2026-10-17",
+  "hora": "19:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 3,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Madrid Chamberí",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-10-18",
+  "hora": "13:15",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 3,
+  "local": "CDE Parla Vóley",
+  "visitante": "Rivas Ciudad del Deporte",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2026-10-24",
+  "hora": "16:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 4,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "CV Gupane Guía",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-10-24",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 4,
+  "local": "Madrid Chamberí",
+  "visitante": "Ciudad de A Coruña",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2026-10-24",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 4,
+  "local": "FEEL Alcobendas",
+  "visitante": "Guía CDV UFP Canarias",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2026-10-24",
+  "hora": "19:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 4,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Arenal Emevé",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-10-25",
+  "hora": "12:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 4,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Rivas Ciudad del Deporte",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-10-25",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 4,
+  "local": "Grupo Egido Pinto",
+  "visitante": "UBE L´Illa Grau",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2026-10-31",
+  "hora": "16:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 5,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Voleibol Sant Just",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2026-10-31",
+  "hora": "19:30",
+  "competicion": "superliga-masculina",
+  "jornada": 3,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Pamesa Teruel Voleibol",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2026-10-31",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 5,
+  "local": "UCAM Torrejón",
+  "visitante": "C.V.Paterna-Liceo",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2026-10-31",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 5,
+  "local": "FEEL Alcobendas",
+  "visitante": "Servigroup Playas de Benidorm",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2026-10-31",
+  "hora": "19:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 5,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Clínica Inmuv. Descubre Fuentes",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-10-31",
+  "hora": "20:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 5,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Tenerife Libby´s La Laguna",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-11-01",
+  "hora": "10:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 5,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Mairena Vóley Club",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-11-01",
+  "hora": "12:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 5,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Tenerife Libby´s La Laguna",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-11-01",
+  "hora": "12:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 5,
+  "local": "Vóley Playa Madrid",
+  "visitante": "COX CV Collado Villalba",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-11-07",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 6,
+  "local": "Madrid Chamberí",
+  "visitante": "Instituto Zalaeta",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2026-11-07",
+  "hora": "19:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 6,
+  "local": "COX CV Collado Villalba",
+  "visitante": "CID Jovellanos",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-11-07",
+  "hora": "20:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 6,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Club Voleibol Dumbría",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-11-08",
+  "hora": "13:15",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 6,
+  "local": "CDE Parla Vóley",
+  "visitante": "CV Gupane Guía",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2026-11-08",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 6,
+  "local": "Grupo Egido Pinto",
+  "visitante": "Rotogal Boiro",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2026-11-14",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 7,
+  "local": "UCAM Torrejón",
+  "visitante": "Élite Vóley El Rosario",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2026-11-14",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 7,
+  "local": "FEEL Alcobendas",
+  "visitante": "C.V.Paterna-Liceo",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2026-11-14",
+  "hora": "19:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 7,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Cisneros La Laguna",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-11-14",
+  "hora": "20:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 7,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "COX CV Collado Villalba",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-11-15",
+  "hora": "10:30",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 7,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Universidad de Valladolid VCV",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-11-15",
+  "hora": "12:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 7,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Madrid Chamberí",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-11-21",
+  "hora": "17:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 8,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "UCAM Torrejón",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2026-11-21",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 8,
+  "local": "Madrid Chamberí",
+  "visitante": "Mairena Vóley Club",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2026-11-21",
+  "hora": "19:30",
+  "competicion": "superliga-masculina",
+  "jornada": 6,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Club Voleibol Guaguas",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2026-11-21",
+  "hora": "19:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 8,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Ciudad de A Coruña",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-11-21",
+  "hora": "20:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 8,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Vóley Playa Madrid",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-11-22",
+  "hora": "13:15",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 8,
+  "local": "CDE Parla Vóley",
+  "visitante": "Club Voleibol Dumbría",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2026-11-22",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 8,
+  "local": "Grupo Egido Pinto",
+  "visitante": "Indescar Zaragoza",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2026-11-28",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 9,
+  "local": "FEEL Alcobendas",
+  "visitante": "Élite Vóley El Rosario",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2026-11-28",
+  "hora": "19:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 9,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Rivas Ciudad del Deporte",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-11-28",
+  "hora": "20:00",
+  "competicion": "superliga-masculina",
+  "jornada": 8,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Unicaja Costa de Almería",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2026-11-28",
+  "hora": "20:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 9,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Ciudad de A Coruña",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-11-29",
+  "hora": "10:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 9,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Clínica Inmuv. Descubre Fuentes",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-11-29",
+  "hora": "12:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 9,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Universidad de Granada",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-11-29",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 9,
+  "local": "Grupo Egido Pinto",
+  "visitante": "Arona Spring In Motion",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2026-12-05",
+  "hora": "16:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 10,
+  "local": "UCAM Torrejón",
+  "visitante": "DSV Sant Cugat",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2026-12-05",
+  "hora": "18:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 10,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Cisneros La Laguna",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-12-05",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 10,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "FEEL Alcobendas",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2026-12-05",
+  "hora": "19:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 10,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Instituto Zalaeta",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-12-05",
+  "hora": "20:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 10,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Madrid Chamberí",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-12-06",
+  "hora": "13:15",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 10,
+  "local": "CDE Parla Vóley",
+  "visitante": "Vóley Playa Madrid",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2026-12-12",
+  "hora": "16:00",
+  "competicion": "superliga-masculina",
+  "jornada": 10,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Servigroup Playas de Benidorm",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2026-12-12",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 11,
+  "local": "Madrid Chamberí",
+  "visitante": "Aceites Abril Ourense",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2026-12-12",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 11,
+  "local": "FEEL Alcobendas",
+  "visitante": "UCAM Torrejón",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2026-12-12",
+  "hora": "19:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 11,
+  "local": "COX CV Collado Villalba",
+  "visitante": "CDE Parla Vóley",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-12-13",
+  "hora": "10:30",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 11,
+  "local": "Vóley Playa Madrid",
+  "visitante": "CV Gupane Guía",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-12-13",
+  "hora": "12:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 11,
+  "local": "Vóley Playa Madrid",
+  "visitante": "COX CV Collado Villalba",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-12-13",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 11,
+  "local": "Grupo Egido Pinto",
+  "visitante": "CVA Extremadura Tránsitos Suroeste",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2026-12-19",
+  "hora": "16:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 12,
+  "local": "FEEL Alcobendas",
+  "visitante": "DSV Sant Cugat",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2026-12-19",
+  "hora": "16:30",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 12,
+  "local": "COX CV Collado Villalba",
+  "visitante": "CV Gupane Guía",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2026-12-19",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 12,
+  "local": "Madrid Chamberí",
+  "visitante": "Clínica Inmuv. Descubre Fuentes",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2026-12-19",
+  "hora": "20:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 12,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "CID Jovellanos",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2026-12-20",
+  "hora": "10:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 12,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Ciudad de A Coruña",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-12-20",
+  "hora": "12:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 12,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Club Voleibol Oviedo",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2026-12-20",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 12,
+  "local": "Grupo Egido Pinto",
+  "visitante": "CV Textil Santanderina",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2027-01-16",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 13,
+  "local": "UCAM Torrejón",
+  "visitante": "Guía CDV UFP Canarias",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2027-01-16",
+  "hora": "19:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 13,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Club Voleibol Sestao",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2027-01-16",
+  "hora": "20:00",
+  "competicion": "superliga-masculina",
+  "jornada": 13,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Conqueridor Valencia",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-01-16",
+  "hora": "20:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 13,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Instituto Zalaeta",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2027-01-17",
+  "hora": "12:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 13,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Servigroup Playas de Benidorm",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-01-17",
+  "hora": "13:15",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 13,
+  "local": "CDE Parla Vóley",
+  "visitante": "Universidad de Valladolid VCV",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2027-01-23",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 14,
+  "local": "Madrid Chamberí",
+  "visitante": "COX CV Collado Villalba",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2027-01-23",
+  "hora": "19:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 14,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Club Voleibol Dumbría",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2027-01-23",
+  "hora": "20:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 14,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "CDE Parla Vóley",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2027-01-24",
+  "hora": "10:30",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 14,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Arenal Emevé",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2027-01-24",
+  "hora": "12:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 14,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Instituto Zalaeta",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2027-01-24",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 14,
+  "local": "Grupo Egido Pinto",
+  "visitante": "Barça Voleibol",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2027-01-30",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 15,
+  "local": "UCAM Torrejón",
+  "visitante": "Arona Vóley",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2027-01-30",
+  "hora": "19:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 15,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Aceites Abril Ourense",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2027-01-30",
+  "hora": "20:00",
+  "competicion": "superliga-masculina",
+  "jornada": 15,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Club Voleibol Melilla Ciudad del Deporte",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-01-30",
+  "hora": "20:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 15,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Vóley Playa Madrid",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2027-01-31",
+  "hora": "12:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 15,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "C.V.Paterna-Liceo",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-01-31",
+  "hora": "13:15",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 15,
+  "local": "CDE Parla Vóley",
+  "visitante": "Universidad de Granada",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2027-02-06",
+  "hora": "16:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 16,
+  "local": "Vóley Playa Madrid",
+  "visitante": "CID Jovellanos",
+  "pabellon": "CAJA MÁGICA"
+ },
+ {
+  "fecha": "2027-02-06",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 16,
+  "local": "Madrid Chamberí",
+  "visitante": "Voleibol Astillero",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2027-02-06",
+  "hora": "20:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 16,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Club Voleibol Oviedo",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2027-02-07",
+  "hora": "12:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 16,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Vóley Playa Madrid",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2027-02-07",
+  "hora": "13:15",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 16,
+  "local": "CDE Parla Vóley",
+  "visitante": "CID Jovellanos",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2027-02-07",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 16,
+  "local": "Grupo Egido Pinto",
+  "visitante": "Anaya Mayurqa Vóley Palma",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2027-02-13",
+  "hora": "16:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 17,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Élite Vóley El Rosario",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-02-13",
+  "hora": "19:30",
+  "competicion": "superliga-masculina",
+  "jornada": 16,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Intasa San Sadurniño",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-02-13",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 17,
+  "local": "FEEL Alcobendas",
+  "visitante": "Arona Vóley",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2027-02-13",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 17,
+  "local": "UCAM Torrejón",
+  "visitante": "Voleibol Sant Just",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2027-02-13",
+  "hora": "20:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 17,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Mairena Vóley Club",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2027-02-14",
+  "hora": "10:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 17,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Club Voleibol Sestao",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2027-02-14",
+  "hora": "13:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 17,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Cisneros La Laguna",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2027-02-20",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 18,
+  "local": "Madrid Chamberí",
+  "visitante": "Vóley Playa Madrid",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2027-02-20",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 18,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "CV Torrelavega",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-02-20",
+  "hora": "19:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 18,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Rivas Ciudad del Deporte",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2027-02-20",
+  "hora": "20:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 18,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Arenal Emevé",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2027-02-21",
+  "hora": "13:15",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 18,
+  "local": "CDE Parla Vóley",
+  "visitante": "Club Voleibol Oviedo",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2027-02-21",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 18,
+  "local": "Grupo Egido Pinto",
+  "visitante": "Asisa Tarragona SPSP",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2027-02-24",
+  "hora": "18:00",
+  "competicion": "superliga-masculina",
+  "jornada": 19,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Conectabalear CV Manacor",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-02-27",
+  "hora": "16:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 19,
+  "local": "FEEL Alcobendas",
+  "visitante": "Voleibol Sant Just",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2027-02-27",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 19,
+  "local": "UCAM Torrejón",
+  "visitante": "UC3M Voleibol Leganés",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2027-02-27",
+  "hora": "19:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 19,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Universidad de Valladolid VCV",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2027-02-27",
+  "hora": "20:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 19,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Club Voleibol Sestao",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2027-02-28",
+  "hora": "10:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 19,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Aceites Abril Ourense",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2027-02-28",
+  "hora": "12:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 19,
+  "local": "Vóley Playa Madrid",
+  "visitante": "Rivas Ciudad del Deporte",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2027-03-06",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 20,
+  "local": "Madrid Chamberí",
+  "visitante": "Club Voleibol Sestao",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2027-03-06",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 20,
+  "local": "UCAM Torrejón",
+  "visitante": "CV Torrelavega",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2027-03-06",
+  "hora": "19:45",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 20,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Voleibol Astillero",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2027-03-06",
+  "hora": "20:00",
+  "competicion": "superliga-masculina",
+  "jornada": 20,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Grupo Herce Soria Voleibol",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-03-06",
+  "hora": "20:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 20,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "COX CV Collado Villalba",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2027-03-07",
+  "hora": "12:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 20,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "DSV Sant Cugat",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-03-07",
+  "hora": "13:15",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 20,
+  "local": "CDE Parla Vóley",
+  "visitante": "Arenal Emevé",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2027-03-13",
+  "hora": "19:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 21,
+  "local": "Madrid Chamberí",
+  "visitante": "Rivas Ciudad del Deporte",
+  "pabellon": "Estadio Vallehermoso"
+ },
+ {
+  "fecha": "2027-03-13",
+  "hora": "19:30",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 21,
+  "local": "FEEL Alcobendas",
+  "visitante": "UC3M Voleibol Leganés",
+  "pabellon": "Pabellón Luis Buñuel"
+ },
+ {
+  "fecha": "2027-03-13",
+  "hora": "19:45",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 21,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Universidad de Granada",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2027-03-14",
+  "hora": "12:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 21,
+  "local": "Vóley Playa Madrid",
+  "visitante": "CDE Parla Vóley",
+  "pabellon": "C.D.M. ENTREVÍAS"
+ },
+ {
+  "fecha": "2027-03-14",
+  "hora": "17:00",
+  "competicion": "superliga-2-masculina",
+  "grupo": "A",
+  "jornada": 21,
+  "local": "Grupo Egido Pinto",
+  "visitante": "Bus Leader San Roque",
+  "pabellon": "Pab. Príncipe de Asturias"
+ },
+ {
+  "fecha": "2027-03-20",
+  "hora": "17:00",
+  "competicion": "superliga-masculina",
+  "jornada": 22,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "Club Voleibol Suac Canarias",
+  "pabellon": "Pabellón Europa"
+ },
+ {
+  "fecha": "2027-03-20",
+  "hora": "17:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 22,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Voleibol Astillero",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ },
+ {
+  "fecha": "2027-03-20",
+  "hora": "17:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "C",
+  "jornada": 22,
+  "local": "COX CV Collado Villalba",
+  "visitante": "Vóley Playa Madrid",
+  "pabellon": "POL. MAJALASTABLAS"
+ },
+ {
+  "fecha": "2027-03-20",
+  "hora": "17:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 22,
+  "local": "UCAM Torrejón",
+  "visitante": "FEEL Alcobendas",
+  "pabellon": "PABELLÓN JOSÉ ANTONIO PARAISO"
+ },
+ {
+  "fecha": "2027-03-20",
+  "hora": "17:00",
+  "competicion": "superliga-2-femenina",
+  "grupo": "A",
+  "jornada": 22,
+  "local": "UC3M Voleibol Leganés",
+  "visitante": "CVB Barça",
+  "pabellon": "Pabellón Emilia Pardo Bazán"
+ },
+ {
+  "fecha": "2027-03-20",
+  "hora": "19:30",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 22,
+  "local": "CDE Parla Vóley",
+  "visitante": "COX CV Collado Villalba",
+  "pabellon": "Polideportivo La Cantueña"
+ },
+ {
+  "fecha": "2027-03-20",
+  "hora": "19:30",
+  "competicion": "superliga-2-masculina",
+  "grupo": "C",
+  "jornada": 22,
+  "local": "Rivas Ciudad del Deporte",
+  "visitante": "Universidad de Valladolid VCV",
+  "pabellon": "PABELLÓN CEIP JOSÉ HIERRO"
+ }
+]

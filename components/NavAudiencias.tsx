@@ -86,7 +86,16 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
       secciones: [DIRECTORIO, { label: "Amistosos", href: "/amistosos" }],
       visible: true,
     },
-    // "árbitro", "afición" y "campeonatos" no se pintan: sin contenido todavía.
+    {
+      id: "aficion",
+      nombre: "aficionado",
+      nombreCorto: "Afición",
+      href: "/partidos",
+      prefijos: ["/partidos"],
+      secciones: [DIRECTORIO, { label: "Partidos", href: "/partidos" }],
+      visible: true,
+    },
+    // "árbitro" y "campeonatos" no se pintan: sin contenido todavía.
   ];
 
   const visibles = audiencias.filter((a) => a.visible);

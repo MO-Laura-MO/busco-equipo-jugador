@@ -21,7 +21,7 @@ const faqJsonLd = {
       name: "¿Cuándo es el próximo curso de entrenador de voleibol en Madrid?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "La Federación de Madrid de Voleibol ha convocado el curso de Técnico de Competición de Nivel I del 13 al 24 de octubre de 2026, con inscripción abierta hasta el 7 de octubre.",
+        text: "La Federación de Madrid de Voleibol ha convocado el curso de Técnico Deportivo de Nivel II del 9 al 27 de noviembre de 2026, por videoconferencia, con inscripción hasta el 3 de noviembre. El de nivel 1 de octubre ya tiene la inscripción cerrada.",
       },
     },
     {
@@ -48,6 +48,14 @@ const faqJsonLd = {
         text: "Cumplir 16 años durante el año en que se imparte el curso. No se exige experiencia previa ni haber jugado en competición.",
       },
     },
+    {
+      "@type": "Question",
+      name: "¿Qué requisitos hay para apuntarse al curso de nivel 2?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tener el título definitivo de nivel 1. También pueden acceder los diplomados en Educación Física con un curso de voleibol, quien haya jugado 10 partidos internacionales absolutos y quien haya tenido licencia cinco años en categoría absoluta de ligas nacionales.",
+      },
+    },
   ],
 };
 
@@ -70,79 +78,67 @@ export default function Pagina() {
           en la que la hemos comprobado.
         </p>
         <p>
-          <strong>Actualizado el 16 de septiembre de 2026.</strong>
+          <strong>Actualizado el 14 de octubre de 2026.</strong>
         </p>
 
-        <h2>Convocatoria abierta: nivel 1, octubre de 2026</h2>
+        <h2>Convocatoria abierta: nivel 2, noviembre de 2026</h2>
         <p>
           Es el curso federativo de{" "}
           <a
-            href="https://fmvoley.com/media/e45jp5bg/convocatoria-técnico-deportivo-de-voleibol-ni-octubre-2026.pdf"
+            href="https://fmvoley.com/media/xfhd2r4d/convocatoria-t%C3%A9cnico-deportivo-de-voleibol-n2-noviembre-2026-fmvb.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Técnico de Competición de Voleibol de Nivel I
+            Técnico Deportivo de Voleibol de Nivel II
           </a>
-          .
+          , el título que hace falta para dirigir equipos juveniles y
+          absolutos en la liga autonómica y en las fases nacionales de
+          Segunda División.
         </p>
         <ul>
           <li>
-            <strong>Fechas:</strong> del 13 al 24 de octubre de 2026.
+            <strong>Fechas:</strong> del 9 al 27 de noviembre de 2026.
           </li>
           <li>
-            <strong>Inscripción:</strong> hasta el 7 de octubre de 2026.
+            <strong>Inscripción:</strong> hasta el 3 de noviembre de 2026, con
+            el formulario de la web de la federación.
           </li>
           <li>
-            <strong>Formato:</strong> teoría por videoconferencia en directo
-            los días 13, 14, 16, 19, 21 y 23, de 16:00 a 20:00, más una
-            jornada presencial de prácticas el sábado 24, de 10:00 a 14:00 y
-            de 16:00 a 20:00.
+            <strong>Formato:</strong> 100 % por videoconferencia en directo,
+            sin grabaciones: ocho tardes de 16:00 a 20:00 (9, 11, 13, 17, 19,
+            23, 25 y 27 de noviembre). Después, 20 horas de prácticas en pista
+            con la federación, en fechas por determinar.
           </li>
           <li>
-            <strong>Dónde:</strong> la parte presencial, en las instalaciones
-            deportivas del Canal de Isabel II, Avenida de Filipinas 54,
-            Madrid.
+            <strong>Quién puede apuntarse:</strong> quien tenga el título
+            definitivo de nivel 1, diplomados en Educación Física con un curso
+            de voleibol, jugadores con 10 partidos internacionales absolutos o
+            quien haya jugado cinco años con licencia en categoría absoluta de
+            ligas nacionales.
           </li>
           <li>
-            <strong>Precio:</strong> 210 € general, 189 € con TSEAS o TAFAD,
-            105 € si ya estás autorizado en un club federado, y 55 € la
-            asignatura suelta.
+            <strong>Para aprobar:</strong> asistir al 85 % de las horas, no
+            faltar a más de un bloque por área y sacar al menos un 5. El curso
+            sale adelante con un mínimo de 15 alumnos.
           </li>
           <li>
-            <strong>Requisitos:</strong> cumplir 16 años durante 2026. No hace
-            falta experiencia previa.
-          </li>
-          <li>
-            <strong>Para aprobar:</strong> asistir al 80 % de las horas y
-            sacar al menos un 5. El curso se imparte si hay un mínimo de 15
-            alumnos.
-          </li>
-          <li>
-            <strong>Qué habilita:</strong>{" "}
-            <Link href="/blog/niveles-entrenador-voleibol">
-              dirigir equipos de categoría infantil y cadete
-            </Link>
-            , una vez obtenido el título definitivo, que requiere una
-            temporada de prácticas.
+            <strong>Qué habilita:</strong> al aprobar tienes el título
+            provisional y ya puedes entrenar con él. El definitivo llega tras
+            una temporada de prácticas con un equipo federado.
           </li>
         </ul>
-
-        <h2>Nivel 2</h2>
         <p>
-          Sin{" "}
-          <a
-            href="https://fmvoley.com/formacion/cursos-de-tecnico-de-competicion"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            convocatoria abierta
-          </a>{" "}
-          en el momento de actualizar esta página. En la última publicada por
-          la federación costaba 265 euros, con una fase teórica de 32 horas
-          repartida en ocho tardes y 20 horas de prácticas. Las tasas del
-          título definitivo van aparte. Para acceder hace falta el título
-          definitivo de nivel 1, salvo excepciones por titulación
-          universitaria o trayectoria como jugador.
+          El precio, las tarifas reducidas y las convalidaciones están en la
+          convocatoria de la federación.
+        </p>
+
+        <h2>Nivel 1</h2>
+        <p>
+          La convocatoria de octubre de 2026 tiene la inscripción cerrada y el
+          curso se imparte del 13 al 24 de octubre. Se puede hacer desde el
+          año en que cumples 16 y no pide experiencia previa. La federación
+          no anuncia la siguiente con antelación; la añadiremos aquí en cuanto
+          salga.
         </p>
 
         <h2>Nivel 3</h2>

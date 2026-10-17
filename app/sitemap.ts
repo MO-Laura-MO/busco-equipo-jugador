@@ -80,6 +80,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    {
+      url: `${URL_SITIO}/partidos`,
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
     ...fichas,
     ...paginasMunicipio,
     ...paginasZona,
