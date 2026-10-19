@@ -2739,9 +2739,9 @@
   "tipoEntidad": ["privada"],
   "nivel": "Liga Madrid Voleibol",
   "temporada": "2026-27",
-  "tipoFecha": "mes",
+  "tipoFecha": "abierta",
   "fecha": "",
-  "mesAprox": "2026-09",
+  "mesAprox": "",
   "estadoFecha": "confirmada",
   "hora": "",
   "pabellon": "",
@@ -2749,9 +2749,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "770 € la temporada",
-  "notas": "Buscan preferiblemente dos chicas para el equipo: dos puntas receptoras, o una punta y una central, de nivel medio; plazas abiertas hasta cubrirse. El pabellón se indica al contactar por teléfono.",
+  "notas": "Buscan un opuesto, chico o chica: es la única plaza de juego que les queda. Entrenan los lunes de 21:00 a 23:00 en el Colegio Asunción Cuestablanca (Hortaleza) y los viernes de 20:30 a 22:30 en el Colegio Richmond (Fuencarral-El Pardo). Los partidos son los domingos, normalmente entre las 10:00 y las 17:00.",
   "origen": "club",
-  "fechaActualizacion": "2026-09-11"
+  "fechaActualizacion": "2026-10-19"
  },
  {
   "clubId": "spartan-voley",
@@ -2760,7 +2760,7 @@
   "tipoEntidad": ["privada"],
   "nivel": "Solo entrenamientos",
   "temporada": "2026-27",
-  "tipoFecha": "por-confirmar",
+  "tipoFecha": "abierta",
   "fecha": "",
   "mesAprox": "",
   "estadoFecha": "confirmada",
@@ -2770,9 +2770,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "470 € la temporada",
-  "notas": "Dos plazas solo de entrenamiento, una para jugador y otra para jugadora: participan en todos los entrenamientos pero no en los partidos de liga.",
+  "notas": "Dos plazas solo de entrenamiento, una para jugador y otra para jugadora: participan en todos los entrenamientos pero no en los partidos de liga. Entrenan los lunes de 21:00 a 23:00 en el Colegio Asunción Cuestablanca (Hortaleza) y los viernes de 20:30 a 22:30 en el Colegio Richmond (Fuencarral-El Pardo).",
   "origen": "club",
-  "fechaActualizacion": "2026-09-11"
+  "fechaActualizacion": "2026-10-19"
  },
  {
   "clubId": "villa-de-aranjuez",
