@@ -256,29 +256,6 @@
  },
  {
   "clubId": "voleibol-maria-rodrigo",
-  "categoria": "cadete",
-  "sexo": "femenino",
-  "tipoEntidad": [
-   "municipal"
-  ],
-  "nivel": "",
-  "temporada": "2026-27",
-  "tipoFecha": "por-confirmar",
-  "fecha": "",
-  "mesAprox": "",
-  "estadoFecha": "confirmada",
-  "hora": "",
-  "pabellon": "IES María Rodrigo",
-  "direccion": "C/ Talamanca del Jarama, 2, 28051 Madrid",
-  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
-  "avisoPrevio": true,
-  "cuotaOrientativa": "",
-  "notas": "Inscripción por email. El email del club está en Contacto.",
-  "origen": "club",
-  "fechaActualizacion": "2026-08-18"
- },
- {
-  "clubId": "voleibol-maria-rodrigo",
   "categoria": "senior",
   "sexo": "femenino",
   "tipoEntidad": [
@@ -296,9 +273,9 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Entrenamientos lunes y miércoles de 21:00 a 23:00. El formulario de inscripción está en Contacto.",
+  "notas": "Buscan centrales. Entrenamientos lunes y miércoles de 21:00 a 23:00. El formulario de inscripción está en Contacto.",
   "origen": "club",
-  "fechaActualizacion": "2026-08-18"
+  "fechaActualizacion": "2026-10-19"
  },
  {
   "clubId": "voleibol-maria-rodrigo",
@@ -320,18 +297,18 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "Buscan una líbero. Inscripción por email, que está en Contacto.",
+  "notas": "Buscan receptoras. Inscripción por email, que está en Contacto.",
   "origen": "club",
-  "fechaActualizacion": "2026-08-18"
+  "fechaActualizacion": "2026-10-19"
  },
  {
   "clubId": "voleibol-maria-rodrigo",
-  "categoria": "senior",
-  "sexo": "mixto",
+  "categoria": "juvenil",
+  "sexo": "masculino",
   "tipoEntidad": [
    "municipal"
   ],
-  "nivel": "Equipo de nueva creación",
+  "nivel": "",
   "temporada": "2026-27",
   "tipoFecha": "por-confirmar",
   "fecha": "",
@@ -343,9 +320,32 @@
   "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
   "avisoPrevio": true,
   "cuotaOrientativa": "",
-  "notas": "",
+  "notas": "Buscan jugadores de distintas posiciones. Inscripción por email o por mensaje directo en su Instagram.",
   "origen": "club",
-  "fechaActualizacion": "2026-08-25"
+  "fechaActualizacion": "2026-10-19"
+ },
+ {
+  "clubId": "voleibol-maria-rodrigo",
+  "categoria": "junior",
+  "sexo": "masculino",
+  "tipoEntidad": [
+   "municipal"
+  ],
+  "nivel": "",
+  "temporada": "2026-27",
+  "tipoFecha": "por-confirmar",
+  "fecha": "",
+  "mesAprox": "",
+  "estadoFecha": "confirmada",
+  "hora": "",
+  "pabellon": "IES María Rodrigo",
+  "direccion": "C/ Talamanca del Jarama, 2, 28051 Madrid",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=IES+Mar%C3%ADa+Rodrigo%2C+Calle+Talamanca+del+Jarama+2%2C+28051+Madrid",
+  "avisoPrevio": true,
+  "cuotaOrientativa": "",
+  "notas": "Buscan jugadores de distintas posiciones. Inscripción por email o por mensaje directo en su Instagram.",
+  "origen": "club",
+  "fechaActualizacion": "2026-10-19"
  },
  {
   "clubId": "avp-parla",
@@ -2739,9 +2739,9 @@
   "tipoEntidad": ["privada"],
   "nivel": "Liga Madrid Voleibol",
   "temporada": "2026-27",
-  "tipoFecha": "mes",
+  "tipoFecha": "abierta",
   "fecha": "",
-  "mesAprox": "2026-09",
+  "mesAprox": "",
   "estadoFecha": "confirmada",
   "hora": "",
   "pabellon": "",
@@ -2749,9 +2749,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "770 € la temporada",
-  "notas": "Buscan preferiblemente dos chicas para el equipo: dos puntas receptoras, o una punta y una central, de nivel medio; plazas abiertas hasta cubrirse. El pabellón se indica al contactar por teléfono.",
+  "notas": "Buscan un opuesto, chico o chica: es la única plaza de juego que les queda. Entrenan los lunes de 21:00 a 23:00 en el Colegio Asunción Cuestablanca (Hortaleza) y los viernes de 20:30 a 22:30 en el Colegio Richmond (Fuencarral-El Pardo). Los partidos son los domingos, normalmente entre las 10:00 y las 17:00.",
   "origen": "club",
-  "fechaActualizacion": "2026-09-11"
+  "fechaActualizacion": "2026-10-19"
  },
  {
   "clubId": "spartan-voley",
@@ -2760,7 +2760,7 @@
   "tipoEntidad": ["privada"],
   "nivel": "Solo entrenamientos",
   "temporada": "2026-27",
-  "tipoFecha": "por-confirmar",
+  "tipoFecha": "abierta",
   "fecha": "",
   "mesAprox": "",
   "estadoFecha": "confirmada",
@@ -2770,9 +2770,9 @@
   "mapsUrl": "",
   "avisoPrevio": true,
   "cuotaOrientativa": "470 € la temporada",
-  "notas": "Dos plazas solo de entrenamiento, una para jugador y otra para jugadora: participan en todos los entrenamientos pero no en los partidos de liga.",
+  "notas": "Dos plazas solo de entrenamiento, una para jugador y otra para jugadora: participan en todos los entrenamientos pero no en los partidos de liga. Entrenan los lunes de 21:00 a 23:00 en el Colegio Asunción Cuestablanca (Hortaleza) y los viernes de 20:30 a 22:30 en el Colegio Richmond (Fuencarral-El Pardo).",
   "origen": "club",
-  "fechaActualizacion": "2026-09-11"
+  "fechaActualizacion": "2026-10-19"
  },
  {
   "clubId": "villa-de-aranjuez",
