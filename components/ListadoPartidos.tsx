@@ -7,6 +7,7 @@ import {
   Competicion,
   EQUIPOS_MADRID,
   Partido,
+  SIN_EQUIPOS_MADRID,
   nombrePabellon,
 } from "@/lib/partidos";
 
@@ -127,7 +128,13 @@ export default function ListadoPartidos({
         </div>
       </div>
 
-      {grupos.length === 0 ? (
+      {competicion && SIN_EQUIPOS_MADRID.includes(competicion) ? (
+        <p className="px-4 py-6 text-[13px] leading-relaxed text-tinta-3">
+          Esta temporada no hay ningún equipo de la Comunidad de Madrid en la{" "}
+          {COMPETICIONES.find((c) => c.valor === competicion)!.etiqueta}, así que no se juega
+          ningún partido aquí.
+        </p>
+      ) : grupos.length === 0 ? (
         <p className="px-4 py-6 text-[13px] text-tinta-3">No hay partidos con estos filtros.</p>
       ) : (
         grupos.map(([sabado, lista]) => (
@@ -150,7 +157,7 @@ export default function ListadoPartidos({
                 const derbi = MADRID.has(p.visitante);
                 return (
                   <li
-                    key={`${p.competicion}-${p.grupo ?? ""}-${p.jornada}-${p.local}`}
+                    key={`${p.competicion}-${p.grupo ?? ""}-${p.partido}`}
                     className="flex gap-3 border-b border-borde-fila px-4 py-3"
                   >
                     <div className="w-[52px] shrink-0 tabular-nums">
