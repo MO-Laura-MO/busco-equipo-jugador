@@ -264,10 +264,13 @@
    "cadete",
    "juvenil"
   ],
-  "sexos": [],
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
   "inscripcionAbierta": true,
   "inscripcion": "Inscripciones por teléfono con la organización: +34 610 056 117.",
-  "notas": "Torneo para equipos de escuelas municipales, de nivel competitivo.",
+  "notas": "Abierto a equipos de escuelas y federados, de nivel competitivo.",
   "web": "https://www.instagram.com/plivamanager/",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-11-06"
