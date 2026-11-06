@@ -21,6 +21,8 @@ export interface Torneo {
   periodo?: string;
   /** Vacía si el organizador no las ha publicado. */
   categorias: Categoria[];
+  /** Texto que sustituye a las categorías cuando el torneo va por edades (U13, U15…). `categorias` sigue mandando en el filtro. */
+  categoriasTexto?: string;
   sexos: Sexo[];
   /** Último día de inscripción, si el organizador lo publica. */
   inscripcionHasta?: string;
@@ -105,7 +107,8 @@ export function columnaFecha(t: Torneo): { dia?: string; mes: string } {
 export function textoCategorias(t: Torneo): string {
   const cats = [...t.categorias].sort((a, b) => ordenCategoria(a) - ordenCategoria(b));
   let c = "";
-  if (cats.length === 1) c = etiquetaCategoria(cats[0]);
+  if (t.categoriasTexto) c = t.categoriasTexto;
+  else if (cats.length === 1) c = etiquetaCategoria(cats[0]);
   else if (cats.length === 2) c = `${etiquetaCategoria(cats[0])} y ${etiquetaCategoria(cats[1]).toLowerCase()}`;
   else if (cats.length > 2) {
     // Rango solo si las categorías son consecutivas en el orden de edad.

@@ -249,5 +249,55 @@
   "web": "https://www.vcvoleibol.es/",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "madrid-fest-2026",
+  "nombre": "Madrid Fest 2026 · Torneo Ínter Escuelas Municipales",
+  "organizador": "Pliva Manager",
+  "lugar": "Madrid",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2026-12-19",
+  "fechaFin": "2026-12-22",
+  "categorias": [
+   "infantil",
+   "cadete",
+   "juvenil"
+  ],
+  "sexos": [],
+  "inscripcionAbierta": true,
+  "inscripcion": "Inscripciones por teléfono con la organización: +34 610 056 117.",
+  "notas": "Torneo para equipos de escuelas municipales, de nivel competitivo.",
+  "web": "https://www.instagram.com/plivamanager/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "madrid-eurocup-2027",
+  "nombre": "Madrid Eurocup 2027",
+  "organizador": "Pliva Manager",
+  "lugar": "Madrid",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2027-04-01",
+  "fechaFin": "2027-04-04",
+  "categorias": [
+   "alevin",
+   "infantil",
+   "cadete",
+   "juvenil",
+   "junior",
+   "master"
+  ],
+  "categoriasTexto": "U13 (2014-2015), U15 (2012-2013), U17 (2010-2011), U19 (2008-2009) y máster",
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
+  "inscripcion": "Información e inscripciones con la organización: +34 610 056 117 o plivamanager@gmail.com.",
+  "notas": "Torneo internacional con equipos de Europa y Latinoamérica. Va por edades (U13 a U19), no por las categorías de la federación.",
+  "web": "https://www.instagram.com/plivamanager/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
  }
 ]
