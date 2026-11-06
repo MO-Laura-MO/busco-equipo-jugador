@@ -1,0 +1,253 @@
+[
+ {
+  "id": "copa-espana-2026-valladolid",
+  "nombre": "Copa de España 2026 · Valladolid",
+  "organizador": "RFEVB",
+  "lugar": "Valladolid",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2026-12-27",
+  "fechaFin": "2026-12-30",
+  "categorias": [
+   "benjamin",
+   "alevin",
+   "infantil"
+  ],
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
+  "inscripcionHasta": "2026-11-10",
+  "inscripcion": "Clubes federados, por la Intranet de la RFEVB; clubes no federados, por formulario. Plazas por orden de inscripción.",
+  "web": "https://esvoley.es/voleibol/competiciones-de-menores/copas-de-espana/copa-de-espana-2026-valladolid",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "copa-espana-2026-almeria",
+  "nombre": "Copa de España 2026 · Almería",
+  "organizador": "RFEVB",
+  "lugar": "Almería, Roquetas de Mar y Aguadulce",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2026-12-27",
+  "fechaFin": "2026-12-30",
+  "categorias": [
+   "cadete"
+  ],
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
+  "inscripcionHasta": "2026-11-10",
+  "inscripcion": "Clubes federados, por la Intranet de la RFEVB; clubes no federados, por formulario. Plazas por orden de inscripción.",
+  "web": "https://esvoley.es/voleibol/competiciones-de-menores/copas-de-espana/copa-de-espana-2026-almeria",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "copa-espana-2026-guadalajara",
+  "nombre": "Copa de España 2026 · Guadalajara",
+  "organizador": "RFEVB",
+  "lugar": "Guadalajara y Corredor del Henares",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2026-12-27",
+  "fechaFin": "2026-12-30",
+  "categorias": [
+   "juvenil",
+   "junior",
+   "senior",
+   "master"
+  ],
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
+  "inscripcionHasta": "2026-11-10",
+  "inscripcion": "Clubes federados, por la Intranet de la RFEVB; clubes no federados, por formulario. Plazas por orden de inscripción.",
+  "notas": "Pabellones en Guadalajara, Alovera, Chiloeches, Alcalá de Henares, Meco, Torija, Azuqueca de Henares y Yebes.",
+  "web": "https://esvoley.es/voleibol/competiciones-de-menores/copas-de-espana/copa-de-espana-2026-guadalajara",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "madcup-volley-2027",
+  "nombre": "MADCUP Volley 2027",
+  "organizador": "MADCUP",
+  "lugar": "Comunidad de Madrid",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2027-03-21",
+  "fechaFin": "2027-03-24",
+  "categorias": [
+   "infantil",
+   "cadete",
+   "juvenil"
+  ],
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
+  "inscripcionAbierta": true,
+  "inscripcion": "Inscripción abierta en la web del torneo. La cuota de los equipos de Madrid sube después del 31 de enero.",
+  "web": "https://www.madcup.es/deportes_madcupvolley/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "zgz-volley-cup-2027",
+  "nombre": "ZGZ Volley Cup 2027",
+  "organizador": "Federación Aragonesa de Voleibol",
+  "lugar": "Zaragoza",
+  "pais": "España",
+  "tipoFecha": "mes",
+  "mesAprox": "2027-03",
+  "periodo": "Semana Santa",
+  "categorias": [
+   "alevin",
+   "infantil",
+   "cadete",
+   "juvenil",
+   "junior"
+  ],
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
+  "notas": "Se juega cada año en Semana Santa. Las fechas de 2027 aún no se han publicado.",
+  "web": "https://favb.es/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "volabola-finestrat-2027",
+  "nombre": "Torneo VolaBola Finestrat 2027",
+  "organizador": "CV Finestrat y CV Elche",
+  "lugar": "Finestrat (Alicante)",
+  "pais": "España",
+  "tipoFecha": "mes",
+  "mesAprox": "2027-03",
+  "periodo": "Semana Santa",
+  "categorias": [],
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
+  "notas": "Se juega cada año en Semana Santa. Las fechas y categorías de 2027 aún no se han publicado.",
+  "web": "https://ayto-finestrat.es/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "torrevieja-cup-2027",
+  "nombre": "Torrevieja International Cup 2027 · Voleibol",
+  "organizador": "Torrevieja International Cup",
+  "lugar": "Torrevieja (Alicante)",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2027-06-23",
+  "fechaFin": "2027-06-27",
+  "categorias": [],
+  "sexos": [],
+  "notas": "Torneo multideporte con competición de voleibol. Consulta las categorías con la organización.",
+  "web": "https://www.torreviejacup.com/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "amb-volleyball-cup-2027",
+  "nombre": "AMB Volleyball Cup 2027",
+  "organizador": "Academia Maia Brenha",
+  "lugar": "Espinho (Portugal)",
+  "pais": "Portugal",
+  "tipoFecha": "mes",
+  "mesAprox": "2027-07",
+  "periodo": "Primera semana de julio",
+  "categorias": [
+   "benjamin",
+   "alevin",
+   "infantil",
+   "cadete",
+   "juvenil",
+   "junior"
+  ],
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
+  "notas": "Fuera de España, pero con muchos clubes españoles cada año. La organización ha anunciado ya las fechas de 2027 en su web.",
+  "web": "https://ambvolleyball.com/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "torneo-nacional-ciudad-alcala-2026",
+  "nombre": "I Torneo Nacional Ciudad de Alcalá",
+  "organizador": "CV Alcalá",
+  "lugar": "Alcalá de Henares",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2026-09-05",
+  "fechaFin": "2026-09-06",
+  "categorias": [
+   "infantil",
+   "cadete",
+   "juvenil",
+   "junior",
+   "senior"
+  ],
+  "sexos": [
+   "masculino"
+  ],
+  "web": "https://x.com/CV_Alcala",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "torneo-nacional-ciudad-elche-2026",
+  "nombre": "IV Torneo Nacional Ciudad de Elche",
+  "organizador": "CV Elche",
+  "lugar": "Elche (Alicante)",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2026-09-11",
+  "fechaFin": "2026-09-13",
+  "categorias": [
+   "benjamin",
+   "alevin",
+   "infantil",
+   "cadete",
+   "juvenil",
+   "senior"
+  ],
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
+  "web": "https://www.elche.es/event/iv-torneo-nacional-ciudad-de-elche/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "memorial-felix-ubierna-2026",
+  "nombre": "III Torneo Ciudad de Valladolid · Memorial Félix Ubierna",
+  "organizador": "Valladolid Club Voleibol",
+  "lugar": "Valladolid",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2026-09-12",
+  "categorias": [
+   "infantil",
+   "cadete",
+   "juvenil"
+  ],
+  "sexos": [
+   "femenino",
+   "masculino"
+  ],
+  "web": "https://www.vcvoleibol.es/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
+ }
+]

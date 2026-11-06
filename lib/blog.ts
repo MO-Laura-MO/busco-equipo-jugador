@@ -30,6 +30,15 @@ export interface Articulo {
 
 export const ARTICULOS: Articulo[] = [
   {
+    slug: "copa-de-espana-voleibol-2026",
+    titulo: "Copa de España de voleibol 2026: sedes, categorías y plazo de inscripción",
+    descripcion:
+      "La Copa de España de voleibol base se juega del 27 al 30 de diciembre en Valladolid, Almería y Guadalajara. Qué categorías van a cada sede, quién puede apuntarse y hasta cuándo.",
+    fecha: "2026-11-06",
+    publico: ["familias", "jugadores"],
+    minutos: 3,
+  },
+  {
     slug: "como-ser-arbitro-de-voleibol-madrid",
     titulo: "Cómo ser árbitro o anotador de voleibol en Madrid",
     descripcion:
