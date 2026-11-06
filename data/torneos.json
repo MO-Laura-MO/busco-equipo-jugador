@@ -299,5 +299,25 @@
   "web": "https://www.instagram.com/plivamanager/",
   "origen": "fuentes-publicas",
   "fechaActualizacion": "2026-11-06"
+ },
+ {
+  "id": "festival-internacional-voleibol-madrid-2027",
+  "nombre": "Festival Internacional de Voleibol",
+  "organizador": "Pliva Manager",
+  "lugar": "Madrid",
+  "pais": "España",
+  "tipoFecha": "exacta",
+  "fechaInicio": "2027-06-04",
+  "fechaFin": "2027-06-07",
+  "categorias": [
+   "infantil",
+   "cadete"
+  ],
+  "sexos": [],
+  "inscripcionAbierta": true,
+  "inscripcion": "Información e inscripciones con la organización: +34 610 056 117 (WhatsApp).",
+  "web": "https://www.instagram.com/plivamanager/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-06"
  }
 ]
