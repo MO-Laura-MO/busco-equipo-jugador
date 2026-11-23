@@ -1,0 +1,23 @@
+[
+ {
+  "id": "cuva-campus-navidad-2026",
+  "nombre": "Campus de Navidad CUVA",
+  "clubId": "club-unificado-voleibol-alcorcon",
+  "organizador": "Club Unificado Voleibol Alcorcón",
+  "temporada": "navidad",
+  "municipio": "Alcorcón",
+  "provincia": "Madrid",
+  "pabellon": "Polideportivo Los Cantos",
+  "fechaInicio": "2026-12-23",
+  "fechaFin": "2027-01-08",
+  "dias": "23, 28, 29 y 30 de diciembre; 4, 5, 7 y 8 de enero",
+  "edades": "De 8 a 15 años (nacidos de 2011 a 2019)",
+  "horario": "De 9:00 a 14:00",
+  "precioOrientativo": "Campus completo 75 € (60 € miembros CUVA). Días sueltos 12 € (9 € miembros CUVA).",
+  "inscripcion": "Inscripción con el código QR del cartel del club. Más información en campamentos@cuvalcorcon.com.",
+  "email": "campamentos@cuvalcorcon.com",
+  "web": "https://www.instagram.com/cuvalcorcon/",
+  "origen": "fuentes-publicas",
+  "fechaActualizacion": "2026-11-23"
+ }
+]

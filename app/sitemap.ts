@@ -81,6 +81,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${URL_SITIO}/campus`,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
       url: `${URL_SITIO}/torneos`,
       changeFrequency: "weekly",
       priority: 0.6,

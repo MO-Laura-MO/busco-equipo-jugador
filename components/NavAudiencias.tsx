@@ -64,8 +64,12 @@ export default function NavAudiencias({ hayVacantes }: { hayVacantes: boolean })
       nombre: "jugador",
       nombreCorto: "Jugador",
       href: "/pruebas",
-      prefijos: ["/pruebas"],
-      secciones: [DIRECTORIO, { label: "Pruebas", href: "/pruebas" }],
+      prefijos: ["/pruebas", "/campus"],
+      secciones: [
+        DIRECTORIO,
+        { label: "Pruebas", href: "/pruebas" },
+        { label: "Campus", href: "/campus" },
+      ],
       visible: true,
     },
     {
