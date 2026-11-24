@@ -73,3 +73,8 @@ export function rangoCampus(c: Campus): string {
 export function ultimaActualizacionCampus(): string {
   return campus.map((c) => c.fechaActualizacion).sort().at(-1) ?? "";
 }
+
+/** Campus vigentes de un club del directorio, para su ficha. */
+export function campusDeClub(clubId: string, hoy: string): Campus[] {
+  return campus.filter((c) => c.clubId === clubId && c.fechaFin >= hoy);
+}

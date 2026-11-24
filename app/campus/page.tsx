@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Clock, ExternalLink, Info, Mail, MapPin, Users } from "lucide-react";
+import { Info } from "lucide-react";
 import Actualizado from "@/components/Actualizado";
+import FilaCampus from "@/components/FilaCampus";
+import { clubPorId } from "@/lib/datos";
 import { EMAIL_CORRECCIONES } from "@/lib/config";
-import {
-  Campus,
-  TEMPORADAS,
-  columnaFechaCampus,
-  rangoCampus,
-  separarCampus,
-  ultimaActualizacionCampus,
-} from "@/lib/campus";
+import { Campus, separarCampus, ultimaActualizacionCampus } from "@/lib/campus";
+
+/** Escudo del club organizador: solo con perfil verificado y escudo enviado, como en las pruebas. */
+function logoDe(c: Campus): string | undefined {
+  const club = c.clubId ? clubPorId(c.clubId) : undefined;
+  return club?.logo && club.verificado === true ? club.logo : undefined;
+}
 
 export const metadata: Metadata = {
   title: { absolute: "Campus de voleibol: Navidad, Semana Santa y verano" },
@@ -21,94 +21,6 @@ export const metadata: Metadata = {
 
 // Los campus pasan a "ya celebrados" solos cuando acaba el último día.
 export const revalidate = 3600;
-
-function FilaCampus({ c, pasado = false }: { c: Campus; pasado?: boolean }) {
-  const col = columnaFechaCampus(c);
-  const lugar = [c.pabellon, c.municipio, c.provincia !== c.municipio && c.provincia !== "Madrid" ? c.provincia : null]
-    .filter(Boolean)
-    .join(" · ");
-
-  return (
-    <li className="border-b border-borde-fila last:border-b-0">
-      <div className="flex gap-3 px-4 py-[14px]">
-        <div className="flex w-[46px] shrink-0 flex-col items-center pt-[3px]">
-          <span className="text-[22px] font-medium leading-[1.15] text-tinta">{col.dia}</span>
-          <span className="text-[11px] leading-[1.4] text-tinta-3">{col.mes}</span>
-        </div>
-        <div className="min-w-0 flex-1">
-          <h3 className={`text-[15px] font-medium leading-snug ${pasado ? "text-tinta-2" : "text-tinta"}`}>
-            {c.nombre}
-          </h3>
-          <p className="mt-[2px] text-[13.5px] leading-snug text-tinta-2">{c.dias ?? rangoCampus(c)}</p>
-          <p className="mt-[2px] text-[12.5px] leading-snug text-tinta-2">{c.edades}</p>
-          <p className="mt-[3px] flex items-center gap-[5px] text-[12.5px] leading-snug text-tinta-3">
-            <MapPin size={13} strokeWidth={1.75} className="shrink-0" />
-            <span>{lugar}</span>
-          </p>
-          {c.horario && (
-            <p className="mt-[3px] flex items-center gap-[5px] text-[12.5px] leading-snug text-tinta-3">
-              <Clock size={13} strokeWidth={1.75} className="shrink-0" />
-              <span>{c.horario}</span>
-            </p>
-          )}
-          <p className="mt-[3px] flex items-center gap-[5px] text-[12.5px] leading-snug text-tinta-3">
-            <Users size={13} strokeWidth={1.75} className="shrink-0" />
-            <span>
-              Organiza:{" "}
-              {c.clubId ? (
-                <Link href={`/clubes/${c.clubId}`} className="text-acento underline underline-offset-2">
-                  {c.organizador}
-                </Link>
-              ) : (
-                c.organizador
-              )}
-            </span>
-          </p>
-          {!pasado && (
-            <>
-              <p className="mt-[6px] text-[12.5px] leading-relaxed text-tinta-2">
-                {c.precioOrientativo
-                  ? `Precio orientativo: ${c.precioOrientativo}`
-                  : "Consulta el precio con el organizador."}
-              </p>
-              {c.inscripcion && (
-                <p className="mt-[4px] text-[12.5px] leading-relaxed text-tinta-2">{c.inscripcion}</p>
-              )}
-              {c.notas && <p className="mt-[4px] text-[12.5px] leading-relaxed text-tinta-3">{c.notas}</p>}
-              <div className="mt-[7px] flex flex-wrap gap-[6px]">
-                <span className="inline-block rounded-[5px] bg-gris-tinte px-[8px] py-[3px] text-[11.5px] leading-[1.3] text-gris-etiqueta">
-                  {TEMPORADAS[c.temporada]}
-                </span>
-              </div>
-              <div className="mt-[10px] flex flex-wrap gap-2">
-                {c.web && (
-                  <a
-                    href={c.web}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-[5px] rounded-[6px] bg-acento px-3 py-[7px] text-[12.5px] font-medium text-white"
-                  >
-                    Información del campus
-                    <ExternalLink size={13} strokeWidth={2} />
-                  </a>
-                )}
-                {c.email && (
-                  <a
-                    href={`mailto:${c.email}`}
-                    className="inline-flex items-center gap-[5px] rounded-[6px] border border-acento/40 px-3 py-[7px] text-[12.5px] text-acento"
-                  >
-                    <Mail size={13} strokeWidth={2} />
-                    Escribir
-                  </a>
-                )}
-              </div>
-            </>
-          )}
-        </div>
-      </div>
-    </li>
-  );
-}
 
 export default function PaginaCampus() {
   const hoy = new Date().toISOString().slice(0, 10);
@@ -142,7 +54,7 @@ export default function PaginaCampus() {
         ) : (
           <ul>
             {proximos.map((c) => (
-              <FilaCampus key={c.id} c={c} />
+              <FilaCampus key={c.id} c={c} logo={logoDe(c)} />
             ))}
           </ul>
         )}
@@ -155,7 +67,7 @@ export default function PaginaCampus() {
           </h2>
           <ul>
             {pasados.map((c) => (
-              <FilaCampus key={c.id} c={c} pasado />
+              <FilaCampus key={c.id} c={c} pasado logo={logoDe(c)} />
             ))}
           </ul>
         </section>

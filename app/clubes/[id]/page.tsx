@@ -14,12 +14,14 @@ import {
   Link2,
   MapPin,
   RefreshCw,
+  Tent,
   Twitter,
   Users,
   Volleyball,
   Youtube,
 } from "lucide-react";
 import ContactoClub from "@/components/ContactoClub";
+import FilaCampus from "@/components/FilaCampus";
 import FilaVacante from "@/components/FilaVacante";
 import Seguir from "@/components/Seguir";
 import EtiquetaEstado from "@/components/EtiquetaEstado";
@@ -45,7 +47,11 @@ import {
   vacantesDeClub,
 } from "@/lib/datos";
 import { EMAIL_CORRECCIONES, URL_SITIO } from "@/lib/config";
+import { campusDeClub } from "@/lib/campus";
 import { coloresClub } from "@/lib/color";
+
+// El bloque de campus desaparece solo cuando acaba el campus: se recalcula cada hora.
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return clubes.map((c) => ({ id: c.id }));
@@ -143,6 +149,7 @@ export default async function FichaClub({
 
   const lista = convocatoriasDeClub(club.id);
   const vacantes = vacantesDeClub(club.id);
+  const campusClub = campusDeClub(club.id, new Date().toISOString().slice(0, 10));
   const zona = ZONAS.find((z) => z.valor === club.zona)?.etiqueta ?? club.zona;
   const tieneMunicipioPagina = municipiosConPagina().includes(club.municipio);
   // El perfil verificado es un dato del club, no algo que se deduzca de sus
@@ -360,6 +367,29 @@ export default async function FichaClub({
           />
         </div>
       </header>
+
+      {campusClub.length > 0 && (
+        <section id="campus" className="scroll-mt-[100px]">
+          <h2
+            className={`flex items-center gap-[6px] px-4 py-[9px] text-[12.5px] ${
+              colores ? "" : "bg-barra text-tinta-2"
+            }`}
+            style={
+              colores
+                ? { backgroundColor: colores.barra, color: colores.barraTexto }
+                : undefined
+            }
+          >
+            <Tent size={14} strokeWidth={1.75} className="shrink-0" />
+            {campusClub.length === 1 ? "Campus del club" : `${campusClub.length} campus del club`}
+          </h2>
+          <ul>
+            {campusClub.map((c) => (
+              <FilaCampus key={c.id} c={c} mostrarOrganizador={false} />
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section>
         <h2
