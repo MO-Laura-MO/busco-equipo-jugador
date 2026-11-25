@@ -51,6 +51,7 @@
   "colorFondo": "#95ca3d",
   "colorAcento": "#000000",
   "verificado": true,
+  "equipoSuperliga": "Rivas Ciudad del Deporte",
   "fechaActualizacion": "2026-09-23"
  },
  {
@@ -302,6 +303,7 @@
   "telefono": "+34 696357167",
   "logo": "",
   "descripcion": "",
+  "equipoSuperliga": "CDE Parla Vóley",
   "fechaActualizacion": "2026-08-05"
  },
  {
@@ -462,6 +464,7 @@
   "telefono": "+34 656469949",
   "logo": "",
   "descripcion": "Club de voleibol de Madrid con equipos federados de pista en todas las categorías, de benjamín a sénior, y en las dos ramas. Pese a su nombre, no es solo un club de voley playa: sus pruebas de acceso son de pista.",
+  "equipoSuperliga": "Vóley Playa Madrid",
   "fechaActualizacion": "2026-08-26"
  },
  {
@@ -705,6 +708,7 @@
   "telefono": "+34 652 023 114",
   "logo": "",
   "descripcion": "",
+  "equipoSuperliga": "FEEL Alcobendas",
   "fechaActualizacion": "2026-11-25"
  },
  {
@@ -723,6 +727,7 @@
   "telefono": "+34 608187207",
   "logo": "",
   "descripcion": "",
+  "equipoSuperliga": "COX CV Collado Villalba",
   "fechaActualizacion": "2026-08-25"
  },
  {
@@ -862,6 +867,7 @@
   "telefono": "+34 655836532",
   "logo": "",
   "descripcion": "",
+  "equipoSuperliga": "Grupo Egido Pinto",
   "fechaActualizacion": "2026-08-06"
  },
  {
@@ -901,6 +907,7 @@
   "colorFondo": "#e72125",
   "colorAcento": "#000000",
   "verificado": true,
+  "equipoSuperliga": "UCAM Torrejón",
   "fechaActualizacion": "2026-08-20"
  },
  {

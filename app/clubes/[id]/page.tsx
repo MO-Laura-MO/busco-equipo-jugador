@@ -15,6 +15,7 @@ import {
   MapPin,
   RefreshCw,
   Tent,
+  Ticket,
   Twitter,
   Users,
   Volleyball,
@@ -22,6 +23,7 @@ import {
 } from "lucide-react";
 import ContactoClub from "@/components/ContactoClub";
 import FilaCampus from "@/components/FilaCampus";
+import FilaPartido from "@/components/FilaPartido";
 import FilaVacante from "@/components/FilaVacante";
 import Seguir from "@/components/Seguir";
 import EtiquetaEstado from "@/components/EtiquetaEstado";
@@ -48,6 +50,7 @@ import {
 } from "@/lib/datos";
 import { EMAIL_CORRECCIONES, URL_SITIO } from "@/lib/config";
 import { campusDeClub } from "@/lib/campus";
+import { URL_RFEVB, partidosDeEquipo } from "@/lib/partidos";
 import { coloresClub } from "@/lib/color";
 
 // El bloque de campus desaparece solo cuando acaba el campus: se recalcula cada hora.
@@ -149,7 +152,12 @@ export default async function FichaClub({
 
   const lista = convocatoriasDeClub(club.id);
   const vacantes = vacantesDeClub(club.id);
-  const campusClub = campusDeClub(club.id, new Date().toISOString().slice(0, 10));
+  const hoy = new Date().toISOString().slice(0, 10);
+  const campusClub = campusDeClub(club.id, hoy);
+  // Solo los clubes de Madrid con equipo en Superliga llevan `equipoSuperliga`.
+  const partidosClub = club.equipoSuperliga
+    ? partidosDeEquipo(club.equipoSuperliga, hoy)
+    : [];
   const zona = ZONAS.find((z) => z.valor === club.zona)?.etiqueta ?? club.zona;
   const tieneMunicipioPagina = municipiosConPagina().includes(club.municipio);
   // El perfil verificado es un dato del club, no algo que se deduzca de sus
@@ -544,6 +552,52 @@ export default async function FichaClub({
           <p className="px-4 py-4 text-[12.5px] text-tinta-3">
             Escribe al club con el contacto de arriba. voley.app solo
             publica: el acuerdo es directamente con el club.
+          </p>
+        </section>
+      )}
+
+      {partidosClub.length > 0 && (
+        <section id="partidos" className="scroll-mt-[100px]">
+          <h2
+            className={`flex items-center gap-[6px] px-4 py-[9px] text-[12.5px] ${
+              colores ? "" : "bg-barra text-tinta-2"
+            }`}
+            style={
+              colores
+                ? { backgroundColor: colores.barra, color: colores.barraTexto }
+                : undefined
+            }
+          >
+            <Ticket size={14} strokeWidth={1.75} className="shrink-0" />
+            {partidosClub.length === 1
+              ? "1 partido de Superliga en Madrid"
+              : `${partidosClub.length} partidos de Superliga en Madrid`}
+          </h2>
+          <ul>
+            {partidosClub.map((p) => (
+              <FilaPartido key={`${p.competicion}-${p.grupo ?? ""}-${p.partido}`} p={p} />
+            ))}
+          </ul>
+          <p className="px-4 py-4 text-[12.5px] leading-relaxed text-tinta-3">
+            Aquí solo salen los partidos que se juegan en la Comunidad de
+            Madrid: los suyos en casa y las visitas a otro equipo madrileño. El
+            calendario completo, con los desplazamientos fuera, está en la{" "}
+            <a
+              href={URL_RFEVB}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 decoration-borde-control hover:text-tinta"
+            >
+              web de la RFEVB
+            </a>
+            . Confirma siempre la hora y el pabellón antes de ir.{" "}
+            <Link
+              href="/partidos"
+              className="text-acento underline underline-offset-2 decoration-acento/40 hover:decoration-acento"
+            >
+              Ver todos los partidos en Madrid
+            </Link>
+            .
           </p>
         </section>
       )}

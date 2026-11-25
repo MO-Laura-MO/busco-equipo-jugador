@@ -73,6 +73,14 @@ export interface Club {
    * pero no tiene pruebas abiertas no podría lucir el tic ni sus colores.
    */
   verificado?: boolean;
+  /**
+   * Nombre con el que juega en Superliga, tal y como lo escribe la RFEVB en
+   * `partidos.json` (lleva patrocinador: "FEEL Alcobendas", "Grupo Egido
+   * Pinto"). Solo lo tienen los clubes de Madrid con equipo en Superliga o
+   * Superliga 2, y sirve para enseñar sus partidos en la ficha. El nombre del
+   * directorio no cambia por esto.
+   */
+  equipoSuperliga?: string;
   fechaActualizacion: string;
 }
 

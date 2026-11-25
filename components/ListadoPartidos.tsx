@@ -1,16 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { MapPin } from "lucide-react";
-import {
-  COMPETICIONES,
-  Competicion,
-  EQUIPOS_MADRID,
-  Partido,
-  nombrePabellon,
-} from "@/lib/partidos";
+import FilaPartido from "@/components/FilaPartido";
+import { COMPETICIONES, Competicion, EQUIPOS_MADRID, Partido } from "@/lib/partidos";
 
-const DIAS = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
 const MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 
 function fecha(iso: string): Date {
@@ -39,8 +32,6 @@ function tituloFinde(sabado: string): string {
   const mesSab = s.getMonth() !== d.getMonth() ? ` ${MESES[s.getMonth()]}` : "";
   return `Fin de semana ${s.getDate()}${mesSab}-${d.getDate()} ${MESES[d.getMonth()]}`;
 }
-
-const MADRID = new Set(EQUIPOS_MADRID);
 
 export default function ListadoPartidos({
   partidos,
@@ -144,47 +135,9 @@ export default function ListadoPartidos({
               </span>
             </h2>
             <ul>
-              {lista.map((p) => {
-                const d = fecha(p.fecha);
-                const comp = COMPETICIONES.find((c) => c.valor === p.competicion)!;
-                const derbi = MADRID.has(p.visitante);
-                return (
-                  <li
-                    key={`${p.competicion}-${p.grupo ?? ""}-${p.partido}`}
-                    className="flex gap-3 border-b border-borde-fila px-4 py-3"
-                  >
-                    <div className="w-[52px] shrink-0 tabular-nums">
-                      <div className="text-[15px] font-medium text-tinta">{p.hora}</div>
-                      <div className="text-[12px] text-tinta-3">
-                        {DIAS[d.getDay()]} {d.getDate()} {MESES[d.getMonth()]}
-                      </div>
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-[14px] font-medium text-tinta">
-                        {p.local}
-                        <span className="px-1 font-normal text-tinta-3">vs</span>
-                        {p.visitante}
-                      </p>
-                      <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-[12px] text-tinta-3">
-                        <span className="rounded-[4px] bg-acento-tinte px-[6px] py-[1px] text-[11px] font-medium text-acento">
-                          {comp.corta}
-                          {p.grupo ? ` · grupo ${p.grupo}` : ""}
-                        </span>
-                        {derbi && (
-                          <span className="rounded-[4px] bg-gris-tinte px-[6px] py-[1px] text-[11px] font-medium text-gris-etiqueta">
-                            Derbi madrileño
-                          </span>
-                        )}
-                        <span>Jornada {p.jornada}</span>
-                        <span className="inline-flex items-center gap-1">
-                          <MapPin size={13} strokeWidth={1.75} className="shrink-0" />
-                          {nombrePabellon(p.pabellon)}
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                );
-              })}
+              {lista.map((p) => (
+                <FilaPartido key={`${p.competicion}-${p.grupo ?? ""}-${p.partido}`} p={p} />
+              ))}
             </ul>
           </section>
         ))

@@ -45,6 +45,21 @@ export const EQUIPOS_MADRID = Array.from(new Set(partidos.map((p) => p.local))).
 );
 
 /**
+ * Partidos de un equipo que todavía no se han jugado, para su ficha de club.
+ *
+ * Solo salen los que aparecen en el calendario, es decir, los que se juegan en
+ * un pabellón de la Comunidad de Madrid: los suyos en casa y las visitas a
+ * otro equipo madrileño. Sus desplazamientos fuera de Madrid no están en
+ * `partidos.json` y por eso la ficha avisa de que el calendario completo está
+ * en la RFEVB.
+ */
+export function partidosDeEquipo(equipo: string, hoy: string): Partido[] {
+  return partidos.filter(
+    (p) => p.fecha >= hoy && (p.local === equipo || p.visitante === equipo)
+  );
+}
+
+/**
  * La RFEVB escribe muchos pabellones en mayúsculas. Se muestran en
  * mayúsculas y minúsculas sin tocar el JSON, que se queda como en el original.
  */
