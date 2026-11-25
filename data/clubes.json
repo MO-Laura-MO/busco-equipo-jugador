@@ -691,7 +691,7 @@
  },
  {
   "id": "cv-alcobendas",
-  "nombre": "CV Alcobendas",
+  "nombre": "FEEL Alcobendas",
   "municipio": "Alcobendas",
   "zona": "norte",
   "web": "https://feelalcobendas.es",
@@ -702,10 +702,10 @@
    }
   ],
   "email": "feelalcobendas@yahoo.com",
-  "telefono": "+34 652023114",
+  "telefono": "+34 652 023 114",
   "logo": "",
   "descripcion": "",
-  "fechaActualizacion": "2026-08-05"
+  "fechaActualizacion": "2026-11-25"
  },
  {
   "id": "cv-collado-villalba",
